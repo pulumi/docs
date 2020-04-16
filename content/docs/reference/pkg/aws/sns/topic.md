@@ -79,7 +79,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -179,7 +179,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -357,7 +357,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -411,7 +411,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -483,7 +483,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -492,7 +492,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -571,7 +571,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -580,7 +580,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -607,7 +607,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -688,7 +688,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>application_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -740,7 +740,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>delivery_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>http_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>kms_<wbr>master_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>lambda_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ The `<endpoint>_success_feedback_role_arn` and `<endpoint>_failure_feedback_role
             title="Optional">
         <span>sqs_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1095,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1131,7 +1131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1140,7 +1140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1149,7 +1149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1158,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1167,7 +1167,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1194,7 +1194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1203,7 +1203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1212,7 +1212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1221,7 +1221,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1230,7 +1230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1239,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1248,7 +1248,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1282,7 +1282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1300,7 +1300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1318,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1354,7 +1354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1381,7 +1381,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1390,7 +1390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1399,7 +1399,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1426,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1444,7 +1444,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1469,7 +1469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1487,7 +1487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1505,7 +1505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delivery<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1514,7 +1514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1523,7 +1523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1532,7 +1532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1541,7 +1541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1550,7 +1550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Master<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1559,7 +1559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1577,7 +1577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1586,7 +1586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1595,7 +1595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1613,7 +1613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1622,7 +1622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1631,7 +1631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1656,7 +1656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1665,7 +1665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1674,7 +1674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1692,7 +1692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delivery_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1710,7 +1710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1719,7 +1719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1728,7 +1728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>master_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1746,7 +1746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1764,7 +1764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1773,7 +1773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1782,7 +1782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1791,7 +1791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1800,7 +1800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1809,7 +1809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1818,7 +1818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sqs_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>

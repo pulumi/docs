@@ -58,7 +58,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
+const ssmLifecycleTrust = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [{
@@ -66,7 +66,7 @@ const ssmLifecycleTrust = pulumi.output(aws.iam.getPolicyDocument({
             type: "Service",
         }],
     }],
-}, { async: true }));
+});
 const stopInstance = new aws.ssm.Document("stop_instance", {
     content: `  {
     "schemaVersion": "1.2",
@@ -106,7 +106,7 @@ const ssmLifecyclePolicyDocument = stopInstance.arn.apply(arn => aws.iam.getPoli
             resources: [arn],
         },
     ],
-}, { async: true }));
+}));
 const ssmLifecycleRole = new aws.iam.Role("ssm_lifecycle", {
     assumeRolePolicy: ssmLifecycleTrust.json,
 });
@@ -226,7 +226,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetArgs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetArgs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -326,7 +326,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Required">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -371,7 +371,7 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
             title="Optional">
         <span>Input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -399,7 +399,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -515,7 +515,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -567,7 +567,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -594,7 +594,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -631,7 +631,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -658,7 +658,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -674,7 +674,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -683,7 +683,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -710,7 +710,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -747,7 +747,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>target_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -806,7 +806,7 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -920,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -947,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -984,7 +984,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -1063,7 +1063,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -1072,7 +1072,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -1100,7 +1100,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -1109,7 +1109,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -1136,7 +1136,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -1179,7 +1179,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -1216,7 +1216,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -1225,7 +1225,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -1252,7 +1252,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>target<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -1268,7 +1268,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) associated of the target.
 {{% /md %}}</dd>
@@ -1295,7 +1295,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Valid JSON text passed to the target.
 {{% /md %}}</dd>
@@ -1304,7 +1304,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>input_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
 that is used for extracting part of the matched event when passing it to the target.
@@ -1332,7 +1332,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used.
 {{% /md %}}</dd>
@@ -1341,7 +1341,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule you want to add targets to.
 {{% /md %}}</dd>
@@ -1368,7 +1368,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>target_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique target assignment ID.  If missing, will generate a random, unique id.
 {{% /md %}}</dd>
@@ -1393,7 +1393,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1406,7 +1406,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Job<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
 {{% /md %}}</dd>
@@ -1415,7 +1415,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
 {{% /md %}}</dd>
@@ -1424,7 +1424,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Array<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
 {{% /md %}}</dd>
@@ -1433,7 +1433,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Job<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
 {{% /md %}}</dd>
@@ -1449,7 +1449,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Job<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
 {{% /md %}}</dd>
@@ -1467,7 +1467,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Array<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
 {{% /md %}}</dd>
@@ -1476,7 +1476,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Job<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>job<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
 {{% /md %}}</dd>
@@ -1501,7 +1501,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
 {{% /md %}}</dd>
@@ -1510,7 +1510,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>array<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
 {{% /md %}}</dd>
@@ -1519,7 +1519,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>job<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
 {{% /md %}}</dd>
@@ -1535,7 +1535,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>job<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
 {{% /md %}}</dd>
@@ -1544,7 +1544,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name to use for this execution of the job, if the target is an AWS Batch job.
 {{% /md %}}</dd>
@@ -1553,7 +1553,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>array<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
 {{% /md %}}</dd>
@@ -1562,7 +1562,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>job<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
 {{% /md %}}</dd>
@@ -1580,7 +1580,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1593,7 +1593,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Task<wbr>Definition<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
 {{% /md %}}</dd>
@@ -1602,7 +1602,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Launch<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Platform<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd>
@@ -1638,7 +1638,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Task<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
 {{% /md %}}</dd>
@@ -1654,7 +1654,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Task<wbr>Definition<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
 {{% /md %}}</dd>
@@ -1663,7 +1663,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
 {{% /md %}}</dd>
@@ -1672,7 +1672,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Launch<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
 {{% /md %}}</dd>
@@ -1690,7 +1690,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Platform<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd>
@@ -1699,7 +1699,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Task<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
 {{% /md %}}</dd>
@@ -1715,7 +1715,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>task<wbr>Definition<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
 {{% /md %}}</dd>
@@ -1724,7 +1724,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
 {{% /md %}}</dd>
@@ -1733,7 +1733,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>launch<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
 {{% /md %}}</dd>
@@ -1751,7 +1751,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>platform<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd>
@@ -1760,7 +1760,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>task<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
 {{% /md %}}</dd>
@@ -1776,7 +1776,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>task<wbr>Definition<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the task definition to use if the event target is an Amazon ECS cluster.
 {{% /md %}}</dd>
@@ -1785,7 +1785,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies an ECS task group for the task. The maximum length is 255 characters.
 {{% /md %}}</dd>
@@ -1794,7 +1794,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>launch_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
 {{% /md %}}</dd>
@@ -1812,7 +1812,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>platform_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the platform version for the task. Specify only the numeric portion of the platform version, such as 1.1.0. This is used only if LaunchType is FARGATE. For more information about valid platform versions, see [AWS Fargate Platform Versions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>task<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of tasks to create based on the TaskDefinition. The default is 1.
 {{% /md %}}</dd>
@@ -1839,7 +1839,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1852,7 +1852,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
 {{% /md %}}</dd>
@@ -1861,7 +1861,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd>
@@ -1870,7 +1870,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd>
@@ -1886,7 +1886,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
 {{% /md %}}</dd>
@@ -1895,7 +1895,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd>
@@ -1904,7 +1904,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd>
@@ -1920,7 +1920,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
 {{% /md %}}</dd>
@@ -1929,7 +1929,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd>
@@ -1938,7 +1938,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd>
@@ -1954,7 +1954,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The subnets associated with the task or service.
 {{% /md %}}</dd>
@@ -1963,7 +1963,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>assign<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Assign a public IP address to the ENI (Fargate launch type only). Valid values are `true` or `false`. Default `false`.
 {{% /md %}}</dd>
@@ -1972,7 +1972,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.
 {{% /md %}}</dd>
@@ -1990,7 +1990,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2003,7 +2003,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Input<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Structure containing the template body.
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Input<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Structure containing the template body.
 {{% /md %}}</dd>
@@ -2053,7 +2053,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>input<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Structure containing the template body.
 {{% /md %}}</dd>
@@ -2078,7 +2078,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>input<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Structure containing the template body.
 {{% /md %}}</dd>
@@ -2105,7 +2105,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2118,7 +2118,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Partition<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
 {{% /md %}}</dd>
@@ -2134,7 +2134,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Partition<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
 {{% /md %}}</dd>
@@ -2150,7 +2150,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>partition<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
 {{% /md %}}</dd>
@@ -2166,7 +2166,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>partition<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The JSON path to be extracted from the event and used as the partition key.
 {{% /md %}}</dd>
@@ -2184,7 +2184,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2197,7 +2197,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
 {{% /md %}}</dd>
@@ -2206,7 +2206,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
 {{% /md %}}</dd>
@@ -2222,7 +2222,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
 {{% /md %}}</dd>
@@ -2231,7 +2231,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
 {{% /md %}}</dd>
@@ -2247,7 +2247,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
 {{% /md %}}</dd>
@@ -2256,7 +2256,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
 {{% /md %}}</dd>
@@ -2272,7 +2272,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Can be either `tag:tag-key` or `InstanceIds`.
 {{% /md %}}</dd>
@@ -2281,7 +2281,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}If Key is `tag:tag-key`, Values is a list of tag values. If Key is `InstanceIds`, Values is a list of Amazon EC2 instance IDs.
 {{% /md %}}</dd>
@@ -2299,7 +2299,7 @@ that is used for extracting part of the matched event when passing it to the tar
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2312,7 +2312,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Message<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
 {{% /md %}}</dd>
@@ -2328,7 +2328,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>Message<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
 {{% /md %}}</dd>
@@ -2344,7 +2344,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>message<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
 {{% /md %}}</dd>
@@ -2360,7 +2360,7 @@ that is used for extracting part of the matched event when passing it to the tar
             title="Optional">
         <span>message<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The FIFO message group ID to use as the target.
 {{% /md %}}</dd>

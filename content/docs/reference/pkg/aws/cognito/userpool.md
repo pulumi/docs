@@ -39,7 +39,7 @@ const pool = new aws.cognito.UserPool("pool", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolArgs">UserPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPool">UserPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolArgs">UserPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPool">UserPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,7 +148,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>Username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -585,7 +585,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -612,7 +612,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -639,7 +639,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -736,7 +736,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>alias_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>auto_<wbr>verified_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>email_<wbr>verification_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -781,7 +781,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>email_<wbr>verification_<wbr>subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -799,7 +799,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>mfa_<wbr>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -808,7 +808,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>sms_<wbr>authentication_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>sms_<wbr>verification_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ const pool = new aws.cognito.UserPool("pool", {});
             title="Optional">
         <span>username_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -935,7 +935,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -987,7 +987,7 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -996,7 +996,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1005,7 +1005,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following output properties are available:
             title="">
         <span>creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following output properties are available:
             title="">
         <span>last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ The following output properties are available:
             title="">
         <span>creation_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1091,7 +1091,7 @@ The following output properties are available:
             title="">
         <span>last_<wbr>modified_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1121,7 +1121,7 @@ Get an existing UserPool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolState">UserPoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPool">UserPool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolState">UserPoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPool">UserPool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1244,7 +1244,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -1253,7 +1253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1262,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1298,7 +1298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1334,7 +1334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -1433,7 +1433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -1476,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -1485,7 +1485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1494,7 +1494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -1503,7 +1503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1530,7 +1530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -1539,7 +1539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -1548,7 +1548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1566,7 +1566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1575,7 +1575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -1665,7 +1665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -1708,7 +1708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alias<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -1717,7 +1717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1726,7 +1726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Verified<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>creation<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Verification<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -1807,7 +1807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mfa<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -1843,7 +1843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Authentication<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -1861,7 +1861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Verification<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alias_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
 {{% /md %}}</dd>
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>verified_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
 {{% /md %}}</dd>
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>creation_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
 {{% /md %}}</dd>
@@ -1994,7 +1994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email_<wbr>verification_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
 {{% /md %}}</dd>
@@ -2003,7 +2003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email_<wbr>verification_<wbr>subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
 {{% /md %}}</dd>
@@ -2012,7 +2012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
@@ -2030,7 +2030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last_<wbr>modified_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
 {{% /md %}}</dd>
@@ -2039,7 +2039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mfa_<wbr>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -2075,7 +2075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms_<wbr>authentication_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
 {{% /md %}}</dd>
@@ -2093,7 +2093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms_<wbr>verification_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
 {{% /md %}}</dd>
@@ -2129,7 +2129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
 {{% /md %}}</dd>
@@ -2172,7 +2172,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd>
@@ -2203,7 +2203,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Unused<wbr>Account<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use password_policy.temporary_password_validity_days instead{{% /md %}}</p></dd>
@@ -2219,7 +2219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd>
@@ -2237,7 +2237,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Unused<wbr>Account<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use password_policy.temporary_password_validity_days instead{{% /md %}}</p></dd>
@@ -2253,7 +2253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd>
@@ -2271,7 +2271,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>unused<wbr>Account<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use password_policy.temporary_password_validity_days instead{{% /md %}}</p></dd>
@@ -2287,7 +2287,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
 {{% /md %}}</dd>
@@ -2305,7 +2305,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>unused<wbr>Account<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use password_policy.temporary_password_validity_days instead{{% /md %}}</p></dd>
@@ -2323,7 +2323,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolAdminCreateUserConfigInviteMessageTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2336,7 +2336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -2345,7 +2345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -2354,7 +2354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -2370,7 +2370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -2379,7 +2379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -2388,7 +2388,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -2404,7 +2404,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -2413,7 +2413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -2422,7 +2422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -2438,7 +2438,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -2447,7 +2447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -2456,7 +2456,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -2474,7 +2474,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolDeviceConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd>
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
 {{% /md %}}</dd>
@@ -2512,7 +2512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd>
@@ -2521,7 +2521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
 {{% /md %}}</dd>
@@ -2537,7 +2537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd>
@@ -2546,7 +2546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
 {{% /md %}}</dd>
@@ -2562,7 +2562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
 {{% /md %}}</dd>
@@ -2571,7 +2571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
 {{% /md %}}</dd>
@@ -2589,7 +2589,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolEmailConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolEmailConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolEmailConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolEmailConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2602,7 +2602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Sending<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.
 {{% /md %}}</dd>
@@ -2611,7 +2611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>From<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
 {{% /md %}}</dd>
@@ -2620,7 +2620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reply<wbr>To<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
 {{% /md %}}</dd>
@@ -2629,7 +2629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the email source.
 {{% /md %}}</dd>
@@ -2645,7 +2645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Sending<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.
 {{% /md %}}</dd>
@@ -2654,7 +2654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>From<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
 {{% /md %}}</dd>
@@ -2663,7 +2663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reply<wbr>To<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
 {{% /md %}}</dd>
@@ -2672,7 +2672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the email source.
 {{% /md %}}</dd>
@@ -2688,7 +2688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Sending<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.
 {{% /md %}}</dd>
@@ -2697,7 +2697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>from<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
 {{% /md %}}</dd>
@@ -2706,7 +2706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reply<wbr>To<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
 {{% /md %}}</dd>
@@ -2715,7 +2715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the email source.
 {{% /md %}}</dd>
@@ -2731,7 +2731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Sending<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.
 {{% /md %}}</dd>
@@ -2740,7 +2740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>from<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s name with their email address (e.g. "john@smith.com" or "John Smith <john@smith.com>")
 {{% /md %}}</dd>
@@ -2749,7 +2749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reply<wbr>To<wbr>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
 {{% /md %}}</dd>
@@ -2758,7 +2758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the email source.
 {{% /md %}}</dd>
@@ -2776,7 +2776,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolLambdaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolLambdaConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolLambdaConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolLambdaConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2789,7 +2789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd>
@@ -2798,7 +2798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2807,7 +2807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Define<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd>
@@ -2816,7 +2816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Post<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2825,7 +2825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Post<wbr>Confirmation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2834,7 +2834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2843,7 +2843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2852,7 +2852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Token<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd>
@@ -2861,7 +2861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Migration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
 {{% /md %}}</dd>
@@ -2870,7 +2870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Verify<wbr>Auth<wbr>Challenge<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd>
@@ -2886,7 +2886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd>
@@ -2895,7 +2895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2904,7 +2904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Define<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd>
@@ -2913,7 +2913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Post<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2922,7 +2922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Post<wbr>Confirmation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2931,7 +2931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2940,7 +2940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -2949,7 +2949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pre<wbr>Token<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd>
@@ -2958,7 +2958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Migration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
 {{% /md %}}</dd>
@@ -2967,7 +2967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Verify<wbr>Auth<wbr>Challenge<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd>
@@ -2983,7 +2983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>create<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd>
@@ -2992,7 +2992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3001,7 +3001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>define<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd>
@@ -3010,7 +3010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>post<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3019,7 +3019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>post<wbr>Confirmation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3028,7 +3028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3037,7 +3037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3046,7 +3046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Token<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd>
@@ -3055,7 +3055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Migration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
 {{% /md %}}</dd>
@@ -3064,7 +3064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>verify<wbr>Auth<wbr>Challenge<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd>
@@ -3080,7 +3080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>create<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
 {{% /md %}}</dd>
@@ -3089,7 +3089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3098,7 +3098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>define<wbr>Auth<wbr>Challenge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
 {{% /md %}}</dd>
@@ -3107,7 +3107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>post<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3116,7 +3116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>post<wbr>Confirmation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3125,7 +3125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3134,7 +3134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
 {{% /md %}}</dd>
@@ -3143,7 +3143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pre<wbr>Token<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
 {{% /md %}}</dd>
@@ -3152,7 +3152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Migration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
 {{% /md %}}</dd>
@@ -3161,7 +3161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>verify<wbr>Auth<wbr>Challenge<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
 {{% /md %}}</dd>
@@ -3179,7 +3179,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolPasswordPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolPasswordPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolPasswordPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolPasswordPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3192,7 +3192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
 {{% /md %}}</dd>
@@ -3201,7 +3201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd>
@@ -3210,7 +3210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd>
@@ -3219,7 +3219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd>
@@ -3228,7 +3228,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd>
@@ -3237,7 +3237,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temporary<wbr>Password<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd>
@@ -3253,7 +3253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Minimum<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
 {{% /md %}}</dd>
@@ -3262,7 +3262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd>
@@ -3271,7 +3271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd>
@@ -3280,7 +3280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd>
@@ -3289,7 +3289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd>
@@ -3298,7 +3298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temporary<wbr>Password<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd>
@@ -3314,7 +3314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>minimum<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
 {{% /md %}}</dd>
@@ -3323,7 +3323,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd>
@@ -3332,7 +3332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd>
@@ -3341,7 +3341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd>
@@ -3350,7 +3350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd>
@@ -3359,7 +3359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>temporary<wbr>Password<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd>
@@ -3375,7 +3375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>minimum<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
 {{% /md %}}</dd>
@@ -3384,7 +3384,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Lowercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
 {{% /md %}}</dd>
@@ -3393,7 +3393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require_<wbr>numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
 {{% /md %}}</dd>
@@ -3402,7 +3402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require_<wbr>symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
 {{% /md %}}</dd>
@@ -3411,7 +3411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Uppercase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
 {{% /md %}}</dd>
@@ -3420,7 +3420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>temporary<wbr>Password<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
 {{% /md %}}</dd>
@@ -3438,7 +3438,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3451,7 +3451,7 @@ The following state arguments are supported:
             title="Required">
         <span>Attribute<wbr>Data<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd>
@@ -3460,7 +3460,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -3469,7 +3469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Developer<wbr>Only<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
 {{% /md %}}</dd>
@@ -3478,7 +3478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mutable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
 {{% /md %}}</dd>
@@ -3496,7 +3496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd>
@@ -3521,7 +3521,7 @@ The following state arguments are supported:
             title="Required">
         <span>Attribute<wbr>Data<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd>
@@ -3530,7 +3530,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -3539,7 +3539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Developer<wbr>Only<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
 {{% /md %}}</dd>
@@ -3548,7 +3548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mutable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
 {{% /md %}}</dd>
@@ -3566,7 +3566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd>
@@ -3591,7 +3591,7 @@ The following state arguments are supported:
             title="Required">
         <span>attribute<wbr>Data<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd>
@@ -3600,7 +3600,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -3609,7 +3609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>developer<wbr>Only<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
 {{% /md %}}</dd>
@@ -3618,7 +3618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mutable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
 {{% /md %}}</dd>
@@ -3636,7 +3636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd>
@@ -3661,7 +3661,7 @@ The following state arguments are supported:
             title="Required">
         <span>attribute<wbr>Data<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
 {{% /md %}}</dd>
@@ -3670,7 +3670,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the attribute.
 {{% /md %}}</dd>
@@ -3679,7 +3679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>developer<wbr>Only<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
 {{% /md %}}</dd>
@@ -3688,7 +3688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mutable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
 {{% /md %}}</dd>
@@ -3706,7 +3706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
 {{% /md %}}</dd>
@@ -3733,7 +3733,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaNumberAttributeConstraintsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3746,7 +3746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3755,7 +3755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3771,7 +3771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3780,7 +3780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3796,7 +3796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3805,7 +3805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3821,7 +3821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3830,7 +3830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
 {{% /md %}}</dd>
@@ -3848,7 +3848,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSchemaStringAttributeConstraintsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3861,7 +3861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3870,7 +3870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3886,7 +3886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3895,7 +3895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3911,7 +3911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3920,7 +3920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3936,7 +3936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3945,7 +3945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
 {{% /md %}}</dd>
@@ -3963,7 +3963,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSmsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSmsConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSmsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSmsConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3976,7 +3976,7 @@ The following state arguments are supported:
             title="Required">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd>
@@ -3985,7 +3985,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sns<wbr>Caller<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd>
@@ -4001,7 +4001,7 @@ The following state arguments are supported:
             title="Required">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd>
@@ -4010,7 +4010,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sns<wbr>Caller<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd>
@@ -4026,7 +4026,7 @@ The following state arguments are supported:
             title="Required">
         <span>external<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd>
@@ -4035,7 +4035,7 @@ The following state arguments are supported:
             title="Required">
         <span>sns<wbr>Caller<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd>
@@ -4051,7 +4051,7 @@ The following state arguments are supported:
             title="Required">
         <span>external<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
 {{% /md %}}</dd>
@@ -4060,7 +4060,7 @@ The following state arguments are supported:
             title="Required">
         <span>sns<wbr>Caller<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
 {{% /md %}}</dd>
@@ -4078,7 +4078,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolSoftwareTokenMfaConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4091,7 +4091,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd>
@@ -4107,7 +4107,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd>
@@ -4123,7 +4123,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd>
@@ -4139,7 +4139,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
 {{% /md %}}</dd>
@@ -4157,7 +4157,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUserPoolAddOnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4170,7 +4170,7 @@ The following state arguments are supported:
             title="Required">
         <span>Advanced<wbr>Security<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd>
@@ -4186,7 +4186,7 @@ The following state arguments are supported:
             title="Required">
         <span>Advanced<wbr>Security<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd>
@@ -4202,7 +4202,7 @@ The following state arguments are supported:
             title="Required">
         <span>advanced<wbr>Security<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd>
@@ -4218,7 +4218,7 @@ The following state arguments are supported:
             title="Required">
         <span>advanced<wbr>Security<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
 {{% /md %}}</dd>
@@ -4236,7 +4236,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolUsernameConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4249,7 +4249,7 @@ The following state arguments are supported:
             title="Required">
         <span>Case<wbr>Sensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd>
@@ -4265,7 +4265,7 @@ The following state arguments are supported:
             title="Required">
         <span>Case<wbr>Sensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd>
@@ -4281,7 +4281,7 @@ The following state arguments are supported:
             title="Required">
         <span>case<wbr>Sensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd>
@@ -4297,7 +4297,7 @@ The following state arguments are supported:
             title="Required">
         <span>case<wbr>Sensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
 {{% /md %}}</dd>
@@ -4315,7 +4315,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cognito?tab=doc#UserPoolVerificationMessageTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4328,7 +4328,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Email<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd>
@@ -4337,7 +4337,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -4346,7 +4346,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd>
@@ -4355,7 +4355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -4364,7 +4364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd>
@@ -4373,7 +4373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -4389,7 +4389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Email<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd>
@@ -4398,7 +4398,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -4407,7 +4407,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Message<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd>
@@ -4416,7 +4416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -4425,7 +4425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Subject<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd>
@@ -4434,7 +4434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -4450,7 +4450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Email<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd>
@@ -4459,7 +4459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -4468,7 +4468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd>
@@ -4477,7 +4477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -4486,7 +4486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd>
@@ -4495,7 +4495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>
@@ -4511,7 +4511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Email<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
 {{% /md %}}</dd>
@@ -4520,7 +4520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
 {{% /md %}}</dd>
@@ -4529,7 +4529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Message<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
 {{% /md %}}</dd>
@@ -4538,7 +4538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
 {{% /md %}}</dd>
@@ -4547,7 +4547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Subject<wbr>By<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
 {{% /md %}}</dd>
@@ -4556,7 +4556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
 {{% /md %}}</dd>

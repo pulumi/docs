@@ -28,8 +28,8 @@ const us_east_1 = new aws.Provider("us-east-1", {
 const exampleComZone = new aws.route53.Zone("example_com", {});
 const awsRoute53ExampleCom = new aws.cloudwatch.LogGroup("aws_route53_example_com", {
     retentionInDays: 30,
-}, { provider: us_east_1 });
-const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+}, {provider: us_east_1});
+const route53_query_logging_policyPolicyDocument = aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "logs:CreateLogStream",
@@ -41,15 +41,15 @@ const route53_query_logging_policyPolicyDocument = pulumi.output(aws.iam.getPoli
         }],
         resources: ["arn:aws:logs:*:*:log-group:/aws/route53/*"],
     }],
-}, { async: true }));
+});
 const route53_query_logging_policyLogResourcePolicy = new aws.cloudwatch.LogResourcePolicy("route53-query-logging-policy", {
     policyDocument: route53_query_logging_policyPolicyDocument.json,
     policyName: "route53-query-logging-policy",
-}, { provider: us_east_1 });
+}, {provider: us_east_1});
 const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
     cloudwatchLogGroupArn: awsRoute53ExampleCom.arn,
     zoneId: exampleComZone.zoneId,
-}, { dependsOn: [route53_query_logging_policyLogResourcePolicy] });
+}, {dependsOn: [route53_query_logging_policyLogResourcePolicy]});
 ```
 
 {{% /example %}}
@@ -70,7 +70,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQueryLog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQueryLog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLogArgs">QueryLogArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -170,7 +170,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>cloudwatch_<wbr>log_<wbr>group_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
             title="Required">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ Get an existing QueryLog resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueryLog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#QueryLogState">QueryLogState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQueryLog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLogState">QueryLogState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#QueryLog">QueryLog</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -400,7 +400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -434,7 +434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -450,7 +450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>
@@ -475,7 +475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch_<wbr>log_<wbr>group_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CloudWatch log group ARN to send query logs.
 {{% /md %}}</dd>
@@ -484,7 +484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Route53 hosted zone ID to enable query logs.
 {{% /md %}}</dd>

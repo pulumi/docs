@@ -32,7 +32,7 @@ const exampleOrganization = new aws.organizations.Organization("example", {
 const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("example", {
     lambdaFunctionArn: aws_lambda_function_example.arn,
     triggerTypes: ["ConfigurationItemChangeNotification"],
-}, { dependsOn: [examplePermission, exampleOrganization] });
+}, {dependsOn: [examplePermission, exampleOrganization]});
 ```
 
 {{% /example %}}
@@ -53,7 +53,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRuleArgs">OrganizationCustomRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -153,7 +153,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>Trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -259,7 +259,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>Trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -331,7 +331,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -340,7 +340,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>Tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -410,7 +410,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>lambda_<wbr>function_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Required">
         <span>trigger_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>excluded_<wbr>accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>input_<wbr>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>maximum_<wbr>execution_<wbr>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>resource_<wbr>id_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>resource_<wbr>types_<wbr>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>tag_<wbr>key_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ const exampleOrganizationCustomRule = new aws.cfg.OrganizationCustomRule("exampl
             title="Optional">
         <span>tag_<wbr>value_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -621,7 +621,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -637,7 +637,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ Get an existing OrganizationCustomRule resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#OrganizationCustomRuleState">OrganizationCustomRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationCustomRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRuleState">OrganizationCustomRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#OrganizationCustomRule">OrganizationCustomRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -781,7 +781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -790,7 +790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -799,7 +799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -808,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -817,7 +817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -826,7 +826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -896,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -905,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -923,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -932,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -986,7 +986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>excluded<wbr>Accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -1047,7 +1047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -1056,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1074,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Types<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1092,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag<wbr>Key<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1101,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag<wbr>Value<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>trigger<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>
@@ -1126,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -1144,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>excluded_<wbr>accounts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of AWS account identifiers to exclude from the rule
 {{% /md %}}</dd>
@@ -1153,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>input_<wbr>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config Rule Lambda Function
 {{% /md %}}</dd>
@@ -1162,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda_<wbr>function_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the rule Lambda Function
 {{% /md %}}</dd>
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum_<wbr>execution_<wbr>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1189,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>id_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS resource to evaluate
 {{% /md %}}</dd>
@@ -1198,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>types_<wbr>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of types of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1207,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag_<wbr>key_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Tag key of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1216,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tag_<wbr>value_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Tag value of AWS resources to evaluate
 {{% /md %}}</dd>
@@ -1225,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>trigger_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
 {{% /md %}}</dd>

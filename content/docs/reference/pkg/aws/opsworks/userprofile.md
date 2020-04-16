@@ -40,7 +40,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#UserProfileArgs">UserProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#UserProfile">UserProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#UserProfileArgs">UserProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#UserProfile">UserProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -140,7 +140,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>Ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>User<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>Allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>Ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>User<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>Allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>user<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>ssh_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Required">
         <span>user_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>allow_<wbr>self_<wbr>management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ const myProfile = new aws.opsworks.UserProfile("my_profile", {
             title="Optional">
         <span>ssh_<wbr>public_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ Get an existing UserProfile resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#UserProfileState">UserProfileState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#UserProfile">UserProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUserProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#UserProfileState">UserProfileState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#UserProfile">UserProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -442,7 +442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -485,7 +485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -494,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -503,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -512,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -528,7 +528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow<wbr>Self<wbr>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>
@@ -571,7 +571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow_<wbr>self_<wbr>management</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users can specify their own SSH public key through the My Settings page
 {{% /md %}}</dd>
@@ -580,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh_<wbr>public_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The users public key
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ssh username, with witch this user wants to log in
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user's IAM ARN
 {{% /md %}}</dd>

@@ -56,7 +56,7 @@ const docdb = new aws.docdb.Cluster("docdb", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -156,7 +156,7 @@ const docdb = new aws.docdb.Cluster("docdb", {
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -167,7 +167,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -177,7 +177,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -222,7 +222,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -250,7 +250,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -259,7 +259,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -279,7 +279,7 @@ made.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ made.
             title="Optional">
         <span>Master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -298,7 +298,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -326,7 +326,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -334,7 +334,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -387,7 +387,7 @@ with the Cluster
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -398,7 +398,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -408,7 +408,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -481,7 +481,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -510,7 +510,7 @@ made.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ made.
             title="Optional">
         <span>Master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -529,7 +529,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -547,7 +547,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -557,7 +557,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -565,7 +565,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -618,7 +618,7 @@ with the Cluster
             title="Optional">
         <span>apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -629,7 +629,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -639,7 +639,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -666,7 +666,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -675,7 +675,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -684,7 +684,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -702,7 +702,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -712,7 +712,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -721,7 +721,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -741,7 +741,7 @@ made.
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -750,7 +750,7 @@ made.
             title="Optional">
         <span>master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -760,7 +760,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -788,7 +788,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -796,7 +796,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -849,7 +849,7 @@ with the Cluster
             title="Optional">
         <span>apply_<wbr>immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -860,7 +860,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -870,7 +870,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>backup_<wbr>retention_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>identifier_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -906,7 +906,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>deletion_<wbr>protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -943,7 +943,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -952,7 +952,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>final_<wbr>snapshot_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -972,7 +972,7 @@ made.
             title="Optional">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ made.
             title="Optional">
         <span>master_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -991,7 +991,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>master_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>preferred_<wbr>backup_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -1019,7 +1019,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>preferred_<wbr>maintenance_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1027,7 +1027,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>skip_<wbr>final_<wbr>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>snapshot_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -1045,7 +1045,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>storage_<wbr>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -1063,7 +1063,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -1092,7 +1092,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1101,7 +1101,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ The following output properties are available:
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following output properties are available:
             title="">
         <span>Reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1144,7 +1144,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1153,7 +1153,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1162,7 +1162,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1171,7 +1171,7 @@ The following output properties are available:
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The following output properties are available:
             title="">
         <span>Reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1214,7 +1214,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1223,7 +1223,7 @@ The following output properties are available:
             title="">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ The following output properties are available:
             title="">
         <span>reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1248,7 +1248,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>resource_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1266,7 +1266,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1275,7 +1275,7 @@ The following output properties are available:
             title="">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1284,7 +1284,7 @@ The following output properties are available:
             title="">
         <span>reader_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1314,7 +1314,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1428,7 +1428,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -1439,7 +1439,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -1458,7 +1458,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -1467,7 +1467,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -1476,7 +1476,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -1485,7 +1485,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -1494,7 +1494,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1503,7 +1503,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -1512,7 +1512,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -1521,7 +1521,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -1530,7 +1530,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -1540,7 +1540,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1549,7 +1549,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -1558,7 +1558,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -1567,7 +1567,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -1578,7 +1578,7 @@ made.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ made.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ made.
             title="Optional">
         <span>Master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -1606,7 +1606,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -1615,7 +1615,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -1624,7 +1624,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -1634,7 +1634,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1642,7 +1642,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1651,7 +1651,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -1660,7 +1660,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -1669,7 +1669,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -1687,7 +1687,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -1704,7 +1704,7 @@ with the Cluster
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -1715,7 +1715,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -1724,7 +1724,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -1734,7 +1734,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -1743,7 +1743,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -1770,7 +1770,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -1779,7 +1779,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -1788,7 +1788,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -1797,7 +1797,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -1806,7 +1806,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -1816,7 +1816,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -1825,7 +1825,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -1834,7 +1834,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -1843,7 +1843,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>Final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -1854,7 +1854,7 @@ made.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -1863,7 +1863,7 @@ made.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -1872,7 +1872,7 @@ made.
             title="Optional">
         <span>Master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -1882,7 +1882,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -1891,7 +1891,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -1900,7 +1900,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>Preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -1910,7 +1910,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1918,7 +1918,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -1927,7 +1927,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -1936,7 +1936,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -1945,7 +1945,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -1963,7 +1963,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -1980,7 +1980,7 @@ with the Cluster
             title="Optional">
         <span>apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -1991,7 +1991,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -2000,7 +2000,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -2010,7 +2010,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>backup<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -2019,7 +2019,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Identifier<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -2037,7 +2037,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -2046,7 +2046,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -2055,7 +2055,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -2064,7 +2064,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -2073,7 +2073,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -2082,7 +2082,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -2092,7 +2092,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -2101,7 +2101,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -2110,7 +2110,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -2119,7 +2119,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>final<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -2130,7 +2130,7 @@ made.
             title="Optional">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -2139,7 +2139,7 @@ made.
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -2148,7 +2148,7 @@ made.
             title="Optional">
         <span>master<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -2158,7 +2158,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -2167,7 +2167,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -2176,7 +2176,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>preferred<wbr>Backup<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -2186,7 +2186,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2194,7 +2194,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>reader<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -2203,7 +2203,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>skip<wbr>Final<wbr>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -2212,7 +2212,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -2221,7 +2221,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -2239,7 +2239,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
@@ -2256,7 +2256,7 @@ with the Cluster
             title="Optional">
         <span>apply_<wbr>immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
@@ -2267,7 +2267,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
 {{% /md %}}</dd>
@@ -2276,7 +2276,7 @@ are applied immediately, or during the next maintenance window. Default is
             title="Optional">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
@@ -2286,7 +2286,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>backup_<wbr>retention_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The days to retain backups for. Default `1`
 {{% /md %}}</dd>
@@ -2295,7 +2295,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
 {{% /md %}}</dd>
@@ -2304,7 +2304,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>identifier_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
 {{% /md %}}</dd>
@@ -2313,7 +2313,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
 {{% /md %}}</dd>
@@ -2322,7 +2322,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>cluster_<wbr>resource_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DocDB Cluster Resource ID
 {{% /md %}}</dd>
@@ -2331,7 +2331,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A cluster parameter group to associate with the cluster.
 {{% /md %}}</dd>
@@ -2340,7 +2340,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A DB subnet group to associate with this DB instance.
 {{% /md %}}</dd>
@@ -2349,7 +2349,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>deletion_<wbr>protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
 {{% /md %}}</dd>
@@ -2358,7 +2358,7 @@ instances in the DB cluster can be created in.
             title="Optional">
         <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
@@ -2368,7 +2368,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS address of the DocDB instance
 {{% /md %}}</dd>
@@ -2377,7 +2377,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
 {{% /md %}}</dd>
@@ -2386,7 +2386,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>engine_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
 {{% /md %}}</dd>
@@ -2395,7 +2395,7 @@ The following log types are supported: `audit`, `profiler`.
             title="Optional">
         <span>final_<wbr>snapshot_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
@@ -2406,7 +2406,7 @@ made.
             title="Optional">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
 {{% /md %}}</dd>
@@ -2415,7 +2415,7 @@ made.
             title="Optional">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
 {{% /md %}}</dd>
@@ -2424,7 +2424,7 @@ made.
             title="Optional">
         <span>master_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
@@ -2434,7 +2434,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>master_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user. 
 {{% /md %}}</dd>
@@ -2443,7 +2443,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port on which the DB accepts connections
 {{% /md %}}</dd>
@@ -2452,7 +2452,7 @@ show up in logs, and it will be stored in the state file. Please refer to the Do
             title="Optional">
         <span>preferred_<wbr>backup_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
@@ -2462,7 +2462,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>preferred_<wbr>maintenance_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2470,7 +2470,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>reader_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
 {{% /md %}}</dd>
@@ -2479,7 +2479,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>skip_<wbr>final_<wbr>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
 {{% /md %}}</dd>
@@ -2488,7 +2488,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>snapshot_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>storage_<wbr>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
 {{% /md %}}</dd>
@@ -2515,7 +2515,7 @@ Default: A 30-minute window selected at random from an 8-hour block of time per 
             title="Optional">
         <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster

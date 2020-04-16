@@ -16,7 +16,7 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
+const examplePolicyDocument = aws.iam.getPolicyDocument({
     statements: [
         {
             actions: [
@@ -47,7 +47,7 @@ const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
             ],
         },
     ],
-}, { async: true }));
+});
 const examplePolicy = new aws.iam.Policy("example", {
     path: "/",
     policy: examplePolicyDocument.json,
@@ -84,7 +84,7 @@ Showing how you can use this as an assume role policy as well as showing how you
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
+const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [
@@ -98,7 +98,7 @@ const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDoc
             },
         ],
     }],
-}, { async: true }));
+});
 ```
 
 ## Example with Source and Override
@@ -109,7 +109,7 @@ Showing how you can use `source_json` and `override_json`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = pulumi.output(aws.iam.getPolicyDocument({
+const source = aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
@@ -121,8 +121,8 @@ const source = pulumi.output(aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-}, { async: true }));
-const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
+});
+const sourceJsonExample = aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
         actions: ["s3:*"],
@@ -132,15 +132,15 @@ const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
         ],
         sid: "SidToOverwrite",
     }],
-}, { async: true }));
-const override = pulumi.output(aws.iam.getPolicyDocument({
+});
+const override = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:*"],
         resources: ["*"],
         sid: "SidToOverwrite",
     }],
-}, { async: true }));
-const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
+});
+const overrideJsonExample = aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -156,7 +156,7 @@ const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument
             sid: "SidToOverwrite",
         },
     ],
-}, { async: true }));
+});
 ```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
@@ -181,24 +181,24 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = pulumi.output(aws.iam.getPolicyDocument({
+const source = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-}, { async: true }));
-const override = pulumi.output(aws.iam.getPolicyDocument({
+});
+const override = aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:GetObject"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-}, { async: true }));
-const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
+});
+const politik = aws.iam.getPolicyDocument({
     overrideJson: override.json,
     sourceJson: source.json,
-}, { async: true }));
+});
 ```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
@@ -227,7 +227,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -250,7 +250,7 @@ The following arguments are supported:
             title="Optional">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -262,7 +262,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -293,7 +293,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -321,7 +321,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -352,7 +352,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -380,7 +380,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -411,7 +411,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>override_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -439,7 +439,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>source_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -470,7 +470,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ The following output properties are available:
             title="">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The following output properties are available:
             title="">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -525,7 +525,7 @@ The following output properties are available:
             title="">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -533,7 +533,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -564,7 +564,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The following output properties are available:
             title="">
         <span>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ The following output properties are available:
             title="">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -590,7 +590,7 @@ The following output properties are available:
             title="">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -629,7 +629,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ The following output properties are available:
             title="">
         <span>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ The following output properties are available:
             title="">
         <span>override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -655,7 +655,7 @@ The following output properties are available:
             title="">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -694,7 +694,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The following output properties are available:
             title="">
         <span>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ The following output properties are available:
             title="">
         <span>override_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -720,7 +720,7 @@ The following output properties are available:
             title="">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +728,7 @@ The following output properties are available:
             title="">
         <span>source_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ The following output properties are available:
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -766,7 +766,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatement">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatement">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -779,7 +779,7 @@ The following output properties are available:
             title="Optional">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -800,7 +800,7 @@ whether this statement applies.
             title="Optional">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -810,7 +810,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>Not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -831,7 +831,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>Not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -852,7 +852,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -862,7 +862,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>Sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -878,7 +878,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -899,7 +899,7 @@ whether this statement applies.
             title="Optional">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -909,7 +909,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>Not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -930,7 +930,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>Not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -951,7 +951,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -961,7 +961,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>Sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -998,7 +998,7 @@ whether this statement applies.
             title="Optional">
         <span>effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1008,7 +1008,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1029,7 +1029,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1050,7 +1050,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1060,7 +1060,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1097,7 +1097,7 @@ whether this statement applies.
             title="Optional">
         <span>effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1107,7 +1107,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1128,7 +1128,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1149,7 +1149,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1159,7 +1159,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1177,7 +1177,7 @@ to. This is required by AWS if used for an IAM policy.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1190,7 +1190,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Required">
         <span>Test</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -1201,7 +1201,7 @@ to evaluate.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -1212,7 +1212,7 @@ values are provided, the condition matches if at least one of them applies.
             title="Required">
         <span>Variable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -1232,7 +1232,7 @@ the service name.
             title="Required">
         <span>Test</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -1243,7 +1243,7 @@ to evaluate.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -1254,7 +1254,7 @@ values are provided, the condition matches if at least one of them applies.
             title="Required">
         <span>Variable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -1274,7 +1274,7 @@ the service name.
             title="Required">
         <span>test</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -1285,7 +1285,7 @@ to evaluate.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -1296,7 +1296,7 @@ values are provided, the condition matches if at least one of them applies.
             title="Required">
         <span>variable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -1316,7 +1316,7 @@ the service name.
             title="Required">
         <span>test</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -1327,7 +1327,7 @@ to evaluate.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -1338,7 +1338,7 @@ values are provided, the condition matches if at least one of them applies.
             title="Required">
         <span>variable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -1360,7 +1360,7 @@ the service name.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1373,7 +1373,7 @@ the service name.
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1383,7 +1383,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1399,7 +1399,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1409,7 +1409,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1435,7 +1435,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1451,7 +1451,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1461,7 +1461,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1479,7 +1479,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1492,7 +1492,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1502,7 +1502,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1518,7 +1518,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1528,7 +1528,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1544,7 +1544,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1554,7 +1554,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>
@@ -1570,7 +1570,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1580,7 +1580,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service".
 {{% /md %}}</dd>

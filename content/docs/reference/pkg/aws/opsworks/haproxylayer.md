@@ -40,7 +40,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHaproxyLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayerArgs">HaproxyLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayer">HaproxyLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHaproxyLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayerArgs">HaproxyLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayer">HaproxyLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -140,7 +140,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>Stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -193,7 +193,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -201,7 +201,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -236,7 +236,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -244,7 +244,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -252,7 +252,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>Stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -403,7 +403,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -421,7 +421,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,7 +438,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -446,7 +446,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,7 +481,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -489,7 +489,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -497,7 +497,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -630,7 +630,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -639,7 +639,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -666,7 +666,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -675,7 +675,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -683,7 +683,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -691,7 +691,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -700,7 +700,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -709,7 +709,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -742,7 +742,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>system<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>stack_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Required">
         <span>stats_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto_<wbr>assign_<wbr>elastic_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto_<wbr>assign_<wbr>public_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>auto_<wbr>healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -920,7 +920,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>configure_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -928,7 +928,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>deploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -936,7 +936,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>instance_<wbr>profile_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>setup_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -971,7 +971,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>shutdown_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>custom_<wbr>undeploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -987,7 +987,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>drain_<wbr>elb_<wbr>on_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1005,7 +1005,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>elastic_<wbr>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>healthcheck_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>healthcheck_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1041,7 +1041,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>instance_<wbr>shutdown_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>stats_<wbr>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>system_<wbr>packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ const lb = new aws.opsworks.HaproxyLayer("lb", {
             title="Optional">
         <span>use_<wbr>ebs_<wbr>optimized_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1132,7 +1132,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1164,7 +1164,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1210,7 +1210,7 @@ Get an existing HaproxyLayer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaproxyLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayerState">HaproxyLayerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayer">HaproxyLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaproxyLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayerState">HaproxyLayerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayer">HaproxyLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1333,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1342,7 +1342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1351,7 +1351,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1360,7 +1360,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1368,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1376,7 +1376,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1385,7 +1385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1394,7 +1394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1403,7 +1403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1427,7 +1427,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1481,7 +1481,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1499,7 +1499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -1535,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -1544,7 +1544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1562,7 +1562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1605,7 +1605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1614,7 +1614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1622,7 +1622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1630,7 +1630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1648,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1657,7 +1657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1665,7 +1665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1673,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1681,7 +1681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1699,7 +1699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1708,7 +1708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -1717,7 +1717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -1726,7 +1726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1744,7 +1744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1753,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -1789,7 +1789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -1798,7 +1798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1841,7 +1841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1850,7 +1850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1859,7 +1859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1868,7 +1868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1876,7 +1876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1893,7 +1893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1902,7 +1902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1911,7 +1911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1919,7 +1919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1935,7 +1935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1953,7 +1953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>healthcheck<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>healthcheck<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -1980,7 +1980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1989,7 +1989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2007,7 +2007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2016,7 +2016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -2025,7 +2025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -2034,7 +2034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -2043,7 +2043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats<wbr>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -2052,7 +2052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>system<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2070,7 +2070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2086,7 +2086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2095,7 +2095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>assign_<wbr>elastic_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2104,7 +2104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>assign_<wbr>public_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2113,7 +2113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2122,7 +2122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>configure_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>deploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2138,7 +2138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>instance_<wbr>profile_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2147,7 +2147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2156,7 +2156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2165,7 +2165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>setup_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>shutdown_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2181,7 +2181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>undeploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2189,7 +2189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain_<wbr>elb_<wbr>on_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elastic_<wbr>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>healthcheck_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}HTTP method to use for instance healthchecks. Defaults to "OPTIONS".
 {{% /md %}}</dd>
@@ -2225,7 +2225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>healthcheck_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL path to use for instance healthchecks. Defaults to "/".
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>shutdown_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2261,7 +2261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stack_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2270,7 +2270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable HAProxy stats.
 {{% /md %}}</dd>
@@ -2279,7 +2279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to use for HAProxy stats.
 {{% /md %}}</dd>
@@ -2288,7 +2288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HAProxy stats URL. Defaults to "/haproxy?stats".
 {{% /md %}}</dd>
@@ -2297,7 +2297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stats_<wbr>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username for HAProxy stats. Defaults to "opsworks".
 {{% /md %}}</dd>
@@ -2306,7 +2306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>system_<wbr>packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2324,7 +2324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use_<wbr>ebs_<wbr>optimized_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2349,7 +2349,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayerEbsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#HaproxyLayerEbsVolumeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayerEbsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#HaproxyLayerEbsVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2362,7 +2362,7 @@ The following state arguments are supported:
             title="Required">
         <span>Mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2371,7 +2371,7 @@ The following state arguments are supported:
             title="Required">
         <span>Number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2380,7 +2380,7 @@ The following state arguments are supported:
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2389,7 +2389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2397,7 +2397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2406,7 +2406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Raid<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2415,7 +2415,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2431,7 +2431,7 @@ The following state arguments are supported:
             title="Required">
         <span>Mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2440,7 +2440,7 @@ The following state arguments are supported:
             title="Required">
         <span>Number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ The following state arguments are supported:
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2458,7 +2458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2466,7 +2466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2475,7 +2475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Raid<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2484,7 +2484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2500,7 +2500,7 @@ The following state arguments are supported:
             title="Required">
         <span>mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2509,7 +2509,7 @@ The following state arguments are supported:
             title="Required">
         <span>number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2518,7 +2518,7 @@ The following state arguments are supported:
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2527,7 +2527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2535,7 +2535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2544,7 +2544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>raid<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2553,7 +2553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2569,7 +2569,7 @@ The following state arguments are supported:
             title="Required">
         <span>mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2578,7 +2578,7 @@ The following state arguments are supported:
             title="Required">
         <span>number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2587,7 +2587,7 @@ The following state arguments are supported:
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2596,7 +2596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2604,7 +2604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2613,7 +2613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>raid<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2622,7 +2622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>

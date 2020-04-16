@@ -45,7 +45,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccelerator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#AcceleratorArgs">AcceleratorArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#Accelerator">Accelerator</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccelerator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorArgs">AcceleratorArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#Accelerator">Accelerator</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -154,7 +154,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>ip_<wbr>address_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -377,7 +377,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -401,7 +401,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -413,7 +413,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -437,7 +437,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -449,7 +449,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -473,7 +473,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>dns_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -485,7 +485,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -523,7 +523,7 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccelerator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#AcceleratorState">AcceleratorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#Accelerator">Accelerator</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccelerator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorState">AcceleratorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#Accelerator">Accelerator</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -646,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -658,7 +658,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -675,7 +675,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -739,7 +739,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -748,7 +748,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -756,7 +756,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -808,7 +808,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -820,7 +820,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -837,7 +837,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip<wbr>Address<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>dns_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS name of the accelerator. For example, `a5d53ff5ee6bca4ce.awsglobalaccelerator.com`.
 * `hosted_zone_id` --  The Global Accelerator Route 53 zone ID that can be used to
@@ -901,7 +901,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the accelerator is enabled. The value is true or false. The default value is true.
 {{% /md %}}</dd>
@@ -910,7 +910,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -918,7 +918,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip_<wbr>address_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value for the address type must be `IPV4`.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the accelerator.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorAttributesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -983,7 +983,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled.
 {{% /md %}}</dd>
@@ -992,7 +992,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1017,7 +1017,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled.
 {{% /md %}}</dd>
@@ -1026,7 +1026,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1035,7 +1035,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Flow<wbr>Logs<wbr>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled.
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether flow logs are enabled.
 {{% /md %}}</dd>
@@ -1094,7 +1094,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1103,7 +1103,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>flow<wbr>Logs<wbr>S3Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the location in the Amazon S3 bucket for the flow logs.
 {{% /md %}}</dd>
@@ -1121,7 +1121,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#AcceleratorIpSetOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/globalaccelerator?tab=doc#AcceleratorIpSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1134,7 +1134,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
 {{% /md %}}</dd>
@@ -1159,7 +1159,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
@@ -1168,7 +1168,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>Ip<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
 {{% /md %}}</dd>
@@ -1209,7 +1209,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
@@ -1218,7 +1218,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
             title="Optional">
         <span>ip<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
 {{% /md %}}</dd>

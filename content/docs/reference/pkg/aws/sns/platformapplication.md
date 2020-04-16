@@ -57,7 +57,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPlatformApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPlatformApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,7 +157,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -166,7 +166,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>Platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -272,7 +272,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>Platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -281,7 +281,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -441,7 +441,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -450,7 +450,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -475,7 +475,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -484,7 +484,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Required">
         <span>platform_<wbr>credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -493,7 +493,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -502,7 +502,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -547,7 +547,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>platform_<wbr>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -556,7 +556,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -565,7 +565,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
             title="Optional">
         <span>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -593,7 +593,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -641,7 +641,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ Get an existing PlatformApplication resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlatformApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlatformApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -785,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -972,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -990,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1024,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1042,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>failure<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1078,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -1087,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform<wbr>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1105,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>success<wbr>Feedback<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1114,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>success<wbr>Feedback<wbr>Sample<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>failure_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform][1] for supported platforms.
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform_<wbr>credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential][1] for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform_<wbr>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal][2] for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>success_<wbr>feedback_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1229,7 +1229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>success_<wbr>feedback_<wbr>sample_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>

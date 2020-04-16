@@ -47,7 +47,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterfaceArgs">TransitVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -147,7 +147,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Required">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -156,7 +156,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Required">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Required">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Required">
         <span>Dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Required">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const exampleTransitVirtualInterface = new aws.directconnect.TransitVirtualInter
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -229,7 +229,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -272,7 +272,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -281,7 +281,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>Dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -336,7 +336,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -406,7 +406,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -443,7 +443,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -468,7 +468,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>address_<wbr>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>bgp_<wbr>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -486,7 +486,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>connection_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>dx_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Required">
         <span>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp_<wbr>auth_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>customer_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -550,7 +550,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ The following output properties are available:
             title="">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -595,7 +595,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ The following output properties are available:
             title="">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The following output properties are available:
             title="">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -629,7 +629,7 @@ The following output properties are available:
             title="">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ The following output properties are available:
             title="">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -655,7 +655,7 @@ The following output properties are available:
             title="">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ The following output properties are available:
             title="">
         <span>amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -688,7 +688,7 @@ The following output properties are available:
             title="">
         <span>aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -697,7 +697,7 @@ The following output properties are available:
             title="">
         <span>jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The following output properties are available:
             title="">
         <span>amazon_<wbr>side_<wbr>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -721,7 +721,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ The following output properties are available:
             title="">
         <span>aws_<wbr>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -739,7 +739,7 @@ The following output properties are available:
             title="">
         <span>jumbo_<wbr>frame_<wbr>capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ Get an existing TransitVirtualInterface resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#TransitVirtualInterfaceState">TransitVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransitVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterfaceState">TransitVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directconnect?tab=doc#TransitVirtualInterface">TransitVirtualInterface</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -883,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -892,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -909,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -972,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -991,7 +991,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -1025,7 +1025,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1034,7 +1034,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1043,7 +1043,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1051,7 +1051,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1078,7 +1078,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1087,7 +1087,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1105,7 +1105,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -1114,7 +1114,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -1123,7 +1123,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -1133,7 +1133,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1151,7 +1151,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -1167,7 +1167,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1193,7 +1193,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1229,7 +1229,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1238,7 +1238,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1247,7 +1247,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>dx<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -1256,7 +1256,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -1265,7 +1265,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -1275,7 +1275,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1293,7 +1293,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -1309,7 +1309,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>address_<wbr>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1318,7 +1318,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>amazon_<wbr>side_<wbr>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1335,7 +1335,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1344,7 +1344,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>aws_<wbr>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1353,7 +1353,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp_<wbr>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1362,7 +1362,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>bgp_<wbr>auth_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1371,7 +1371,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>connection_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1380,7 +1380,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>customer_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1389,7 +1389,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>dx_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
 {{% /md %}}</dd>
@@ -1398,7 +1398,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>jumbo_<wbr>frame_<wbr>capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (8500 MTU) are supported.
 {{% /md %}}</dd>
@@ -1407,7 +1407,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
@@ -1417,7 +1417,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo fra
             title="Optional">
         <span>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
