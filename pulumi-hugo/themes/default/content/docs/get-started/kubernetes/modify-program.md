@@ -108,6 +108,9 @@ export const ip = isMinikube
 {{% choosable language python %}}
 
 ```python
+"""
+Creating a Kubernetes Deployment
+"""
 import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
 from pulumi_kubernetes.core.v1 import Service
@@ -144,10 +147,15 @@ frontend = Service(
     })
 
 # When "done", this will print the public IP.
+result = None
 if is_minikube:
-    pulumi.export("ip", frontend.spec.apply(lambda v: v["cluster_ip"] if "cluster_ip" in v else None))
+    result = frontend.spec.apply(lambda v: v["cluster_ip"] if "cluster_ip" in v else None)
 else:
-    pulumi.export("ip", frontend.status.apply(lambda v: v["load_balancer"]["ingress"][0]["ip"] if "load_balancer" in v else None))
+    ingress = frontend.status.apply(lambda v: v["load_balancer"]["ingress"][0] if "load_balancer" in v else None)
+    if ingress is not None:
+        result = ingress.apply(lambda v: v["ip"] if "ip" in v else v["hostname"])
+
+pulumi.export("ip", result)
 ```
 
 {{% /choosable %}}
