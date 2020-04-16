@@ -56,7 +56,9 @@ const frontend = new k8s.core.v1.Service(appName, {
 // When "done", this will print the public IP.
 exports.ip = isMinikube
     ? frontend.spec.clusterIP
-    : frontend.status.loadBalancer.ingress[0].ip;
+    : frontend.status.loadBalancer.apply(
+          (lb) => lb.ingress[0].ip || lb.ingress[0].hostname
+      );
 ```
 
 {{% /choosable %}}
@@ -97,7 +99,9 @@ const frontend = new k8s.core.v1.Service(appName, {
 // When "done", this will print the public IP.
 export const ip = isMinikube
     ? frontend.spec.clusterIP
-    : frontend.status.loadBalancer.ingress[0].ip;
+    : frontend.status.loadBalancer.apply(
+          (lb) => lb.ingress[0].ip || lb.ingress[0].hostname
+      );
 ```
 
 {{% /choosable %}}
