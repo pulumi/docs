@@ -12,7 +12,7 @@ menu:
 
 The Cloudflare provider for Pulumi can be used to provision any of the resources available in [Cloudflare](https://www.cloudflare.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/cloudflare" >}}) for complete details of the available Cloudflare provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/cloudflare" >}}) for complete details of the available Cloudflare provider APIs.
 
 ## Setup
 

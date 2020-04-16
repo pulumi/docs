@@ -12,7 +12,7 @@ menu:
 
 The HashiCorp Consul provider for Pulumi can be used to provision any of the resources available in [Consul](https://www.consul.io/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/consul" >}}) for complete details of the available Consul provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/consul" >}}) for complete details of the available Consul provider APIs.
 
 ## Setup
 
