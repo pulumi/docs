@@ -32,20 +32,8 @@
     0% {
         opacity: 1;
     }
-    96% {
-        opacity: 1;
-    }
-    97% {
-        opacity: .2;
-    }
-    98% {
-        opacity: 1;
-    }
-    99% {
-        opacity: .2;
-    }
     100% {
-        opacity: 1;
+        opacity: .6;
     }
 }
 
@@ -53,30 +41,18 @@
     0% {
         opacity: .4;
     }
-    96% {
-        opacity: .4;
-    }
-    97% {
-        opacity: .1;
-    }
-    98% {
-        opacity: .4;
-    }
-    99% {
-        opacity: .1;
-    }
     100% {
-        opacity: .4;
+        opacity: .8;
     }
 }
 
 .sparkle {
     &.primary {
-        animation: sparkle-primary 6s ease-in-out infinite;
+        animation: sparkle-primary .6s ease-in infinite alternate;
     }
 
     &.secondary {
-        animation: sparkle-secondary 6s ease-in-out .1s infinite;
+        animation: sparkle-secondary .6s ease-in infinite alternate;
     }
 }
 
