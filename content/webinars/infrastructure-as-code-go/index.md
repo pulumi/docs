@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Modern Cloud Infrastructure in Go"
-meta_desc: "Join us Wed, Apr 14, 2020, 6:30 PM where Evan Boyle will go over modern cloud progamming techniques using Pulumi and Go."
+meta_desc: "Pulumi Engineer, Evan Boyle, uses Go to walks us through modern infrastructure as code concepts and best practices like functions, containers, and Kubernetes."
 
 # A featured webinar will display first in the list.
 featured: false
