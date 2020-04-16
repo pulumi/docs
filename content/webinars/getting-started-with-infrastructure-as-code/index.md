@@ -3,6 +3,9 @@
 title: "Getting Started with Infrastructure as Code"
 meta_desc: "In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs."
 
+aliases:
+  - /webinars/getting-started-with-infrastrcuture-as-code
+
 # A featured webinar will display first in the list.
 featured: true
 
@@ -60,10 +63,12 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Paul Stack
+        - name: Luke Hoban
+          role: CTO, Pulumi
+        - name: Mike Metral
           role: Software Engineer, Pulumi
-        - name: Mikhail Shilkov
-          role: Software Engineer, Pulumi
+        - name: Cameron Stokes
+          role: Customer Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
