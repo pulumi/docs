@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.streamanalytics.FunctionJavaScriptUDF">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">FunctionJavaScriptUDF</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">script=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.FunctionJavaScriptUDF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a JavaScript UDF Function within Stream Analytics Streaming Job.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_function_javascript_udf.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -233,9 +230,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.Job">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">Job</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compatibility_level=None</em>, <em class="sig-param">data_locale=None</em>, <em class="sig-param">events_late_arrival_max_delay_in_seconds=None</em>, <em class="sig-param">events_out_of_order_max_delay_in_seconds=None</em>, <em class="sig-param">events_out_of_order_policy=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">output_error_policy=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">streaming_units=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">transformation_query=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.Job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Job.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -408,9 +402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.OutputBlob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">OutputBlob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">date_format=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path_pattern=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">storage_account_key=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">time_format=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to Blob Storage.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_blob.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -577,9 +568,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.OutputEventHub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">OutputEventHub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eventhub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">servicebus_namespace=None</em>, <em class="sig-param">shared_access_policy_key=None</em>, <em class="sig-param">shared_access_policy_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputEventHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to an EventHub.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_eventhub.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -730,9 +718,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.OutputMssql">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">OutputMssql</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">server=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">table=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputMssql" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to Microsoft SQL Server Database.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_mssql.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -855,9 +840,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.OutputServiceBusQueue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">OutputServiceBusQueue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">queue_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">servicebus_namespace=None</em>, <em class="sig-param">shared_access_policy_key=None</em>, <em class="sig-param">shared_access_policy_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServiceBusQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to a ServiceBus Queue.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_queue.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1008,9 +990,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.OutputServicebusTopic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">OutputServicebusTopic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">servicebus_namespace=None</em>, <em class="sig-param">shared_access_policy_key=None</em>, <em class="sig-param">shared_access_policy_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.OutputServicebusTopic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Output to a ServiceBus Topic.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_output_servicebus_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1161,9 +1140,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.ReferenceInputBlob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">ReferenceInputBlob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">date_format=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path_pattern=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">storage_account_key=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">time_format=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.ReferenceInputBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Reference Input Blob. Reference data (also known as a lookup table) is a finite data set that is static or slowly changing in nature, used to perform a lookup or to correlate with your data stream. Learn more <a class="reference external" href="https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-use-reference-data#azure-blob-storage">here</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_reference_input_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_reference_input_blob.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1327,9 +1303,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.StreamInputBlob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">StreamInputBlob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">date_format=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path_pattern=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">storage_account_key=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">storage_container_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">time_format=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputBlob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input Blob.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_blob.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1493,9 +1466,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.StreamInputEventHub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">StreamInputEventHub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eventhub_consumer_group_name=None</em>, <em class="sig-param">eventhub_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">servicebus_namespace=None</em>, <em class="sig-param">shared_access_policy_key=None</em>, <em class="sig-param">shared_access_policy_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputEventHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input EventHub.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_eventhub.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1651,9 +1621,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.StreamInputIotHub">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">StreamInputIotHub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">eventhub_consumer_group_name=None</em>, <em class="sig-param">iothub_namespace=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">serialization=None</em>, <em class="sig-param">shared_access_policy_key=None</em>, <em class="sig-param">shared_access_policy_name=None</em>, <em class="sig-param">stream_analytics_job_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.StreamInputIotHub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Stream Analytics Stream Input IoTHub.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/stream_analytics_stream_input_iothub.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1809,9 +1776,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.streamanalytics.get_job">
 <code class="sig-prename descclassname">pulumi_azure.streamanalytics.</code><code class="sig-name descname">get_job</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.streamanalytics.get_job" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Stream Analytics Job.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/stream_analytics_job.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/stream_analytics_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

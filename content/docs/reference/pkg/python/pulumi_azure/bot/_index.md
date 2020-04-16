@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.bot.ChannelDirectLine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">ChannelDirectLine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bot_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sites=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.ChannelDirectLine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Directline integration for a Bot Channel</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_directline.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_directline.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -112,7 +109,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Email integration for a Bot Channel</p>
 <blockquote>
 <div><p><strong>Note</strong> A bot can only have a single Email Channel associated with it.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_email.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_email.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -222,7 +218,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Slack integration for a Bot Channel</p>
 <blockquote>
 <div><p><strong>Note</strong> A bot can only have a single Slack Channel associated with it.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_slack.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_slack.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -348,7 +343,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a MS Teams integration for a Bot Channel</p>
 <blockquote>
 <div><p><strong>Note</strong> A bot can only have a single MS Teams Channel associated with it.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_ms_teams.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channel_ms_teams.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -456,9 +450,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.ChannelsRegistration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">ChannelsRegistration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">developer_app_insights_api_key=None</em>, <em class="sig-param">developer_app_insights_application_id=None</em>, <em class="sig-param">developer_app_insights_key=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">microsoft_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.ChannelsRegistration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Channels Registration.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channels_registration.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_channels_registration.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -613,9 +604,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bot_name=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">service_provider_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Connection.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_connection.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_connection.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -762,9 +750,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.bot.WebApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.bot.</code><code class="sig-name descname">WebApp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">developer_app_insights_api_key=None</em>, <em class="sig-param">developer_app_insights_application_id=None</em>, <em class="sig-param">developer_app_insights_key=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">luis_app_ids=None</em>, <em class="sig-param">luis_key=None</em>, <em class="sig-param">microsoft_app_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.bot.WebApp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Bot Web App.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_web_app.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/bot_web_app.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

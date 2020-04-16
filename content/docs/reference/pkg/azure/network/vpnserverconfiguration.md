@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages a VPN Server Configuration.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/vpn_server_configuration.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages a VPN Server Configuration.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VpnServerConfigurationArgs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VpnServerConfiguration">VpnServerConfiguration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VpnServerConfigurationArgs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,7 +26,7 @@ Manages a VPN Server Configuration.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationArgs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfiguration">VpnServerConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationArgs">VpnServerConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfiguration">VpnServerConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -121,11 +122,29 @@ Manages a VPN Server Configuration.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -134,7 +153,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Client<wbr>Revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -143,7 +162,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Client<wbr>Root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -152,7 +171,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -161,7 +180,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -170,7 +189,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -179,43 +198,25 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -226,6 +227,24 @@ Manages a VPN Server Configuration.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpn<wbr>Authentication<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -258,7 +277,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">*Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -267,7 +286,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -276,7 +295,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -285,18 +304,9 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>Radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">*Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -308,20 +318,11 @@ Manages a VPN Server Configuration.
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -333,11 +334,29 @@ Manages a VPN Server Configuration.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpn<wbr>Authentication<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -346,7 +365,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>client<wbr>Revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -355,7 +374,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>client<wbr>Root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -364,7 +383,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -373,7 +392,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -382,7 +401,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -391,43 +410,25 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -438,6 +439,24 @@ Manages a VPN Server Configuration.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpn_<wbr>authentication_<wbr>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -479,7 +498,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -488,7 +507,7 @@ Manages a VPN Server Configuration.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -502,15 +521,6 @@ Manages a VPN Server Configuration.
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -520,20 +530,11 @@ Manages a VPN Server Configuration.
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>vpn_<wbr>authentication_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>vpn_<wbr>protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -542,440 +543,6 @@ Manages a VPN Server Configuration.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VpnServerConfiguration Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipsec<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Radius<wbr>Server</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server?</a></span>
-    </dt>
-    <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">[]Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</a></span>
-    </dt>
-    <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Revoked<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipsec<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">*Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Radius<wbr>Server</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">*Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
-    </dt>
-    <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Revoked<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipsec<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>radius<wbr>Server</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server?</a></span>
-    </dt>
-    <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn<wbr>Authentication<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn<wbr>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>azure_<wbr>active_<wbr>directory_<wbr>authentications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List[Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication]</a></span>
-    </dt>
-    <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>revoked_<wbr>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>root_<wbr>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipsec_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `ipsec_policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>radius_<wbr>server</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Dict[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server]</a></span>
-    </dt>
-    <dd>{{% md %}}A `radius_server` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn_<wbr>authentication_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn_<wbr>protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -999,7 +566,7 @@ Get an existing VpnServerConfiguration resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationState">VpnServerConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfiguration">VpnServerConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpnServerConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationState">VpnServerConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfiguration">VpnServerConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1113,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -1122,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1131,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1140,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1149,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1158,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1167,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}</dd>
@@ -1176,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1185,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1194,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Authentication<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
@@ -1203,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -1246,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">*Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1255,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1264,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1273,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">*Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}</dd>
@@ -1282,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1300,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Authentication<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
@@ -1309,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -1325,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>azure<wbr>Active<wbr>Directory<wbr>Authentications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication[]</a></span>
     </dt>
     <dd>{{% md %}}A `azure_active_directory_authentication` block as defined below.
 {{% /md %}}</dd>
@@ -1334,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_revoked_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1343,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `client_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1352,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipsec<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `ipsec_policy` block as defined below.
 {{% /md %}}</dd>
@@ -1361,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1370,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1379,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>radius<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server?</a></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</a></span>
     </dt>
     <dd>{{% md %}}A `radius_server` block as defined below.
 {{% /md %}}</dd>
@@ -1388,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1397,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1406,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpn<wbr>Authentication<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
@@ -1415,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpn<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -1467,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1476,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1494,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which this VPN Server Configuration should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1512,7 +1079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpn_<wbr>authentication_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A list of one of more Authentication Types applicable for this VPN Server Configuration. Possible values are `AAD` (Azure Active Directory), `Certificate` and `Radius`.
 {{% /md %}}</dd>
@@ -1521,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpn_<wbr>protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN Protocols to use for this Server Configuration. Possible values are `IkeV2` and `OpenVPN`.
 {{% /md %}}</dd>
@@ -1546,7 +1113,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationAzureActiveDirectoryAuthenticationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationAzureActiveDirectoryAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationAzureActiveDirectoryAuthenticationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1559,7 +1126,7 @@ The following state arguments are supported:
             title="Required">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd>
@@ -1568,7 +1135,7 @@ The following state arguments are supported:
             title="Required">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd>
@@ -1577,7 +1144,7 @@ The following state arguments are supported:
             title="Required">
         <span>Tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd>
@@ -1593,7 +1160,7 @@ The following state arguments are supported:
             title="Required">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd>
@@ -1602,7 +1169,7 @@ The following state arguments are supported:
             title="Required">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd>
@@ -1611,7 +1178,7 @@ The following state arguments are supported:
             title="Required">
         <span>Tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd>
@@ -1627,7 +1194,7 @@ The following state arguments are supported:
             title="Required">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd>
@@ -1636,7 +1203,7 @@ The following state arguments are supported:
             title="Required">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd>
@@ -1645,7 +1212,7 @@ The following state arguments are supported:
             title="Required">
         <span>tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd>
@@ -1661,7 +1228,7 @@ The following state arguments are supported:
             title="Required">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Audience which should be used for authentication.
 {{% /md %}}</dd>
@@ -1670,7 +1237,7 @@ The following state arguments are supported:
             title="Required">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Issuer which should be used for authentication.
 {{% /md %}}</dd>
@@ -1679,7 +1246,7 @@ The following state arguments are supported:
             title="Required">
         <span>tenant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Tenant which should be used for authentication.
 {{% /md %}}</dd>
@@ -1697,7 +1264,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationClientRevokedCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationClientRevokedCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationClientRevokedCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationClientRevokedCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1710,7 +1277,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1719,7 +1286,7 @@ The following state arguments are supported:
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -1735,7 +1302,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1744,7 +1311,7 @@ The following state arguments are supported:
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -1760,7 +1327,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1769,7 +1336,7 @@ The following state arguments are supported:
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -1785,7 +1352,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1794,7 +1361,7 @@ The following state arguments are supported:
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -1812,7 +1379,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationClientRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationClientRootCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationClientRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationClientRootCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1825,7 +1392,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1834,7 +1401,7 @@ The following state arguments are supported:
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -1850,7 +1417,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1859,7 +1426,7 @@ The following state arguments are supported:
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -1875,7 +1442,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1884,7 +1451,7 @@ The following state arguments are supported:
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -1900,7 +1467,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -1909,7 +1476,7 @@ The following state arguments are supported:
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -1927,7 +1494,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationIpsecPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationIpsecPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationIpsecPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationIpsecPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1940,7 +1507,7 @@ The following state arguments are supported:
             title="Required">
         <span>Dh<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd>
@@ -1949,7 +1516,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ike<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd>
@@ -1958,7 +1525,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ike<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd>
@@ -1967,7 +1534,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ipsec<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd>
@@ -1976,7 +1543,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ipsec<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd>
@@ -1985,7 +1552,7 @@ The following state arguments are supported:
             title="Required">
         <span>Pfs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd>
@@ -1994,7 +1561,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2003,7 +1570,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sa<wbr>Lifetime<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2019,7 +1586,7 @@ The following state arguments are supported:
             title="Required">
         <span>Dh<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd>
@@ -2028,7 +1595,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ike<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd>
@@ -2037,7 +1604,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ike<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd>
@@ -2046,7 +1613,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ipsec<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd>
@@ -2055,7 +1622,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ipsec<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd>
@@ -2064,7 +1631,7 @@ The following state arguments are supported:
             title="Required">
         <span>Pfs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd>
@@ -2073,7 +1640,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2082,7 +1649,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sa<wbr>Lifetime<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2098,7 +1665,7 @@ The following state arguments are supported:
             title="Required">
         <span>dh<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd>
@@ -2107,7 +1674,7 @@ The following state arguments are supported:
             title="Required">
         <span>ike<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd>
@@ -2116,7 +1683,7 @@ The following state arguments are supported:
             title="Required">
         <span>ike<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd>
@@ -2125,7 +1692,7 @@ The following state arguments are supported:
             title="Required">
         <span>ipsec<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd>
@@ -2134,7 +1701,7 @@ The following state arguments are supported:
             title="Required">
         <span>ipsec<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd>
@@ -2143,7 +1710,7 @@ The following state arguments are supported:
             title="Required">
         <span>pfs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd>
@@ -2152,7 +1719,7 @@ The following state arguments are supported:
             title="Required">
         <span>sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2161,7 +1728,7 @@ The following state arguments are supported:
             title="Required">
         <span>sa<wbr>Lifetime<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2177,7 +1744,7 @@ The following state arguments are supported:
             title="Required">
         <span>dh<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DH Group, used in IKE Phase 1. Possible values include `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384` and `None`.
 {{% /md %}}</dd>
@@ -2186,7 +1753,7 @@ The following state arguments are supported:
             title="Required">
         <span>ike<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm, used for IKE Phase 2. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128` and `GCMAES256`.
 {{% /md %}}</dd>
@@ -2195,7 +1762,7 @@ The following state arguments are supported:
             title="Required">
         <span>ike<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include `GCMAES128`, `GCMAES256`, `MD5`, `SHA1`, `SHA256` and `SHA384`.
 {{% /md %}}</dd>
@@ -2204,7 +1771,7 @@ The following state arguments are supported:
             title="Required">
         <span>ipsec<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm, used for IKE phase 1. Possible values include `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256` and `None`.
 {{% /md %}}</dd>
@@ -2213,7 +1780,7 @@ The following state arguments are supported:
             title="Required">
         <span>ipsec<wbr>Integrity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm, used for IKE phase 1. Possible values include `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1` and `SHA256`.
 {{% /md %}}</dd>
@@ -2222,7 +1789,7 @@ The following state arguments are supported:
             title="Required">
         <span>pfs<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Pfs Group, used in IKE Phase 2. Possible values include `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM` and `None`.
 {{% /md %}}</dd>
@@ -2231,7 +1798,7 @@ The following state arguments are supported:
             title="Required">
         <span>sa<wbr>Data<wbr>Size<wbr>Kilobytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2240,7 +1807,7 @@ The following state arguments are supported:
             title="Required">
         <span>sa<wbr>Lifetime<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.
 {{% /md %}}</dd>
@@ -2258,7 +1825,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2271,25 +1838,16 @@ The following state arguments are supported:
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd>
@@ -2303,6 +1861,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List&lt;Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2314,25 +1881,16 @@ The following state arguments are supported:
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd>
@@ -2346,6 +1904,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Root<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">[]Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2357,25 +1924,16 @@ The following state arguments are supported:
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Root<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd>
@@ -2389,6 +1947,15 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Root<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2400,25 +1967,16 @@ The following state arguments are supported:
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Address of the Radius Server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client_<wbr>root_<wbr>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Secret used to communicate with the Radius Server.
 {{% /md %}}</dd>
@@ -2430,6 +1988,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpnserverconfigurationradiusserverserverrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}One or more `server_root_certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client_<wbr>root_<wbr>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnserverconfigurationradiusserverclientrootcertificate">List[Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `client_root_certificate` blocks as defined above.
 {{% /md %}}</dd>
 
 </dl>
@@ -2445,7 +2012,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerClientRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerClientRootCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerClientRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerClientRootCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2458,7 +2025,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2467,7 +2034,7 @@ The following state arguments are supported:
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -2483,7 +2050,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2492,7 +2059,7 @@ The following state arguments are supported:
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -2508,7 +2075,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2517,7 +2084,7 @@ The following state arguments are supported:
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -2533,7 +2100,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2542,7 +2109,7 @@ The following state arguments are supported:
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Thumbprint of the Certificate.
 {{% /md %}}</dd>
@@ -2560,7 +2127,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerServerRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerServerRootCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerServerRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VpnServerConfigurationRadiusServerServerRootCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2573,7 +2140,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2582,7 +2149,7 @@ The following state arguments are supported:
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -2598,7 +2165,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2607,7 +2174,7 @@ The following state arguments are supported:
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -2623,7 +2190,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2632,7 +2199,7 @@ The following state arguments are supported:
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -2648,7 +2215,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name used to uniquely identify this certificate.
 {{% /md %}}</dd>
@@ -2657,7 +2224,7 @@ The following state arguments are supported:
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Public Key Data associated with the Certificate.
 {{% /md %}}</dd>
@@ -2679,6 +2246,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

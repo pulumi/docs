@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an App Service Certificate Order.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/app_service_certificate_order.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an App Service Certificate Order.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CertificateOrder">CertificateOrder</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CertificateOrderArgs">CertificateOrderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CertificateOrder">CertificateOrder</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CertificateOrderArgs">CertificateOrderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +26,11 @@ Manages an App Service Certificate Order.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificateOrder<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#CertificateOrderArgs">CertificateOrderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#CertificateOrder">CertificateOrder</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificateOrder<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#CertificateOrderArgs">CertificateOrderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#CertificateOrder">CertificateOrder</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.CertificateOrder.html">CertificateOrder</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.CertificateOrderArgs.html">CertificateOrderArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.CertificateOrder.html">CertificateOrder</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.CertificateOrderArgs.html">CertificateOrderArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,11 +122,20 @@ Manages an App Service Certificate Order.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -134,7 +144,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -143,7 +153,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -152,7 +162,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -161,7 +171,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -170,7 +180,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -179,25 +189,16 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -206,7 +207,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -218,11 +219,20 @@ Manages an App Service Certificate Order.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -231,7 +241,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -240,7 +250,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -249,7 +259,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -258,7 +268,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -267,7 +277,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -276,18 +286,9 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -303,7 +304,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>Validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -315,11 +316,20 @@ Manages an App Service Certificate Order.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -328,7 +338,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -337,7 +347,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -346,7 +356,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -355,7 +365,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -364,7 +374,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -373,25 +383,16 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -400,7 +401,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -412,11 +413,20 @@ Manages an App Service Certificate Order.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto_<wbr>renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -425,7 +435,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -434,7 +444,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>distinguished_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -443,7 +453,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>key_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -452,7 +462,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -461,7 +471,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -470,18 +480,9 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>product_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,7 +498,7 @@ Manages an App Service Certificate Order.
             title="Optional">
         <span>validity_<wbr>in_<wbr>years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -525,18 +526,9 @@ The following output properties are available:
             title="">
         <span>App<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -550,27 +542,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last CSR that was created for this order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Distinguished<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -579,7 +553,7 @@ The following output properties are available:
             title="">
         <span>Expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -588,7 +562,7 @@ The following output properties are available:
             title="">
         <span>Intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -597,61 +571,16 @@ The following output properties are available:
             title="">
         <span>Is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Certificate key size.  Defaults to 2048.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -660,7 +589,7 @@ The following output properties are available:
             title="">
         <span>Signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -669,27 +598,9 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validity<wbr>In<wbr>Years</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
 
 </dl>
@@ -703,18 +614,9 @@ The following output properties are available:
             title="">
         <span>App<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -728,27 +630,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last CSR that was created for this order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Distinguished<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -757,7 +641,7 @@ The following output properties are available:
             title="">
         <span>Expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -766,7 +650,7 @@ The following output properties are available:
             title="">
         <span>Intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -775,61 +659,16 @@ The following output properties are available:
             title="">
         <span>Is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Certificate key size.  Defaults to 2048.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Product<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -838,7 +677,7 @@ The following output properties are available:
             title="">
         <span>Signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -847,27 +686,9 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validity<wbr>In<wbr>Years</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
 
 </dl>
@@ -881,18 +702,9 @@ The following output properties are available:
             title="">
         <span>app<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -906,27 +718,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Last CSR that was created for this order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>distinguished<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -935,7 +729,7 @@ The following output properties are available:
             title="">
         <span>expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -944,7 +738,7 @@ The following output properties are available:
             title="">
         <span>intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -953,61 +747,16 @@ The following output properties are available:
             title="">
         <span>is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Certificate key size.  Defaults to 2048.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -1016,7 +765,7 @@ The following output properties are available:
             title="">
         <span>signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -1025,27 +774,9 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validity<wbr>In<wbr>Years</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1059,18 +790,9 @@ The following output properties are available:
             title="">
         <span>app_<wbr>service_<wbr>certificate_<wbr>not_<wbr>renewable_<wbr>reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1084,27 +806,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Last CSR that was created for this order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>distinguished_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain_<wbr>verification_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -1113,7 +817,7 @@ The following output properties are available:
             title="">
         <span>expiration_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -1122,7 +826,7 @@ The following output properties are available:
             title="">
         <span>intermediate_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -1131,61 +835,16 @@ The following output properties are available:
             title="">
         <span>is_<wbr>private_<wbr>key_<wbr>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Certificate key size.  Defaults to 2048.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>product_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>root_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -1194,7 +853,7 @@ The following output properties are available:
             title="">
         <span>signed_<wbr>certificate_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -1203,27 +862,9 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validity_<wbr>in_<wbr>years</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1251,11 +892,11 @@ Get an existing CertificateOrder resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificateOrder<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#CertificateOrderState">CertificateOrderState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#CertificateOrder">CertificateOrder</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificateOrder<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#CertificateOrderState">CertificateOrderState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#CertificateOrder">CertificateOrder</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.CertificateOrder.html">CertificateOrder</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Appservice.CertificateOrderState.html">CertificateOrderState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.CertificateOrder.html">CertificateOrder</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppService.CertificateOrderState.html">CertificateOrderState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1365,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
 {{% /md %}}</dd>
@@ -1374,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -1383,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateordercertificate">List&lt;Certificate<wbr>Order<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#certificateordercertificate">List&lt;Certificate<wbr>Order<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret. A `certificates` block as defined below.
 {{% /md %}}</dd>
@@ -1392,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -1401,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -1410,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -1419,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -1428,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -1437,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
@@ -1446,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -1455,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -1464,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1473,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
 {{% /md %}}</dd>
@@ -1482,7 +1123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1491,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -1500,7 +1141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -1509,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
 {{% /md %}}</dd>
@@ -1518,7 +1159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1527,7 +1168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -1543,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
 {{% /md %}}</dd>
@@ -1552,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -1570,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -1579,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -1588,7 +1229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -1597,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -1606,7 +1247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -1615,7 +1256,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
@@ -1624,7 +1265,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -1633,7 +1274,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -1642,7 +1283,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1651,7 +1292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
 {{% /md %}}</dd>
@@ -1660,7 +1301,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1669,7 +1310,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -1678,7 +1319,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -1687,7 +1328,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
 {{% /md %}}</dd>
@@ -1705,7 +1346,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -1721,7 +1362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app<wbr>Service<wbr>Certificate<wbr>Not<wbr>Renewable<wbr>Reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
 {{% /md %}}</dd>
@@ -1730,7 +1371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -1739,7 +1380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateordercertificate">Certificate<wbr>Order<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#certificateordercertificate">Certificate<wbr>Order<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}State of the Key Vault secret. A `certificates` block as defined below.
 {{% /md %}}</dd>
@@ -1748,7 +1389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -1757,7 +1398,7 @@ The following state arguments are supported:
             title="Optional">
         <span>distinguished<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -1766,7 +1407,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -1775,7 +1416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expiration<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -1784,7 +1425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>intermediate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -1793,7 +1434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Private<wbr>Key<wbr>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
@@ -1802,7 +1443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -1811,7 +1452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -1820,7 +1461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1829,7 +1470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>product<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
 {{% /md %}}</dd>
@@ -1838,7 +1479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1847,7 +1488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>root<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -1856,7 +1497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>signed<wbr>Certificate<wbr>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -1865,7 +1506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
 {{% /md %}}</dd>
@@ -1874,7 +1515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1883,7 +1524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validity<wbr>In<wbr>Years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -1899,7 +1540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app_<wbr>service_<wbr>certificate_<wbr>not_<wbr>renewable_<wbr>reasons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Reasons why App Service Certificate is not renewable at the current moment.
 {{% /md %}}</dd>
@@ -1908,7 +1549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}true if the certificate should be automatically renewed when it expires; otherwise, false. Defaults to true.
 {{% /md %}}</dd>
@@ -1926,7 +1567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last CSR that was created for this order.
 {{% /md %}}</dd>
@@ -1935,7 +1576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>distinguished_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Distinguished Name for the App Service Certificate Order.
 {{% /md %}}</dd>
@@ -1944,7 +1585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain_<wbr>verification_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Domain verification token.
 {{% /md %}}</dd>
@@ -1953,7 +1594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expiration_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate expiration time.
 {{% /md %}}</dd>
@@ -1962,7 +1603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>intermediate_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint intermediate certificate.
 {{% /md %}}</dd>
@@ -1971,7 +1612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is_<wbr>private_<wbr>key_<wbr>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the private key is external or not.
 {{% /md %}}</dd>
@@ -1980,7 +1621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Certificate key size.  Defaults to 2048.
 {{% /md %}}</dd>
@@ -1989,7 +1630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. Currently the only valid value is `global`.
 {{% /md %}}</dd>
@@ -1998,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2007,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>product_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate product type, such as `Standard` or `WildCard`.
 {{% /md %}}</dd>
@@ -2016,7 +1657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the certificate. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2025,7 +1666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>root_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for root certificate.
 {{% /md %}}</dd>
@@ -2034,7 +1675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>signed_<wbr>certificate_<wbr>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate thumbprint for signed certificate.
 {{% /md %}}</dd>
@@ -2043,7 +1684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current order status.
 {{% /md %}}</dd>
@@ -2061,7 +1702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validity_<wbr>in_<wbr>years</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Duration in years (must be between `1` and `3`).  Defaults to `1`.
 {{% /md %}}</dd>
@@ -2086,7 +1727,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/appservice?tab=doc#CertificateOrderCertificateOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice?tab=doc#CertificateOrderCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2099,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the App Service Certificate.
 {{% /md %}}</dd>
@@ -2108,7 +1749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault resource Id.
 {{% /md %}}</dd>
@@ -2117,7 +1758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Secret<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault secret name.
 {{% /md %}}</dd>
@@ -2126,7 +1767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provisioning<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the Key Vault secret.
 {{% /md %}}</dd>
@@ -2142,7 +1783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the App Service Certificate.
 {{% /md %}}</dd>
@@ -2151,7 +1792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault resource Id.
 {{% /md %}}</dd>
@@ -2160,7 +1801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Secret<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault secret name.
 {{% /md %}}</dd>
@@ -2169,7 +1810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provisioning<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the Key Vault secret.
 {{% /md %}}</dd>
@@ -2185,7 +1826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the App Service Certificate.
 {{% /md %}}</dd>
@@ -2194,7 +1835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault resource Id.
 {{% /md %}}</dd>
@@ -2203,7 +1844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Vault<wbr>Secret<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Key Vault secret name.
 {{% /md %}}</dd>
@@ -2212,7 +1853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provisioning<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the Key Vault secret.
 {{% /md %}}</dd>
@@ -2228,7 +1869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the App Service Certificate.
 {{% /md %}}</dd>
@@ -2237,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Key Vault resource Id.
 {{% /md %}}</dd>
@@ -2246,7 +1887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Vault<wbr>Secret<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Key Vault secret name.
 {{% /md %}}</dd>
@@ -2255,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provisioning<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the Key Vault secret.
 {{% /md %}}</dd>
@@ -2277,6 +1918,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

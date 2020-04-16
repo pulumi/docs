@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an Action Group within Azure Monitor.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an Action Group within Azure Monitor.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#ActionGroupArgs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#ActionGroup">ActionGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#ActionGroupArgs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,7 +26,7 @@ Manages an Action Group within Azure Monitor.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActionGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupArgs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroup">ActionGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActionGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupArgs">ActionGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroup">ActionGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -121,92 +122,11 @@ Manages an Action Group within Azure Monitor.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arm<wbr>Role<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Automation<wbr>Runbook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Azure<wbr>App<wbr>Push<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Azure<wbr>Function<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Email<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Itsm<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Logic<wbr>App<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -215,16 +135,97 @@ Manages an Action Group within Azure Monitor.
             title="Required">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Arm<wbr>Role<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Automation<wbr>Runbook<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azure<wbr>App<wbr>Push<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Azure<wbr>Function<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Email<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Itsm<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Logic<wbr>App<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Sms<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -233,7 +234,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -242,7 +243,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>Voice<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -251,7 +252,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>Webhook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -262,6 +263,24 @@ Manages an Action Group within Azure Monitor.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Short<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +331,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -339,27 +358,9 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -405,92 +406,11 @@ Manages an Action Group within Azure Monitor.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>arm<wbr>Role<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>automation<wbr>Runbook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>azure<wbr>App<wbr>Push<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>azure<wbr>Function<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>email<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>itsm<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>logic<wbr>App<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -499,16 +419,97 @@ Manages an Action Group within Azure Monitor.
             title="Required">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>arm<wbr>Role<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>automation<wbr>Runbook<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azure<wbr>App<wbr>Push<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>azure<wbr>Function<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>email<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>itsm<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>logic<wbr>App<wbr>Receivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>sms<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -517,7 +518,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -526,7 +527,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>voice<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -535,7 +536,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>webhook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -546,6 +547,24 @@ Manages an Action Group within Azure Monitor.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>short_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -596,7 +615,7 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -623,27 +642,9 @@ Manages an Action Group within Azure Monitor.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>short_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -686,584 +687,6 @@ Manages an Action Group within Azure Monitor.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ActionGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Arm<wbr>Role<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Automation<wbr>Runbook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>App<wbr>Push<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Function<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Itsm<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logic<wbr>App<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sms<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Voice<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Arm<wbr>Role<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Automation<wbr>Runbook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>App<wbr>Push<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Function<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Itsm<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logic<wbr>App<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sms<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Voice<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>arm<wbr>Role<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>automation<wbr>Runbook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure<wbr>App<wbr>Push<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure<wbr>Function<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>itsm<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logic<wbr>App<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sms<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>voice<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook<wbr>Receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>arm_<wbr>role_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>automation_<wbr>runbook_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure_<wbr>app_<wbr>push_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure_<wbr>function_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List[Action<wbr>Group<wbr>Email<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>itsm_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List[Action<wbr>Group<wbr>Itsm<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logic_<wbr>app_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>short_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sms_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List[Action<wbr>Group<wbr>Sms<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>voice_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List[Action<wbr>Group<wbr>Voice<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook_<wbr>receivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List[Action<wbr>Group<wbr>Webhook<wbr>Receiver]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1287,7 +710,7 @@ Get an existing ActionGroup resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupState">ActionGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroup">ActionGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetActionGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupState">ActionGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroup">ActionGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1401,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arm<wbr>Role<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1410,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automation<wbr>Runbook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1419,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>App<wbr>Push<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1428,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Function<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1437,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1446,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1455,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Itsm<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1464,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logic<wbr>App<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1473,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1482,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -1491,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
@@ -1500,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sms<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1509,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1518,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Voice<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1527,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1588,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1615,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1624,7 +1047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -1633,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
@@ -1685,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arm<wbr>Role<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1694,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>automation<wbr>Runbook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1703,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>azure<wbr>App<wbr>Push<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1712,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>azure<wbr>Function<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1721,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1730,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1739,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>itsm<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1748,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logic<wbr>App<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1757,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1766,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -1775,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
@@ -1784,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sms<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1793,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1802,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>voice<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1811,7 +1234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>webhook<wbr>Receivers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]?</a></span>
+        <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
 {{% /md %}}</dd>
@@ -1872,7 +1295,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1899,7 +1322,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1908,7 +1331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
 {{% /md %}}</dd>
@@ -1917,7 +1340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
 {{% /md %}}</dd>
@@ -1978,7 +1401,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupArmRoleReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupArmRoleReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupArmRoleReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupArmRoleReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1991,7 +1414,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd>
@@ -2000,7 +1423,7 @@ The following state arguments are supported:
             title="Required">
         <span>Role<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd>
@@ -2009,7 +1432,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2025,7 +1448,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd>
@@ -2034,7 +1457,7 @@ The following state arguments are supported:
             title="Required">
         <span>Role<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd>
@@ -2043,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2059,7 +1482,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd>
@@ -2068,7 +1491,7 @@ The following state arguments are supported:
             title="Required">
         <span>role<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd>
@@ -2077,7 +1500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2093,7 +1516,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
 {{% /md %}}</dd>
@@ -2102,7 +1525,7 @@ The following state arguments are supported:
             title="Required">
         <span>role<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The arm role id.
 {{% /md %}}</dd>
@@ -2111,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2129,7 +1552,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAutomationRunbookReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAutomationRunbookReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAutomationRunbookReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAutomationRunbookReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2142,7 +1565,7 @@ The following state arguments are supported:
             title="Required">
         <span>Automation<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd>
@@ -2151,7 +1574,7 @@ The following state arguments are supported:
             title="Required">
         <span>Is<wbr>Global<wbr>Runbook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd>
@@ -2160,7 +1583,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd>
@@ -2169,7 +1592,7 @@ The following state arguments are supported:
             title="Required">
         <span>Runbook<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd>
@@ -2178,27 +1601,27 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Webhook<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
 </dl>
@@ -2212,7 +1635,7 @@ The following state arguments are supported:
             title="Required">
         <span>Automation<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd>
@@ -2221,7 +1644,7 @@ The following state arguments are supported:
             title="Required">
         <span>Is<wbr>Global<wbr>Runbook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd>
@@ -2230,7 +1653,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd>
@@ -2239,7 +1662,7 @@ The following state arguments are supported:
             title="Required">
         <span>Runbook<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd>
@@ -2248,27 +1671,27 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Webhook<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
 </dl>
@@ -2282,7 +1705,7 @@ The following state arguments are supported:
             title="Required">
         <span>automation<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd>
@@ -2291,7 +1714,7 @@ The following state arguments are supported:
             title="Required">
         <span>is<wbr>Global<wbr>Runbook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd>
@@ -2300,7 +1723,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd>
@@ -2309,7 +1732,7 @@ The following state arguments are supported:
             title="Required">
         <span>runbook<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd>
@@ -2318,27 +1741,27 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>webhook<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
 </dl>
@@ -2352,7 +1775,7 @@ The following state arguments are supported:
             title="Required">
         <span>automation<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
 {{% /md %}}</dd>
@@ -2361,7 +1784,7 @@ The following state arguments are supported:
             title="Required">
         <span>is<wbr>Global<wbr>Runbook</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
 {{% /md %}}</dd>
@@ -2370,7 +1793,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
 {{% /md %}}</dd>
@@ -2379,7 +1802,7 @@ The following state arguments are supported:
             title="Required">
         <span>runbook_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
 {{% /md %}}</dd>
@@ -2388,27 +1811,27 @@ The following state arguments are supported:
             title="Required">
         <span>service_<wbr>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>webhook<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
 
 </dl>
@@ -2424,7 +1847,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAzureAppPushReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAzureAppPushReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAzureAppPushReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAzureAppPushReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2437,7 +1860,7 @@ The following state arguments are supported:
             title="Required">
         <span>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd>
@@ -2446,7 +1869,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd>
@@ -2462,7 +1885,7 @@ The following state arguments are supported:
             title="Required">
         <span>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd>
@@ -2471,7 +1894,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd>
@@ -2487,7 +1910,7 @@ The following state arguments are supported:
             title="Required">
         <span>email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd>
@@ -2496,7 +1919,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd>
@@ -2512,7 +1935,7 @@ The following state arguments are supported:
             title="Required">
         <span>email_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
 {{% /md %}}</dd>
@@ -2521,7 +1944,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
 {{% /md %}}</dd>
@@ -2539,7 +1962,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAzureFunctionReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupAzureFunctionReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAzureFunctionReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupAzureFunctionReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2552,7 +1975,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>App<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2560,7 +1983,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd>
@@ -2569,7 +1992,7 @@ The following state arguments are supported:
             title="Required">
         <span>Http<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd>
@@ -2578,7 +2001,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd>
@@ -2587,7 +2010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2603,7 +2026,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>App<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2611,7 +2034,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd>
@@ -2620,7 +2043,7 @@ The following state arguments are supported:
             title="Required">
         <span>Http<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd>
@@ -2629,7 +2052,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd>
@@ -2638,7 +2061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2654,7 +2077,7 @@ The following state arguments are supported:
             title="Required">
         <span>function<wbr>App<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2662,7 +2085,7 @@ The following state arguments are supported:
             title="Required">
         <span>function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd>
@@ -2671,7 +2094,7 @@ The following state arguments are supported:
             title="Required">
         <span>http<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd>
@@ -2680,7 +2103,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd>
@@ -2689,7 +2112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2705,7 +2128,7 @@ The following state arguments are supported:
             title="Required">
         <span>function<wbr>App<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2713,7 +2136,7 @@ The following state arguments are supported:
             title="Required">
         <span>function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
 {{% /md %}}</dd>
@@ -2722,7 +2145,7 @@ The following state arguments are supported:
             title="Required">
         <span>http<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
 {{% /md %}}</dd>
@@ -2731,7 +2154,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
 {{% /md %}}</dd>
@@ -2740,7 +2163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2758,7 +2181,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupEmailReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupEmailReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupEmailReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupEmailReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2771,7 +2194,7 @@ The following state arguments are supported:
             title="Required">
         <span>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd>
@@ -2780,7 +2203,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -2789,7 +2212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2805,7 +2228,7 @@ The following state arguments are supported:
             title="Required">
         <span>Email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd>
@@ -2814,7 +2237,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -2823,7 +2246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2839,7 +2262,7 @@ The following state arguments are supported:
             title="Required">
         <span>email<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd>
@@ -2848,7 +2271,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -2857,7 +2280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2873,7 +2296,7 @@ The following state arguments are supported:
             title="Required">
         <span>email_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
 {{% /md %}}</dd>
@@ -2882,7 +2305,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -2891,7 +2314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -2909,7 +2332,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupItsmReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupItsmReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupItsmReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupItsmReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2922,7 +2345,7 @@ The following state arguments are supported:
             title="Required">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd>
@@ -2931,7 +2354,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd>
@@ -2940,7 +2363,7 @@ The following state arguments are supported:
             title="Required">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd>
@@ -2949,7 +2372,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ticket<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd>
@@ -2958,7 +2381,7 @@ The following state arguments are supported:
             title="Required">
         <span>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd>
@@ -2974,7 +2397,7 @@ The following state arguments are supported:
             title="Required">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd>
@@ -2983,7 +2406,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd>
@@ -2992,7 +2415,7 @@ The following state arguments are supported:
             title="Required">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd>
@@ -3001,7 +2424,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ticket<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd>
@@ -3010,7 +2433,7 @@ The following state arguments are supported:
             title="Required">
         <span>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd>
@@ -3026,7 +2449,7 @@ The following state arguments are supported:
             title="Required">
         <span>connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd>
@@ -3035,7 +2458,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd>
@@ -3044,7 +2467,7 @@ The following state arguments are supported:
             title="Required">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd>
@@ -3053,7 +2476,7 @@ The following state arguments are supported:
             title="Required">
         <span>ticket<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd>
@@ -3062,7 +2485,7 @@ The following state arguments are supported:
             title="Required">
         <span>workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd>
@@ -3078,7 +2501,7 @@ The following state arguments are supported:
             title="Required">
         <span>connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
 {{% /md %}}</dd>
@@ -3087,7 +2510,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
 {{% /md %}}</dd>
@@ -3096,7 +2519,7 @@ The following state arguments are supported:
             title="Required">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
 {{% /md %}}</dd>
@@ -3105,7 +2528,7 @@ The following state arguments are supported:
             title="Required">
         <span>ticket<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
 {{% /md %}}</dd>
@@ -3114,7 +2537,7 @@ The following state arguments are supported:
             title="Required">
         <span>workspace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
 {{% /md %}}</dd>
@@ -3132,7 +2555,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupLogicAppReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupLogicAppReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupLogicAppReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupLogicAppReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3145,7 +2568,7 @@ The following state arguments are supported:
             title="Required">
         <span>Callback<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd>
@@ -3154,7 +2577,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd>
@@ -3163,7 +2586,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd>
@@ -3172,7 +2595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3188,7 +2611,7 @@ The following state arguments are supported:
             title="Required">
         <span>Callback<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd>
@@ -3197,7 +2620,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd>
@@ -3206,7 +2629,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd>
@@ -3215,7 +2638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3231,7 +2654,7 @@ The following state arguments are supported:
             title="Required">
         <span>callback<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd>
@@ -3240,7 +2663,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd>
@@ -3249,7 +2672,7 @@ The following state arguments are supported:
             title="Required">
         <span>resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd>
@@ -3258,7 +2681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3274,7 +2697,7 @@ The following state arguments are supported:
             title="Required">
         <span>callback<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
 {{% /md %}}</dd>
@@ -3283,7 +2706,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
 {{% /md %}}</dd>
@@ -3292,7 +2715,7 @@ The following state arguments are supported:
             title="Required">
         <span>resource_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
 {{% /md %}}</dd>
@@ -3301,7 +2724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3319,7 +2742,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupSmsReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupSmsReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupSmsReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupSmsReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3332,7 +2755,7 @@ The following state arguments are supported:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd>
@@ -3341,7 +2764,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3350,7 +2773,7 @@ The following state arguments are supported:
             title="Required">
         <span>Phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd>
@@ -3366,7 +2789,7 @@ The following state arguments are supported:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd>
@@ -3375,7 +2798,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3384,7 +2807,7 @@ The following state arguments are supported:
             title="Required">
         <span>Phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd>
@@ -3400,7 +2823,7 @@ The following state arguments are supported:
             title="Required">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd>
@@ -3409,7 +2832,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3418,7 +2841,7 @@ The following state arguments are supported:
             title="Required">
         <span>phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd>
@@ -3434,7 +2857,7 @@ The following state arguments are supported:
             title="Required">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
 {{% /md %}}</dd>
@@ -3443,7 +2866,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3452,7 +2875,7 @@ The following state arguments are supported:
             title="Required">
         <span>phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
 {{% /md %}}</dd>
@@ -3470,7 +2893,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupVoiceReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupVoiceReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupVoiceReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupVoiceReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3483,7 +2906,7 @@ The following state arguments are supported:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd>
@@ -3492,7 +2915,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd>
@@ -3501,7 +2924,7 @@ The following state arguments are supported:
             title="Required">
         <span>Phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd>
@@ -3517,7 +2940,7 @@ The following state arguments are supported:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd>
@@ -3526,7 +2949,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd>
@@ -3535,7 +2958,7 @@ The following state arguments are supported:
             title="Required">
         <span>Phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd>
@@ -3551,7 +2974,7 @@ The following state arguments are supported:
             title="Required">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd>
@@ -3560,7 +2983,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd>
@@ -3569,7 +2992,7 @@ The following state arguments are supported:
             title="Required">
         <span>phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd>
@@ -3585,7 +3008,7 @@ The following state arguments are supported:
             title="Required">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
 {{% /md %}}</dd>
@@ -3594,7 +3017,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
 {{% /md %}}</dd>
@@ -3603,7 +3026,7 @@ The following state arguments are supported:
             title="Required">
         <span>phone<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
 {{% /md %}}</dd>
@@ -3621,7 +3044,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupWebhookReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#ActionGroupWebhookReceiverOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupWebhookReceiverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#ActionGroupWebhookReceiverOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3634,7 +3057,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3643,7 +3066,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd>
@@ -3652,7 +3075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3668,7 +3091,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3677,7 +3100,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd>
@@ -3686,7 +3109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3702,7 +3125,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3711,7 +3134,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd>
@@ -3720,7 +3143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3736,7 +3159,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
 {{% /md %}}</dd>
@@ -3745,7 +3168,7 @@ The following state arguments are supported:
             title="Required">
         <span>service_<wbr>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
 {{% /md %}}</dd>
@@ -3754,7 +3177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Common<wbr>Alert<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
 {{% /md %}}</dd>
@@ -3776,6 +3199,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

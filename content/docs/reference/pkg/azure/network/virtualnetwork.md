@@ -13,7 +13,8 @@ optionally be configured with a security group to be associated with the subnet.
 provides both a standalone Subnet resource, and allows for Subnets to be defined in-line within the Virtual Network resource.
 At this time you cannot use a Virtual Network with in-line Subnets in conjunction with any Subnet resources. Doing so will cause a conflict of Subnet configurations and will overwrite Subnet's.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -22,7 +23,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetwork">VirtualNetwork</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkArgs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetwork">VirtualNetwork</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkArgs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,7 +31,7 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkArgs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetwork">VirtualNetwork</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkArgs">VirtualNetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetwork">VirtualNetwork</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -130,18 +131,28 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
             title="Required">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the virtual network.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -150,7 +161,7 @@ a new resource to be created.
             title="Optional">
         <span>Dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -159,7 +170,7 @@ a new resource to be created.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -169,27 +180,17 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -199,7 +200,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -215,18 +216,28 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the virtual network.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">*Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -235,7 +246,7 @@ a new resource to be created.
             title="Optional">
         <span>Dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -244,7 +255,7 @@ a new resource to be created.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -254,20 +265,10 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -300,18 +301,28 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the virtual network.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan?</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -320,7 +331,7 @@ a new resource to be created.
             title="Optional">
         <span>dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -329,7 +340,7 @@ a new resource to be created.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -339,376 +350,14 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
-        <span>subnets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>address_<wbr>spaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ddos_<wbr>protection_<wbr>plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Dict[Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan]</a></span>
-    </dt>
-    <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dns_<wbr>servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of IP addresses of DNS servers
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subnets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## VirtualNetwork Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address<wbr>Spaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan?</a></span>
-    </dt>
-    <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of IP addresses of DNS servers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address<wbr>Spaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ddos<wbr>Protection<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">*Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
-    </dt>
-    <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of IP addresses of DNS servers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">[]Virtual<wbr>Network<wbr>Subnet</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times to define multiple
-subnets. Each `subnet` block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address<wbr>Spaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The address space that is used the virtual
-network. You can supply more than one address space. Changing this forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ddos<wbr>Protection<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan?</a></span>
-    </dt>
-    <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Servers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of IP addresses of DNS servers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the virtual network is
-created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual network. Changing this forces a
-new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>subnets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
@@ -717,11 +366,11 @@ create the virtual network.
 subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -733,19 +382,29 @@ subnets. Each `subnet` block supports fields documented below.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>address_<wbr>spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
 a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ddos_<wbr>protection_<wbr>plan</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Dict[Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan]</a></span>
@@ -753,47 +412,37 @@ a new resource to be created.
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>dns_<wbr>servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the virtual network.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>subnets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworksubnet">List[Virtual<wbr>Network<wbr>Subnet]</a></span>
@@ -802,8 +451,8 @@ create the virtual network.
 subnets. Each `subnet` block supports fields documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -813,6 +462,8 @@ subnets. Each `subnet` block supports fields documented below.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -836,7 +487,7 @@ Get an existing VirtualNetwork resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkState">VirtualNetworkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetwork">VirtualNetwork</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkState">VirtualNetworkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetwork">VirtualNetwork</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -950,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
@@ -961,7 +612,7 @@ a new resource to be created.
             title="Optional">
         <span>Ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -970,7 +621,7 @@ a new resource to be created.
             title="Optional">
         <span>Dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -979,7 +630,7 @@ a new resource to be created.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -989,7 +640,7 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -999,7 +650,7 @@ new resource to be created.
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network.
@@ -1009,7 +660,7 @@ create the virtual network.
             title="Optional">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">List&lt;Virtual<wbr>Network<wbr>Subnet<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -1019,7 +670,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1035,7 +686,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
@@ -1046,7 +697,7 @@ a new resource to be created.
             title="Optional">
         <span>Ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">*Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -1055,7 +706,7 @@ a new resource to be created.
             title="Optional">
         <span>Dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -1064,7 +715,7 @@ a new resource to be created.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -1074,7 +725,7 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1084,7 +735,7 @@ new resource to be created.
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network.
@@ -1120,7 +771,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
@@ -1131,7 +782,7 @@ a new resource to be created.
             title="Optional">
         <span>ddos<wbr>Protection<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan?</a></span>
+        <span class="property-type"><a href="#virtualnetworkddosprotectionplan">Virtual<wbr>Network<wbr>Ddos<wbr>Protection<wbr>Plan</a></span>
     </dt>
     <dd>{{% md %}}A `ddos_protection_plan` block as documented below.
 {{% /md %}}</dd>
@@ -1140,7 +791,7 @@ a new resource to be created.
             title="Optional">
         <span>dns<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -1149,7 +800,7 @@ a new resource to be created.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -1159,7 +810,7 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1169,7 +820,7 @@ new resource to be created.
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network.
@@ -1179,7 +830,7 @@ create the virtual network.
             title="Optional">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]?</a></span>
+        <span class="property-type"><a href="#virtualnetworksubnet">Virtual<wbr>Network<wbr>Subnet[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times to define multiple
 subnets. Each `subnet` block supports fields documented below.
@@ -1189,7 +840,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1205,7 +856,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Optional">
         <span>address_<wbr>spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The address space that is used the virtual
 network. You can supply more than one address space. Changing this forces
@@ -1225,7 +876,7 @@ a new resource to be created.
             title="Optional">
         <span>dns_<wbr>servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IP addresses of DNS servers
 {{% /md %}}</dd>
@@ -1234,7 +885,7 @@ a new resource to be created.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the virtual network is
 created. Changing this forces a new resource to be created.
@@ -1244,7 +895,7 @@ created. Changing this forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1254,7 +905,7 @@ new resource to be created.
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the virtual network.
@@ -1299,7 +950,7 @@ subnets. Each `subnet` block supports fields documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkDdosProtectionPlanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkDdosProtectionPlanOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkDdosProtectionPlanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkDdosProtectionPlanOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1312,7 +963,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable/disable DDoS Protection Plan on Virtual Network.
 {{% /md %}}</dd>
@@ -1321,7 +972,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
@@ -1337,7 +988,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable/disable DDoS Protection Plan on Virtual Network.
 {{% /md %}}</dd>
@@ -1346,7 +997,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
@@ -1362,7 +1013,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable/disable DDoS Protection Plan on Virtual Network.
 {{% /md %}}</dd>
@@ -1371,7 +1022,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
@@ -1387,7 +1038,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable/disable DDoS Protection Plan on Virtual Network.
 {{% /md %}}</dd>
@@ -1396,7 +1047,7 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
@@ -1414,7 +1065,7 @@ subnets. Each `subnet` block supports fields documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkSubnetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkSubnetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkSubnetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkSubnetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1427,25 +1078,16 @@ subnets. Each `subnet` block supports fields documented below.
             title="Required">
         <span>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1453,9 +1095,18 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Network Security Group to associate with
 the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
@@ -1472,25 +1123,16 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
             title="Required">
         <span>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1498,9 +1140,18 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Network Security Group to associate with
 the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
@@ -1517,25 +1168,16 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
             title="Required">
         <span>address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1543,9 +1185,18 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Network Security Group to associate with
 the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
@@ -1562,25 +1213,16 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
             title="Required">
         <span>address_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address prefix to use for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network. Changing this forces a
 new resource to be created.
@@ -1588,9 +1230,18 @@ new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Resource ID of DDoS Protection Plan.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Network Security Group to associate with
 the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`)
@@ -1613,6 +1264,7 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 
