@@ -89,7 +89,7 @@ export const url = web.endpoint.hostname;
 ## Step 1. Create a Cluster
 
 The opening stanza imports Pulumi's
-[open source AWSX NPM package]({{< relref "/docs/guides/crosswalk/aws/" >}}), `@pulumi/awsx`. It
+[open source AWSX NPM package]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx" >}}), `@pulumi/awsx`. It
 contains high level AWS best practices and patterns, and leverages real
 languages to eliminate boilerplate YAML templating:
 
