@@ -291,7 +291,7 @@ This can be provisioned with a single `pulumi up`, just like before, but instead
 
 Note that it's possible to mix node groups. So, if you need precise control over some groups, but not others, feel free to call `createNodeGroup` and `createManagedNodeGroup` interspersed with one another. The EKS package knows what to do.
 
-For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs]({{< relref "/docs/reference/pkg/aws/eks/nodegroup/#create-a-nodegroup-resource" >}}). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
+For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs]({{< relref "/docs/reference/pkg/aws/eks/nodegroup#create-a-nodegroup-resource" >}}). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
 
 ## Let Fargate Manage It All
 

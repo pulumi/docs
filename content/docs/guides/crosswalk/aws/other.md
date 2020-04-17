@@ -67,7 +67,7 @@ tbody tr td:first-child {
 | [AWS CloudFormation](https://aws.amazon.com/cloudformation/) | Provision resources in YAML/JSON | | [cloudformation]({{< relref "/docs/reference/pkg/aws/cloudformation" >}}) |
 | [Amazon CloudFront](https://aws.amazon.com/cloudfront/) | Fast and secure CDN | | [cloudfront]({{< relref "/docs/reference/pkg/aws/cloudfront" >}}) |
 | [AWS CloudHSM](https://aws.amazon.com/cloudhsm/) | Managed hardware security module (HSM) | | [cloudhsmv2]({{< relref "/docs/reference/pkg/aws/cloudhsmv2" >}}) |
-| [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) | Track user activity and API usage | | [cloudtrail]({{< relref "/docs/reference/aws/cloudtrail" >}}) |
+| [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) | Track user activity and API usage | | [cloudtrail]({{< relref "/docs/reference/pkg/aws/cloudtrail" >}}) |
 | [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) | Application and infrastructure monitoring | [User Guide]({{< relref "cloudwatch" >}}) | [cloudwatch]({{< relref "/docs/reference/pkg/aws/cloudwatch" >}}) |
 | [AWS CodeBuild](https://aws.amazon.com/codebuild/) | Build and test code | [User Guide]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}}) | [codebuild]({{< relref "/docs/reference/pkg/aws/codebuild" >}}) |
 | [AWS CodeCommit](https://aws.amazon.com/codecommit/) | Host private Git repos | [User Guide]({{< relref "/docs/guides/continuous-delivery/aws-code-services" >}}) | [codecommit]({{< relref "/docs/reference/pkg/aws/codecommit" >}}) |
