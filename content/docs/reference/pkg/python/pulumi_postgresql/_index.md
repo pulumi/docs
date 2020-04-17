@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Database</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/managing-databases.html">database
 objects</a>
 within a PostgreSQL server instance.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -317,7 +314,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.DefaultPrivileges</span></code> resource creates and manages default privileges given to a user for a database schema.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_default_privileges.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_default_privileges.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -434,9 +430,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_postgresql.</code><code class="sig-name descname">Extension</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_postgresql.Extension" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Extension</span></code> resource creates and manages an extension on a PostgreSQL
 server.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_extension.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -537,7 +530,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Grant</span></code> resource creates and manages privileges given to a user for a database schema.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This resource needs Postgresql version 9 or above.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_grant.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -648,9 +640,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -727,7 +716,6 @@ and all but the final <code class="docutils literal notranslate"><span class="pr
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_role.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1048,9 +1036,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Schema</span></code> resource creates and manages <a class="reference external" href="https://www.postgresql.org/docs/current/static/ddl-schemas.html">schema
 objects</a> within
 a PostgreSQL database.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_schema.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
