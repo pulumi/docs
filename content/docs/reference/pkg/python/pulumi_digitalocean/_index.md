@@ -127,9 +127,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_digitalocean.Cdn">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Cdn</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_id=None</em>, <em class="sig-param">custom_domain=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Cdn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean CDN Endpoint resource for use with Spaces.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/cdn.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -256,9 +253,6 @@ Certificates created with this resource can be referenced in your
 Load Balancer configuration via their ID. The certificate can either
 be a custom one provided by you or automatically generated one with
 Let’s Encrypt.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -408,9 +402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">sql_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database cluster resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -634,9 +625,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseConnectionPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseConnectionPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">db_name=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseConnectionPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database connection pool resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_connection_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -793,9 +781,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseDb">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseDb</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseDb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name <code class="docutils literal notranslate"><span class="pre">defaultdb</span></code> will be created. Then, this resource can be used to provide additional database inside the cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_db.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -880,9 +865,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_firewall.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -998,9 +980,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DatabaseReplica">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseReplica</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseReplica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database replica resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_replica.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_replica.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1157,7 +1136,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean database user resource. When creating a new database cluster, a default admin user with name <code class="docutils literal notranslate"><span class="pre">doadmin</span></code> will be created. Then, this resource can be used to provide additional normal users inside the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Any new users created will always have <code class="docutils literal notranslate"><span class="pre">normal</span></code> role, only the default user that comes with database cluster creation has <code class="docutils literal notranslate"><span class="pre">primary</span></code> role. Additional permissions must be managed manually.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1263,9 +1241,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DnsRecord">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DnsRecord</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">flags=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">weight=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DnsRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean DNS record resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/record.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1419,9 +1394,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean domain resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1516,9 +1488,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1801,9 +1770,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.DropletSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DropletSnapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">droplet_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DropletSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/droplet_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1915,9 +1881,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Firewall</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">inbound_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outbound_rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Firewall" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/firewall.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2194,7 +2157,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP addresses that can be mapped to one of your Droplets.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Floating IPs can be assigned to a Droplet either directly on the <code class="docutils literal notranslate"><span class="pre">.FloatingIp</span></code> resource by setting a <code class="docutils literal notranslate"><span class="pre">droplet_id</span></code> or using the <code class="docutils literal notranslate"><span class="pre">.FloatingIpAssignment</span></code> resource, but the two cannot be used together.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2295,9 +2257,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This
 makes it easy to provision floating IP addresses that are not tied to the lifecycle of your
 Droplet.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/floating_ip_assignment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3224,9 +3183,6 @@ the following attributes:</p>
 <dt id="pulumi_digitalocean.KubernetesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pool=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3561,9 +3517,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.KubernetesNodePool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesNodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scale=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_nodes=None</em>, <em class="sig-param">min_nodes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesNodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the <code class="docutils literal notranslate"><span class="pre">.KubernetesCluster</span></code> resource, this resource can be used to add additional ones to a cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_node_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3759,9 +3712,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/loadbalancer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4145,9 +4095,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4213,9 +4160,6 @@ the provider’s <code class="docutils literal notranslate"><span class="pre">sp
 access ID and secret you generate via the DigitalOcean control panel. For
 example:</p>
 <p>For more information, See <a class="reference external" href="https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces">An Introduction to DigitalOcean Spaces</a></p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4359,9 +4303,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 keys for Droplet access. Keys created with this resource
 can be referenced in your Droplet configuration via their ID or
 fingerprint.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4457,9 +4398,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/tag.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4534,9 +4472,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">filesystem_type=None</em>, <em class="sig-param">initial_filesystem_label=None</em>, <em class="sig-param">initial_filesystem_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4698,7 +4633,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages attaching a Volume to a Droplet.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Volumes can be attached either directly on the <code class="docutils literal notranslate"><span class="pre">.Droplet</span></code> resource, or using the <code class="docutils literal notranslate"><span class="pre">.VolumeAttachment</span></code> resource - but the two cannot be used together. If both are used against the same Droplet, the volume attachments will constantly drift.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4782,9 +4716,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.VolumeSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">VolumeSnapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.VolumeSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/volume_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4903,9 +4834,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.get_account">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on your DigitalOcean account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -4923,9 +4851,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.get_database_cluster">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_database_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_database_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information on a DigitalOcean database cluster resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/database_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the database cluster.</p>
@@ -4965,9 +4890,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
 resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet_snapshot.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5061,9 +4983,6 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dt id="pulumi_digitalocean.get_kubernetes_versions">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_kubernetes_versions</code><span class="sig-paren">(</span><em class="sig-param">version_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_kubernetes_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to the available DigitalOcean Kubernetes Service versions.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_versions.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_versions.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -5082,9 +5001,6 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a single DigitalOcean project. If neither the <code class="docutils literal notranslate"><span class="pre">id</span></code> nor <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes are provided,
 then this data source returns the default project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/project.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/project.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5105,9 +5021,6 @@ will be returned.</p>
 <p>Note: You can use the <cite>`</cite>.Project`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/project.html">https://www.terraform.io/docs/providers/do/d/project.html</a>&gt;`_ data source to
 obtain metadata about a single project if you already know the <code class="docutils literal notranslate"><span class="pre">id</span></code> to retrieve or the unique
 <code class="docutils literal notranslate"><span class="pre">name</span></code> of the project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/projects.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/projects.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5152,9 +5065,6 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param">slug=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_region" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a single DigitalOcean region. This is useful to find out 
 what Droplet sizes and features are supported within a region.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/region.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/region.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>slug</strong> (<em>str</em>) – A human-readable string that is used as a unique identifier for each region.</p>
@@ -5169,9 +5079,6 @@ what Droplet sizes and features are supported within a region.</p>
 filter and sort the results. If no filters are specified, all regions will be returned.</p>
 <p>Note: You can use the <cite>`</cite>.getRegion`` &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/do/d/region.html">https://www.terraform.io/docs/providers/do/d/region.html</a>&gt;`_ data source
 to obtain metadata about a single region if you already know the <code class="docutils literal notranslate"><span class="pre">slug</span></code> to retrieve.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/regions.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/regions.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5203,9 +5110,6 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dd><p>Retrieves information about the Droplet sizes that DigitalOcean supports, with
 the ability to filter and sort the results. If no filters are specified, all sizes
 will be returned.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5275,9 +5179,6 @@ one of the values provided here.</p></li>
 <dd><p>Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
 resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume_snapshot.html.md">https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume_snapshot.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
