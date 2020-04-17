@@ -8,18 +8,21 @@ block_external_search_index: true
 
 Use this data source to retrieve the collaborators for a given repository.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.app.getApp({
+const example = okta.app.getApp({
     label: "Example App",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -41,7 +44,7 @@ const example = pulumi.output(okta.app.getApp({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#LookupAppArgs">LookupAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#LookupAppResult">LookupAppResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupAppArgs">LookupAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupAppResult">LookupAppResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +67,7 @@ The following arguments are supported:
             title="Optional">
         <span>Active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
@@ -73,7 +76,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
@@ -82,7 +85,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`.
 {{% /md %}}</dd>
@@ -91,7 +94,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
@@ -107,7 +110,7 @@ The following arguments are supported:
             title="Optional">
         <span>Active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
@@ -116,7 +119,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
@@ -125,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`.
 {{% /md %}}</dd>
@@ -134,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
@@ -150,7 +153,7 @@ The following arguments are supported:
             title="Optional">
         <span>active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
@@ -159,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
@@ -168,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`.
 {{% /md %}}</dd>
@@ -177,7 +180,7 @@ The following arguments are supported:
             title="Optional">
         <span>label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
@@ -193,7 +196,7 @@ The following arguments are supported:
             title="Optional">
         <span>active_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
@@ -202,7 +205,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
@@ -211,7 +214,7 @@ The following arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`.
 {{% /md %}}</dd>
@@ -220,7 +223,7 @@ The following arguments are supported:
             title="Optional">
         <span>label_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
@@ -249,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
@@ -258,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
@@ -267,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
@@ -276,7 +279,7 @@ The following output properties are available:
             title="">
         <span>Active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -284,7 +287,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
@@ -293,7 +296,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
@@ -302,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -317,7 +320,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
@@ -326,7 +329,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
@@ -335,7 +338,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
@@ -344,7 +347,7 @@ The following output properties are available:
             title="">
         <span>Active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -352,7 +355,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
@@ -361,7 +364,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
@@ -370,7 +373,7 @@ The following output properties are available:
             title="">
         <span>Label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -385,7 +388,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
@@ -394,7 +397,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
@@ -403,7 +406,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
@@ -412,7 +415,7 @@ The following output properties are available:
             title="">
         <span>active<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -420,7 +423,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
@@ -429,7 +432,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
@@ -438,7 +441,7 @@ The following output properties are available:
             title="">
         <span>label<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -453,7 +456,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
@@ -462,7 +465,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
@@ -480,7 +483,7 @@ The following output properties are available:
             title="">
         <span>active_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +491,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
@@ -497,7 +500,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
@@ -506,7 +509,7 @@ The following output properties are available:
             title="">
         <span>label_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

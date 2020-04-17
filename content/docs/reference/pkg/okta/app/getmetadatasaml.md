@@ -8,19 +8,22 @@ block_external_search_index: true
 
 Use this data source to retrieve the collaborators for a given repository.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.app.getMetadataSaml({
+const example = okta.app.getMetadataSaml({
     appId: "<app id>",
     keyId: "<cert key id>",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/app_metadata_saml.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -42,7 +45,7 @@ const example = pulumi.output(okta.app.getMetadataSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetadataSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#LookupMetadataSamlArgs">LookupMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#LookupMetadataSamlResult">LookupMetadataSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMetadataSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupMetadataSamlArgs">LookupMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupMetadataSamlResult">LookupMetadataSamlResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -65,7 +68,7 @@ The following arguments are supported:
             title="Required">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -74,7 +77,7 @@ The following arguments are supported:
             title="Required">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate Key ID.
 {{% /md %}}</dd>
@@ -90,7 +93,7 @@ The following arguments are supported:
             title="Required">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -99,7 +102,7 @@ The following arguments are supported:
             title="Required">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate Key ID.
 {{% /md %}}</dd>
@@ -115,7 +118,7 @@ The following arguments are supported:
             title="Required">
         <span>app<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -124,7 +127,7 @@ The following arguments are supported:
             title="Required">
         <span>key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Certificate Key ID.
 {{% /md %}}</dd>
@@ -140,7 +143,7 @@ The following arguments are supported:
             title="Required">
         <span>app_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -149,7 +152,7 @@ The following arguments are supported:
             title="Required">
         <span>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Certificate Key ID.
 {{% /md %}}</dd>
@@ -178,7 +181,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -186,7 +189,7 @@ The following output properties are available:
             title="">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}public certificate from application metadata.
 {{% /md %}}</dd>
@@ -195,7 +198,7 @@ The following output properties are available:
             title="">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 {{% /md %}}</dd>
@@ -204,7 +207,7 @@ The following output properties are available:
             title="">
         <span>Http<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 {{% /md %}}</dd>
@@ -213,7 +216,7 @@ The following output properties are available:
             title="">
         <span>Http<wbr>Redirect<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 {{% /md %}}</dd>
@@ -222,7 +225,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -231,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -239,7 +242,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}raw metadata of application.
 {{% /md %}}</dd>
@@ -248,7 +251,7 @@ The following output properties are available:
             title="">
         <span>Want<wbr>Authn<wbr>Requests<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
@@ -264,7 +267,7 @@ The following output properties are available:
             title="">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -272,7 +275,7 @@ The following output properties are available:
             title="">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}public certificate from application metadata.
 {{% /md %}}</dd>
@@ -281,7 +284,7 @@ The following output properties are available:
             title="">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 {{% /md %}}</dd>
@@ -290,7 +293,7 @@ The following output properties are available:
             title="">
         <span>Http<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 {{% /md %}}</dd>
@@ -299,7 +302,7 @@ The following output properties are available:
             title="">
         <span>Http<wbr>Redirect<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 {{% /md %}}</dd>
@@ -308,7 +311,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -317,7 +320,7 @@ The following output properties are available:
             title="">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -325,7 +328,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}raw metadata of application.
 {{% /md %}}</dd>
@@ -334,7 +337,7 @@ The following output properties are available:
             title="">
         <span>Want<wbr>Authn<wbr>Requests<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
@@ -350,7 +353,7 @@ The following output properties are available:
             title="">
         <span>app<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -358,7 +361,7 @@ The following output properties are available:
             title="">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}public certificate from application metadata.
 {{% /md %}}</dd>
@@ -367,7 +370,7 @@ The following output properties are available:
             title="">
         <span>entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 {{% /md %}}</dd>
@@ -376,7 +379,7 @@ The following output properties are available:
             title="">
         <span>http<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 {{% /md %}}</dd>
@@ -385,7 +388,7 @@ The following output properties are available:
             title="">
         <span>http<wbr>Redirect<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 {{% /md %}}</dd>
@@ -394,7 +397,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -403,7 +406,7 @@ The following output properties are available:
             title="">
         <span>key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -411,7 +414,7 @@ The following output properties are available:
             title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}raw metadata of application.
 {{% /md %}}</dd>
@@ -420,7 +423,7 @@ The following output properties are available:
             title="">
         <span>want<wbr>Authn<wbr>Requests<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
@@ -436,7 +439,7 @@ The following output properties are available:
             title="">
         <span>app_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -444,7 +447,7 @@ The following output properties are available:
             title="">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}public certificate from application metadata.
 {{% /md %}}</dd>
@@ -453,7 +456,7 @@ The following output properties are available:
             title="">
         <span>entity_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Entity URL for instance `https://www.okta.com/saml2/service-provider/sposcfdmlybtwkdcgtuf`.
 {{% /md %}}</dd>
@@ -462,7 +465,7 @@ The following output properties are available:
             title="">
         <span>http_<wbr>post_<wbr>binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ The following output properties are available:
             title="">
         <span>http_<wbr>redirect_<wbr>binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
 {{% /md %}}</dd>
@@ -480,7 +483,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -489,7 +492,7 @@ The following output properties are available:
             title="">
         <span>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -497,7 +500,7 @@ The following output properties are available:
             title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}raw metadata of application.
 {{% /md %}}</dd>
@@ -506,7 +509,7 @@ The following output properties are available:
             title="">
         <span>want_<wbr>authn_<wbr>requests_<wbr>signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>

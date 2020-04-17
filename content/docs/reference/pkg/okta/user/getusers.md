@@ -8,22 +8,25 @@ block_external_search_index: true
 
 Use this data source to retrieve a list of users from Okta.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.user.getUsers({
+const example = okta.user.getUsers({
     searches: [{
         comparison: "sw",
         name: "profile.company",
         value: "Articulate",
     }],
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/users.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -45,7 +48,7 @@ const example = pulumi.output(okta.user.getUsers({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupUsers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersArgs">LookupUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#LookupUsersResult">LookupUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupUsers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#LookupUsersArgs">LookupUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#LookupUsersResult">LookupUsersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -181,7 +184,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -214,7 +217,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -247,7 +250,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -280,7 +283,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -320,7 +323,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#GetUsersSearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#GetUsersSearch">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersSearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersSearch">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -333,7 +336,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of property to search against.
 {{% /md %}}</dd>
@@ -342,7 +345,7 @@ The following output properties are available:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Value to compare with.
 {{% /md %}}</dd>
@@ -351,7 +354,7 @@ The following output properties are available:
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
@@ -367,7 +370,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of property to search against.
 {{% /md %}}</dd>
@@ -376,7 +379,7 @@ The following output properties are available:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Value to compare with.
 {{% /md %}}</dd>
@@ -385,7 +388,7 @@ The following output properties are available:
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
@@ -401,7 +404,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of property to search against.
 {{% /md %}}</dd>
@@ -410,7 +413,7 @@ The following output properties are available:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Value to compare with.
 {{% /md %}}</dd>
@@ -419,7 +422,7 @@ The following output properties are available:
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
@@ -435,7 +438,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of property to search against.
 {{% /md %}}</dd>
@@ -444,7 +447,7 @@ The following output properties are available:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Value to compare with.
 {{% /md %}}</dd>
@@ -453,7 +456,7 @@ The following output properties are available:
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Comparison to use.
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#GetUsersUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#GetUsersUser">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersUser">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -484,7 +487,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -493,7 +496,7 @@ The following output properties are available:
             title="Required">
         <span>City</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -502,7 +505,7 @@ The following output properties are available:
             title="Required">
         <span>Cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -511,7 +514,7 @@ The following output properties are available:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -520,7 +523,7 @@ The following output properties are available:
             title="Required">
         <span>Custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -529,7 +532,7 @@ The following output properties are available:
             title="Required">
         <span>Department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -538,7 +541,7 @@ The following output properties are available:
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -547,7 +550,7 @@ The following output properties are available:
             title="Required">
         <span>Division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -556,7 +559,7 @@ The following output properties are available:
             title="Required">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -565,7 +568,7 @@ The following output properties are available:
             title="Required">
         <span>Employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -574,7 +577,7 @@ The following output properties are available:
             title="Required">
         <span>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -583,7 +586,7 @@ The following output properties are available:
             title="Required">
         <span>Group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -592,7 +595,7 @@ The following output properties are available:
             title="Required">
         <span>Honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -601,7 +604,7 @@ The following output properties are available:
             title="Required">
         <span>Honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -610,7 +613,7 @@ The following output properties are available:
             title="Required">
         <span>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -619,7 +622,7 @@ The following output properties are available:
             title="Required">
         <span>Locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -628,7 +631,7 @@ The following output properties are available:
             title="Required">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -637,7 +640,7 @@ The following output properties are available:
             title="Required">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -646,7 +649,7 @@ The following output properties are available:
             title="Required">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -655,7 +658,7 @@ The following output properties are available:
             title="Required">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -664,7 +667,7 @@ The following output properties are available:
             title="Required">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -673,7 +676,7 @@ The following output properties are available:
             title="Required">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -682,7 +685,7 @@ The following output properties are available:
             title="Required">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -691,7 +694,7 @@ The following output properties are available:
             title="Required">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -700,7 +703,7 @@ The following output properties are available:
             title="Required">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -709,7 +712,7 @@ The following output properties are available:
             title="Required">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -718,7 +721,7 @@ The following output properties are available:
             title="Required">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -727,7 +730,7 @@ The following output properties are available:
             title="Required">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -736,7 +739,7 @@ The following output properties are available:
             title="Required">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -745,7 +748,7 @@ The following output properties are available:
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -754,7 +757,7 @@ The following output properties are available:
             title="Required">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -763,7 +766,7 @@ The following output properties are available:
             title="Required">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -772,7 +775,7 @@ The following output properties are available:
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -781,7 +784,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -790,7 +793,7 @@ The following output properties are available:
             title="Required">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -806,7 +809,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -815,7 +818,7 @@ The following output properties are available:
             title="Required">
         <span>City</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -824,7 +827,7 @@ The following output properties are available:
             title="Required">
         <span>Cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -833,7 +836,7 @@ The following output properties are available:
             title="Required">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -842,7 +845,7 @@ The following output properties are available:
             title="Required">
         <span>Custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -851,7 +854,7 @@ The following output properties are available:
             title="Required">
         <span>Department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -860,7 +863,7 @@ The following output properties are available:
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -869,7 +872,7 @@ The following output properties are available:
             title="Required">
         <span>Division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -878,7 +881,7 @@ The following output properties are available:
             title="Required">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -887,7 +890,7 @@ The following output properties are available:
             title="Required">
         <span>Employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -896,7 +899,7 @@ The following output properties are available:
             title="Required">
         <span>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -905,7 +908,7 @@ The following output properties are available:
             title="Required">
         <span>Group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -914,7 +917,7 @@ The following output properties are available:
             title="Required">
         <span>Honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -923,7 +926,7 @@ The following output properties are available:
             title="Required">
         <span>Honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -932,7 +935,7 @@ The following output properties are available:
             title="Required">
         <span>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -941,7 +944,7 @@ The following output properties are available:
             title="Required">
         <span>Locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -950,7 +953,7 @@ The following output properties are available:
             title="Required">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -959,7 +962,7 @@ The following output properties are available:
             title="Required">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -968,7 +971,7 @@ The following output properties are available:
             title="Required">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -977,7 +980,7 @@ The following output properties are available:
             title="Required">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -986,7 +989,7 @@ The following output properties are available:
             title="Required">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -995,7 +998,7 @@ The following output properties are available:
             title="Required">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1004,7 +1007,7 @@ The following output properties are available:
             title="Required">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1013,7 +1016,7 @@ The following output properties are available:
             title="Required">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1022,7 +1025,7 @@ The following output properties are available:
             title="Required">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1031,7 +1034,7 @@ The following output properties are available:
             title="Required">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1040,7 +1043,7 @@ The following output properties are available:
             title="Required">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1049,7 +1052,7 @@ The following output properties are available:
             title="Required">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1058,7 +1061,7 @@ The following output properties are available:
             title="Required">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1067,7 +1070,7 @@ The following output properties are available:
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1076,7 +1079,7 @@ The following output properties are available:
             title="Required">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1085,7 +1088,7 @@ The following output properties are available:
             title="Required">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1094,7 +1097,7 @@ The following output properties are available:
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1103,7 +1106,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1112,7 +1115,7 @@ The following output properties are available:
             title="Required">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1128,7 +1131,7 @@ The following output properties are available:
             title="Required">
         <span>admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -1137,7 +1140,7 @@ The following output properties are available:
             title="Required">
         <span>city</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1146,7 +1149,7 @@ The following output properties are available:
             title="Required">
         <span>cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1155,7 +1158,7 @@ The following output properties are available:
             title="Required">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1164,7 +1167,7 @@ The following output properties are available:
             title="Required">
         <span>custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -1173,7 +1176,7 @@ The following output properties are available:
             title="Required">
         <span>department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1182,7 +1185,7 @@ The following output properties are available:
             title="Required">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1191,7 +1194,7 @@ The following output properties are available:
             title="Required">
         <span>division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1200,7 +1203,7 @@ The following output properties are available:
             title="Required">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1209,7 +1212,7 @@ The following output properties are available:
             title="Required">
         <span>employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1218,7 +1221,7 @@ The following output properties are available:
             title="Required">
         <span>first<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1227,7 +1230,7 @@ The following output properties are available:
             title="Required">
         <span>group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1236,7 +1239,7 @@ The following output properties are available:
             title="Required">
         <span>honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1245,7 +1248,7 @@ The following output properties are available:
             title="Required">
         <span>honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1254,7 +1257,7 @@ The following output properties are available:
             title="Required">
         <span>last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1263,7 +1266,7 @@ The following output properties are available:
             title="Required">
         <span>locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1272,7 +1275,7 @@ The following output properties are available:
             title="Required">
         <span>login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1281,7 +1284,7 @@ The following output properties are available:
             title="Required">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1290,7 +1293,7 @@ The following output properties are available:
             title="Required">
         <span>manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1299,7 +1302,7 @@ The following output properties are available:
             title="Required">
         <span>middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1308,7 +1311,7 @@ The following output properties are available:
             title="Required">
         <span>mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1317,7 +1320,7 @@ The following output properties are available:
             title="Required">
         <span>nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1326,7 +1329,7 @@ The following output properties are available:
             title="Required">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1335,7 +1338,7 @@ The following output properties are available:
             title="Required">
         <span>postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1344,7 +1347,7 @@ The following output properties are available:
             title="Required">
         <span>preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1353,7 +1356,7 @@ The following output properties are available:
             title="Required">
         <span>primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1362,7 +1365,7 @@ The following output properties are available:
             title="Required">
         <span>profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1371,7 +1374,7 @@ The following output properties are available:
             title="Required">
         <span>second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1380,7 +1383,7 @@ The following output properties are available:
             title="Required">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1389,7 +1392,7 @@ The following output properties are available:
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1398,7 +1401,7 @@ The following output properties are available:
             title="Required">
         <span>street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1407,7 +1410,7 @@ The following output properties are available:
             title="Required">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1416,7 +1419,7 @@ The following output properties are available:
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1425,7 +1428,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1434,7 +1437,7 @@ The following output properties are available:
             title="Required">
         <span>zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1450,7 +1453,7 @@ The following output properties are available:
             title="Required">
         <span>admin_<wbr>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to user.
 {{% /md %}}</dd>
@@ -1459,7 +1462,7 @@ The following output properties are available:
             title="Required">
         <span>city</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1468,7 +1471,7 @@ The following output properties are available:
             title="Required">
         <span>cost_<wbr>center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1477,7 +1480,7 @@ The following output properties are available:
             title="Required">
         <span>country_<wbr>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1486,7 +1489,7 @@ The following output properties are available:
             title="Required">
         <span>custom_<wbr>profile_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -1495,7 +1498,7 @@ The following output properties are available:
             title="Required">
         <span>department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1504,7 +1507,7 @@ The following output properties are available:
             title="Required">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1513,7 +1516,7 @@ The following output properties are available:
             title="Required">
         <span>division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1522,7 +1525,7 @@ The following output properties are available:
             title="Required">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1531,7 +1534,7 @@ The following output properties are available:
             title="Required">
         <span>employee_<wbr>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1540,7 +1543,7 @@ The following output properties are available:
             title="Required">
         <span>first_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1549,7 +1552,7 @@ The following output properties are available:
             title="Required">
         <span>group_<wbr>memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1558,7 +1561,7 @@ The following output properties are available:
             title="Required">
         <span>honorific_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1567,7 +1570,7 @@ The following output properties are available:
             title="Required">
         <span>honorific_<wbr>suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1576,7 +1579,7 @@ The following output properties are available:
             title="Required">
         <span>last_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1585,7 +1588,7 @@ The following output properties are available:
             title="Required">
         <span>locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1594,7 +1597,7 @@ The following output properties are available:
             title="Required">
         <span>login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1603,7 +1606,7 @@ The following output properties are available:
             title="Required">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1612,7 +1615,7 @@ The following output properties are available:
             title="Required">
         <span>manager_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1621,7 +1624,7 @@ The following output properties are available:
             title="Required">
         <span>middle_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1630,7 +1633,7 @@ The following output properties are available:
             title="Required">
         <span>mobile_<wbr>phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1639,7 +1642,7 @@ The following output properties are available:
             title="Required">
         <span>nick_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1648,7 +1651,7 @@ The following output properties are available:
             title="Required">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1657,7 +1660,7 @@ The following output properties are available:
             title="Required">
         <span>postal_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1666,7 +1669,7 @@ The following output properties are available:
             title="Required">
         <span>preferred_<wbr>language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1675,7 +1678,7 @@ The following output properties are available:
             title="Required">
         <span>primary_<wbr>phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1684,7 +1687,7 @@ The following output properties are available:
             title="Required">
         <span>profile_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1693,7 +1696,7 @@ The following output properties are available:
             title="Required">
         <span>second_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1702,7 +1705,7 @@ The following output properties are available:
             title="Required">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1711,7 +1714,7 @@ The following output properties are available:
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1720,7 +1723,7 @@ The following output properties are available:
             title="Required">
         <span>street_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1729,7 +1732,7 @@ The following output properties are available:
             title="Required">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1738,7 +1741,7 @@ The following output properties are available:
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1747,7 +1750,7 @@ The following output properties are available:
             title="Required">
         <span>user_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
@@ -1756,7 +1759,7 @@ The following output properties are available:
             title="Required">
         <span>zip_<wbr>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
