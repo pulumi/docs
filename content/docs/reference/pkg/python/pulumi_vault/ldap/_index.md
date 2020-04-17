@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.ldap.AuthBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ldap.</code><code class="sig-name descname">AuthBackend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">binddn=None</em>, <em class="sig-param">bindpass=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">deny_null_bind=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">discoverdn=None</em>, <em class="sig-param">groupattr=None</em>, <em class="sig-param">groupdn=None</em>, <em class="sig-param">groupfilter=None</em>, <em class="sig-param">insecure_tls=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">starttls=None</em>, <em class="sig-param">tls_max_version=None</em>, <em class="sig-param">tls_min_version=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">upndomain=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_token_groups=None</em>, <em class="sig-param">userattr=None</em>, <em class="sig-param">userdn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ldap.AuthBackend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource for managing an <a class="reference external" href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -357,9 +354,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.ldap.AuthBackendGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ldap.</code><code class="sig-name descname">AuthBackendGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">groupname=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ldap.AuthBackendGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a group in an <a class="reference external" href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend_group.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend_group.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -450,9 +444,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.ldap.AuthBackendUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ldap.</code><code class="sig-name descname">AuthBackendUser</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ldap.AuthBackendUser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a user in an <a class="reference external" href="https://www.vaultproject.io/docs/auth/ldap.html">LDAP auth backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend_user.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ldap_auth_backend_user.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
