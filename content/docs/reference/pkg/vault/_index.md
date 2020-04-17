@@ -1,5 +1,5 @@
 ---
-title: "vault"
+title: "Vault"
 block_external_search_index: true
 menu:
     reference:
@@ -11,15 +11,10 @@ menu:
 
 A Pulumi package for creating and managing vault cloud resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-vault` repo](https://github.com/pulumi/pulumi-vault/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-vault` repo](https://github.com/terraform-providers/terraform-provider-vault/issues).
-
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="alicloud/" title="alicloud"><span class="symbol module"></span>alicloud</a></li>
-    <li><a href="appRole/" title="appRole"><span class="symbol module"></span>appRole</a></li>
+    <li><a href="approle/" title="appRole"><span class="symbol module"></span>appRole</a></li>
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
     <li><a href="azure/" title="azure"><span class="symbol module"></span>azure</a></li>
     <li><a href="consul/" title="consul"><span class="symbol module"></span>consul</a></li>
@@ -32,8 +27,8 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="kubernetes/" title="kubernetes"><span class="symbol module"></span>kubernetes</a></li>
     <li><a href="ldap/" title="ldap"><span class="symbol module"></span>ldap</a></li>
     <li><a href="okta/" title="okta"><span class="symbol module"></span>okta</a></li>
-    <li><a href="pkiSecret/" title="pkiSecret"><span class="symbol module"></span>pkiSecret</a></li>
-    <li><a href="rabbitMq/" title="rabbitMq"><span class="symbol module"></span>rabbitMq</a></li>
+    <li><a href="pkisecret/" title="pkiSecret"><span class="symbol module"></span>pkiSecret</a></li>
+    <li><a href="rabbitmq/" title="rabbitMq"><span class="symbol module"></span>rabbitMq</a></li>
     <li><a href="ssh/" title="ssh"><span class="symbol module"></span>ssh</a></li>
     <li><a href="tokenauth/" title="tokenauth"><span class="symbol module"></span>tokenauth</a></li>
     <li><a href="transit/" title="transit"><span class="symbol module"></span>transit</a></li>
@@ -66,6 +61,7 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

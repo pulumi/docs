@@ -802,9 +802,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a Database Secret Backend static role in Vault. Database secret backend
 static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
 database for the database.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/database_secret_backend_static_role.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

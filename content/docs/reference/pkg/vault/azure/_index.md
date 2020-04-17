@@ -16,12 +16,18 @@ block_external_search_index: true
     <li><a href="backendrole" title="BackendRole"><span class="symbol resource"></span>BackendRole</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="getaccesscredentials" title="GetAccessCredentials"><span class="symbol function"></span>GetAccessCredentials</a></li>
+</ul>
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 
