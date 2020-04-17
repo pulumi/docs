@@ -18,6 +18,9 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"github.com/pulumi/pulumi/pkg/v2/codegen/dotnet"
+	go_gen "github.com/pulumi/pulumi/pkg/v2/codegen/go"
+	"github.com/pulumi/pulumi/pkg/v2/codegen/nodejs"
 	"io/ioutil"
 	"os"
 	"path"
@@ -36,35 +39,151 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	if len(args) < 2 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file>\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file> [overlay-schema-file]>\n", os.Args[0])
 		os.Exit(1)
 	}
 
 	defer glog.Flush()
 
-	outDir, schemaFile := args[0], args[1]
+	outDir, schemaFile, overlaysSchemaFile := args[0], args[1], args[2]
 
-	b, err := ioutil.ReadFile(schemaFile)
+	schema, err := ioutil.ReadFile(schemaFile)
 	if err != nil {
-		fmt.Printf("error reading schema file from path: %v", err)
+		glog.Infof("error reading schema file from path: %v", err)
 		os.Exit(1)
 	}
 
-	if err := generateDocsFromSchema(outDir, b); err != nil {
-		fmt.Printf("error generating docs from schema: %v", err)
+	mainSpec := &pschema.PackageSpec{}
+	if err := json.Unmarshal(schema, mainSpec); err != nil {
+		glog.Infof("error unmarshalling schema into a PackageSpec: %v", err)
+		os.Exit(1)
+	}
+
+	if overlaysSchemaFile != "" {
+		overlaySpec := &pschema.PackageSpec{}
+		overlaysSchema, err := ioutil.ReadFile(overlaysSchemaFile)
+		if err != nil {
+			glog.Infof("error reading overlay schema file from path: %v", err)
+			os.Exit(1)
+		}
+		if err := json.Unmarshal(overlaysSchema, overlaySpec); err != nil {
+			glog.Infof("error unmarshalling overlay schema into a PackageSpec: %v", err)
+			os.Exit(1)
+		}
+
+		mergeOverlaySchemaSpec(mainSpec, overlaySpec)
+	}
+
+	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {
+		glog.Infof("error generating docs from schema: %v", err)
 		os.Exit(1)
 	}
 }
 
-func generateDocsFromSchema(outDir string, schema []byte) error {
-	spec := &pschema.PackageSpec{}
-	if err := json.Unmarshal(schema, spec); err != nil {
-		return errors.Wrapf(err, "error unmarshalling schema into a PackageSpec: %v", err)
+// mergeOverlaySchemaSpec merges the resources, types and language info from the overlay schema spec
+// into the main package spec.
+func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.PackageSpec) error {
+	// Merge the overlay schema spec into the main schema spec.
+	for key, value := range overlaySpec.Types {
+		if _, ok := mainSpec.Types[key]; ok {
+			glog.Infoln(key, "was skipped because it was already in the main schema spec")
+			continue
+		}
+		mainSpec.Types[key] = value
+	}
+	for key, value := range overlaySpec.Resources {
+		if _, ok := mainSpec.Resources[key]; ok {
+			glog.Infoln(key, "was skipped because it was already in the main schema spec")
+			continue
+		}
+		mainSpec.Resources[key] = value
+	}
+	for lang, overlayLanguageInfo := range overlaySpec.Language {
+		switch lang {
+		case "go":
+			var mainSchemaPkgInfo go_gen.GoInfo
+			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling Go package info from the main schema spec")
+			}
+
+			var overlaySchemaPkgInfo go_gen.GoInfo
+			if err := json.Unmarshal(overlayLanguageInfo, &overlaySchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling Go package info from the overlay schema spec")
+			}
+
+			for key, value := range overlaySchemaPkgInfo.ModuleToPackage {
+				if _, ok := mainSchemaPkgInfo.ModuleToPackage[key]; ok {
+					glog.Infoln("Go ModuleToPackage key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
+				mainSchemaPkgInfo.ModuleToPackage[key] = value
+			}
+
+			// Override the language info for Go in the main schema spec.
+			b, err := json.Marshal(mainSchemaPkgInfo)
+			if err != nil {
+				return errors.Wrap(err, "error marshalling Go package info")
+			}
+			mainSpec.Language[lang] = json.RawMessage(string(b))
+		case "nodejs":
+			var mainSchemaPkgInfo nodejs.NodePackageInfo
+			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling NodeJS package info from the main schema spec")
+			}
+
+			var overlaySchemaPkgInfo nodejs.NodePackageInfo
+			if err := json.Unmarshal(overlayLanguageInfo, &overlaySchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling NodeJS package info from the overlay schema spec")
+			}
+
+			for key, value := range overlaySchemaPkgInfo.ModuleToPackage {
+				if _, ok := mainSchemaPkgInfo.ModuleToPackage[key]; ok {
+					glog.Infoln("NodeJS ModuleToPackage key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
+				mainSchemaPkgInfo.ModuleToPackage[key] = value
+			}
+
+			// Override the language info for NodeJS in the main schema spec.
+			b, err := json.Marshal(mainSchemaPkgInfo)
+			if err != nil {
+				return errors.Wrap(err, "error marshalling NodeJS package info")
+			}
+			mainSpec.Language[lang] = json.RawMessage(string(b))
+		case "csharp":
+			var mainSchemaPkgInfo dotnet.CSharpPackageInfo
+			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling C# package info from the main schema spec")
+			}
+
+			var overlaySchemaPkgInfo dotnet.CSharpPackageInfo
+			if err := json.Unmarshal(overlayLanguageInfo, &overlaySchemaPkgInfo); err != nil {
+				return errors.Wrap(err, "error un-marshalling C# package info from overlay schema spec")
+			}
+
+			for key, value := range overlaySchemaPkgInfo.Namespaces {
+				if _, ok := mainSchemaPkgInfo.Namespaces[key]; ok {
+					glog.Infoln("C# Namespaces key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
+				mainSchemaPkgInfo.Namespaces[key] = value
+			}
+			// Override the language info for C# in the main schema spec.
+			b, err := json.Marshal(mainSchemaPkgInfo)
+			if err != nil {
+				return errors.Wrap(err, "error marshalling C# package info")
+			}
+			mainSpec.Language[lang] = json.RawMessage(string(b))
+		}
 	}
 
+	return nil
+}
+
+func generateDocsFromSchema(outDir string, spec *pschema.PackageSpec) error {
 	pulPkg, err := pschema.ImportSpec(*spec)
 	if err != nil {
-		return errors.Wrapf(err, "error importing un-marshalled package spec: %v", err)
+		return errors.Wrapf(err, "error importing package spec: %v", err)
 	}
 
 	files, err := docsgen.GeneratePackage("Pulumi Docs Generator", pulPkg)

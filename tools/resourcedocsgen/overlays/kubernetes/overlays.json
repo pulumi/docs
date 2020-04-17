@@ -1,0 +1,417 @@
+{
+    "name": "kubernetes",
+    "types": {
+        "kubernetes:helm/v2:FetchOpts": {
+            "type": "object",
+            "description": "Additional options to customize the fetching of the Helm chart.",
+            "inputProperties": {
+                "caFile": {
+                    "type": "string",
+                    "description": "Verify certificates of HTTPS-enabled servers using this CA bundle."
+                },
+                "certFile": {
+                    "type": "string",
+                    "description": "Identify HTTPS client using this SSL certificate file."
+                },
+                "destination": {
+                    "type": "string",
+                    "description": "Location to write the chart. If this and tardir are specified, tardir is appended to this (default \".\")."
+                },
+                "devel": {
+                    "type": "boolean",
+                    "description": "Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored."
+                },
+                "home": {
+                    "type": "string",
+                    "description": "Location of your Helm config. Overrides $HELM_HOME (default \"/Users/abc/.helm\")."
+                },
+                "keyFile": {
+                    "type": "string",
+                    "description": "Identify HTTPS client using this SSL key file."
+                },
+                "keyring": {
+                    "type": "string",
+                    "description": "Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”)."
+                },
+                "password": {
+                    "type": "string",
+                    "description": "Chart repository password."
+                },
+                "prov": {
+                    "type": "string",
+                    "description": "Fetch the provenance file, but don’t perform verification."
+                },
+                "repo": {
+                    "type": "string",
+                    "description": "Chart repository url where to locate the requested chart."
+                },
+                "untar": {
+                    "type": "boolean",
+                    "description": "If set to false, will leave the chart as a tarball after downloading."
+                },
+                "untardir": {
+                    "type": "string",
+                    "description": "If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default \".\")."
+                },
+                "username": {
+                    "type": "string",
+                    "description": "Chart repository username."
+                },
+                "verify": {
+                    "type": "string",
+                    "description": "Verify the package against its signature."
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Specific version of a chart. Without this, the latest version is fetched."
+                }
+            }
+        },
+        "kubernetes:helm/v3:FetchOpts": {
+            "type": "object",
+            "description": "Additional options to customize the fetching of the Helm chart.",
+            "inputProperties": {
+                "caFile": {
+                    "type": "string",
+                    "description": "Verify certificates of HTTPS-enabled servers using this CA bundle."
+                },
+                "certFile": {
+                    "type": "string",
+                    "description": "Identify HTTPS client using this SSL certificate file."
+                },
+                "destination": {
+                    "type": "string",
+                    "description": "Location to write the chart. If this and tardir are specified, tardir is appended to this (default \".\")."
+                },
+                "devel": {
+                    "type": "boolean",
+                    "description": "Use development versions, too. Equivalent to version '>0.0.0-0'. If –version is set, this is ignored."
+                },
+                "home": {
+                    "type": "string",
+                    "description": "Location of your Helm config. Overrides $HELM_HOME (default \"/Users/abc/.helm\")."
+                },
+                "keyFile": {
+                    "type": "string",
+                    "description": "Identify HTTPS client using this SSL key file."
+                },
+                "keyring": {
+                    "type": "string",
+                    "description": "Keyring containing public keys (default “/Users/abc/.gnupg/pubring.gpg”)."
+                },
+                "password": {
+                    "type": "string",
+                    "description": "Chart repository password."
+                },
+                "prov": {
+                    "type": "string",
+                    "description": "Fetch the provenance file, but don’t perform verification."
+                },
+                "repo": {
+                    "type": "string",
+                    "description": "Chart repository url where to locate the requested chart."
+                },
+                "untar": {
+                    "type": "boolean",
+                    "description": "If set to false, will leave the chart as a tarball after downloading."
+                },
+                "untardir": {
+                    "type": "string",
+                    "description": "If untar is specified, this flag specifies the name of the directory into which the chart is expanded (default \".\")."
+                },
+                "username": {
+                    "type": "string",
+                    "description": "Chart repository username."
+                },
+                "verify": {
+                    "type": "string",
+                    "description": "Verify the package against its signature."
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Specific version of a chart. Without this, the latest version is fetched."
+                }
+            }
+        }
+    },
+    "resources": {
+        "kubernetes:apiextensions.k8s.io:CustomResource": {
+            "description": "CustomResource represents an instance of a CustomResourceDefinition (CRD). For example, the\n CoreOS Prometheus operator exposes a CRD `monitoring.coreos.com/ServiceMonitor`; to\n instantiate this as a Pulumi resource, one could call `new CustomResource`, passing the\n `ServiceMonitor` resource definition as an argument.",
+            "type": "object",
+            "properties": {
+                "apiVersion": {
+                    "type": "string",
+                    "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources"
+                },
+                "kind": {
+                    "type": "string",
+                    "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+                },
+                "metadata": {
+                    "$ref": "#/types/kubernetes:meta/v1:ObjectMeta",
+                    "description": "Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
+                }
+            },
+            "inputProperties": {
+                "apiVersion": {
+                    "type": "string",
+                    "description": "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources"
+                },
+                "kind": {
+                    "type": "string",
+                    "description": "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds"
+                },
+                "metadata": {
+                    "$ref": "#/types/kubernetes:meta/v1:ObjectMeta",
+                    "description": "Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
+                },
+                "others": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "This field is not an actual property. It is used to represent custom property names and their values that can be passed in addition to the other input properties."
+                }
+            }
+        },
+        "kubernetes:helm/v2:Chart": {
+            "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`\n is not specified, `ConfigFile` assumes the argument `name` is the filename.",
+            "type": "object",
+            "properties": {
+                "resources": {
+                    "type": "string"
+                },
+                "urn": {
+                    "type": "string",
+                    "description": "urn is the stable logical URN used to distinctly address a resource, both before and after deployments."
+                }
+            },
+            "inputProperties": {
+                "chart": {
+                    "type": "string",
+                    "description": "The name of the chart to deploy. If [repo] is provided, this chart name will be prefixed by the repo name. Example: repo: \"stable\", chart: \"nginx-ingress\" -> \"stable/nginx-ingress\" Example: chart: \"stable/nginx-ingress\" -> \"stable/nginx-ingress\"\n\nRequired if specifying `ChartOpts` for a remote chart."
+                },
+                "fetchOpts": {
+                    "$ref": "#/types/kubernetes:helm/v2:FetchOpts",
+                    "description": "Additional options to customize the fetching of the Helm chart."
+                },
+                "path": {
+                    "type": "string",
+                    "description": "The path to the chart directory which contains the `Chart.yaml` file.\n\nRequired if specifying `LocalChartOpts`."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The optional namespace to install chart resources into."
+                },
+                "repo": {
+                    "type": "string",
+                    "description": "The repository name of the chart to deploy. Example: \"stable\".\n\nUsed only when specifying options for a remote chart."
+                },
+                "resourcePrefix": {
+                    "type": "string",
+                    "description": "An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix=\"foo\" would produce a resource named \"foo-resourceName\"."
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "Optional array of transformations to apply to resources that will be created by this chart prior to creation. Allows customization of the chart behaviour without directly modifying the chart itself."
+                },
+                "values": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "Overrides for chart values."
+                },
+                "version": {
+                    "type": "string",
+                    "description": "The version of the chart to deploy. If not provided, the latest version will be deployed."
+                }
+            }
+        },
+        "kubernetes:helm/v3:Chart": {
+            "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name`\n is not specified, `ConfigFile` assumes the argument `name` is the filename.",
+            "type": "object",
+            "properties": {
+                "resources": {
+                    "type": "string"
+                },
+                "urn": {
+                    "type": "string",
+                    "description": "urn is the stable logical URN used to distinctly address a resource, both before and after deployments."
+                }
+            },
+            "inputProperties": {
+                "chart": {
+                    "type": "string",
+                    "description": "The name of the chart to deploy. If [repo] is provided, this chart name will be prefixed by the repo name. Example: repo: \"stable\", chart: \"nginx-ingress\" -> \"stable/nginx-ingress\" Example: chart: \"stable/nginx-ingress\" -> \"stable/nginx-ingress\"\n\nRequired if specifying `ChartOpts` for a remote chart."
+                },
+                "fetchOpts": {
+                    "$ref": "#/types/kubernetes:helm/v3:FetchOpts",
+                    "description": "Additional options to customize the fetching of the Helm chart."
+                },
+                "path": {
+                    "type": "string",
+                    "description": "The path to the chart directory which contains the `Chart.yaml` file.\n\nRequired if specifying `LocalChartOpts`."
+                },
+                "namespace": {
+                    "type": "string",
+                    "description": "The optional namespace to install chart resources into."
+                },
+                "repo": {
+                    "type": "string",
+                    "description": "The repository name of the chart to deploy. Example: \"stable\".\n\nUsed only when specifying options for a remote chart."
+                },
+                "resourcePrefix": {
+                    "type": "string",
+                    "description": "An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix=\"foo\" would produce a resource named \"foo-resourceName\"."
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "Optional array of transformations to apply to resources that will be created by this chart prior to creation. Allows customization of the chart behaviour without directly modifying the chart itself."
+                },
+                "values": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "Overrides for chart values."
+                },
+                "version": {
+                    "type": "string",
+                    "description": "The version of the chart to deploy. If not provided, the latest version will be deployed."
+                }
+            }
+        },
+        "kubernetes:yaml:ConfigFile": {
+            "description": "ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `config.name` is not specified, `ConfigFile` assumes the argument `name` is the filename.",
+            "type": "object",
+            "properties": {
+                "resources": {
+                    "type": "string"
+                },
+                "urn": {
+                    "type": "string",
+                    "description": "urn is the stable logical URN used to distinctly address a resource, both before and after deployments."
+                }
+            },
+            "inputProperties": {
+                "file": {
+                    "type": "string",
+                    "description": "Path or a URL that uniquely identifies a file."
+                },
+                "resourcePrefix": {
+                    "type": "string",
+                    "description": "An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix=\"foo\" would produce a resource named \"foo-resourceName\"."
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "A set of transformations to apply to Kubernetes resource definitions before registering with engine."
+                }
+            }
+        },
+        "kubernetes:yaml:ConfigGroup": {
+            "description": "ConfigGroup creates a set of Kubernetes resources from Kubernetes YAML text. The YAML text\n may be supplied using any of the following `ConfigGroupOpts`:\n\n\n1. Using a filename or a list of filenames:\n\ta. `{files: \"foo.yaml\"}`\n\tb. `{files: [\"foo.yaml\", \"bar.yaml\"]}`\n2. Using a file pattern or a list of file patterns:\n\ta. `{files: \"*.yaml\"}`\n\tb. `{files: [\"foo/*.yaml\", \"bar/*.yaml\"]}`\n3. Using a literal string containing YAML, or a list of such strings:\n\ta. `{yaml: \"(LITERAL YAML HERE)\"}`\n\tb. `{yaml: [\"(LITERAL YAML HERE)\", \"(MORE YAML)\"]}`\n4. Any combination of files, patterns, or YAML strings:\n\ta. `{files: \"foo.yaml\", yaml: \"(LITERAL YAML HERE)\"}`",
+            "type": "object",
+            "properties": {
+                "resources": {
+                    "type": "string"
+                },
+                "urn": {
+                    "type": "string",
+                    "description": "urn is the stable logical URN used to distinctly address a resource, both before and after deployments."
+                }
+            },
+            "inputProperties": {
+                "files": {
+                    "description": "Set of paths or a URLs that uniquely identify files.",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "description": "Path or a URL that uniquely identifies a file."
+                },
+                "objs": {
+                    "description": "Objects representing Kubernetes resources.",
+                    "oneOf": [
+                        {
+                            "$ref": "pulumi.json#/Any"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "$ref": "pulumi.json#/Any"
+                            }
+                        }
+                    ],
+                    "description": "Path or a URL that uniquely identifies a file."
+                },
+                "resourcePrefix": {
+                    "type": "string",
+                    "description": "An optional prefix for the auto-generated resource names. Example: A resource created with resourcePrefix=\"foo\" would produce a resource named \"foo-resourceName\"."
+                },
+                "transformations": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "A set of transformations to apply to Kubernetes resource definitions before registering with engine."
+                },
+                "yaml": {
+                    "description": "YAML text containing Kubernetes resource definitions.",
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    ],
+                    "description": "Path or a URL that uniquely identifies a file."
+                }
+            }
+        }
+    },
+    "language": {
+        "go": {
+            "moduleToPackage": {
+                "apiextensions.k8s.io": "apiextensions",
+                "helm/v2": "helm/v2",
+                "helm/v3": "helm/v3",
+                "yaml": "yaml"
+            }
+        },
+        "nodejs": {
+            "moduleToPackage": {
+                "helm/v2": "helm/v2",
+                "helm/v3": "helm/v3",
+                "yaml": "yaml"
+            }
+        },
+        "csharp": {
+            "namespaces": {
+                "helm/v2": "Helm.V2",
+                "helm/v3": "Helm.V3",
+                "yaml": "Yaml"
+            }
+        }
+    }
+}
