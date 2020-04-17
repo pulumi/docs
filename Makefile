@@ -49,10 +49,6 @@ generate:
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
 
-.PHONY: resource_docs
-resource_docs::
-	./scripts/gen_resource_docs.sh
-
 .PHONY: copy_static_prebuilt
 copy_static_prebuilt:
 	mkdir -p public && cp -R static-prebuilt/* public/
