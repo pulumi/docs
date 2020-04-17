@@ -43,8 +43,6 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/ml_engine_model.html.markdown.
-
 
 
 ## Create a EngineModel Resource
@@ -52,7 +50,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/ml/#EngineModel">EngineModel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/ml/#EngineModelArgs">EngineModelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/ml/#EngineModel">EngineModel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/ml/#EngineModelArgs">EngineModelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -60,11 +58,11 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEngineModel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModelArgs">EngineModelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModel">EngineModel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEngineModel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModelArgs">EngineModelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModel">EngineModel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Ml.EngineModel.html">EngineModel</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModelArgs.html">EngineModelArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModel.html">EngineModel</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModelArgs.html">EngineModelArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -160,7 +158,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args?</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -169,7 +167,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -178,7 +176,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -187,7 +185,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -196,7 +194,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -205,7 +203,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -214,7 +212,7 @@ const defaultEngineModel = new gcp.ml.EngineModel("default", {
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -224,7 +222,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -240,7 +238,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">*Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -249,7 +247,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -267,7 +265,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -276,7 +274,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -285,7 +283,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -294,7 +292,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -304,7 +302,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -320,7 +318,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version?</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -329,7 +327,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -338,7 +336,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -347,7 +345,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -356,7 +354,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -365,7 +363,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -374,7 +372,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -384,7 +382,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -409,7 +407,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -427,7 +425,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -436,7 +434,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online_<wbr>prediction_<wbr>console_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -445,7 +443,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online_<wbr>prediction_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -454,7 +452,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -464,7 +462,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -473,336 +471,6 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## EngineModel Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version?</a></span>
-    </dt>
-    <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description specified for the model when it was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}One or more labels that you can add, to organize your models.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name specified for the model.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Online<wbr>Prediction<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">*Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
-    </dt>
-    <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description specified for the model when it was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}One or more labels that you can add, to organize your models.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name specified for the model.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Online<wbr>Prediction<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version?</a></span>
-    </dt>
-    <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description specified for the model when it was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}One or more labels that you can add, to organize your models.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name specified for the model.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>online<wbr>Prediction<wbr>Console<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>online<wbr>Prediction<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Dict[Engine<wbr>Model<wbr>Default<wbr>Version]</a></span>
-    </dt>
-    <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description specified for the model when it was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}One or more labels that you can add, to organize your models.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name specified for the model.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>online_<wbr>prediction_<wbr>console_<wbr>logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>online_<wbr>prediction_<wbr>logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -826,11 +494,11 @@ Get an existing EngineModel resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineModel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModelState">EngineModelState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModel">EngineModel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEngineModel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModelState">EngineModelState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModel">EngineModel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Ml.EngineModel.html">EngineModel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Ml.EngineModelState.html">EngineModelState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModel.html">EngineModel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ML.EngineModelState.html">EngineModelState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -940,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args?</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -949,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -958,7 +626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -967,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -976,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -985,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -994,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1004,7 +672,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -1020,7 +688,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">*Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -1029,7 +697,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -1047,7 +715,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -1056,7 +724,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -1065,7 +733,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -1074,7 +742,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1084,7 +752,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -1100,7 +768,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version?</a></span>
+        <span class="property-type"><a href="#enginemodeldefaultversion">Engine<wbr>Model<wbr>Default<wbr>Version</a></span>
     </dt>
     <dd>{{% md %}}The default version of the model. This version will be used to handle prediction requests that do not specify a version.
 {{% /md %}}</dd>
@@ -1109,7 +777,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -1118,7 +786,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}One or more labels that you can add, to organize your models.
 {{% /md %}}</dd>
@@ -1127,7 +795,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -1136,7 +804,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online<wbr>Prediction<wbr>Console<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -1145,7 +813,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online<wbr>Prediction<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -1154,7 +822,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1164,7 +832,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -1189,7 +857,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description specified for the model when it was created.
 {{% /md %}}</dd>
@@ -1207,7 +875,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name specified for the model.
 {{% /md %}}</dd>
@@ -1216,7 +884,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online_<wbr>prediction_<wbr>console_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
 {{% /md %}}</dd>
@@ -1225,7 +893,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>online_<wbr>prediction_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, online prediction access logs are sent to StackDriver Logging.
 {{% /md %}}</dd>
@@ -1234,7 +902,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1244,7 +912,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The list of regions where the model is going to be deployed. Currently only one region per model is supported
 {{% /md %}}</dd>
@@ -1269,7 +937,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModelDefaultVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/ml?tab=doc#EngineModelDefaultVersionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModelDefaultVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/ml?tab=doc#EngineModelDefaultVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1282,7 +950,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1297,7 +965,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1312,7 +980,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1327,7 +995,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1348,6 +1016,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

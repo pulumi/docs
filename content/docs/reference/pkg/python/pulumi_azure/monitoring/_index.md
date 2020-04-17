@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.monitoring.ActionGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActionGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arm_role_receivers=None</em>, <em class="sig-param">automation_runbook_receivers=None</em>, <em class="sig-param">azure_app_push_receivers=None</em>, <em class="sig-param">azure_function_receivers=None</em>, <em class="sig-param">email_receivers=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">itsm_receivers=None</em>, <em class="sig-param">logic_app_receivers=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">sms_receivers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">voice_receivers=None</em>, <em class="sig-param">webhook_receivers=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Action Group within Azure Monitor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_action_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -400,9 +397,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.ActivityLogAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ActivityLogAlert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">criteria=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Activity Log Alert within Azure Monitor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_activity_log_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_activity_log_alert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -585,9 +579,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.AutoscaleSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AutoscaleSetting</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification=None</em>, <em class="sig-param">profiles=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_autoscale_setting.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_autoscale_setting.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -939,9 +930,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.DiagnosticSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">DiagnosticSetting</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eventhub_authorization_rule_id=None</em>, <em class="sig-param">eventhub_name=None</em>, <em class="sig-param">log_analytics_destination_type=None</em>, <em class="sig-param">log_analytics_workspace_id=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Diagnostic Setting for an existing Resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_diagnostic_setting.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_diagnostic_setting.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1416,7 +1404,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile">Log Profile</a>. A Log Profile configures how Activity Logs are exported.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> It’s only possible to configure one Log Profile per Subscription. If you are trying to create more than one Log Profile, an error with <code class="docutils literal notranslate"><span class="pre">StatusCode=409</span></code> will occur.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_log_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_log_profile.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1549,9 +1536,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.MetricAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">MetricAlert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">auto_mitigate=None</em>, <em class="sig-param">criterias=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Metric Alert within Azure Monitor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_metric_alert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1772,9 +1756,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.ScheduledQueryRulesAlert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ScheduledQueryRulesAlert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">query_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">time_window=None</em>, <em class="sig-param">trigger=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ScheduledQueryRulesAlert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_scheduled_query_rules_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_scheduled_query_rules_alert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2000,9 +1981,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.ScheduledQueryRulesLog">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">ScheduledQueryRulesLog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">criteria=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.ScheduledQueryRulesLog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a LogToMetricAction Scheduled Query Rules resource within Azure Monitor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_scheduled_query_rules_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_scheduled_query_rules_log.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2149,9 +2127,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_action_group">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_action_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_action_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an Action Group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_action_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_action_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2166,9 +2141,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_diagnostic_categories">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_diagnostic_categories</code><span class="sig-paren">(</span><em class="sig-param">resource_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_diagnostic_categories" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_diagnostic_categories.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_diagnostic_categories.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>resource_id</strong> (<em>str</em>) – The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.</p>
@@ -2180,9 +2152,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_log_profile">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_log_profile</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_log_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a Log Profile.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_log_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_log_profile.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the Log Profile.</p>
@@ -2194,9 +2163,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_scheduled_query_rules_alert">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_alert</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_alert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of an AlertingAction scheduled query rule.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2211,9 +2177,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.monitoring.get_scheduled_query_rules_log">
 <code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_log</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_log" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the properties of a LogToMetricAction scheduled query rule.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -13,7 +13,8 @@ Manages a folder-level logging sink. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -22,7 +23,7 @@ granted to the credentials used with this provider.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#FolderSink">FolderSink</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#FolderSinkArgs">FolderSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#FolderSink">FolderSink</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#FolderSinkArgs">FolderSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,7 +31,7 @@ granted to the credentials used with this provider.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFolderSink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSinkArgs">FolderSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSink">FolderSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFolderSink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSinkArgs">FolderSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSink">FolderSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,20 +127,11 @@ granted to the credentials used with this provider.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -149,22 +141,11 @@ import * as pulumi from "@pulumi/pulumi";
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -172,9 +153,29 @@ accepted.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Bigquery<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -184,7 +185,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -196,20 +197,11 @@ associated with child projects are also exported; otherwise only logs relating t
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">*Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -219,22 +211,11 @@ import * as pulumi from "@pulumi/pulumi";
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -242,9 +223,29 @@ accepted.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Bigquery<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -254,7 +255,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -266,20 +267,11 @@ associated with child projects are also exported; otherwise only logs relating t
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -289,22 +281,11 @@ import * as pulumi from "@pulumi/pulumi";
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -312,9 +293,29 @@ accepted.
 
     <dt class="property-optional"
             title="Optional">
+        <span>bigquery<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -324,7 +325,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -336,20 +337,11 @@ associated with child projects are also exported; otherwise only logs relating t
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bigquery_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Dict[Folder<wbr>Sink<wbr>Bigquery<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -359,22 +351,11 @@ import * as pulumi from "@pulumi/pulumi";
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -382,9 +363,29 @@ accepted.
 
     <dt class="property-optional"
             title="Optional">
+        <span>bigquery_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Dict[Folder<wbr>Sink<wbr>Bigquery<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
+See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
+write a filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>include_<wbr>children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -394,7 +395,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -420,72 +421,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Folder</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
-accepted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
-associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -500,72 +438,9 @@ configured `destination`.
 
     <dt class="property-"
             title="">
-        <span>Bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Folder</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
-accepted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
-associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -580,72 +455,9 @@ configured `destination`.
 
     <dt class="property-"
             title="">
-        <span>bigquery<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>folder</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
-accepted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include<wbr>Children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
-associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -660,72 +472,9 @@ configured `destination`.
 
     <dt class="property-"
             title="">
-        <span>bigquery_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Dict[Folder<wbr>Sink<wbr>Bigquery<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
-Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-The writer associated with the sink must have access to write to the above resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
-See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
-write a filter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>folder</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
-accepted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include_<wbr>children</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
-associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the logging sink.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>writer_<wbr>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -756,7 +505,7 @@ Get an existing FolderSink resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFolderSink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSinkState">FolderSinkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSink">FolderSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFolderSink<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSinkState">FolderSinkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSink">FolderSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -870,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bigquery<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
@@ -879,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -893,7 +642,7 @@ The writer associated with the sink must have access to write to the above resou
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
@@ -904,7 +653,7 @@ write a filter.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -914,7 +663,7 @@ accepted.
             title="Optional">
         <span>Include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -924,7 +673,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -933,7 +682,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -950,7 +699,7 @@ configured `destination`.
             title="Optional">
         <span>Bigquery<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">*Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
@@ -959,7 +708,7 @@ configured `destination`.
             title="Optional">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -973,7 +722,7 @@ The writer associated with the sink must have access to write to the above resou
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
@@ -984,7 +733,7 @@ write a filter.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -994,7 +743,7 @@ accepted.
             title="Optional">
         <span>Include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -1004,7 +753,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -1013,7 +762,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>Writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -1030,7 +779,7 @@ configured `destination`.
             title="Optional">
         <span>bigquery<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options?</a></span>
+        <span class="property-type"><a href="#foldersinkbigqueryoptions">Folder<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
@@ -1039,7 +788,7 @@ configured `destination`.
             title="Optional">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -1053,7 +802,7 @@ The writer associated with the sink must have access to write to the above resou
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
@@ -1064,7 +813,7 @@ write a filter.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -1074,7 +823,7 @@ accepted.
             title="Optional">
         <span>include<wbr>Children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -1084,7 +833,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -1093,7 +842,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>writer<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -1119,7 +868,7 @@ configured `destination`.
             title="Optional">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
@@ -1133,7 +882,7 @@ The writer associated with the sink must have access to write to the above resou
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
@@ -1144,7 +893,7 @@ write a filter.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The folder to be exported to the sink. Note that either [FOLDER_ID] or "folders/[FOLDER_ID]" is
 accepted.
@@ -1154,7 +903,7 @@ accepted.
             title="Optional">
         <span>include_<wbr>children</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to include children folders in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided folder are included.
@@ -1164,7 +913,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
@@ -1173,7 +922,7 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Optional">
         <span>writer_<wbr>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
@@ -1199,7 +948,7 @@ configured `destination`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#FolderSinkBigqueryOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#FolderSinkBigqueryOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1212,7 +961,7 @@ configured `destination`.
             title="Required">
         <span>Use<wbr>Partitioned<wbr>Tables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
@@ -1231,7 +980,7 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span>Use<wbr>Partitioned<wbr>Tables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
@@ -1250,7 +999,7 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span>use<wbr>Partitioned<wbr>Tables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
@@ -1269,7 +1018,7 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span>use<wbr>Partitioned<wbr>Tables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
@@ -1294,6 +1043,7 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

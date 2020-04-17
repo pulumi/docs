@@ -10,8 +10,6 @@ Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
 and [the API reference](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_node_pool.html.markdown.
-
 
 
 ## Create a NodePool Resource
@@ -19,7 +17,7 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#NodePool">NodePool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#NodePoolArgs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#NodePool">NodePool</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/container/#NodePoolArgs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,7 +25,7 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolArgs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePool">NodePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolArgs">NodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePool">NodePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -123,30 +121,30 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
+the size of the node pool to the current cluster usage. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -157,7 +155,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -166,7 +164,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -176,7 +174,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -189,7 +187,7 @@ for more information.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -199,7 +197,7 @@ auto-generate a unique name.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -209,7 +207,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>Node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -219,7 +217,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -229,7 +227,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>Node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -242,7 +240,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -252,7 +250,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>Upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -263,7 +261,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -280,30 +278,30 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">*Node<wbr>Pool<wbr>Autoscaling</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
+the size of the node pool to the current cluster usage. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -314,7 +312,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -323,7 +321,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">*Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -333,7 +331,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -346,7 +344,7 @@ for more information.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -356,7 +354,7 @@ auto-generate a unique name.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -366,7 +364,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>Node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">*Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -376,7 +374,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -386,7 +384,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>Node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -399,7 +397,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -409,7 +407,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>Upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">*Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -420,7 +418,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -437,30 +435,30 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscaling</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
+the size of the node pool to the current cluster usage. Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -471,7 +469,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -480,7 +478,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management?</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -490,7 +488,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -503,7 +501,7 @@ for more information.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -513,7 +511,7 @@ auto-generate a unique name.
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -523,7 +521,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -533,7 +531,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -543,7 +541,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -556,7 +554,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -566,7 +564,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -577,7 +575,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -594,6 +592,15 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>autoscaling</span>
@@ -604,20 +611,11 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 the size of the node pool to the current cluster usage. Structure is documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>initial_<wbr>node_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -628,7 +626,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -647,7 +645,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>max_<wbr>pods_<wbr>per_<wbr>node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -660,7 +658,7 @@ for more information.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -670,7 +668,7 @@ auto-generate a unique name.
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -690,7 +688,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>node_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -700,7 +698,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>node_<wbr>locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -713,7 +711,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -734,7 +732,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -765,161 +763,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location (region or zone) of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Management</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
-    </dt>
-    <dd>{{% md %}}Node management configuration, wherein auto-repair and
-auto-upgrade is configured. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of pods per node in this node pool.
-Note that this does not work on node pools which are "route-based" - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node pool. If left blank, the provider will
-auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
-gcp.container.Cluster for schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes per instance group. This field can be used to
-update the number of nodes per instance group but should not be used alongside `autoscaling`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
-be in the region of their regional cluster or in the same region as their
-cluster's zone for zonal clusters. If unspecified, the cluster-level
-`node_locations` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
-the provider-configured project will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Upgrade<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
-upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
-and `auto_upgrade` are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as the provider will see spurious diffs
-when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
-`version_prefix` field to approximate fuzzy versions in a provider-compatible way.
 {{% /md %}}</dd>
 
 </dl>
@@ -931,161 +779,11 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-"
             title="">
-        <span>Autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">*Node<wbr>Pool<wbr>Autoscaling</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location (region or zone) of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Management</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
-    </dt>
-    <dd>{{% md %}}Node management configuration, wherein auto-repair and
-auto-upgrade is configured. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of pods per node in this node pool.
-Note that this does not work on node pools which are "route-based" - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node pool. If left blank, the provider will
-auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
-gcp.container.Cluster for schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes per instance group. This field can be used to
-update the number of nodes per instance group but should not be used alongside `autoscaling`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
-be in the region of their regional cluster or in the same region as their
-cluster's zone for zonal clusters. If unspecified, the cluster-level
-`node_locations` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
-the provider-configured project will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Upgrade<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
-upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
-and `auto_upgrade` are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as the provider will see spurious diffs
-when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
-`version_prefix` field to approximate fuzzy versions in a provider-compatible way.
 {{% /md %}}</dd>
 
 </dl>
@@ -1097,161 +795,11 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-"
             title="">
-        <span>autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial<wbr>Node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location (region or zone) of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>management</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
-    </dt>
-    <dd>{{% md %}}Node management configuration, wherein auto-repair and
-auto-upgrade is configured. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Pods<wbr>Per<wbr>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of pods per node in this node pool.
-Note that this does not work on node pools which are "route-based" - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node pool. If left blank, the provider will
-auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
-gcp.container.Cluster for schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes per instance group. This field can be used to
-update the number of nodes per instance group but should not be used alongside `autoscaling`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
-be in the region of their regional cluster or in the same region as their
-cluster's zone for zonal clusters. If unspecified, the cluster-level
-`node_locations` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
-the provider-configured project will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>upgrade<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
-upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
-and `auto_upgrade` are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as the provider will see spurious diffs
-when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
-`version_prefix` field to approximate fuzzy versions in a provider-compatible way.
 {{% /md %}}</dd>
 
 </dl>
@@ -1263,161 +811,11 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-"
             title="">
-        <span>autoscaling</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Dict[Node<wbr>Pool<wbr>Autoscaling]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
-the size of the node pool to the current cluster usage. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial_<wbr>node_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The initial number of nodes for the pool. In
-regional or multi-zonal clusters, this is the number of nodes per zone. Changing
-this will force recreation of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance_<wbr>group_<wbr>urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location (region or zone) of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>management</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Dict[Node<wbr>Pool<wbr>Management]</a></span>
-    </dt>
-    <dd>{{% md %}}Node management configuration, wherein auto-repair and
-auto-upgrade is configured. Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>pods_<wbr>per_<wbr>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of pods per node in this node pool.
-Note that this does not work on node pools which are "route-based" - that is, node
-pools belonging to clusters that do not have IP Aliasing enabled.
-See the [official documentation](https://cloud.google.com/kubernetes-engine/docs/how-to/flexible-pod-cidr)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the node pool. If left blank, the provider will
-auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name for the node pool beginning
-with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Dict[Node<wbr>Pool<wbr>Node<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The node configuration of the pool. See
-gcp.container.Cluster for schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of nodes per instance group. This field can be used to
-update the number of nodes per instance group but should not be used alongside `autoscaling`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}
-The list of zones in which the node pool's nodes should be located. Nodes must
-be in the region of their regional cluster or in the same region as their
-cluster's zone for zonal clusters. If unspecified, the cluster-level
-`node_locations` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
-the provider-configured project will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>upgrade_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Dict[Node<wbr>Pool<wbr>Upgrade<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
-upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
-The maximum number of nodes upgraded simultaneously is limited to 20.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
-and `auto_upgrade` are both specified, they will fight each other for what the node version should
-be, so setting both is highly discouraged. While a fuzzy version can be specified, it's
-recommended that you specify explicit versions as the provider will see spurious diffs
-when fuzzy versions are used. See the `gcp.container.getEngineVersions` data source's
-`version_prefix` field to approximate fuzzy versions in a provider-compatible way.
 {{% /md %}}</dd>
 
 </dl>
@@ -1445,7 +843,7 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolState">NodePoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePool">NodePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolState">NodePoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePool">NodePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1559,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -1569,7 +967,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
@@ -1578,7 +976,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>Initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -1589,7 +987,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -1598,7 +996,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -1607,7 +1005,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -1617,7 +1015,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -1630,7 +1028,7 @@ for more information.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -1640,7 +1038,7 @@ auto-generate a unique name.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -1650,7 +1048,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>Node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1660,7 +1058,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -1670,7 +1068,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>Node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -1683,7 +1081,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -1693,7 +1091,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>Upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -1704,7 +1102,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -1725,7 +1123,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Autoscaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">*Node<wbr>Pool<wbr>Autoscaling</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -1735,7 +1133,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
@@ -1744,7 +1142,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>Initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -1755,7 +1153,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -1764,7 +1162,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -1773,7 +1171,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>Management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">*Node<wbr>Pool<wbr>Management</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -1783,7 +1181,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>Max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -1796,7 +1194,7 @@ for more information.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -1806,7 +1204,7 @@ auto-generate a unique name.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -1816,7 +1214,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>Node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">*Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1826,7 +1224,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -1836,7 +1234,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>Node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -1849,7 +1247,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -1859,7 +1257,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>Upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">*Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -1870,7 +1268,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -1891,7 +1289,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>autoscaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling?</a></span>
+        <span class="property-type"><a href="#nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</a></span>
     </dt>
     <dd>{{% md %}}Configuration required by cluster autoscaler to adjust
 the size of the node pool to the current cluster usage. Structure is documented below.
@@ -1901,7 +1299,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
@@ -1910,7 +1308,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>initial<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -1921,7 +1319,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -1930,7 +1328,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -1939,7 +1337,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>management</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management?</a></span>
+        <span class="property-type"><a href="#nodepoolmanagement">Node<wbr>Pool<wbr>Management</a></span>
     </dt>
     <dd>{{% md %}}Node management configuration, wherein auto-repair and
 auto-upgrade is configured. Structure is documented below.
@@ -1949,7 +1347,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>max<wbr>Pods<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -1962,7 +1360,7 @@ for more information.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -1972,7 +1370,7 @@ auto-generate a unique name.
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -1982,7 +1380,7 @@ with the specified prefix. Conflicts with `name`.
             title="Optional">
         <span>node<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The node configuration of the pool. See
 gcp.container.Cluster for schema.
@@ -1992,7 +1390,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -2002,7 +1400,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>node<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -2015,7 +1413,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -2025,7 +1423,7 @@ the provider-configured project will be used.
             title="Optional">
         <span>upgrade<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Specify node upgrade settings to change how many nodes GKE attempts to
 upgrade at once. The number of nodes upgraded simultaneously is the sum of `max_surge` and `max_unavailable`.
@@ -2036,7 +1434,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -2067,7 +1465,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster to create the node pool for. Cluster must be present in `location` provided for zonal clusters.
 {{% /md %}}</dd>
@@ -2076,7 +1474,7 @@ the size of the node pool to the current cluster usage. Structure is documented 
             title="Optional">
         <span>initial_<wbr>node_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The initial number of nodes for the pool. In
 regional or multi-zonal clusters, this is the number of nodes per zone. Changing
@@ -2087,7 +1485,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>instance_<wbr>group_<wbr>urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The resource URLs of the managed instance groups associated with this node pool.
 {{% /md %}}</dd>
@@ -2096,7 +1494,7 @@ this will force recreation of the resource.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location (region or zone) of the cluster.
 {{% /md %}}</dd>
@@ -2115,7 +1513,7 @@ auto-upgrade is configured. Structure is documented below.
             title="Optional">
         <span>max_<wbr>pods_<wbr>per_<wbr>node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods per node in this node pool.
 Note that this does not work on node pools which are "route-based" - that is, node
@@ -2128,7 +1526,7 @@ for more information.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the node pool. If left blank, the provider will
 auto-generate a unique name.
@@ -2138,7 +1536,7 @@ auto-generate a unique name.
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name for the node pool beginning
 with the specified prefix. Conflicts with `name`.
@@ -2158,7 +1556,7 @@ gcp.container.Cluster for schema.
             title="Optional">
         <span>node_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes per instance group. This field can be used to
 update the number of nodes per instance group but should not be used alongside `autoscaling`.
@@ -2168,7 +1566,7 @@ update the number of nodes per instance group but should not be used alongside `
             title="Optional">
         <span>node_<wbr>locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}
 The list of zones in which the node pool's nodes should be located. Nodes must
@@ -2181,7 +1579,7 @@ cluster's zone for zonal clusters. If unspecified, the cluster-level
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the node pool. If blank,
 the provider-configured project will be used.
@@ -2202,7 +1600,7 @@ The maximum number of nodes upgraded simultaneously is limited to 20.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes version for the nodes in this pool. Note that if this field
 and `auto_upgrade` are both specified, they will fight each other for what the node version should
@@ -2232,7 +1630,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolAutoscalingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolAutoscalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolAutoscalingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2245,7 +1643,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Max<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count.
 {{% /md %}}</dd>
@@ -2254,7 +1652,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Min<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >=0 and
 <= `max_node_count`.
@@ -2271,7 +1669,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Max<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count.
 {{% /md %}}</dd>
@@ -2280,7 +1678,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Min<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >=0 and
 <= `max_node_count`.
@@ -2297,7 +1695,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>max<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count.
 {{% /md %}}</dd>
@@ -2306,7 +1704,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>min<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >=0 and
 <= `max_node_count`.
@@ -2323,7 +1721,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>max<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes in the NodePool. Must be >= min_node_count.
 {{% /md %}}</dd>
@@ -2332,7 +1730,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>min<wbr>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes in the NodePool. Must be >=0 and
 <= `max_node_count`.
@@ -2351,7 +1749,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolManagementOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolManagementOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2364,7 +1762,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Auto<wbr>Repair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically repaired.
 {{% /md %}}</dd>
@@ -2373,7 +1771,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Auto<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically upgraded.
 {{% /md %}}</dd>
@@ -2389,7 +1787,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Auto<wbr>Repair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically repaired.
 {{% /md %}}</dd>
@@ -2398,7 +1796,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Auto<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically upgraded.
 {{% /md %}}</dd>
@@ -2414,7 +1812,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>auto<wbr>Repair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically repaired.
 {{% /md %}}</dd>
@@ -2423,7 +1821,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>auto<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically upgraded.
 {{% /md %}}</dd>
@@ -2439,7 +1837,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>auto<wbr>Repair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically repaired.
 {{% /md %}}</dd>
@@ -2448,7 +1846,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>auto<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the nodes will be automatically upgraded.
 {{% /md %}}</dd>
@@ -2466,7 +1864,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2479,7 +1877,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Boot<wbr>Disk<wbr>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2487,7 +1885,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2495,7 +1893,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2503,7 +1901,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Guest<wbr>Accelerators</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2511,7 +1909,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Image<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2519,7 +1917,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2527,7 +1925,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Local<wbr>Ssd<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2535,7 +1933,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Machine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2543,7 +1941,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2551,7 +1949,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Min<wbr>Cpu<wbr>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2559,7 +1957,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2567,7 +1965,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2575,7 +1973,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Sandbox<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2583,7 +1981,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2591,7 +1989,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Shielded<wbr>Instance<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2599,7 +1997,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2607,7 +2005,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">List&lt;Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2615,7 +2013,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Workload<wbr>Metadata<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2630,7 +2028,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Boot<wbr>Disk<wbr>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2638,7 +2036,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2646,7 +2044,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2662,7 +2060,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Image<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2678,7 +2076,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Local<wbr>Ssd<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2686,7 +2084,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Machine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2702,7 +2100,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Min<wbr>Cpu<wbr>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2710,7 +2108,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2718,7 +2116,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2726,7 +2124,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Sandbox<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">*Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2734,7 +2132,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2742,7 +2140,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Shielded<wbr>Instance<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">*Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2750,7 +2148,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2766,7 +2164,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Workload<wbr>Metadata<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">*Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2781,7 +2179,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>boot<wbr>Disk<wbr>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2789,7 +2187,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2797,7 +2195,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2805,7 +2203,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>guest<wbr>Accelerators</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigguestaccelerator">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2813,7 +2211,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>image<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2821,7 +2219,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2829,7 +2227,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>local<wbr>Ssd<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2837,7 +2235,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>machine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2845,7 +2243,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2853,7 +2251,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>min<wbr>Cpu<wbr>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2861,7 +2259,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2869,7 +2267,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2877,7 +2275,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>sandbox<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2885,7 +2283,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2893,7 +2291,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>shielded<wbr>Instance<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2901,7 +2299,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2909,7 +2307,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigtaint">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2917,7 +2315,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>workload<wbr>Metadata<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2932,7 +2330,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>boot<wbr>Disk<wbr>Kms<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2940,7 +2338,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>disk_<wbr>size_<wbr>gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2948,7 +2346,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2964,7 +2362,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>image<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2980,7 +2378,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>local<wbr>Ssd<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2988,7 +2386,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>machine_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3004,7 +2402,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>min_<wbr>cpu_<wbr>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3012,7 +2410,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +2418,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3036,7 +2434,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3052,7 +2450,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3085,7 +2483,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3098,7 +2496,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3106,7 +2504,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3121,7 +2519,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3129,7 +2527,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3144,7 +2542,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3152,7 +2550,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3167,7 +2565,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3175,7 +2573,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3192,7 +2590,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigSandboxConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigSandboxConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigSandboxConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3205,7 +2603,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Sandbox<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3220,7 +2618,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Sandbox<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3235,7 +2633,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>sandbox<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3250,7 +2648,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>sandbox<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3267,7 +2665,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigShieldedInstanceConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigShieldedInstanceConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3280,7 +2678,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Enable<wbr>Integrity<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3288,7 +2686,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Enable<wbr>Secure<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3303,7 +2701,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Enable<wbr>Integrity<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3311,7 +2709,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>Enable<wbr>Secure<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3326,7 +2724,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>enable<wbr>Integrity<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3334,7 +2732,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>enable<wbr>Secure<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3349,7 +2747,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>enable<wbr>Integrity<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3357,7 +2755,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Optional">
         <span>enable<wbr>Secure<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3374,7 +2772,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigTaintOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigTaintOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3387,7 +2785,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3395,7 +2793,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3403,7 +2801,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3418,7 +2816,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3426,7 +2824,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3434,7 +2832,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3449,7 +2847,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3457,7 +2855,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3465,7 +2863,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3480,7 +2878,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3488,7 +2886,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3496,7 +2894,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3513,7 +2911,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigWorkloadMetadataConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolNodeConfigWorkloadMetadataConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3526,7 +2924,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Node<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3541,7 +2939,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Node<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3556,7 +2954,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>node<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3571,7 +2969,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>node<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3588,7 +2986,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolUpgradeSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/container?tab=doc#NodePoolUpgradeSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolUpgradeSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/container?tab=doc#NodePoolUpgradeSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3601,7 +2999,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
             title="Required">
         <span>Max<wbr>Surge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of additional nodes that can be added to the node pool during
 an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
@@ -3612,7 +3010,7 @@ Can be set to 0 or greater.
             title="Required">
         <span>Max<wbr>Unavailable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes that can be simultaneously unavailable during
 an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
@@ -3630,7 +3028,7 @@ parallel. Can be set to 0 or greater.
             title="Required">
         <span>Max<wbr>Surge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of additional nodes that can be added to the node pool during
 an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
@@ -3641,7 +3039,7 @@ Can be set to 0 or greater.
             title="Required">
         <span>Max<wbr>Unavailable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes that can be simultaneously unavailable during
 an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
@@ -3659,7 +3057,7 @@ parallel. Can be set to 0 or greater.
             title="Required">
         <span>max<wbr>Surge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of additional nodes that can be added to the node pool during
 an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
@@ -3670,7 +3068,7 @@ Can be set to 0 or greater.
             title="Required">
         <span>max<wbr>Unavailable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes that can be simultaneously unavailable during
 an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
@@ -3688,7 +3086,7 @@ parallel. Can be set to 0 or greater.
             title="Required">
         <span>max<wbr>Surge</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of additional nodes that can be added to the node pool during
 an upgrade. Increasing `max_surge` raises the number of nodes that can be upgraded simultaneously.
@@ -3699,7 +3097,7 @@ Can be set to 0 or greater.
             title="Required">
         <span>max<wbr>Unavailable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes that can be simultaneously unavailable during
 an upgrade. Increasing `max_unavailable` raises the number of nodes that can be upgraded in
@@ -3723,6 +3121,7 @@ parallel. Can be set to 0 or greater.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

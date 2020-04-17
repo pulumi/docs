@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.securitycenter.AdvancedThreatProtection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.securitycenter.</code><code class="sig-name descname">AdvancedThreatProtection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.securitycenter.AdvancedThreatProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a resources Advanced Threat Protection setting.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/advanced_threat_protection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/advanced_threat_protection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -104,7 +101,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages the subscription’s Security Center Contact.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Owner access permission is required.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_contact.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_contact.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -207,7 +203,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires the <code class="docutils literal notranslate"><span class="pre">Owner</span></code> permission on the Subscription.</p>
 <p><strong>NOTE:</strong> Deletion of this resource does not change or reset the pricing tier to <code class="docutils literal notranslate"><span class="pre">Free</span></code></p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_subscription_pricing.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_subscription_pricing.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -286,7 +281,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Owner access permission is required.</p>
 <p><strong>NOTE:</strong> The subscription’s pricing model can not be <code class="docutils literal notranslate"><span class="pre">Free</span></code> for this to have any affect.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_workspace.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/security_center_workspace.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

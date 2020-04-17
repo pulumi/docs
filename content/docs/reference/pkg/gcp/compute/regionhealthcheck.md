@@ -214,8 +214,6 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_health_check.html.markdown.
-
 
 
 ## Create a RegionHealthCheck Resource
@@ -223,7 +221,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionHealthCheck">RegionHealthCheck</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionHealthCheckArgs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionHealthCheck">RegionHealthCheck</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionHealthCheckArgs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -231,7 +229,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckArgs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheck">RegionHealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckArgs">RegionHealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheck">RegionHealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -331,7 +329,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -340,7 +338,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -349,7 +347,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -358,7 +356,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -367,7 +365,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -376,7 +374,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -385,7 +383,7 @@ const http2_region_health_check = new gcp.compute.RegionHealthCheck("http2-regio
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -397,7 +395,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -407,7 +405,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -416,7 +414,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -425,7 +423,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -434,7 +432,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -444,7 +442,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -460,7 +458,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -469,7 +467,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -478,7 +476,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -487,7 +485,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">*Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -496,7 +494,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -505,7 +503,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">*Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -514,7 +512,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -526,7 +524,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -536,7 +534,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -545,7 +543,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">*Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -554,7 +552,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -563,7 +561,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -573,7 +571,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -589,7 +587,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -598,7 +596,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -607,7 +605,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -616,7 +614,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -625,7 +623,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -634,7 +632,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -643,7 +641,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -655,7 +653,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -665,7 +663,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -674,7 +672,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -683,7 +681,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -692,7 +690,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -702,7 +700,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -718,7 +716,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>check_<wbr>interval_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -727,7 +725,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -736,7 +734,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>healthy_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -772,7 +770,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -784,7 +782,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -794,7 +792,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -821,7 +819,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -831,7 +829,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>unhealthy_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -857,151 +855,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Check<wbr>Interval<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Healthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http2Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Https<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Ssl<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tcp<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unhealthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1013,151 +889,29 @@ have greater value than checkIntervalSec.
 
     <dt class="property-"
             title="">
-        <span>Check<wbr>Interval<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Healthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http2Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">*Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Http<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Https<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">*Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Ssl<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">*Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tcp<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unhealthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1169,151 +923,29 @@ have greater value than checkIntervalSec.
 
     <dt class="property-"
             title="">
-        <span>check<wbr>Interval<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>healthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http2Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>https<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>ssl<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tcp<wbr>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check?</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unhealthy<wbr>Threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1325,151 +957,29 @@ have greater value than checkIntervalSec.
 
     <dt class="property-"
             title="">
-        <span>check_<wbr>interval_<wbr>sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>healthy_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http2_<wbr>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Dict[Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>http_<wbr>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Dict[Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>https_<wbr>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Dict[Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>ssl_<wbr>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Dict[Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tcp_<wbr>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Dict[Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}A nested object resource
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout_<wbr>sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
-have greater value than checkIntervalSec.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unhealthy_<wbr>threshold</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
 
 </dl>
@@ -1497,7 +1007,7 @@ Get an existing RegionHealthCheck resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckState">RegionHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheck">RegionHealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckState">RegionHealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheck">RegionHealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1611,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -1620,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1629,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1638,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -1647,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1656,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1665,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1674,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1686,7 +1196,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1696,7 +1206,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1705,7 +1215,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1714,7 +1224,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1723,7 +1233,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1732,7 +1242,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -1742,7 +1252,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
 {{% /md %}}</dd>
@@ -1751,7 +1261,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -1767,7 +1277,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -1776,7 +1286,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1785,7 +1295,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1794,7 +1304,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -1803,7 +1313,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">*Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1812,7 +1322,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1821,7 +1331,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">*Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1830,7 +1340,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1842,7 +1352,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1852,7 +1362,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1861,7 +1371,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1870,7 +1380,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">*Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1879,7 +1389,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">*Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1888,7 +1398,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -1898,7 +1408,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
 {{% /md %}}</dd>
@@ -1907,7 +1417,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -1923,7 +1433,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>check<wbr>Interval<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -1932,7 +1442,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1941,7 +1451,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1950,7 +1460,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -1959,7 +1469,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>http2Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttp2healthcheck">Region<wbr>Health<wbr>Check<wbr>Http2Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1968,7 +1478,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>http<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttphealthcheck">Region<wbr>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1977,7 +1487,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>https<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthcheckhttpshealthcheck">Region<wbr>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -1986,7 +1496,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1998,7 +1508,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2008,7 +1518,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -2017,7 +1527,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -2026,7 +1536,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>ssl<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthchecksslhealthcheck">Region<wbr>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -2035,7 +1545,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tcp<wbr>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#regionhealthchecktcphealthcheck">Region<wbr>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
 {{% /md %}}</dd>
@@ -2044,7 +1554,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -2054,7 +1564,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
 {{% /md %}}</dd>
@@ -2063,7 +1573,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -2079,7 +1589,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>check_<wbr>interval_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to send a health check. The default value is 5 seconds.
 {{% /md %}}</dd>
@@ -2088,7 +1598,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2097,7 +1607,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -2106,7 +1616,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>healthy_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
 {{% /md %}}</dd>
@@ -2142,7 +1652,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -2154,7 +1664,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2164,7 +1674,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created health check should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -2173,7 +1683,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -2200,7 +1710,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to
 have greater value than checkIntervalSec.
@@ -2210,7 +1720,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
 {{% /md %}}</dd>
@@ -2219,7 +1729,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>unhealthy_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
 {{% /md %}}</dd>
@@ -2244,7 +1754,7 @@ have greater value than checkIntervalSec.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttp2HealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2257,7 +1767,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2265,7 +1775,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2273,7 +1783,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2281,7 +1791,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2289,7 +1799,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2297,7 +1807,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,7 +1815,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2320,7 +1830,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2328,7 +1838,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2336,7 +1846,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2344,7 +1854,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2352,7 +1862,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2360,7 +1870,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2368,7 +1878,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2383,7 +1893,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2391,7 +1901,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2399,7 +1909,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2407,7 +1917,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2415,7 +1925,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2423,7 +1933,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2431,7 +1941,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2446,7 +1956,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2454,7 +1964,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2462,7 +1972,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2470,7 +1980,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2478,7 +1988,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2486,7 +1996,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2494,7 +2004,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2511,7 +2021,7 @@ have greater value than checkIntervalSec.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2524,7 +2034,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2532,7 +2042,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2540,7 +2050,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2548,7 +2058,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2556,7 +2066,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2564,7 +2074,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2572,7 +2082,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2587,7 +2097,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2595,7 +2105,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2603,7 +2113,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2611,7 +2121,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2619,7 +2129,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2627,7 +2137,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2635,7 +2145,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2650,7 +2160,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2658,7 +2168,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2666,7 +2176,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2674,7 +2184,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2682,7 +2192,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2690,7 +2200,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2698,7 +2208,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2713,7 +2223,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2721,7 +2231,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2729,7 +2239,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2737,7 +2247,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2745,7 +2255,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2753,7 +2263,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2761,7 +2271,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2778,7 +2288,7 @@ have greater value than checkIntervalSec.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckHttpsHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2791,7 +2301,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2799,7 +2309,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2807,7 +2317,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2815,7 +2325,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2823,7 +2333,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2831,7 +2341,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2839,7 +2349,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2854,7 +2364,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2862,7 +2372,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2870,7 +2380,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2878,7 +2388,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2886,7 +2396,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2894,7 +2404,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2902,7 +2412,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2917,7 +2427,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2925,7 +2435,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2933,7 +2443,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2941,7 +2451,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2949,7 +2459,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2957,7 +2467,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2965,7 +2475,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2980,7 +2490,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2988,7 +2498,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2996,7 +2506,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3004,7 +2514,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3012,7 +2522,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +2530,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3028,7 +2538,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3045,7 +2555,7 @@ have greater value than checkIntervalSec.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckSslHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3058,7 +2568,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +2576,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3074,7 +2584,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3082,7 +2592,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3090,7 +2600,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3098,7 +2608,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3113,7 +2623,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3121,7 +2631,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3129,7 +2639,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3137,7 +2647,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3145,7 +2655,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3153,7 +2663,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3168,7 +2678,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3176,7 +2686,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3184,7 +2694,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3192,7 +2702,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3200,7 +2710,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3208,7 +2718,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3223,7 +2733,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3231,7 +2741,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3239,7 +2749,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3247,7 +2757,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3255,7 +2765,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3263,7 +2773,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3280,7 +2790,7 @@ have greater value than checkIntervalSec.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionHealthCheckTcpHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3293,7 +2803,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3301,7 +2811,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3309,7 +2819,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3317,7 +2827,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3325,7 +2835,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3333,7 +2843,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3348,7 +2858,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3356,7 +2866,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3364,7 +2874,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3372,7 +2882,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3380,7 +2890,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3388,7 +2898,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3403,7 +2913,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3411,7 +2921,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3419,7 +2929,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3427,7 +2937,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3435,7 +2945,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3443,7 +2953,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3458,7 +2968,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3466,7 +2976,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3474,7 +2984,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3482,7 +2992,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>proxy_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3490,7 +3000,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3498,7 +3008,7 @@ have greater value than checkIntervalSec.
             title="Optional">
         <span>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3519,6 +3029,7 @@ have greater value than checkIntervalSec.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

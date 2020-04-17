@@ -22,7 +22,7 @@ With IAM Conditions:
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     bindings: [{
         condition: {
             description: "Expiring at midnight of 2019-12-31",
@@ -32,15 +32,13 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
         members: ["user:jane@example.com"],
         role: "roles/cloudkms.cryptoKeyEncrypter",
     }],
-}, { async: true }));
+});
 ```
 
 With IAM Conditions:
 
 
 With IAM Conditions:
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_crypto_key_iam.html.markdown.
 
 
 
@@ -49,7 +47,7 @@ With IAM Conditions:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBindingArgs">CryptoKeyIAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyIAMBindingArgs">CryptoKeyIAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -57,7 +55,7 @@ With IAM Conditions:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCryptoKeyIAMBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBindingArgs">CryptoKeyIAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCryptoKeyIAMBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingArgs">CryptoKeyIAMBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -153,21 +151,11 @@ With IAM Conditions:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -179,7 +167,7 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -187,10 +175,20 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -200,21 +198,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">*Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -226,7 +214,7 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -234,10 +222,20 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -247,21 +245,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -273,7 +261,7 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -281,10 +269,20 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -294,21 +292,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Dict[Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition]</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>crypto_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -320,7 +308,7 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -328,10 +316,20 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Dict[Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition]</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -355,51 +353,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Crypto<wbr>Key<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The crypto key ID, in the form
-`{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
-`{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-the provider's project setting will be used as a fallback.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
 
 </dl>
@@ -411,51 +369,11 @@ the provider's project setting will be used as a fallback.
 
     <dt class="property-"
             title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">*Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Crypto<wbr>Key<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The crypto key ID, in the form
-`{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
-`{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-the provider's project setting will be used as a fallback.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
 
 </dl>
@@ -467,51 +385,11 @@ the provider's project setting will be used as a fallback.
 
     <dt class="property-"
             title="">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>crypto<wbr>Key<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The crypto key ID, in the form
-`{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
-`{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-the provider's project setting will be used as a fallback.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
 
 </dl>
@@ -523,51 +401,11 @@ the provider's project setting will be used as a fallback.
 
     <dt class="property-"
             title="">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Dict[Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition]</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>crypto_<wbr>key_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The crypto key ID, in the form
-`{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
-`{location_name}/{key_ring_name}/{crypto_key_name}`. In the second form,
-the provider's project setting will be used as a fallback.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
 
 </dl>
@@ -595,7 +433,7 @@ Get an existing CryptoKeyIAMBinding resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKeyIAMBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBindingState">CryptoKeyIAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKeyIAMBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingState">CryptoKeyIAMBindingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBinding">CryptoKeyIAMBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -709,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -719,7 +557,7 @@ Structure is documented below.
             title="Optional">
         <span>Crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -731,7 +569,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
@@ -740,7 +578,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -748,7 +586,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
@@ -765,7 +603,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">*Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -775,7 +613,7 @@ Structure is documented below.
             title="Optional">
         <span>Crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -787,7 +625,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
@@ -796,7 +634,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -804,7 +642,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
@@ -821,7 +659,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition?</a></span>
+        <span class="property-type"><a href="#cryptokeyiambindingcondition">Crypto<wbr>Key<wbr>IAMBinding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -831,7 +669,7 @@ Structure is documented below.
             title="Optional">
         <span>crypto<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -843,7 +681,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
@@ -852,7 +690,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -860,7 +698,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
@@ -887,7 +725,7 @@ Structure is documented below.
             title="Optional">
         <span>crypto_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The crypto key ID, in the form
 `{project_id}/{location_name}/{key_ring_name}/{crypto_key_name}` or
@@ -899,7 +737,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the project's IAM policy.
 {{% /md %}}</dd>
@@ -908,7 +746,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -916,7 +754,7 @@ the provider's project setting will be used as a fallback.
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
@@ -942,7 +780,7 @@ the provider's project setting will be used as a fallback.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyIAMBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -951,20 +789,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -973,9 +802,18 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -985,20 +823,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1007,9 +836,18 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1019,20 +857,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1041,9 +870,18 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1053,20 +891,11 @@ the provider's project setting will be used as a fallback.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1075,9 +904,18 @@ the provider's project setting will be used as a fallback.
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1097,6 +935,7 @@ the provider's project setting will be used as a fallback.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -35,8 +35,6 @@ const peer = new gcp.compute.RouterPeer("peer", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_bgp_peer.html.markdown.
-
 
 
 ## Create a RouterPeer Resource
@@ -44,7 +42,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeer">RouterPeer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeerArgs">RouterPeerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeer">RouterPeer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RouterPeerArgs">RouterPeerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,7 +50,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRouterPeer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeerArgs">RouterPeerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeer">RouterPeer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRouterPeer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerArgs">RouterPeerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeer">RouterPeer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,11 +146,47 @@ const peer = new gcp.compute.RouterPeer("peer", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Router</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -162,7 +196,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
             title="Optional">
         <span>Advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -176,7 +210,7 @@ custom groups.
             title="Optional">
         <span>Advertised<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
 advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
@@ -187,26 +221,17 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>Advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -214,29 +239,11 @@ be a lowercase letter, and all following characters must be a dash, lowercase le
 character, which cannot be a dash.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -246,18 +253,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -267,11 +265,47 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Router</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -281,7 +315,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -306,26 +340,17 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>Advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -333,29 +358,11 @@ be a lowercase letter, and all following characters must be a dash, lowercase le
 character, which cannot be a dash.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -365,18 +372,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -386,11 +384,47 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>router</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -400,7 +434,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -414,7 +448,7 @@ custom groups.
             title="Optional">
         <span>advertised<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]?</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
 advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
@@ -425,26 +459,17 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -452,29 +477,11 @@ be a lowercase letter, and all following characters must be a dash, lowercase le
 character, which cannot be a dash.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -484,18 +491,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -505,11 +503,47 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>router</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>advertise_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -519,7 +553,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertised_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -544,26 +578,17 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>advertised_<wbr>route_<wbr>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -571,29 +596,11 @@ be a lowercase letter, and all following characters must be a dash, lowercase le
 character, which cannot be a dash.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>peer_<wbr>asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>peer_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -603,18 +610,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -638,63 +636,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Advertise<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Ip<wbr>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Route<wbr>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -703,70 +647,12 @@ routes with the lowest priority value win.
             title="">
         <span>Management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -778,63 +664,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Advertise<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Ip<wbr>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">[]Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</a></span>
-    </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Advertised<wbr>Route<wbr>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -843,70 +675,12 @@ routes with the lowest priority value win.
             title="">
         <span>Management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -918,63 +692,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>advertise<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised<wbr>Ip<wbr>Ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]?</a></span>
-    </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised<wbr>Route<wbr>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -983,70 +703,12 @@ routes with the lowest priority value win.
             title="">
         <span>management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>peer<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>peer<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -1058,63 +720,9 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>advertise_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
-'CUSTOM'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
-'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
-router's own VPC subnets. * 'ALL_PEER_VPC_SUBNETS': Advertises peer subnets of the router's VPC network. Note that this
-field can only be populated if advertiseMode is 'CUSTOM' and overrides the list defined for the router (in the "bgp"
-message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no
-custom groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised_<wbr>ip_<wbr>ranges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">List[Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range]</a></span>
-    </dt>
-    <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
-advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
-to any specified groups. Leave this field blank to advertise no custom IP ranges.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>advertised_<wbr>route_<wbr>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
-routes with the lowest priority value win.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1123,70 +731,12 @@ routes with the lowest priority value win.
             title="">
         <span>management_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
-1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
-be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last
-character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>peer_<wbr>asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>peer_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>router</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
 
 </dl>
@@ -1214,7 +764,7 @@ Get an existing RouterPeer resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterPeer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeerState">RouterPeerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeer">RouterPeer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterPeer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerState">RouterPeerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeer">RouterPeer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1328,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -1338,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -1352,7 +902,7 @@ custom groups.
             title="Optional">
         <span>Advertised<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">List&lt;Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
 advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
@@ -1363,7 +913,7 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>Advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
@@ -1373,7 +923,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
@@ -1382,7 +932,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1391,7 +941,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
@@ -1403,7 +953,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -1415,7 +965,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Peer<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 {{% /md %}}</dd>
@@ -1424,7 +974,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Peer<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1433,7 +983,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1443,7 +993,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1452,7 +1002,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
@@ -1468,7 +1018,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -1478,7 +1028,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -1503,7 +1053,7 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>Advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
@@ -1513,7 +1063,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
@@ -1522,7 +1072,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1531,7 +1081,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>Management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
@@ -1543,7 +1093,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -1555,7 +1105,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Peer<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 {{% /md %}}</dd>
@@ -1564,7 +1114,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Peer<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1573,7 +1123,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1583,7 +1133,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1592,7 +1142,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
@@ -1608,7 +1158,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertise<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -1618,7 +1168,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertised<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -1632,7 +1182,7 @@ custom groups.
             title="Optional">
         <span>advertised<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]?</a></span>
+        <span class="property-type"><a href="#routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if
 advertiseMode is 'CUSTOM' and is advertised to all peers of the router. These IP ranges will be advertised in addition
@@ -1643,7 +1193,7 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>advertised<wbr>Route<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
@@ -1653,7 +1203,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
@@ -1662,7 +1212,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1671,7 +1221,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>management<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
@@ -1683,7 +1233,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -1695,7 +1245,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>peer<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 {{% /md %}}</dd>
@@ -1704,7 +1254,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>peer<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1713,7 +1263,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1723,7 +1273,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1732,7 +1282,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
@@ -1748,7 +1298,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertise_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}User-specified flag to indicate which mode to use for advertisement. Valid values of this enum field are: 'DEFAULT',
 'CUSTOM'
@@ -1758,7 +1308,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>advertised_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: *
 'ALL_SUBNETS': Advertises all available subnets, including peer VPC subnets. * 'ALL_VPC_SUBNETS': Advertises the
@@ -1783,7 +1333,7 @@ to any specified groups. Leave this field blank to advertise no custom IP ranges
             title="Optional">
         <span>advertised_<wbr>route_<wbr>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the
 routes with the lowest priority value win.
@@ -1793,7 +1343,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
 {{% /md %}}</dd>
@@ -1802,7 +1352,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1811,7 +1361,7 @@ routes with the lowest priority value win.
             title="Optional">
         <span>management_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource that configures and manages this BGP peer. * 'MANAGED_BY_USER' is the default value and can be managed by
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
@@ -1823,7 +1373,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be
 1-63 characters long and match the regular expression '[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must
@@ -1835,7 +1385,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>peer_<wbr>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
 {{% /md %}}</dd>
@@ -1844,7 +1394,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>peer_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1853,7 +1403,7 @@ character, which cannot be a dash.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1863,7 +1413,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1872,7 +1422,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
 {{% /md %}}</dd>
@@ -1897,7 +1447,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RouterPeerAdvertisedIpRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1906,19 +1456,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1929,19 +1479,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1952,19 +1502,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1975,19 +1525,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2008,6 +1558,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

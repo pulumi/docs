@@ -24,8 +24,6 @@ To get more information about CryptoKey, see:
 * How-to Guides
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_crypto_key.html.markdown.
-
 
 
 ## Create a CryptoKey Resource
@@ -33,7 +31,7 @@ To get more information about CryptoKey, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKey">CryptoKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKey">CryptoKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,7 +39,7 @@ To get more information about CryptoKey, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyArgs">CryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -141,7 +139,7 @@ To get more information about CryptoKey, see:
             title="Required">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -150,7 +148,7 @@ To get more information about CryptoKey, see:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
@@ -159,7 +157,7 @@ To get more information about CryptoKey, see:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -168,7 +166,7 @@ To get more information about CryptoKey, see:
             title="Optional">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -179,7 +177,7 @@ for possible inputs.
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -190,7 +188,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -206,7 +204,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -224,7 +222,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -233,7 +231,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -244,7 +242,7 @@ for possible inputs.
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -255,7 +253,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">*Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -271,7 +269,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -280,7 +278,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
@@ -289,7 +287,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -298,7 +296,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -309,7 +307,7 @@ for possible inputs.
             title="Optional">
         <span>rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -320,7 +318,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template?</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -336,7 +334,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>key_<wbr>ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -354,7 +352,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -363,7 +361,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -374,7 +372,7 @@ for possible inputs.
             title="Optional">
         <span>rotation_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -411,69 +409,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Ring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Purpose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
-reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -484,69 +424,11 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-"
             title="">
-        <span>Key<wbr>Ring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Purpose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
-reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -557,69 +439,11 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-"
             title="">
-        <span>key<wbr>Ring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>purpose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
-reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -630,69 +454,11 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
 
     <dt class="property-"
             title="">
-        <span>key_<wbr>ring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource name for the CryptoKey.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>purpose</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
-reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
-for possible inputs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rotation_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
-place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
-followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Dict[Crypto<wbr>Key<wbr>Version<wbr>Template]</a></span>
-    </dt>
-    <dd>{{% md %}}A template describing settings for new crypto key versions.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -719,7 +485,7 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyState">CryptoKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyState">CryptoKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKey">CryptoKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -833,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -842,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
@@ -851,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -860,7 +626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -871,7 +637,7 @@ for possible inputs.
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -882,7 +648,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -890,7 +656,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -906,7 +672,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -924,7 +690,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -933,7 +699,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -944,7 +710,7 @@ for possible inputs.
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -955,7 +721,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -963,7 +729,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">*Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -979,7 +745,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -988,7 +754,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
 {{% /md %}}</dd>
@@ -997,7 +763,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -1006,7 +772,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -1017,7 +783,7 @@ for possible inputs.
             title="Optional">
         <span>rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -1028,7 +794,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1036,7 +802,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>version<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template?</a></span>
+        <span class="property-type"><a href="#cryptokeyversiontemplate">Crypto<wbr>Key<wbr>Version<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}A template describing settings for new crypto key versions.
 {{% /md %}}</dd>
@@ -1052,7 +818,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>key_<wbr>ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The KeyRing that this key belongs to. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}''.
 {{% /md %}}</dd>
@@ -1070,7 +836,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name for the CryptoKey.
 {{% /md %}}</dd>
@@ -1079,7 +845,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The immutable purpose of this CryptoKey. See the [purpose
 reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys#CryptoKeyPurpose)
@@ -1090,7 +856,7 @@ for possible inputs.
             title="Optional">
         <span>rotation_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as the primary. The first rotation will take
 place after the specified period. The rotation period has the format of a decimal number with up to 9 fractional digits,
@@ -1101,7 +867,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1134,7 +900,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#CryptoKeyVersionTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1147,7 +913,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1155,7 +921,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1170,7 +936,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1178,7 +944,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>Protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1193,7 +959,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1201,7 +967,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1216,7 +982,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Required">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1224,7 +990,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
             title="Optional">
         <span>protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1245,6 +1011,7 @@ followed by the letter 's' (seconds). It must be greater than a day (ie, 86400).
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

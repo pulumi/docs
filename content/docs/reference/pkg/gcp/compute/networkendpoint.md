@@ -19,8 +19,6 @@ To get more information about NetworkEndpoint, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network_endpoint.html.markdown.
-
 
 
 ## Create a NetworkEndpoint Resource
@@ -28,7 +26,7 @@ To get more information about NetworkEndpoint, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpoint">NetworkEndpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpointArgs">NetworkEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpoint">NetworkEndpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NetworkEndpointArgs">NetworkEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -36,7 +34,7 @@ To get more information about NetworkEndpoint, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NetworkEndpointArgs">NetworkEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NetworkEndpoint">NetworkEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NetworkEndpointArgs">NetworkEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NetworkEndpoint">NetworkEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -136,7 +134,7 @@ To get more information about NetworkEndpoint, see:
             title="Required">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -146,7 +144,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Required">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -156,7 +154,7 @@ aliased IP range).
             title="Required">
         <span>Network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -165,7 +163,7 @@ aliased IP range).
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -174,7 +172,7 @@ aliased IP range).
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -184,7 +182,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -200,7 +198,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -210,7 +208,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Required">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -220,7 +218,7 @@ aliased IP range).
             title="Required">
         <span>Network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -229,7 +227,7 @@ aliased IP range).
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -238,7 +236,7 @@ aliased IP range).
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -248,7 +246,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -264,7 +262,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -274,7 +272,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Required">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -284,7 +282,7 @@ aliased IP range).
             title="Required">
         <span>network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -293,7 +291,7 @@ aliased IP range).
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -302,7 +300,7 @@ aliased IP range).
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -312,7 +310,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -328,7 +326,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -338,7 +336,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Required">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -348,7 +346,7 @@ aliased IP range).
             title="Required">
         <span>network_<wbr>endpoint_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -357,7 +355,7 @@ aliased IP range).
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -366,7 +364,7 @@ aliased IP range).
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -376,7 +374,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -385,272 +383,6 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## NetworkEndpoint Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Endpoint<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Port number of network endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing network endpoint group is located.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Endpoint<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Port number of network endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing network endpoint group is located.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Endpoint<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Port number of network endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing network endpoint group is located.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
-GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
-aliased IP range).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>endpoint_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The network endpoint group this endpoint is part of.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Port number of network endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Zone where the containing network endpoint group is located.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -674,7 +406,7 @@ Get an existing NetworkEndpoint resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NetworkEndpointState">NetworkEndpointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NetworkEndpoint">NetworkEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NetworkEndpointState">NetworkEndpointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NetworkEndpoint">NetworkEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -788,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -798,7 +530,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -808,7 +540,7 @@ aliased IP range).
             title="Optional">
         <span>Network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -817,7 +549,7 @@ aliased IP range).
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -826,7 +558,7 @@ aliased IP range).
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -836,7 +568,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -852,7 +584,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -862,7 +594,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -872,7 +604,7 @@ aliased IP range).
             title="Optional">
         <span>Network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -881,7 +613,7 @@ aliased IP range).
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -890,7 +622,7 @@ aliased IP range).
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -900,7 +632,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -916,7 +648,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -926,7 +658,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -936,7 +668,7 @@ aliased IP range).
             title="Optional">
         <span>network<wbr>Endpoint<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -945,7 +677,7 @@ aliased IP range).
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -954,7 +686,7 @@ aliased IP range).
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -964,7 +696,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -980,7 +712,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for a specific VM instance that the IP address belongs to. This is required for network endpoints of type
 GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
@@ -990,7 +722,7 @@ GCE_VM_IP_PORT. The instance must be in the same zone of network endpoint group.
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an
 aliased IP range).
@@ -1000,7 +732,7 @@ aliased IP range).
             title="Optional">
         <span>network_<wbr>endpoint_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network endpoint group this endpoint is part of.
 {{% /md %}}</dd>
@@ -1009,7 +741,7 @@ aliased IP range).
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Port number of network endpoint.
 {{% /md %}}</dd>
@@ -1018,7 +750,7 @@ aliased IP range).
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1028,7 +760,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Zone where the containing network endpoint group is located.
 {{% /md %}}</dd>
@@ -1052,6 +784,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

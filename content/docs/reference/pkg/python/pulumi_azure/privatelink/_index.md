@@ -36,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE</strong> Private Endpoint is currently in Public Preview.</p>
 </div></blockquote>
 <p>Azure Private Endpoint is a network interface that connects you privately and securely to a service powered by Azure Private Link. Private Endpoint uses a private IP address from your VNet, effectively bringing the service into your VNet. The service could be an Azure service such as Azure Storage, SQL, etc. or your own Private Link Service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/private_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/private_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -281,7 +278,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access the connection status information about an existing Private Endpoint Connection.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Private Endpoint is currently in Public Preview.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_endpoint_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_endpoint_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -299,7 +295,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access information about an existing Private Link Service.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Private Link is currently in Public Preview.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_service.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -317,7 +312,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access endpoint connection information about an existing Private Link Service.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Private Link is currently in Public Preview.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_service_endpoint_connections.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/private_link_service_endpoint_connections.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

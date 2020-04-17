@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.eventgrid.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">input_mapping_default_values=None</em>, <em class="sig-param">input_mapping_fields=None</em>, <em class="sig-param">input_schema=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventGrid Domain</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -211,9 +208,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.eventgrid.EventSubscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">EventSubscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">event_delivery_schema=None</em>, <em class="sig-param">eventhub_endpoint=None</em>, <em class="sig-param">hybrid_connection_endpoint=None</em>, <em class="sig-param">included_event_types=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">retry_policy=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">storage_blob_dead_letter_destination=None</em>, <em class="sig-param">storage_queue_endpoint=None</em>, <em class="sig-param">subject_filter=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">webhook_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.EventSubscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an EventGrid Event Subscription</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -508,7 +502,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an EventGrid Topic</p>
 <blockquote>
 <div><p><strong>Note:</strong> at this time EventGrid Topic’s are only available in a limited number of regions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -629,9 +622,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.eventgrid.get_topic">
 <code class="sig-prename descclassname">pulumi_azure.eventgrid.</code><code class="sig-name descname">get_topic</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.eventgrid.get_topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing EventGrid Topic</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventgrid_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventgrid_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

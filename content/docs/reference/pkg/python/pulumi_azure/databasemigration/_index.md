@@ -101,7 +101,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manage a Azure Database Migration Project.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Destroying a Database Migration Project will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provider.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_project.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_project.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -227,7 +226,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Azure Database Migration Service.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Destroying a Database Migration Service will leave any outstanding tasks untouched. This is to avoid unexpectedly deleting any tasks managed outside of this provide.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/database_migration_service.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -343,9 +341,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.databasemigration.get_project">
 <code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Database Migration Project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/database_migration_project.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/database_migration_project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -361,9 +356,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.databasemigration.get_service">
 <code class="sig-prename descclassname">pulumi_azure.databasemigration.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.databasemigration.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Database Migration Service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/database_migration_service.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/database_migration_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

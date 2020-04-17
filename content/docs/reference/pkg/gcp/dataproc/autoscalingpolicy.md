@@ -8,8 +8,6 @@ block_external_search_index: true
 
 Describes an autoscaling policy for Dataproc cluster autoscaler.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_autoscaling_policy.html.markdown.
-
 
 
 ## Create a AutoscalingPolicy Resource
@@ -17,7 +15,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicy">AutoscalingPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataproc/#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,7 +23,7 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyArgs">AutoscalingPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -121,11 +119,21 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -134,26 +142,16 @@ Describes an autoscaling policy for Dataproc cluster autoscaler.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -163,7 +161,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -172,7 +170,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -184,11 +182,21 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">*Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -197,26 +205,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -226,7 +224,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">*Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -235,7 +233,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">*Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -247,11 +245,21 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -260,26 +268,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -289,7 +287,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -298,7 +296,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -309,6 +307,16 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
+begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -323,26 +331,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -387,67 +385,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Basic<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm?</a></span>
-    </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
 
 </dl>
@@ -459,67 +401,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Basic<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">*Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
-    </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secondary<wbr>Worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">*Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">*Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
 
 </dl>
@@ -531,67 +417,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>basic<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm?</a></span>
-    </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secondary<wbr>Worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>worker<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
 
 </dl>
@@ -603,67 +433,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>basic_<wbr>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm]</a></span>
-    </dt>
-    <dd>{{% md %}}Basic algorithm for autoscaling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
-begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secondary_<wbr>worker_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>worker_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Dict[Autoscaling<wbr>Policy<wbr>Worker<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,7 +465,7 @@ Get an existing AutoscalingPolicy resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscalingPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyState">AutoscalingPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicy">AutoscalingPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -805,7 +579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -814,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
 {{% /md %}}</dd>
@@ -823,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
@@ -832,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
 begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
@@ -842,7 +616,7 @@ begin or end with underscore or hyphen. Must consist of between 3 and 50 charact
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -852,7 +626,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -861,7 +635,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -877,7 +651,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">*Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -886,7 +660,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
 {{% /md %}}</dd>
@@ -895,7 +669,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
@@ -904,7 +678,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
 begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
@@ -914,7 +688,7 @@ begin or end with underscore or hyphen. Must consist of between 3 and 50 charact
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -924,7 +698,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">*Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -933,7 +707,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">*Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -949,7 +723,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>basic<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</a></span>
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 {{% /md %}}</dd>
@@ -958,7 +732,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
 {{% /md %}}</dd>
@@ -967,7 +741,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
@@ -976,7 +750,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
 begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
@@ -986,7 +760,7 @@ begin or end with underscore or hyphen. Must consist of between 3 and 50 charact
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -996,7 +770,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>secondary<wbr>Worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 {{% /md %}}</dd>
@@ -1005,7 +779,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>worker<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config?</a></span>
+        <span class="property-type"><a href="#autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 {{% /md %}}</dd>
@@ -1030,7 +804,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location where the autoscaling poicy should reside. The default value is 'global'.
 {{% /md %}}</dd>
@@ -1039,7 +813,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
 {{% /md %}}</dd>
@@ -1048,7 +822,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot
 begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
@@ -1058,7 +832,7 @@ begin or end with underscore or hyphen. Must consist of between 3 and 50 charact
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1102,7 +876,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1111,19 +885,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Yarn<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1134,19 +908,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cooldown<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Yarn<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1157,19 +931,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>yarn<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1180,19 +954,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cooldown<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>yarn<wbr>Config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalingpolicybasicalgorithmyarnconfig">Dict[Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1209,7 +983,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyBasicAlgorithmYarnConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1222,7 +996,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Graceful<wbr>Decommission<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1230,15 +1004,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Scale<wbr>Down<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1246,7 +1012,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Scale<wbr>Up<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1254,7 +1028,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1269,7 +1043,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Graceful<wbr>Decommission<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1277,15 +1051,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Scale<wbr>Down<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1293,7 +1059,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Scale<wbr>Up<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1301,7 +1075,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1316,7 +1090,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>graceful<wbr>Decommission<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1324,15 +1098,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>scale<wbr>Down<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1340,7 +1106,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>scale<wbr>Up<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1348,7 +1122,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1363,7 +1137,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>graceful<wbr>Decommission<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1371,15 +1145,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>scale<wbr>Down<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1387,7 +1153,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>scale<wbr>Up<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1395,7 +1169,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1412,7 +1186,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicySecondaryWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1425,7 +1199,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1433,7 +1207,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1441,7 +1215,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1456,7 +1230,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1464,7 +1238,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1472,7 +1246,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1487,7 +1261,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1495,7 +1269,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1503,7 +1277,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1518,7 +1292,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1526,7 +1300,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1534,7 +1308,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1551,7 +1325,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/dataproc?tab=doc#AutoscalingPolicyWorkerConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1564,7 +1338,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1572,7 +1346,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1580,7 +1354,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1595,7 +1369,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1603,7 +1377,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1611,7 +1385,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1626,7 +1400,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1634,7 +1408,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1642,7 +1416,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1657,7 +1431,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>max_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1665,7 +1439,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>min<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1673,7 +1447,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1694,6 +1468,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -27,8 +27,6 @@ To get more information about DefaultObjectAccessControl, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/storage/docs/access-control/create-manage-lists)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_default_object_access_control.html.markdown.
-
 
 
 ## Create a DefaultObjectAccessControl Resource
@@ -36,7 +34,7 @@ To get more information about DefaultObjectAccessControl, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectAccessControlArgs">DefaultObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#DefaultObjectAccessControlArgs">DefaultObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,7 +42,7 @@ To get more information about DefaultObjectAccessControl, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultObjectAccessControl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#DefaultObjectAccessControlArgs">DefaultObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultObjectAccessControl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#DefaultObjectAccessControlArgs">DefaultObjectAccessControlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -144,7 +142,7 @@ To get more information about DefaultObjectAccessControl, see:
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -153,29 +151,29 @@ To get more information about DefaultObjectAccessControl, see:
             title="Required">
         <span>Entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
 domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
 </dl>
@@ -189,7 +187,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -198,29 +196,29 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>Entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
 domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
 </dl>
@@ -234,7 +232,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -243,29 +241,29 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
 domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
 </dl>
@@ -279,7 +277,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -288,29 +286,29 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Required">
         <span>entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
 domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
 </dl>
@@ -334,18 +332,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -354,27 +343,16 @@ The following output properties are available:
             title="">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Entity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -383,18 +361,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -404,15 +373,6 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
 
 </dl>
@@ -424,18 +384,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 
     <dt class="property-"
             title="">
-        <span>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -444,27 +395,16 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Entity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -473,18 +413,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -496,15 +427,6 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access permission for the entity.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -514,18 +436,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 
     <dt class="property-"
             title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -534,27 +447,16 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>entity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -563,18 +465,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -586,15 +479,6 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access permission for the entity.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -604,18 +488,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 
     <dt class="property-"
             title="">
-        <span>bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -624,27 +499,16 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>entity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
-"user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
-domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * allUsers * allAuthenticatedUsers
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>entity_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -653,18 +517,9 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -674,15 +529,6 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
         <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Dict[Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team]</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
 
 </dl>
@@ -710,7 +556,7 @@ Get an existing DefaultObjectAccessControl resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultObjectAccessControl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#DefaultObjectAccessControlState">DefaultObjectAccessControlState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultObjectAccessControl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#DefaultObjectAccessControlState">DefaultObjectAccessControlState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#DefaultObjectAccessControl">DefaultObjectAccessControl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -824,7 +670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -833,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -842,7 +688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
@@ -851,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
@@ -862,7 +708,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -871,7 +717,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -880,7 +726,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -889,7 +735,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Project<wbr>Team</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args?</a></span>
+        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -898,7 +744,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
@@ -914,7 +760,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -923,7 +769,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -932,7 +778,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
@@ -941,7 +787,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
@@ -952,7 +798,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -961,7 +807,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -970,7 +816,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -979,7 +825,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Project<wbr>Team</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">*Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
+        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -988,7 +834,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
@@ -1004,7 +850,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -1013,7 +859,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -1022,7 +868,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
@@ -1031,7 +877,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
@@ -1042,7 +888,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>entity<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -1051,7 +897,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -1060,7 +906,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -1069,7 +915,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>project<wbr>Team</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team?</a></span>
+        <span class="property-type"><a href="#defaultobjectaccesscontrolprojectteam">Default<wbr>Object<wbr>Access<wbr>Control<wbr>Project<wbr>Team</a></span>
     </dt>
     <dd>{{% md %}}The project team associated with the entity
 {{% /md %}}</dd>
@@ -1078,7 +924,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
@@ -1094,7 +940,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket.
 {{% /md %}}</dd>
@@ -1103,7 +949,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The domain associated with the entity.
 {{% /md %}}</dd>
@@ -1112,7 +958,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address associated with the entity.
 {{% /md %}}</dd>
@@ -1121,7 +967,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>entity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The entity holding the permission, in one of the following forms: * user-{{userId}} * user-{{email}} (such as
 "user-liz@example.com") * group-{{groupId}} * group-{{email}} (such as "group-example@googlegroups.com") *
@@ -1132,7 +978,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>entity_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID for the entity
 {{% /md %}}</dd>
@@ -1141,7 +987,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The content generation of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -1150,7 +996,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the object, if applied to an object.
 {{% /md %}}</dd>
@@ -1168,7 +1014,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access permission for the entity.
 {{% /md %}}</dd>
@@ -1193,7 +1039,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#DefaultObjectAccessControlProjectTeamOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#DefaultObjectAccessControlProjectTeamOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1206,7 +1052,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Project<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1214,7 +1060,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Team</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1229,7 +1075,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Project<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1237,7 +1083,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>Team</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1252,7 +1098,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>project<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1260,7 +1106,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>team</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1275,7 +1121,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>project_<wbr>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1283,7 +1129,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
             title="Optional">
         <span>team</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1304,6 +1150,7 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 
