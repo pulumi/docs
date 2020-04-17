@@ -11,8 +11,6 @@ settings, however an explicit `Provider` instance may be created and passed duri
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown.
-
 
 
 ## Create a Provider Resource
@@ -28,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -128,7 +126,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Allow<wbr>Unverified<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
@@ -137,7 +135,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
@@ -146,7 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
@@ -155,7 +153,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug<wbr>Path<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
@@ -164,7 +162,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
@@ -173,7 +171,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Persist<wbr>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
@@ -182,7 +180,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Rest<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
@@ -191,7 +189,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
@@ -200,7 +198,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional, Deprecated">
         <span>Vcenter<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
 
@@ -208,7 +206,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vim<wbr>Keep<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
@@ -217,7 +215,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vim<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
@@ -226,7 +224,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vsphere<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
@@ -242,7 +240,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Allow<wbr>Unverified<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
@@ -251,7 +249,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
@@ -260,7 +258,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
@@ -269,7 +267,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Client<wbr>Debug<wbr>Path<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
@@ -278,7 +276,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
@@ -287,7 +285,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Persist<wbr>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
@@ -296,7 +294,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Rest<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
@@ -305,7 +303,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
@@ -314,7 +312,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional, Deprecated">
         <span>Vcenter<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
 
@@ -322,7 +320,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vim<wbr>Keep<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
@@ -331,7 +329,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vim<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
@@ -340,7 +338,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Vsphere<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
@@ -356,7 +354,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>allow<wbr>Unverified<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
@@ -365,7 +363,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client<wbr>Debug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
@@ -374,7 +372,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client<wbr>Debug<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
@@ -383,7 +381,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client<wbr>Debug<wbr>Path<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
@@ -392,7 +390,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
@@ -401,7 +399,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>persist<wbr>Session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
@@ -410,7 +408,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>rest<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
@@ -419,7 +417,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
@@ -428,7 +426,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional, Deprecated">
         <span>vcenter<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
 
@@ -436,7 +434,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vim<wbr>Keep<wbr>Alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
@@ -445,7 +443,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vim<wbr>Session<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
@@ -454,7 +452,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vsphere<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
@@ -470,7 +468,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>allow_<wbr>unverified_<wbr>ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}</dd>
@@ -479,7 +477,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client_<wbr>debug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug
 {{% /md %}}</dd>
@@ -488,7 +486,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client_<wbr>debug_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for debug
 {{% /md %}}</dd>
@@ -497,7 +495,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>client_<wbr>debug_<wbr>path_<wbr>run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}govmomi debug path for a single run
 {{% /md %}}</dd>
@@ -506,7 +504,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user password for vSphere API operations.
 {{% /md %}}</dd>
@@ -515,7 +513,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>persist_<wbr>session</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Persist vSphere client sessions to disk
 {{% /md %}}</dd>
@@ -524,7 +522,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>rest_<wbr>session_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere REST API sessions to
 {{% /md %}}</dd>
@@ -533,7 +531,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name for vSphere API operations.
 {{% /md %}}</dd>
@@ -542,7 +540,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional, Deprecated">
         <span>vcenter_<wbr>server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field has been renamed to vsphere_server.{{% /md %}}</p></dd>
 
@@ -550,7 +548,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vim_<wbr>keep_<wbr>alive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Keep alive interval for the VIM session in minutes
 {{% /md %}}</dd>
@@ -559,7 +557,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vim_<wbr>session_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory to save vSphere SOAP API sessions to
 {{% /md %}}</dd>
@@ -568,7 +566,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>vsphere_<wbr>server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The vSphere Server name for vSphere API operations.
 {{% /md %}}</dd>
@@ -596,6 +594,7 @@ construction to achieve fine-grained programmatic control over provider settings
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

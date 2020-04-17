@@ -22,8 +22,6 @@ import * as pulumi from "@pulumi/pulumi";
 
 The above would import the host with ID `host-123`.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown.
-
 
 
 ## Create a Host Resource
@@ -39,7 +37,7 @@ The above would import the host with ID `host-123`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,7 +137,7 @@ The above would import the host with ID `host-123`.
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -148,7 +146,7 @@ The above would import the host with ID `host-123`.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -158,7 +156,7 @@ to the host.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -168,7 +166,7 @@ to the host.
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -178,7 +176,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -188,7 +186,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -198,7 +196,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -208,7 +206,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -218,7 +216,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -228,7 +226,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -237,7 +235,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -255,7 +253,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -264,7 +262,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -274,7 +272,7 @@ to the host.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -284,7 +282,7 @@ to the host.
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -294,7 +292,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -304,7 +302,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -314,7 +312,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -324,7 +322,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -334,7 +332,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -344,7 +342,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -353,7 +351,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -371,7 +369,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -380,7 +378,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -390,7 +388,7 @@ to the host.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -400,7 +398,7 @@ to the host.
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -410,7 +408,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -420,7 +418,7 @@ Default is `false`.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -430,7 +428,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -440,7 +438,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>license</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -450,7 +448,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -460,7 +458,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -469,7 +467,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -487,7 +485,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -496,7 +494,7 @@ and no thumbprint is set then the operation will fail.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -506,7 +504,7 @@ to the host.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -516,7 +514,7 @@ to the host.
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -526,7 +524,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -536,7 +534,7 @@ Default is `false`.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -546,7 +544,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -556,7 +554,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>license</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -566,7 +564,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -576,7 +574,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -585,7 +583,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -619,7 +617,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostState">HostState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -733,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -743,7 +741,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -753,7 +751,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -763,7 +761,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -773,7 +771,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -782,7 +780,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -792,7 +790,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -802,7 +800,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -811,7 +809,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -821,7 +819,7 @@ to the host.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -832,7 +830,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -849,7 +847,7 @@ to the host.
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -859,7 +857,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -869,7 +867,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -879,7 +877,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -889,7 +887,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -898,7 +896,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -908,7 +906,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -918,7 +916,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -927,7 +925,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -937,7 +935,7 @@ to the host.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -948,7 +946,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -965,7 +963,7 @@ to the host.
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -975,7 +973,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -985,7 +983,7 @@ Default is `false`.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -995,7 +993,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -1005,7 +1003,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -1014,7 +1012,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>license</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -1024,7 +1022,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -1034,7 +1032,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -1043,7 +1041,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -1053,7 +1051,7 @@ to the host.
             title="Optional">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -1064,7 +1062,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -1081,7 +1079,7 @@ to the host.
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -1091,7 +1089,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -1101,7 +1099,7 @@ Default is `false`.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -1111,7 +1109,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -1121,7 +1119,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -1130,7 +1128,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>license</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -1140,7 +1138,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -1150,7 +1148,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -1159,7 +1157,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -1169,7 +1167,7 @@ to the host.
             title="Optional">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -1180,7 +1178,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -1205,6 +1203,7 @@ to the host.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

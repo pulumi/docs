@@ -14,7 +14,9 @@ page][ref-vsphere-resource_pools].
 
 [ref-vsphere-resource_pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example sets up a resource pool in a compute cluster which uses
 the default settings for CPU and memory reservations, shares, and limits. The
@@ -28,19 +30,20 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}, { async: true }));
-const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const computeCluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-}, { async: true }));
+});
 const resourcePool = new vsphere.ResourcePool("resource_pool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -57,7 +60,7 @@ const resourcePool = new vsphere.ResourcePool("resource_pool", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolArgs">ResourcePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,7 +160,7 @@ const resourcePool = new vsphere.ResourcePool("resource_pool", {
             title="Required">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -170,7 +173,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -181,7 +184,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -192,7 +195,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -202,7 +205,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -215,7 +218,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -235,7 +238,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -246,7 +249,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -257,7 +260,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -267,7 +270,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -280,7 +283,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -291,7 +294,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -300,7 +303,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -317,7 +320,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Required">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -330,7 +333,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -341,7 +344,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -352,7 +355,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -362,7 +365,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -375,7 +378,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -395,7 +398,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -406,7 +409,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -417,7 +420,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -427,7 +430,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -440,7 +443,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -451,7 +454,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -460,7 +463,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -477,7 +480,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Required">
         <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -490,7 +493,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -501,7 +504,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -512,7 +515,7 @@ Default: `-1`
             title="Optional">
         <span>cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -522,7 +525,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -535,7 +538,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -555,7 +558,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -566,7 +569,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -577,7 +580,7 @@ Default: `-1`
             title="Optional">
         <span>memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -587,7 +590,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -600,7 +603,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -611,7 +614,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -620,7 +623,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -637,7 +640,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Required">
         <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -650,7 +653,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>cpu_<wbr>expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -661,7 +664,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>cpu_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -672,7 +675,7 @@ Default: `-1`
             title="Optional">
         <span>cpu_<wbr>reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -682,7 +685,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>cpu_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -695,7 +698,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>cpu_<wbr>shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -715,7 +718,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>memory_<wbr>expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -726,7 +729,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>memory_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -737,7 +740,7 @@ Default: `-1`
             title="Optional">
         <span>memory_<wbr>reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -747,7 +750,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>memory_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -760,7 +763,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>memory_<wbr>shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -771,7 +774,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -780,7 +783,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -813,7 +816,7 @@ Get an existing ResourcePool resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetResourcePool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePoolState">ResourcePoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#ResourcePool">ResourcePool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -927,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -938,7 +941,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -949,7 +952,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -959,7 +962,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -972,7 +975,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -992,7 +995,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1003,7 +1006,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1014,7 +1017,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1024,7 +1027,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1037,7 +1040,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1048,7 +1051,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -1057,7 +1060,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1070,7 +1073,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1087,7 +1090,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1098,7 +1101,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1109,7 +1112,7 @@ Default: `-1`
             title="Optional">
         <span>Cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1119,7 +1122,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1132,7 +1135,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1152,7 +1155,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1163,7 +1166,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>Memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1174,7 +1177,7 @@ Default: `-1`
             title="Optional">
         <span>Memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1184,7 +1187,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>Memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1197,7 +1200,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>Memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1208,7 +1211,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -1217,7 +1220,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>Parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1230,7 +1233,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1247,7 +1250,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>cpu<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1258,7 +1261,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>cpu<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1269,7 +1272,7 @@ Default: `-1`
             title="Optional">
         <span>cpu<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1279,7 +1282,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>cpu<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1292,7 +1295,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>cpu<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1312,7 +1315,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>memory<wbr>Expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1323,7 +1326,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>memory<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1334,7 +1337,7 @@ Default: `-1`
             title="Optional">
         <span>memory<wbr>Reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1344,7 +1347,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>memory<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1357,7 +1360,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>memory<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1368,7 +1371,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -1377,7 +1380,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>parent<wbr>Resource<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1390,7 +1393,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1407,7 +1410,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>cpu_<wbr>expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1418,7 +1421,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>cpu_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1429,7 +1432,7 @@ Default: `-1`
             title="Optional">
         <span>cpu_<wbr>reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1439,7 +1442,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>cpu_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1452,7 +1455,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>cpu_<wbr>shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1472,7 +1475,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>memory_<wbr>expandable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
@@ -1483,7 +1486,7 @@ unreserved resources. Default: `true`
             title="Optional">
         <span>memory_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
@@ -1494,7 +1497,7 @@ Default: `-1`
             title="Optional">
         <span>memory_<wbr>reservation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
@@ -1504,7 +1507,7 @@ available to the resource pool. Default: `0`
             title="Optional">
         <span>memory_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CPU allocation level. The level is a
 simplified view of shares. Levels map to a pre-determined set of numeric
@@ -1517,7 +1520,7 @@ ignored.  Default: `normal`
             title="Optional">
         <span>memory_<wbr>shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
@@ -1528,7 +1531,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
 {{% /md %}}</dd>
@@ -1537,7 +1540,7 @@ determine resource allocation in case of resource contention. If this is set,
             title="Optional">
         <span>parent_<wbr>resource_<wbr>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs]
 of the parent resource pool. This can be the root resource pool for a cluster
@@ -1550,7 +1553,7 @@ resource pool or the move will fail.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1575,6 +1578,7 @@ resource pool or the move will fail.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 
