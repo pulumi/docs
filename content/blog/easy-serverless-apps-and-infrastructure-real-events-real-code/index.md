@@ -167,7 +167,7 @@ Note also that the `CallbackFunction` class -- the powerful abstraction
 behind all of this -- is exported, and offers some knobs,
 in case you want to do things like reuse existing IAM roles rather than
 creating new ones.
-See the [`pulumi/aws/lambda` documentation]({{< relref "/docs/reference/pkg/aws/lambda/" >}}) for details.
+See the [`pulumi/aws/lambda` documentation]({{< relref "/docs/reference/pkg/aws/lambda" >}}) for details.
 For instance, say we want to increase the RAM available to our function from 128MB to 256MB:
 
 ```typescript
@@ -245,7 +245,7 @@ bucket name, so we use an environment variable. This highlights both the
 benefits and drawbacks to programming at this level -- we need to know
 how to configure all of these ancillary resources, but as a result,
 the
-[entire power of Lambda is at our fingertips]({{< relref "/docs/reference/pkg/aws/lambda/function/" >}}).
+[entire power of Lambda is at our fingertips]({{< relref "/docs/reference/pkg/aws/lambda/function" >}}).
 
 Notice that we've pointed to our application logic inside of `./app`.
 Pulumi will create the zipfile for you. If we instead wanted to use a

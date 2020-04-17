@@ -15,9 +15,9 @@ But, did you know that you can manage any cloud resource in AWS, Azure, or Googl
 <!--more-->
 
 You can use the
-[@pulumi/aws]({{< relref "/docs/reference/pkg/aws" >}}),
-[@pulumi/azure]({{< relref "/docs/reference/pkg/azure" >}}),
-or [@pulumi/gcp]({{< relref "/docs/reference/pkg/gcp" >}})
+[AWS]({{< relref "/docs/reference/pkg/aws" >}}),
+[Azure]({{< relref "/docs/reference/pkg/azure" >}}),
+or [Google Cloud]({{< relref "/docs/reference/pkg/gcp" >}})
 libraries to manage cloud resources. Using these libraries, you can
 directly manage the properties of any cloud resource.
 
@@ -114,5 +114,5 @@ Pulumi. You can provision
 [Kinesis streams]({{< relref "/docs/reference/pkg/aws/kinesis" >}}), and more.
 
 To learn more, take a look at the
-[@pulumi/aws reference documentation]({{< relref "/docs/reference/pkg/aws" >}})
+[AWS API documentation]({{< relref "/docs/reference/pkg/aws" >}})
 and the [sample code that provisions a variety of infrastructure resources](https://github.com/pulumi/examples/blob/master/aws-ts-resources/index.ts).

@@ -52,7 +52,7 @@ tbody tr td:first-child {
 
 | Service | Description | User Guide | API Docs |
 |---------|-------------|------------|----------|
-| [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) | Manage TLS/SSL certificates | | [acm]({{< relref "/docs/reference/pkg/aws/acm " >}}) |
+| [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) | Manage TLS/SSL certificates | | [acm]({{< relref "/docs/reference/pkg/aws/acm" >}}) |
 | [AWS Certificate Manager Private Certificate Authority](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) | Managed private CA service | | [acmpca]({{< relref "/docs/reference/pkg/aws/acmpca" >}}) |
 | [Amazon API Gateway](https://aws.amazon.com/api-gateway/) | Secure, scalable APIs | [User Guide]({{< relref "api-gateway" >}}) | [apigateway]({{< relref "/docs/reference/pkg/aws/apigateway" >}}) |
 | [AWS App Mesh](https://aws.amazon.com/app-mesh/) | App-level service networking | | [appmesh]({{< relref "/docs/reference/pkg/aws/appmesh" >}}) |

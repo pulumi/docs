@@ -165,5 +165,5 @@ and comprehension for building cloud stacks.
 Find out more:
 
 - Get the [example code on GitHub](https://github.com/pulumi/examples/tree/master/kubernetes-ts-jenkins)
-- Read the docs on [Kubernetes]({{< relref "/docs/reference/pkg/kubernetes/" >}})
+- Read the docs on [Kubernetes]({{< relref "/docs/reference/pkg/kubernetes" >}})
 - See the tutorial on [building components]({{< relref "/docs/tutorials/aws/s3-folder-component" >}})

@@ -191,7 +191,7 @@ const nginx = new awsx.ecs.FargateService("nginx", {
 });
 ```
 
-Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`]({{< relref "/docs/reference/pkg/aws/ecs/cluster/#look-up-an-existing-cluster-resource" >}}), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
+Notice that we are using a method from a different package, [`aws.ecs.Cluster.get`]({{< relref "/docs/reference/pkg/aws/ecs/cluster#look-up-an-existing-cluster-resource" >}}), to look up our existing cluster by its ID and then creating an `awsx.ecs.Cluster` out of it. The former is the raw resource description, while the latter is the object type required to work with the Pulumi Crosswalk for AWS ECS APIs.
 
 ## ECS Tasks, Containers, and Services
 
