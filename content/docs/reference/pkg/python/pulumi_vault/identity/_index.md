@@ -211,9 +211,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.EntityPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">EntityPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">entity_id=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.EntityPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Entity for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_entity_policies.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -518,9 +515,6 @@ Vault, serialized in JSON format.</p>
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_policies=None</em>, <em class="sig-param">member_entity_ids=None</em>, <em class="sig-param">member_group_ids=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>A group can contain multiple entities as its members. A group can also have subgroups. Policies set on the group is granted to all members of the group. During request time, when the token’s entity ID is being evaluated for the policies that it has access to; along with the policies on the entity itself, policies that are inherited due to group memberships are also granted.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -644,9 +638,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">canonical_id=None</em>, <em class="sig-param">mount_accessor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Identity Group Alias for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
 <p>Group aliases allows entity membership in external groups to be managed semi-automatically. External group serves as a mapping to a group that is outside of the identity store. External groups can have one (and only one) alias. This alias should map to a notion of group that is outside of the identity store. For example, groups in LDAP, and teams in GitHub. A username in LDAP, belonging to a group in LDAP, can get its entity ID added as a member of a group in Vault automatically during logins and token renewals. This works only if the group in Vault is an external group and has an alias that maps to the group in LDAP. If the user is removed from the group in LDAP, that change gets reflected in Vault only upon the subsequent login or renewal operation.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_alias.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -737,9 +728,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.identity.GroupPolicies">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.identity.</code><code class="sig-name descname">GroupPolicies</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">exclusive=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.identity.GroupPolicies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages policies for an Identity Group for Vault. The <a class="reference external" href="https://www.vaultproject.io/docs/secrets/identity/index.html">Identity secrets engine</a> is the identity management solution for Vault.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_group_policies.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -841,7 +829,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the clients who are recognized by Vault.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/identity_oidc.html.md</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -572,9 +572,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -871,9 +868,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_tls.</code><code class="sig-name descname">get_public_key</code><span class="sig-paren">(</span><em class="sig-param">private_key_pem=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_tls.get_public_key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/d/public_key.html.md">https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/d/public_key.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>private_key_pem</strong> (<em>str</em>) – The private key to use. Currently-supported key types are “RSA” or “ECDSA”.</p>

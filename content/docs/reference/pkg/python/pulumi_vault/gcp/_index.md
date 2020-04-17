@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.gcp.AuthBackend">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.gcp.</code><code class="sig-name descname">AuthBackend</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_email=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">credentials=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">private_key_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.gcp.AuthBackend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to configure the <a class="reference external" href="https://www.vaultproject.io/docs/auth/gcp.html">GCP auth backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_auth_backend.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -126,9 +123,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.gcp.AuthBackendRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.gcp.</code><code class="sig-name descname">AuthBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_group_aliases=None</em>, <em class="sig-param">allow_gce_inference=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bound_instance_groups=None</em>, <em class="sig-param">bound_labels=None</em>, <em class="sig-param">bound_projects=None</em>, <em class="sig-param">bound_regions=None</em>, <em class="sig-param">bound_service_accounts=None</em>, <em class="sig-param">bound_zones=None</em>, <em class="sig-param">max_jwt_exp=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">token_bound_cidrs=None</em>, <em class="sig-param">token_explicit_max_ttl=None</em>, <em class="sig-param">token_max_ttl=None</em>, <em class="sig-param">token_no_default_policy=None</em>, <em class="sig-param">token_num_uses=None</em>, <em class="sig-param">token_period=None</em>, <em class="sig-param">token_policies=None</em>, <em class="sig-param">token_ttl=None</em>, <em class="sig-param">token_type=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.gcp.AuthBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a role in an <a class="reference external" href="https://www.vaultproject.io/docs/auth/gcp.html">GCP auth backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_auth_backend_role.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -579,9 +573,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.gcp.</code><code class="sig-name descname">SecretRoleset</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">bindings=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">roleset=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">token_scopes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.gcp.SecretRoleset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Roleset in the <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html">GCP Secrets Engine</a> for Vault.</p>
 <p>Each Roleset is <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html#service-accounts-are-tied-to-rolesets">tied</a> to a Service Account, and can have one or more <a class="reference external" href="https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings">bindings</a> associated with it.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_secret_roleset.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/gcp_secret_roleset.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
