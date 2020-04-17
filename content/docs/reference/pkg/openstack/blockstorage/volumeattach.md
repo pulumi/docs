@@ -20,7 +20,9 @@ different cloud provider.
 This does not actually attach a volume to an instance. Please use
 the `openstack.compute.VolumeAttach` resource for that.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -40,7 +42,8 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v3.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -57,7 +60,7 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,7 +160,7 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -166,7 +169,7 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
             title="Required">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -175,7 +178,7 @@ const va1 = new openstack.blockstorage.VolumeAttach("va_1", {
             title="Optional">
         <span>Attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -186,7 +189,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -197,7 +200,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -206,7 +209,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -215,7 +218,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -224,7 +227,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -233,7 +236,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -242,7 +245,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -254,7 +257,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -263,7 +266,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -280,7 +283,7 @@ connections.
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -289,7 +292,7 @@ connections.
             title="Required">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -298,7 +301,7 @@ connections.
             title="Optional">
         <span>Attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -309,7 +312,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -320,7 +323,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -329,7 +332,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -338,7 +341,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -347,7 +350,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -356,7 +359,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -365,7 +368,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -377,7 +380,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -386,7 +389,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -403,7 +406,7 @@ connections.
             title="Required">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -412,7 +415,7 @@ connections.
             title="Required">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -421,7 +424,7 @@ connections.
             title="Optional">
         <span>attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -432,7 +435,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -443,7 +446,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -452,7 +455,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -461,7 +464,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -470,7 +473,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -479,7 +482,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -488,7 +491,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -500,7 +503,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -509,7 +512,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -526,7 +529,7 @@ connections.
             title="Required">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -535,7 +538,7 @@ connections.
             title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -544,7 +547,7 @@ connections.
             title="Optional">
         <span>attach_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -555,7 +558,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -566,7 +569,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -575,7 +578,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -584,7 +587,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -593,7 +596,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>os_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -602,7 +605,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -611,7 +614,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -623,7 +626,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -632,7 +635,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -672,7 +675,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>Driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -681,7 +684,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>Mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -708,7 +711,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>Driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -717,7 +720,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>Mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -744,7 +747,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -753,7 +756,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -780,7 +783,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>driver_<wbr>volume_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -789,7 +792,7 @@ script to finalize the connection. See below for more information.
             title="">
         <span>mount_<wbr>point_<wbr>base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -819,7 +822,7 @@ Get an existing VolumeAttach resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#VolumeAttachState">VolumeAttachState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeAttachState">VolumeAttachState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -933,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -955,7 +958,7 @@ script to finalize the connection. See below for more information.
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -966,7 +969,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -975,7 +978,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -984,7 +987,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -993,7 +996,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -1002,7 +1005,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -1011,7 +1014,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -1020,7 +1023,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -1029,7 +1032,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -1038,7 +1041,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -1050,7 +1053,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -1059,7 +1062,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -1068,7 +1071,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -1085,7 +1088,7 @@ connections.
             title="Optional">
         <span>Attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -1107,7 +1110,7 @@ script to finalize the connection. See below for more information.
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -1118,7 +1121,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -1127,7 +1130,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -1136,7 +1139,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -1145,7 +1148,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -1154,7 +1157,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -1163,7 +1166,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -1172,7 +1175,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -1181,7 +1184,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -1190,7 +1193,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -1202,7 +1205,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -1211,7 +1214,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -1220,7 +1223,7 @@ creates a new volume attachment.
             title="Optional">
         <span>Wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -1237,7 +1240,7 @@ connections.
             title="Optional">
         <span>attach<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -1259,7 +1262,7 @@ script to finalize the connection. See below for more information.
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -1270,7 +1273,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>driver<wbr>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -1279,7 +1282,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -1288,7 +1291,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -1297,7 +1300,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -1306,7 +1309,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>mount<wbr>Point<wbr>Base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -1315,7 +1318,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -1324,7 +1327,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -1333,7 +1336,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -1342,7 +1345,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -1354,7 +1357,7 @@ creates a new volume attachment.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -1363,7 +1366,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -1372,7 +1375,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -1389,7 +1392,7 @@ connections.
             title="Optional">
         <span>attach_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
@@ -1411,7 +1414,7 @@ script to finalize the connection. See below for more information.
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
@@ -1422,7 +1425,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>driver_<wbr>volume_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
 {{% /md %}}</dd>
@@ -1431,7 +1434,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
 {{% /md %}}</dd>
@@ -1440,7 +1443,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
 {{% /md %}}</dd>
@@ -1449,7 +1452,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
 {{% /md %}}</dd>
@@ -1458,7 +1461,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>mount_<wbr>point_<wbr>base</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
 {{% /md %}}</dd>
@@ -1467,7 +1470,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>multipath</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
 {{% /md %}}</dd>
@@ -1476,7 +1479,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>os_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
 {{% /md %}}</dd>
@@ -1485,7 +1488,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
 {{% /md %}}</dd>
@@ -1494,7 +1497,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Block Storage
 client. A Block Storage client is needed to create a volume attachment.
@@ -1506,7 +1509,7 @@ creates a new volume attachment.
             title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -1515,7 +1518,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwnn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}</dd>
@@ -1524,7 +1527,7 @@ creates a new volume attachment.
             title="Optional">
         <span>wwpns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
@@ -1549,6 +1552,7 @@ connections.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

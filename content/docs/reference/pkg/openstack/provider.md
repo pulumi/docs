@@ -11,8 +11,6 @@ settings, however an explicit `Provider` instance may be created and passed duri
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/index.html.markdown.
-
 
 
 ## Create a Provider Resource
@@ -28,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -128,7 +126,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Allow<wbr>Reauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
 useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
@@ -139,7 +137,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
 {{% /md %}}</dd>
@@ -148,7 +146,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
 {{% /md %}}</dd>
@@ -157,7 +155,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
 {{% /md %}}</dd>
@@ -166,7 +164,7 @@ initial token TTL.
             title="Optional">
         <span>Auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
 {{% /md %}}</dd>
@@ -175,7 +173,7 @@ initial token TTL.
             title="Optional">
         <span>Cacert<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
 {{% /md %}}</dd>
@@ -184,7 +182,7 @@ initial token TTL.
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
 {{% /md %}}</dd>
@@ -193,7 +191,7 @@ initial token TTL.
             title="Optional">
         <span>Cloud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
 {{% /md %}}</dd>
@@ -202,7 +200,7 @@ initial token TTL.
             title="Optional">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 {{% /md %}}</dd>
@@ -211,7 +209,7 @@ initial token TTL.
             title="Optional">
         <span>Delayed<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
 {{% /md %}}</dd>
@@ -220,7 +218,7 @@ initial token TTL.
             title="Optional">
         <span>Disable<wbr>No<wbr>Cache<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 {{% /md %}}</dd>
@@ -229,7 +227,7 @@ initial token TTL.
             title="Optional">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -238,7 +236,7 @@ initial token TTL.
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -256,7 +254,7 @@ initial token TTL.
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -264,7 +262,7 @@ initial token TTL.
             title="Optional">
         <span>Insecure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
 {{% /md %}}</dd>
@@ -273,7 +271,7 @@ initial token TTL.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
 {{% /md %}}</dd>
@@ -282,7 +280,7 @@ initial token TTL.
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
 {{% /md %}}</dd>
@@ -291,7 +289,7 @@ initial token TTL.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password to login with.
 {{% /md %}}</dd>
@@ -300,7 +298,7 @@ initial token TTL.
             title="Optional">
         <span>Project<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
 {{% /md %}}</dd>
@@ -309,7 +307,7 @@ initial token TTL.
             title="Optional">
         <span>Project<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
 {{% /md %}}</dd>
@@ -318,7 +316,7 @@ initial token TTL.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
 {{% /md %}}</dd>
@@ -327,7 +325,7 @@ initial token TTL.
             title="Optional">
         <span>Swauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 {{% /md %}}</dd>
@@ -336,7 +334,7 @@ initial token TTL.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -345,7 +343,7 @@ initial token TTL.
             title="Optional">
         <span>Tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -354,7 +352,7 @@ initial token TTL.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
 {{% /md %}}</dd>
@@ -363,7 +361,7 @@ initial token TTL.
             title="Optional">
         <span>Use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 {{% /md %}}</dd>
@@ -372,7 +370,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -381,7 +379,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -390,7 +388,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -399,7 +397,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -415,7 +413,7 @@ initial token TTL.
             title="Optional">
         <span>Allow<wbr>Reauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
 useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
@@ -426,7 +424,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
 {{% /md %}}</dd>
@@ -435,7 +433,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
 {{% /md %}}</dd>
@@ -444,7 +442,7 @@ initial token TTL.
             title="Optional">
         <span>Application<wbr>Credential<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
 {{% /md %}}</dd>
@@ -453,7 +451,7 @@ initial token TTL.
             title="Optional">
         <span>Auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
 {{% /md %}}</dd>
@@ -462,7 +460,7 @@ initial token TTL.
             title="Optional">
         <span>Cacert<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
 {{% /md %}}</dd>
@@ -471,7 +469,7 @@ initial token TTL.
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
 {{% /md %}}</dd>
@@ -480,7 +478,7 @@ initial token TTL.
             title="Optional">
         <span>Cloud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
 {{% /md %}}</dd>
@@ -489,7 +487,7 @@ initial token TTL.
             title="Optional">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 {{% /md %}}</dd>
@@ -498,7 +496,7 @@ initial token TTL.
             title="Optional">
         <span>Delayed<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
 {{% /md %}}</dd>
@@ -507,7 +505,7 @@ initial token TTL.
             title="Optional">
         <span>Disable<wbr>No<wbr>Cache<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 {{% /md %}}</dd>
@@ -516,7 +514,7 @@ initial token TTL.
             title="Optional">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -525,7 +523,7 @@ initial token TTL.
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -543,7 +541,7 @@ initial token TTL.
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -551,7 +549,7 @@ initial token TTL.
             title="Optional">
         <span>Insecure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
 {{% /md %}}</dd>
@@ -560,7 +558,7 @@ initial token TTL.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
 {{% /md %}}</dd>
@@ -569,7 +567,7 @@ initial token TTL.
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
 {{% /md %}}</dd>
@@ -578,7 +576,7 @@ initial token TTL.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password to login with.
 {{% /md %}}</dd>
@@ -587,7 +585,7 @@ initial token TTL.
             title="Optional">
         <span>Project<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
 {{% /md %}}</dd>
@@ -596,7 +594,7 @@ initial token TTL.
             title="Optional">
         <span>Project<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
 {{% /md %}}</dd>
@@ -605,7 +603,7 @@ initial token TTL.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
 {{% /md %}}</dd>
@@ -614,7 +612,7 @@ initial token TTL.
             title="Optional">
         <span>Swauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 {{% /md %}}</dd>
@@ -623,7 +621,7 @@ initial token TTL.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -632,7 +630,7 @@ initial token TTL.
             title="Optional">
         <span>Tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -641,7 +639,7 @@ initial token TTL.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
 {{% /md %}}</dd>
@@ -650,7 +648,7 @@ initial token TTL.
             title="Optional">
         <span>Use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 {{% /md %}}</dd>
@@ -659,7 +657,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -668,7 +666,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -677,7 +675,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -686,7 +684,7 @@ initial token TTL.
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -702,7 +700,7 @@ initial token TTL.
             title="Optional">
         <span>allow<wbr>Reauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
 useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
@@ -713,7 +711,7 @@ initial token TTL.
             title="Optional">
         <span>application<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
 {{% /md %}}</dd>
@@ -722,7 +720,7 @@ initial token TTL.
             title="Optional">
         <span>application<wbr>Credential<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
 {{% /md %}}</dd>
@@ -731,7 +729,7 @@ initial token TTL.
             title="Optional">
         <span>application<wbr>Credential<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
 {{% /md %}}</dd>
@@ -740,7 +738,7 @@ initial token TTL.
             title="Optional">
         <span>auth<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
 {{% /md %}}</dd>
@@ -749,7 +747,7 @@ initial token TTL.
             title="Optional">
         <span>cacert<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
 {{% /md %}}</dd>
@@ -758,7 +756,7 @@ initial token TTL.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
 {{% /md %}}</dd>
@@ -767,7 +765,7 @@ initial token TTL.
             title="Optional">
         <span>cloud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
 {{% /md %}}</dd>
@@ -776,7 +774,7 @@ initial token TTL.
             title="Optional">
         <span>default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 {{% /md %}}</dd>
@@ -785,7 +783,7 @@ initial token TTL.
             title="Optional">
         <span>delayed<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
 {{% /md %}}</dd>
@@ -794,7 +792,7 @@ initial token TTL.
             title="Optional">
         <span>disable<wbr>No<wbr>Cache<wbr>Header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 {{% /md %}}</dd>
@@ -803,7 +801,7 @@ initial token TTL.
             title="Optional">
         <span>domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -812,7 +810,7 @@ initial token TTL.
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -830,7 +828,7 @@ initial token TTL.
             title="Optional">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -838,7 +836,7 @@ initial token TTL.
             title="Optional">
         <span>insecure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
 {{% /md %}}</dd>
@@ -847,7 +845,7 @@ initial token TTL.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
 {{% /md %}}</dd>
@@ -856,7 +854,7 @@ initial token TTL.
             title="Optional">
         <span>max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
 {{% /md %}}</dd>
@@ -865,7 +863,7 @@ initial token TTL.
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password to login with.
 {{% /md %}}</dd>
@@ -874,7 +872,7 @@ initial token TTL.
             title="Optional">
         <span>project<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
 {{% /md %}}</dd>
@@ -883,7 +881,7 @@ initial token TTL.
             title="Optional">
         <span>project<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
 {{% /md %}}</dd>
@@ -892,7 +890,7 @@ initial token TTL.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
 {{% /md %}}</dd>
@@ -901,7 +899,7 @@ initial token TTL.
             title="Optional">
         <span>swauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 {{% /md %}}</dd>
@@ -910,7 +908,7 @@ initial token TTL.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -919,7 +917,7 @@ initial token TTL.
             title="Optional">
         <span>tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -928,7 +926,7 @@ initial token TTL.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
 {{% /md %}}</dd>
@@ -937,7 +935,7 @@ initial token TTL.
             title="Optional">
         <span>use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 {{% /md %}}</dd>
@@ -946,7 +944,7 @@ initial token TTL.
             title="Optional">
         <span>user<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -955,7 +953,7 @@ initial token TTL.
             title="Optional">
         <span>user<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -964,7 +962,7 @@ initial token TTL.
             title="Optional">
         <span>user<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -973,7 +971,7 @@ initial token TTL.
             title="Optional">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -989,7 +987,7 @@ initial token TTL.
             title="Optional">
         <span>allow_<wbr>reauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed automatically, if the initial auth token get expired. This is
 useful, when the token TTL is low or the overall Terraform provider execution time expected to be greater than the
@@ -1000,7 +998,7 @@ initial token TTL.
             title="Optional">
         <span>application_<wbr>credential_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Credential ID to login with.
 {{% /md %}}</dd>
@@ -1009,7 +1007,7 @@ initial token TTL.
             title="Optional">
         <span>application_<wbr>credential_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Credential name to login with.
 {{% /md %}}</dd>
@@ -1018,7 +1016,7 @@ initial token TTL.
             title="Optional">
         <span>application_<wbr>credential_<wbr>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Application Credential secret to login with.
 {{% /md %}}</dd>
@@ -1027,7 +1025,7 @@ initial token TTL.
             title="Optional">
         <span>auth_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Identity authentication URL.
 {{% /md %}}</dd>
@@ -1036,7 +1034,7 @@ initial token TTL.
             title="Optional">
         <span>cacert_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A Custom CA certificate.
 {{% /md %}}</dd>
@@ -1045,7 +1043,7 @@ initial token TTL.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A client certificate to authenticate with.
 {{% /md %}}</dd>
@@ -1054,7 +1052,7 @@ initial token TTL.
             title="Optional">
         <span>cloud</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
 {{% /md %}}</dd>
@@ -1063,7 +1061,7 @@ initial token TTL.
             title="Optional">
         <span>default_<wbr>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain ID to scope to if no other domain is specified. Defaults to `default` (Identity v3).
 {{% /md %}}</dd>
@@ -1072,7 +1070,7 @@ initial token TTL.
             title="Optional">
         <span>delayed_<wbr>auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, OpenStack authorization will be perfomed, when the service provider client is called.
 {{% /md %}}</dd>
@@ -1081,7 +1079,7 @@ initial token TTL.
             title="Optional">
         <span>disable_<wbr>no_<wbr>cache_<wbr>header</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, the HTTP `Cache-Control: no-cache` header will not be added by default to all API requests.
 {{% /md %}}</dd>
@@ -1090,7 +1088,7 @@ initial token TTL.
             title="Optional">
         <span>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -1099,7 +1097,7 @@ initial token TTL.
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Domain to scope to (Identity v3).
 {{% /md %}}</dd>
@@ -1117,7 +1115,7 @@ initial token TTL.
             title="Optional">
         <span>endpoint_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1125,7 +1123,7 @@ initial token TTL.
             title="Optional">
         <span>insecure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
 {{% /md %}}</dd>
@@ -1134,7 +1132,7 @@ initial token TTL.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A client private key to authenticate with.
 {{% /md %}}</dd>
@@ -1143,7 +1141,7 @@ initial token TTL.
             title="Optional">
         <span>max_<wbr>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How many times HTTP connection should be retried until giving up.
 {{% /md %}}</dd>
@@ -1152,7 +1150,7 @@ initial token TTL.
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password to login with.
 {{% /md %}}</dd>
@@ -1161,7 +1159,7 @@ initial token TTL.
             title="Optional">
         <span>project_<wbr>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the proejct resides (Identity v3).
 {{% /md %}}</dd>
@@ -1170,7 +1168,7 @@ initial token TTL.
             title="Optional">
         <span>project_<wbr>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the project resides (Identity v3).
 {{% /md %}}</dd>
@@ -1179,7 +1177,7 @@ initial token TTL.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
 {{% /md %}}</dd>
@@ -1188,7 +1186,7 @@ initial token TTL.
             title="Optional">
         <span>swauth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
 {{% /md %}}</dd>
@@ -1197,7 +1195,7 @@ initial token TTL.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -1206,7 +1204,7 @@ initial token TTL.
             title="Optional">
         <span>tenant_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Tenant (Identity v2) or Project (Identity v3) to login with.
 {{% /md %}}</dd>
@@ -1215,7 +1213,7 @@ initial token TTL.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Authentication token to use as an alternative to username/password.
 {{% /md %}}</dd>
@@ -1224,7 +1222,7 @@ initial token TTL.
             title="Optional">
         <span>use_<wbr>octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
 {{% /md %}}</dd>
@@ -1233,7 +1231,7 @@ initial token TTL.
             title="Optional">
         <span>user_<wbr>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -1242,7 +1240,7 @@ initial token TTL.
             title="Optional">
         <span>user_<wbr>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the domain where the user resides (Identity v3).
 {{% /md %}}</dd>
@@ -1251,7 +1249,7 @@ initial token TTL.
             title="Optional">
         <span>user_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -1260,7 +1258,7 @@ initial token TTL.
             title="Optional">
         <span>user_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username to login with.
 {{% /md %}}</dd>
@@ -1288,6 +1286,7 @@ initial token TTL.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

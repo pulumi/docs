@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a V2 Neutron network resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -48,7 +50,8 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -65,7 +68,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#NetworkArgs">NetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Network">Network</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#NetworkArgs">NetworkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#Network">Network</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -165,7 +168,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -176,7 +179,7 @@ state of the existing network.
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -188,7 +191,7 @@ creates a new network.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -198,7 +201,7 @@ updates the name of the existing network.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -210,7 +213,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -221,7 +224,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -232,7 +235,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -242,7 +245,7 @@ the existing network.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -255,7 +258,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -264,7 +267,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -285,7 +288,7 @@ network.
             title="Optional">
         <span>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -296,7 +299,7 @@ existing network.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -305,7 +308,7 @@ existing network.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -315,7 +318,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>Transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -343,7 +346,7 @@ network.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -354,7 +357,7 @@ state of the existing network.
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -366,7 +369,7 @@ creates a new network.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -376,7 +379,7 @@ updates the name of the existing network.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -388,7 +391,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -399,7 +402,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -410,7 +413,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -420,7 +423,7 @@ the existing network.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -433,7 +436,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -442,7 +445,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -463,7 +466,7 @@ network.
             title="Optional">
         <span>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -474,7 +477,7 @@ existing network.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -483,7 +486,7 @@ existing network.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -493,7 +496,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>Transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -521,7 +524,7 @@ network.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -532,7 +535,7 @@ state of the existing network.
             title="Optional">
         <span>availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -544,7 +547,7 @@ creates a new network.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -554,7 +557,7 @@ updates the name of the existing network.
             title="Optional">
         <span>dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -566,7 +569,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -577,7 +580,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -588,7 +591,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -598,7 +601,7 @@ the existing network.
             title="Optional">
         <span>port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -611,7 +614,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -620,7 +623,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -641,7 +644,7 @@ network.
             title="Optional">
         <span>shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -652,7 +655,7 @@ existing network.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -661,7 +664,7 @@ existing network.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -671,7 +674,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -699,7 +702,7 @@ network.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -710,7 +713,7 @@ state of the existing network.
             title="Optional">
         <span>availability_<wbr>zone_<wbr>hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -722,7 +725,7 @@ creates a new network.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -732,7 +735,7 @@ updates the name of the existing network.
             title="Optional">
         <span>dns_<wbr>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -744,7 +747,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -755,7 +758,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -766,7 +769,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -776,7 +779,7 @@ the existing network.
             title="Optional">
         <span>port_<wbr>security_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -789,7 +792,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>qos_<wbr>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -798,7 +801,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -819,7 +822,7 @@ network.
             title="Optional">
         <span>shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -830,7 +833,7 @@ existing network.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -839,7 +842,7 @@ existing network.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -849,7 +852,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>transparent_<wbr>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -889,7 +892,7 @@ The following output properties are available:
             title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -906,7 +909,7 @@ explicitly and implicitly added.
             title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -923,7 +926,7 @@ explicitly and implicitly added.
             title="">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -940,7 +943,7 @@ explicitly and implicitly added.
             title="">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -971,7 +974,7 @@ Get an existing Network resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#NetworkState">NetworkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Network">Network</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetwork<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#NetworkState">NetworkState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#Network">Network</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1085,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -1096,7 +1099,7 @@ state of the existing network.
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -1106,7 +1109,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -1118,7 +1121,7 @@ creates a new network.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -1128,7 +1131,7 @@ updates the name of the existing network.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -1140,7 +1143,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -1151,7 +1154,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -1162,7 +1165,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -1172,7 +1175,7 @@ the existing network.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -1185,7 +1188,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -1194,7 +1197,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -1215,7 +1218,7 @@ network.
             title="Optional">
         <span>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -1226,7 +1229,7 @@ existing network.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -1235,7 +1238,7 @@ existing network.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -1245,7 +1248,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>Transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -1273,7 +1276,7 @@ network.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -1284,7 +1287,7 @@ state of the existing network.
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -1294,7 +1297,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -1306,7 +1309,7 @@ creates a new network.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -1316,7 +1319,7 @@ updates the name of the existing network.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -1328,7 +1331,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -1339,7 +1342,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -1350,7 +1353,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -1360,7 +1363,7 @@ the existing network.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -1373,7 +1376,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -1382,7 +1385,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -1403,7 +1406,7 @@ network.
             title="Optional">
         <span>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -1414,7 +1417,7 @@ existing network.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -1423,7 +1426,7 @@ existing network.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -1433,7 +1436,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>Transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -1461,7 +1464,7 @@ network.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -1472,7 +1475,7 @@ state of the existing network.
             title="Optional">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -1482,7 +1485,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>availability<wbr>Zone<wbr>Hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -1494,7 +1497,7 @@ creates a new network.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -1504,7 +1507,7 @@ updates the name of the existing network.
             title="Optional">
         <span>dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -1516,7 +1519,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -1527,7 +1530,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -1538,7 +1541,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -1548,7 +1551,7 @@ the existing network.
             title="Optional">
         <span>port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -1561,7 +1564,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -1570,7 +1573,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -1591,7 +1594,7 @@ network.
             title="Optional">
         <span>shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -1602,7 +1605,7 @@ existing network.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -1611,7 +1614,7 @@ existing network.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -1621,7 +1624,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>transparent<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -1649,7 +1652,7 @@ network.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
@@ -1660,7 +1663,7 @@ state of the existing network.
             title="Optional">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
@@ -1670,7 +1673,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>availability_<wbr>zone_<wbr>hints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An availability zone is used to make
 network resources highly available. Used for resources with high availability
@@ -1682,7 +1685,7 @@ creates a new network.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
@@ -1692,7 +1695,7 @@ updates the name of the existing network.
             title="Optional">
         <span>dns_<wbr>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network DNS domain. Available, when Neutron DNS
 extension is enabled. The `dns_domain` of a network in conjunction with the
@@ -1704,7 +1707,7 @@ service when Neutron is configured to integrate with such a service.
             title="Optional">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
@@ -1715,7 +1718,7 @@ false. Changing this updates the external attribute of the existing network.
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
@@ -1726,7 +1729,7 @@ Neutron `net-mtu-writable` extension is enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
@@ -1736,7 +1739,7 @@ the existing network.
             title="Optional">
         <span>port_<wbr>security_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the network. Port Security is usually enabled by default, so
@@ -1749,7 +1752,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>qos_<wbr>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -1758,7 +1761,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron network. If omitted, the
@@ -1779,7 +1782,7 @@ network.
             title="Optional">
         <span>shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
@@ -1790,7 +1793,7 @@ existing network.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
 {{% /md %}}</dd>
@@ -1799,7 +1802,7 @@ existing network.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
@@ -1809,7 +1812,7 @@ create a network for another tenant. Changing this creates a new network.
             title="Optional">
         <span>transparent_<wbr>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the network resource has the
 VLAN transparent attribute set. Valid values are true and false. Defaults to
@@ -1846,7 +1849,7 @@ network.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#NetworkSegmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#NetworkSegmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#NetworkSegmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#NetworkSegmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1859,7 +1862,7 @@ network.
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of physical network.
 {{% /md %}}</dd>
@@ -1868,7 +1871,7 @@ network.
             title="Optional">
         <span>Physical<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
 {{% /md %}}</dd>
@@ -1877,7 +1880,7 @@ network.
             title="Optional">
         <span>Segmentation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
 {{% /md %}}</dd>
@@ -1893,7 +1896,7 @@ network.
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of physical network.
 {{% /md %}}</dd>
@@ -1902,7 +1905,7 @@ network.
             title="Optional">
         <span>Physical<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
 {{% /md %}}</dd>
@@ -1911,7 +1914,7 @@ network.
             title="Optional">
         <span>Segmentation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
 {{% /md %}}</dd>
@@ -1927,7 +1930,7 @@ network.
             title="Optional">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of physical network.
 {{% /md %}}</dd>
@@ -1936,7 +1939,7 @@ network.
             title="Optional">
         <span>physical<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
 {{% /md %}}</dd>
@@ -1945,7 +1948,7 @@ network.
             title="Optional">
         <span>segmentation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
 {{% /md %}}</dd>
@@ -1961,7 +1964,7 @@ network.
             title="Optional">
         <span>network_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of physical network.
 {{% /md %}}</dd>
@@ -1970,7 +1973,7 @@ network.
             title="Optional">
         <span>physical<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
 {{% /md %}}</dd>
@@ -1979,7 +1982,7 @@ network.
             title="Optional">
         <span>segmentation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
 {{% /md %}}</dd>
@@ -2001,6 +2004,7 @@ network.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

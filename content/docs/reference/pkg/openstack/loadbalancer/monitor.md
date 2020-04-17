@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a V2 monitor resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -23,7 +25,8 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v2.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -40,7 +43,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMonitor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMonitor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#MonitorArgs">MonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -140,7 +143,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
             title="Required">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -149,7 +152,7 @@ const monitor1 = new openstack.loadbalancer.Monitor("monitor_1", {
             title="Required">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -160,7 +163,7 @@ and 10.
             title="Required">
         <span>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -169,7 +172,7 @@ and 10.
             title="Required">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -180,7 +183,7 @@ value.
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -191,7 +194,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -201,7 +204,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -212,7 +215,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -223,7 +226,7 @@ defaults to "GET".
             title="Optional">
         <span>Max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -234,7 +237,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -243,7 +246,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -255,7 +258,7 @@ monitor.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -266,7 +269,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -283,7 +286,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -292,7 +295,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -303,7 +306,7 @@ and 10.
             title="Required">
         <span>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -312,7 +315,7 @@ and 10.
             title="Required">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -323,7 +326,7 @@ value.
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -334,7 +337,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -344,7 +347,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -355,7 +358,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -366,7 +369,7 @@ defaults to "GET".
             title="Optional">
         <span>Max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -377,7 +380,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -386,7 +389,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -398,7 +401,7 @@ monitor.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -409,7 +412,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -426,7 +429,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -435,7 +438,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -446,7 +449,7 @@ and 10.
             title="Required">
         <span>pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -455,7 +458,7 @@ and 10.
             title="Required">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -466,7 +469,7 @@ value.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -477,7 +480,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -487,7 +490,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -498,7 +501,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -509,7 +512,7 @@ defaults to "GET".
             title="Optional">
         <span>max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -520,7 +523,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -529,7 +532,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -541,7 +544,7 @@ monitor.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -552,7 +555,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -569,7 +572,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -578,7 +581,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Required">
         <span>max_<wbr>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -589,7 +592,7 @@ and 10.
             title="Required">
         <span>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -598,7 +601,7 @@ and 10.
             title="Required">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -609,7 +612,7 @@ value.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -620,7 +623,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -630,7 +633,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>expected_<wbr>codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -641,7 +644,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>http_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -652,7 +655,7 @@ defaults to "GET".
             title="Optional">
         <span>max_<wbr>retries_<wbr>down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -663,7 +666,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -672,7 +675,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -684,7 +687,7 @@ monitor.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -695,7 +698,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>url_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -728,7 +731,7 @@ Get an existing Monitor resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitor<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#MonitorState">MonitorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#Monitor">Monitor</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -842,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -852,7 +855,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -861,7 +864,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -872,7 +875,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -883,7 +886,7 @@ defaults to "GET".
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -894,7 +897,7 @@ and 10.
             title="Optional">
         <span>Max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -905,7 +908,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -914,7 +917,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -923,7 +926,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -935,7 +938,7 @@ monitor.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -946,7 +949,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -957,7 +960,7 @@ value.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -968,7 +971,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -985,7 +988,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -995,7 +998,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -1004,7 +1007,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -1015,7 +1018,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -1026,7 +1029,7 @@ defaults to "GET".
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -1037,7 +1040,7 @@ and 10.
             title="Optional">
         <span>Max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -1048,7 +1051,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -1057,7 +1060,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -1066,7 +1069,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1078,7 +1081,7 @@ monitor.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -1089,7 +1092,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -1100,7 +1103,7 @@ value.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -1111,7 +1114,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -1128,7 +1131,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -1138,7 +1141,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -1147,7 +1150,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>expected<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -1158,7 +1161,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -1169,7 +1172,7 @@ defaults to "GET".
             title="Optional">
         <span>max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -1180,7 +1183,7 @@ and 10.
             title="Optional">
         <span>max<wbr>Retries<wbr>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -1191,7 +1194,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -1200,7 +1203,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -1209,7 +1212,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1221,7 +1224,7 @@ monitor.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -1232,7 +1235,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -1243,7 +1246,7 @@ value.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -1254,7 +1257,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -1271,7 +1274,7 @@ accessed if monitor type is HTTP or HTTPS.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the monitor.
 A valid value is true (UP) or false (DOWN).
@@ -1281,7 +1284,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, between sending probes to members.
 {{% /md %}}</dd>
@@ -1290,7 +1293,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>expected_<wbr>codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. Expected HTTP codes
 for a passing HTTP(S) monitor. You can either specify a single status like
@@ -1301,7 +1304,7 @@ for a passing HTTP(S) monitor. You can either specify a single status like
             title="Optional">
         <span>http_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. The HTTP method used
 for requests by the monitor. If this attribute is not specified, it
@@ -1312,7 +1315,7 @@ defaults to "GET".
             title="Optional">
         <span>max_<wbr>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures before
 changing the member's status to INACTIVE. Must be a number between 1
@@ -1323,7 +1326,7 @@ and 10.
             title="Optional">
         <span>max_<wbr>retries_<wbr>down</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of permissible ping failures befor changing the member's
 status to ERROR. Must be a number between 1 and 10 (supported only in Octavia).
@@ -1334,7 +1337,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Monitor.
 {{% /md %}}</dd>
@@ -1343,7 +1346,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the pool that this monitor will be assigned to.
 {{% /md %}}</dd>
@@ -1352,7 +1355,7 @@ Changing this updates the max_retries_down of the existing monitor.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1364,7 +1367,7 @@ monitor.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the monitor.  Only administrative users can specify a tenant UUID
@@ -1375,7 +1378,7 @@ other than their own. Changing this creates a new monitor.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds for a monitor to wait for a
 ping reply before it times out. The value must be less than the delay
@@ -1386,7 +1389,7 @@ value.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of probe, which is PING, TCP, HTTP, HTTPS,
 TLS-HELLO or UDP-CONNECT (supported only in Octavia), that is sent by the load
@@ -1397,7 +1400,7 @@ balancer to verify the member state. Changing this creates a new monitor.
             title="Optional">
         <span>url_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for HTTP(S) types. URI path that will be
 accessed if monitor type is HTTP or HTTPS.
@@ -1422,6 +1425,7 @@ accessed if monitor type is HTTP or HTTPS.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

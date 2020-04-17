@@ -978,7 +978,6 @@ to use host groups.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1101,7 +1100,6 @@ resource.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1241,7 +1239,6 @@ resource.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1372,7 +1369,6 @@ resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1530,7 +1526,6 @@ resources. See the individual resource documentation pages for more information.
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1648,7 +1643,6 @@ resources.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1802,7 +1796,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1901,9 +1894,6 @@ multiple files. Each <code class="docutils literal notranslate"><span class="pre
 specified location and stored on the Content Library’s storage backing.</p>
 <p>To make a <code class="docutils literal notranslate"><span class="pre">content_library_item</span></code> a functioning template, the template must be in OVF format. The .ovf and .vmdk
 file(s) can then be set as the <code class="docutils literal notranslate"><span class="pre">file_url</span></code> list.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library_item.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/content_library_item.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2038,10 +2028,7 @@ unspecified.</p>
 <tr><td>Resource Pools</td><td>`ResourcePool`</td></tr>
 <tr><td>vApps</td><td>`VirtualApp`</td></tr>
 <tr><td>Virtual Machines</td><td>`VirtualMachine`</td></tr>
-</table><blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="field-list simple">
+</table><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
@@ -2133,9 +2120,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Datacenter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2268,7 +2252,6 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2660,7 +2643,6 @@ operation that would keep that from happening, depending on the value of the
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2792,7 +2774,6 @@ portgroups, see <a class="reference external" href="https://docs.vmware.com/en/V
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3351,7 +3332,6 @@ page</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4397,7 +4377,6 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4521,7 +4500,6 @@ page</a>.</p>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
 <p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4780,9 +4758,6 @@ and network folders.</p>
 Subfolders are discovered by parsing the relative path specified in <code class="docutils literal notranslate"><span class="pre">path</span></code>, so
 <code class="docutils literal notranslate"><span class="pre">foo/bar</span></code> will create a folder named <code class="docutils literal notranslate"><span class="pre">bar</span></code> in the parent folder <code class="docutils literal notranslate"><span class="pre">foo</span></code>, as long
 as that folder exists.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5215,7 +5190,6 @@ while not affecting the rest of the cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -5536,9 +5510,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Host</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">connected=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">force=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">license=None</em>, <em class="sig-param">lockdown=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere host resource. This represents an ESXi host that
 can be used either as part of a Compute Cluster or Standalone.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5727,9 +5698,6 @@ port groups on an ESXi host. These port groups are connected to standard
 virtual switches, which can be managed by the
 <cite>`</cite>.HostVirtualSwitch`` &lt;/docs/providers/vsphere/r/host_virtual_switch.html&gt;`_ resource.</p>
 <p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6000,9 +5968,6 @@ standard port groups, which can be managed by the
 <cite>`</cite>.HostPortGroup`` &lt;/docs/providers/vsphere/r/host_port_group.html&gt;`_ resource.</p>
 <p>For an overview on vSphere networking concepts, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
 page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6321,9 +6286,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.License">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">License</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6441,9 +6403,6 @@ NFS v3 and v4.1 shares to be used as datastores.</p>
 datastore is only mounted on the hosts you choose to mount it on. To mount on
 multiple hosts, you must specify each host that you want to add in the
 <code class="docutils literal notranslate"><span class="pre">host_system_ids</span></code> argument.</p>
-</div></blockquote>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -6720,9 +6679,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6787,9 +6743,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 resource pools in standalone hosts or on compute clusters.</p>
 <p>For more information on vSphere resource pools, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
 page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7055,9 +7008,6 @@ level and disk affinity for a single virtual machine without affecting the rest
 of the datastore cluster.</p>
 <p>For more information on vSphere datastore clusters and Storage DRS, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
 page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7206,7 +7156,6 @@ objects more sortable and searchable.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7312,7 +7261,6 @@ information about tag categories specifically, click
 <blockquote>
 <div><p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -7430,9 +7378,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 vApps.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7712,9 +7657,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 entity (virtual machine or sub-vApp container) in a vApp container.</p>
 <p>For more information on vSphere vApps, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
 page</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7897,9 +7839,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 of any given <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_
 resource. These disks can be attached to a virtual machine by creating a disk
 block with the <cite>``attach`</cite> &lt;/docs/providers/vsphere/r/virtual_machine.html#attach&gt;`_ parameter.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9535,9 +9474,6 @@ HashiCorp recommends retaining snapshots for a extended period of time and does
 NOT recommend using them as as backup feature. For more information on the
 limitation of virtual machine snapshots, see <a class="reference external" href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html">here</a>.</p>
 </div></blockquote>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9890,9 +9826,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.Vnic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">Vnic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">distributed_port_group=None</em>, <em class="sig-param">distributed_switch_port=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">ipv4=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">mac=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">netstack=None</em>, <em class="sig-param">portgroup=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Vnic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a VMware vSphere vnic resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10092,7 +10025,6 @@ data source.</p></li>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10108,7 +10040,6 @@ connections.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
 connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library_item.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library_item.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10138,9 +10069,6 @@ connections.</p>
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>`</cite>.Host`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datacenter. This can be a name or path.
@@ -10156,9 +10084,6 @@ Can be omitted if there is only one datacenter in your inventory.</p>
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10183,9 +10108,6 @@ cluster that you want to use to assign datastores to using the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resources, or create
 virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10211,7 +10133,6 @@ an example is shown below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
 ESXi connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10234,9 +10155,6 @@ name or path.</p></li>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Folder</span></code> data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -10245,9 +10163,6 @@ datacenter.</p>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Host</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10268,9 +10183,6 @@ in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10298,7 +10210,6 @@ require a storage policy.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Storage policy support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -10314,9 +10225,6 @@ requires vCenter 6.0 or higher.</p>
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10364,9 +10272,6 @@ path. This is required when using vCenter.</p></li>
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10387,9 +10292,6 @@ existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource. It also
 reads the guest ID so that can be supplied as well.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10414,9 +10316,6 @@ scan for disk attributes and controller types on. Default: <code class="docutils
 devices available on an ESXi host. This data source can be combined with the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS
 datastores based off a set of discovered disks.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

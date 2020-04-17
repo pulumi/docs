@@ -9,8 +9,10 @@ block_external_search_index: true
 Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Unprivileged user
 
 Create a shared image and propose a membership to the
@@ -35,6 +37,8 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Privileged user
 
 Create a shared image and set a membership to the
@@ -60,7 +64,8 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -77,7 +82,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessArgs">ImageAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccess">ImageAccess</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images?tab=doc#ImageAccessArgs">ImageAccessArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images?tab=doc#ImageAccess">ImageAccess</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -177,7 +182,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
             title="Required">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -186,7 +191,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
             title="Required">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -195,7 +200,7 @@ const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -206,7 +211,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -224,7 +229,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -233,7 +238,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -242,7 +247,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -253,7 +258,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -271,7 +276,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -280,7 +285,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -289,7 +294,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -300,7 +305,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -318,7 +323,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>image_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -327,7 +332,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Required">
         <span>member_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -336,7 +341,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -347,7 +352,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -377,7 +382,7 @@ The following output properties are available:
             title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -386,7 +391,7 @@ The following output properties are available:
             title="">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -395,7 +400,7 @@ The following output properties are available:
             title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -411,7 +416,7 @@ The following output properties are available:
             title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -420,7 +425,7 @@ The following output properties are available:
             title="">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -429,7 +434,7 @@ The following output properties are available:
             title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -445,7 +450,7 @@ The following output properties are available:
             title="">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -454,7 +459,7 @@ The following output properties are available:
             title="">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -463,7 +468,7 @@ The following output properties are available:
             title="">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -479,7 +484,7 @@ The following output properties are available:
             title="">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -488,7 +493,7 @@ The following output properties are available:
             title="">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -497,7 +502,7 @@ The following output properties are available:
             title="">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -527,7 +532,7 @@ Get an existing ImageAccess resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccessState">ImageAccessState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/images?tab=doc#ImageAccess">ImageAccess</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageAccess<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images?tab=doc#ImageAccessState">ImageAccessState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/images?tab=doc#ImageAccess">ImageAccess</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -641,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -650,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -659,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -668,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -679,7 +684,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -688,7 +693,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -699,7 +704,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -715,7 +720,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -724,7 +729,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -733,7 +738,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -742,7 +747,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -753,7 +758,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -762,7 +767,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -773,7 +778,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -789,7 +794,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -798,7 +803,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -807,7 +812,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>member<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -816,7 +821,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -827,7 +832,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -836,7 +841,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -847,7 +852,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -863,7 +868,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was created.
 {{% /md %}}</dd>
@@ -872,7 +877,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>image_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The image ID.
 {{% /md %}}</dd>
@@ -881,7 +886,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>member_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member ID, e.g. the target project ID.
 {{% /md %}}</dd>
@@ -890,7 +895,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Glance client.
 A Glance client is needed to manage Image members. If omitted, the `region`
@@ -901,7 +906,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member schema.
 {{% /md %}}</dd>
@@ -910,7 +915,7 @@ argument of the provider is used. Changing this creates a new resource.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The member proposal status. Optional if admin wants to
 force the member proposal acceptance. Can either be `accepted`, `rejected` or
@@ -921,7 +926,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
             title="Optional">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the image access was last updated.
 {{% /md %}}</dd>
@@ -945,6 +950,7 @@ force the member proposal acceptance. Can either be `accepted`, `rejected` or
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 
