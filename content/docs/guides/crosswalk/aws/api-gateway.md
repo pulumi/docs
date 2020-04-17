@@ -533,7 +533,7 @@ The `awsx.apigateway.API` class supports three specific methods of controlling a
 * *Usage plans* let you provide *API keys* to customers, and then track and limit usage of your APIs.
 
 Details on each is below. For those not directly supported, all of these capabilities are accessible to you in the
-[AWS package]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}), and are described in depth in the article
+[AWS package]({{< relref "/docs/reference/pkg/aws" >}}), and are described in depth in the article
 [Controlling and Managing Access to a REST API in AWS API Gateway](
 https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html).
 

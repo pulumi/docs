@@ -14,7 +14,7 @@ aliases: ["/docs/reference/clouds/azure/"]
 
 The Azure provider for Pulumi can be used to provision any of the cloud resources available in [Azure](https://azure.microsoft.com/en-us/) via Azure Resource Manager (ARM).  The Azure provider must be configured with credentials to deploy and update resources in Azure.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/azure" >}}) for complete details of the available Azure provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/azure" >}}) for complete details of the available Azure provider APIs.
 
 ## Setup
 
