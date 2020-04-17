@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -25,7 +26,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRateLimit<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitArgs">RateLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimit">RateLimit</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRateLimit<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitArgs">RateLimitArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimit">RateLimit</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -134,7 +135,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -143,7 +144,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -152,7 +153,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -161,7 +162,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -179,7 +180,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -188,7 +189,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -222,7 +223,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -231,7 +232,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -240,7 +241,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -249,7 +250,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -267,7 +268,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -276,7 +277,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -310,7 +311,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -319,7 +320,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -328,7 +329,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -337,7 +338,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -355,7 +356,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -364,7 +365,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -398,7 +399,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -407,7 +408,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -416,7 +417,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Required">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -425,7 +426,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>bypass_<wbr>url_<wbr>patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -443,7 +444,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -452,7 +453,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -493,7 +494,7 @@ Get an existing RateLimit resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRateLimit<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitState">RateLimitState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimit">RateLimit</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRateLimit<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitState">RateLimitState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimit">RateLimit</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -616,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -634,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -643,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -661,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -670,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -679,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -704,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -722,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -731,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -749,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -758,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -767,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -792,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bypass<wbr>Url<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -810,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -819,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -837,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -846,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -855,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -880,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bypass_<wbr>url_<wbr>patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}URLs matching the patterns specified here will be excluded from rate limiting.
 {{% /md %}}</dd>
@@ -898,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A note that you can use to describe the reason for a rate limit. This value is sanitized and all tags are removed.
 {{% /md %}}</dd>
@@ -907,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this ratelimit is currently disabled. Default: `false`.
 {{% /md %}}</dd>
@@ -925,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds to count matching traffic. If the count exceeds threshold within this period the action will be performed (min: 1, max: 86,400).
 {{% /md %}}</dd>
@@ -934,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The threshold that triggers the rate limit mitigations, combine with period. i.e. threshold per period (min: 2, max: 1,000,000).
 {{% /md %}}</dd>
@@ -943,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to apply rate limiting to.
 {{% /md %}}</dd>
@@ -968,7 +969,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -981,7 +982,7 @@ The following state arguments are supported:
             title="Required">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action to perform. Allowable values are 'simulate', 'ban', 'challenge' and 'js_challenge'.
 {{% /md %}}</dd>
@@ -999,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds as an integer to perform the mitigation action. This field is required if the `mode` is either `simulate` or `ban`. Must be the same or greater than the period (min: 1, max: 86400).
 {{% /md %}}</dd>
@@ -1015,7 +1016,7 @@ The following state arguments are supported:
             title="Required">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action to perform. Allowable values are 'simulate', 'ban', 'challenge' and 'js_challenge'.
 {{% /md %}}</dd>
@@ -1033,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds as an integer to perform the mitigation action. This field is required if the `mode` is either `simulate` or `ban`. Must be the same or greater than the period (min: 1, max: 86400).
 {{% /md %}}</dd>
@@ -1049,7 +1050,7 @@ The following state arguments are supported:
             title="Required">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action to perform. Allowable values are 'simulate', 'ban', 'challenge' and 'js_challenge'.
 {{% /md %}}</dd>
@@ -1067,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds as an integer to perform the mitigation action. This field is required if the `mode` is either `simulate` or `ban`. Must be the same or greater than the period (min: 1, max: 86400).
 {{% /md %}}</dd>
@@ -1083,7 +1084,7 @@ The following state arguments are supported:
             title="Required">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of action to perform. Allowable values are 'simulate', 'ban', 'challenge' and 'js_challenge'.
 {{% /md %}}</dd>
@@ -1101,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time in seconds as an integer to perform the mitigation action. This field is required if the `mode` is either `simulate` or `ban`. Must be the same or greater than the period (min: 1, max: 86400).
 {{% /md %}}</dd>
@@ -1119,7 +1120,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitActionResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitActionResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitActionResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitActionResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1132,7 +1133,7 @@ The following state arguments are supported:
             title="Required">
         <span>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The body to return, the content here should conform to the content_type.
 {{% /md %}}</dd>
@@ -1141,7 +1142,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The content-type of the body, must be one of: 'text/plain', 'text/xml', 'application/json'.
 {{% /md %}}</dd>
@@ -1157,7 +1158,7 @@ The following state arguments are supported:
             title="Required">
         <span>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The body to return, the content here should conform to the content_type.
 {{% /md %}}</dd>
@@ -1166,7 +1167,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The content-type of the body, must be one of: 'text/plain', 'text/xml', 'application/json'.
 {{% /md %}}</dd>
@@ -1182,7 +1183,7 @@ The following state arguments are supported:
             title="Required">
         <span>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The body to return, the content here should conform to the content_type.
 {{% /md %}}</dd>
@@ -1191,7 +1192,7 @@ The following state arguments are supported:
             title="Required">
         <span>content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The content-type of the body, must be one of: 'text/plain', 'text/xml', 'application/json'.
 {{% /md %}}</dd>
@@ -1207,7 +1208,7 @@ The following state arguments are supported:
             title="Required">
         <span>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The body to return, the content here should conform to the content_type.
 {{% /md %}}</dd>
@@ -1216,7 +1217,7 @@ The following state arguments are supported:
             title="Required">
         <span>content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The content-type of the body, must be one of: 'text/plain', 'text/xml', 'application/json'.
 {{% /md %}}</dd>
@@ -1234,7 +1235,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitCorrelateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitCorrelateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitCorrelateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitCorrelateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1247,7 +1248,7 @@ The following state arguments are supported:
             title="Optional">
         <span>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If set to 'nat', NAT support will be enabled for rate limiting.
 {{% /md %}}</dd>
@@ -1263,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If set to 'nat', NAT support will be enabled for rate limiting.
 {{% /md %}}</dd>
@@ -1279,7 +1280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>by</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If set to 'nat', NAT support will be enabled for rate limiting.
 {{% /md %}}</dd>
@@ -1295,7 +1296,7 @@ The following state arguments are supported:
             title="Optional">
         <span>by</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If set to 'nat', NAT support will be enabled for rate limiting.
 {{% /md %}}</dd>
@@ -1313,7 +1314,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1428,7 +1429,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchRequestOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchRequestOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1441,7 +1442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}HTTP Methods, can be a subset ['POST','PUT'] or all ['\_ALL\_']. Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1450,7 +1451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schemes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}HTTP Schemes, can be one ['HTTPS'], both ['HTTP','HTTPS'] or all ['\_ALL\_'].  Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1459,7 +1460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: '*'.
 {{% /md %}}</dd>
@@ -1475,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}HTTP Methods, can be a subset ['POST','PUT'] or all ['\_ALL\_']. Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1484,7 +1485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schemes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}HTTP Schemes, can be one ['HTTPS'], both ['HTTP','HTTPS'] or all ['\_ALL\_'].  Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1493,7 +1494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: '*'.
 {{% /md %}}</dd>
@@ -1509,7 +1510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Methods, can be a subset ['POST','PUT'] or all ['\_ALL\_']. Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1518,7 +1519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schemes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Schemes, can be one ['HTTPS'], both ['HTTP','HTTPS'] or all ['\_ALL\_'].  Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1527,7 +1528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: '*'.
 {{% /md %}}</dd>
@@ -1543,7 +1544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Methods, can be a subset ['POST','PUT'] or all ['\_ALL\_']. Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1552,7 +1553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schemes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Schemes, can be one ['HTTPS'], both ['HTTP','HTTPS'] or all ['\_ALL\_'].  Default: ['\_ALL\_'].
 {{% /md %}}</dd>
@@ -1561,7 +1562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: '*'.
 {{% /md %}}</dd>
@@ -1579,7 +1580,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RateLimitMatchResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#RateLimitMatchResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1592,7 +1593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin<wbr>Traffic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Only count traffic that has come from your origin servers. If true, cached items that Cloudflare serve will not count towards rate limiting. Default: `true`.
 {{% /md %}}</dd>
@@ -1601,7 +1602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Statuses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;int&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>
@@ -1617,7 +1618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin<wbr>Traffic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Only count traffic that has come from your origin servers. If true, cached items that Cloudflare serve will not count towards rate limiting. Default: `true`.
 {{% /md %}}</dd>
@@ -1626,7 +1627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Statuses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>
@@ -1642,7 +1643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>origin<wbr>Traffic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Only count traffic that has come from your origin servers. If true, cached items that Cloudflare serve will not count towards rate limiting. Default: `true`.
 {{% /md %}}</dd>
@@ -1651,7 +1652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>statuses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>
@@ -1667,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>origin<wbr>Traffic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Only count traffic that has come from your origin servers. If true, cached items that Cloudflare serve will not count towards rate limiting. Default: `true`.
 {{% /md %}}</dd>
@@ -1676,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>statuses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Integer]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
     <dd>{{% md %}}HTTP Status codes, can be one [403], many [401,403] or indicate all by not providing this value.
 {{% /md %}}</dd>
@@ -1698,6 +1699,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-cloudflare">https://github.com/pulumi/pulumi-cloudflare</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
 </dl>
 

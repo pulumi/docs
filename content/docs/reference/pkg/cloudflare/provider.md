@@ -11,8 +11,6 @@ settings, however an explicit `Provider` instance may be created and passed duri
 construction to achieve fine-grained programmatic control over provider settings. See the
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown.
-
 
 
 ## Create a Provider Resource
@@ -28,7 +26,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -128,7 +126,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
 {{% /md %}}</dd>
@@ -137,7 +135,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Client<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
 {{% /md %}}</dd>
@@ -146,7 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The API key for operations.
 {{% /md %}}</dd>
@@ -155,7 +153,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
 {{% /md %}}</dd>
@@ -164,7 +162,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>User<wbr>Service<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
 {{% /md %}}</dd>
@@ -173,7 +171,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
 {{% /md %}}</dd>
@@ -182,7 +180,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Max<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -191,7 +189,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Min<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -200,7 +198,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
 {{% /md %}}</dd>
@@ -209,7 +207,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Rps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
 {{% /md %}}</dd>
@@ -225,7 +223,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
 {{% /md %}}</dd>
@@ -234,7 +232,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Client<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
 {{% /md %}}</dd>
@@ -243,7 +241,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The API key for operations.
 {{% /md %}}</dd>
@@ -252,7 +250,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
 {{% /md %}}</dd>
@@ -261,7 +259,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Api<wbr>User<wbr>Service<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
 {{% /md %}}</dd>
@@ -270,7 +268,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
 {{% /md %}}</dd>
@@ -279,7 +277,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Max<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -288,7 +286,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Min<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -297,7 +295,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
 {{% /md %}}</dd>
@@ -306,7 +304,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Rps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
 {{% /md %}}</dd>
@@ -322,7 +320,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
 {{% /md %}}</dd>
@@ -331,7 +329,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api<wbr>Client<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
 {{% /md %}}</dd>
@@ -340,7 +338,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The API key for operations.
 {{% /md %}}</dd>
@@ -349,7 +347,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
 {{% /md %}}</dd>
@@ -358,7 +356,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api<wbr>User<wbr>Service<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
 {{% /md %}}</dd>
@@ -367,7 +365,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
 {{% /md %}}</dd>
@@ -376,7 +374,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>max<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -385,7 +383,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>min<wbr>Backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -394,7 +392,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
 {{% /md %}}</dd>
@@ -403,7 +401,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>rps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
 {{% /md %}}</dd>
@@ -419,7 +417,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Configure API client to always use that account.
 {{% /md %}}</dd>
@@ -428,7 +426,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api_<wbr>client_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to print logs from the API client (using the default log library logger)
 {{% /md %}}</dd>
@@ -437,7 +435,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The API key for operations.
 {{% /md %}}</dd>
@@ -446,7 +444,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The API Token for operations.
 {{% /md %}}</dd>
@@ -455,7 +453,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>api_<wbr>user_<wbr>service_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A special Cloudflare API key good for a restricted set of endpoints.
 {{% /md %}}</dd>
@@ -464,7 +462,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A registered Cloudflare email address.
 {{% /md %}}</dd>
@@ -473,7 +471,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>max_<wbr>backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -482,7 +480,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>min_<wbr>backoff</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum backoff period in seconds after failed API calls
 {{% /md %}}</dd>
@@ -491,7 +489,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of retries to perform when an API request fails
 {{% /md %}}</dd>
@@ -500,7 +498,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>rps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}RPS limit to apply when making calls to the API
 {{% /md %}}</dd>
@@ -528,6 +526,7 @@ construction to achieve fine-grained programmatic control over provider settings
 	<dd><a href="https://github.com/pulumi/pulumi-cloudflare">https://github.com/pulumi/pulumi-cloudflare</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/terraform-providers/terraform-provider-cloudflare).</dd>
 </dl>
 
