@@ -164,6 +164,13 @@
                 "metadata": {
                     "$ref": "#/types/kubernetes:meta/v1:ObjectMeta",
                     "description": "Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata."
+                },
+                "others": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "pulumi.json#/Any"
+                    },
+                    "description": "This field is not an actual property. It is used to represent custom property names and their values that can be passed in addition to the other input properties."
                 }
             }
         },
@@ -390,7 +397,7 @@
                 "helm/v2": "helm/v2",
                 "helm/v3": "helm/v3",
                 "yaml": "yaml"
-            },
+            }
         },
         "nodejs": {
             "moduleToPackage": {
