@@ -10,7 +10,9 @@ block_external_search_index: true
 
 Resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_pool.html.markdown.
+
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -27,7 +29,7 @@ Resources should be named with their "full path". The full path is the combinati
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#PoolArgs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#Pool">Pool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#PoolArgs">PoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Pool">Pool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -127,7 +129,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -136,7 +138,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -145,7 +147,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -154,7 +156,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -163,7 +165,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -172,7 +174,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -181,7 +183,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -190,7 +192,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -199,7 +201,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -215,7 +217,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -224,7 +226,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -233,7 +235,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -242,7 +244,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -251,7 +253,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -260,7 +262,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -269,7 +271,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -278,7 +280,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -287,7 +289,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>Slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -303,7 +305,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -312,7 +314,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -321,7 +323,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -330,7 +332,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -339,7 +341,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -348,7 +350,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -357,7 +359,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -366,7 +368,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -375,7 +377,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -391,7 +393,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -400,7 +402,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>allow_<wbr>nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -409,7 +411,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>allow_<wbr>snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -418,7 +420,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -427,7 +429,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>load_<wbr>balancing_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -436,7 +438,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -445,7 +447,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>reselect_<wbr>tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -454,7 +456,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>service_<wbr>down_<wbr>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -463,7 +465,7 @@ Resources should be named with their "full path". The full path is the combinati
             title="Optional">
         <span>slow_<wbr>ramp_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -495,7 +497,7 @@ Get an existing Pool resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#PoolState">PoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#Pool">Pool</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#PoolState">PoolState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#Pool">Pool</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -609,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -618,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -627,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -636,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -645,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -654,7 +656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -663,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -672,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -681,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -697,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -706,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -715,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -724,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -733,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -742,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -751,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -760,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -769,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -785,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow<wbr>Nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -794,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow<wbr>Snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -803,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -812,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>load<wbr>Balancing<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -821,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -830,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -839,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reselect<wbr>Tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -848,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Down<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -857,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>slow<wbr>Ramp<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -873,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow_<wbr>nat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Allow NAT
 {{% /md %}}</dd>
@@ -882,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allow_<wbr>snat</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Allow SNAT
 {{% /md %}}</dd>
@@ -891,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Userdefined value to describe the pool 
 {{% /md %}}</dd>
@@ -900,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>load_<wbr>balancing_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible values: round-robin, ...
 {{% /md %}}</dd>
@@ -909,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of monitor names to associate with the pool
 {{% /md %}}</dd>
@@ -918,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the pool
 {{% /md %}}</dd>
@@ -927,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reselect_<wbr>tries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of times the system tries to select a new pool member after a failure.
 {{% /md %}}</dd>
@@ -936,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>down_<wbr>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Possible values: none, reset, reselect, drop
 {{% /md %}}</dd>
@@ -945,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>slow_<wbr>ramp_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Slow ramp time for pool members
 {{% /md %}}</dd>
@@ -969,6 +971,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 </dl>
 

@@ -7,7 +7,9 @@ block_external_search_index: true
 
 
 `f5bigip.sys.Snmp` provides details bout how to enable "ilx", "asm" "apm" resource on BIG-IP
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 
 ```typescript
@@ -21,7 +23,8 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -38,7 +41,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnmp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#SnmpArgs">SnmpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#Snmp">Snmp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnmp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#SnmpArgs">SnmpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#Snmp">Snmp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -138,7 +141,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -147,7 +150,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -156,7 +159,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -172,7 +175,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -181,7 +184,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -190,7 +193,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>Sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -206,7 +209,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -215,7 +218,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -224,7 +227,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -240,7 +243,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -249,7 +252,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>sys_<wbr>contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -258,7 +261,7 @@ const snmp = new f5bigip.sys.Snmp("snmp", {
             title="Optional">
         <span>sys_<wbr>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -290,7 +293,7 @@ Get an existing Snmp resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnmp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#SnmpState">SnmpState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#Snmp">Snmp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnmp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#SnmpState">SnmpState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#Snmp">Snmp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -404,7 +407,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -413,7 +416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -422,7 +425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -438,7 +441,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -447,7 +450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -456,7 +459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -472,7 +475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -481,7 +484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys<wbr>Contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -490,7 +493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -506,7 +509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowedaddresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Configures hosts or networks from which snmpd can accept traffic. Entries go directly into hosts.allow.
 {{% /md %}}</dd>
@@ -515,7 +518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys_<wbr>contact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the contact information for the system administrator.
 {{% /md %}}</dd>
@@ -524,7 +527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys_<wbr>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Describes the system's physical location.
 {{% /md %}}</dd>
@@ -548,6 +551,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 </dl>
 

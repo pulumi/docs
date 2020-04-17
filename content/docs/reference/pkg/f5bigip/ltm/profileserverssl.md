@@ -10,7 +10,9 @@ block_external_search_index: true
 
 
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
     
 
 ```typescript
@@ -26,7 +28,8 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_server_ssl.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileServerSslArgs">ProfileServerSslArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,7 +146,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -152,7 +155,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -161,7 +164,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -170,7 +173,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -179,7 +182,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -188,7 +191,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -197,7 +200,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -206,7 +209,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -215,7 +218,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -224,7 +227,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -233,7 +236,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -242,7 +245,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -251,7 +254,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -260,7 +263,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -269,7 +272,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -278,7 +281,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -287,7 +290,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -296,7 +299,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -305,7 +308,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -314,7 +317,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -323,7 +326,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -332,7 +335,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -341,7 +344,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -350,7 +353,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -359,7 +362,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -368,7 +371,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -377,7 +380,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -386,7 +389,7 @@ const test_ServerSsl = new f5bigip.ltm.ProfileServerSsl("test-ServerSsl", {
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -398,7 +401,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -407,7 +410,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -416,7 +419,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -425,7 +428,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -435,7 +438,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -444,7 +447,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -453,7 +456,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -462,7 +465,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -480,7 +483,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +491,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -497,7 +500,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -513,7 +516,7 @@ There can be only one SSL profile with this setting enabled.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -522,7 +525,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -531,7 +534,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -540,7 +543,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -549,7 +552,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -558,7 +561,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -567,7 +570,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -576,7 +579,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -585,7 +588,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -594,7 +597,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -603,7 +606,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -612,7 +615,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -621,7 +624,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -630,7 +633,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -639,7 +642,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -648,7 +651,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -657,7 +660,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -666,7 +669,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -675,7 +678,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -684,7 +687,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -693,7 +696,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -702,7 +705,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -711,7 +714,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -720,7 +723,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -729,7 +732,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -738,7 +741,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -747,7 +750,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -756,7 +759,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -768,7 +771,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -777,7 +780,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -786,7 +789,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -795,7 +798,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -805,7 +808,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -814,7 +817,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -823,7 +826,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -832,7 +835,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -841,7 +844,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -850,7 +853,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -858,7 +861,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -867,7 +870,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -883,7 +886,7 @@ There can be only one SSL profile with this setting enabled.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -892,7 +895,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -901,7 +904,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -910,7 +913,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -919,7 +922,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -928,7 +931,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -937,7 +940,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -946,7 +949,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -955,7 +958,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -964,7 +967,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -973,7 +976,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -982,7 +985,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -991,7 +994,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -1000,7 +1003,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -1009,7 +1012,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -1018,7 +1021,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -1027,7 +1030,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -1036,7 +1039,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1045,7 +1048,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1054,7 +1057,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -1063,7 +1066,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -1072,7 +1075,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -1081,7 +1084,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1090,7 +1093,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -1099,7 +1102,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -1108,7 +1111,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -1117,7 +1120,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -1126,7 +1129,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -1138,7 +1141,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -1147,7 +1150,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -1156,7 +1159,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -1165,7 +1168,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -1175,7 +1178,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -1184,7 +1187,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -1193,7 +1196,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -1202,7 +1205,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -1211,7 +1214,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -1220,7 +1223,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1228,7 +1231,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -1237,7 +1240,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -1253,7 +1256,7 @@ There can be only one SSL profile with this setting enabled.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -1262,7 +1265,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>alert_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -1271,7 +1274,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -1280,7 +1283,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate_<wbr>depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -1289,7 +1292,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ca_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -1298,7 +1301,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -1307,7 +1310,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -1316,7 +1319,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -1325,7 +1328,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -1334,7 +1337,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -1343,7 +1346,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>defaults_<wbr>from</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -1352,7 +1355,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>expire_<wbr>cert_<wbr>response_<wbr>control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -1361,7 +1364,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>full_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -1370,7 +1373,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -1379,7 +1382,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generic_<wbr>alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -1388,7 +1391,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>handshake_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -1397,7 +1400,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -1406,7 +1409,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mod_<wbr>ssl_<wbr>methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1415,7 +1418,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1424,7 +1427,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -1433,7 +1436,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -1442,7 +1445,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>peer_<wbr>cert_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -1451,7 +1454,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>proxy_<wbr>ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1460,7 +1463,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -1469,7 +1472,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -1478,7 +1481,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -1487,7 +1490,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>retain_<wbr>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -1496,7 +1499,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>secure_<wbr>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -1508,7 +1511,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>server_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -1517,7 +1520,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session_<wbr>mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -1526,7 +1529,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session_<wbr>ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -1535,7 +1538,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>sni_<wbr>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -1545,7 +1548,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>sni_<wbr>require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -1554,7 +1557,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -1563,7 +1566,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -1572,7 +1575,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>sign_<wbr>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -1581,7 +1584,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>strict_<wbr>resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -1590,7 +1593,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>tm_<wbr>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1598,7 +1601,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>unclean_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -1607,7 +1610,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>untrusted_<wbr>cert_<wbr>response_<wbr>control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -1639,7 +1642,7 @@ Get an existing ProfileServerSsl resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSslState">ProfileServerSslState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProfileServerSsl<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileServerSslState">ProfileServerSslState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/ltm?tab=doc#ProfileServerSsl">ProfileServerSsl</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1753,7 +1756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -1762,7 +1765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -1771,7 +1774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -1780,7 +1783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -1789,7 +1792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -1798,7 +1801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -1807,7 +1810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -1816,7 +1819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -1825,7 +1828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -1834,7 +1837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -1843,7 +1846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -1852,7 +1855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -1861,7 +1864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -1870,7 +1873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -1879,7 +1882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -1888,7 +1891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -1897,7 +1900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1906,7 +1909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1915,7 +1918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -1924,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -1933,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -1942,7 +1945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -1951,7 +1954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -1960,7 +1963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -1969,7 +1972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -1978,7 +1981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -1987,7 +1990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -1996,7 +1999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -2008,7 +2011,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -2017,7 +2020,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -2026,7 +2029,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -2035,7 +2038,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -2045,7 +2048,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -2054,7 +2057,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -2063,7 +2066,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -2072,7 +2075,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -2081,7 +2084,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -2090,7 +2093,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2098,7 +2101,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -2107,7 +2110,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -2123,7 +2126,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -2132,7 +2135,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -2141,7 +2144,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -2150,7 +2153,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -2159,7 +2162,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -2168,7 +2171,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -2177,7 +2180,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -2186,7 +2189,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -2195,7 +2198,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -2204,7 +2207,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -2213,7 +2216,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -2222,7 +2225,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -2231,7 +2234,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -2240,7 +2243,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -2249,7 +2252,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -2258,7 +2261,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -2267,7 +2270,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2276,7 +2279,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2285,7 +2288,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -2294,7 +2297,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -2303,7 +2306,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -2312,7 +2315,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -2321,7 +2324,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2330,7 +2333,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -2339,7 +2342,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -2348,7 +2351,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -2357,7 +2360,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -2366,7 +2369,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -2378,7 +2381,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -2387,7 +2390,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -2396,7 +2399,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -2405,7 +2408,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>Sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -2415,7 +2418,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -2424,7 +2427,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -2433,7 +2436,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -2442,7 +2445,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -2451,7 +2454,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -2460,7 +2463,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2468,7 +2471,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -2477,7 +2480,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>Untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -2493,7 +2496,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>alert<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -2502,7 +2505,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -2511,7 +2514,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -2520,7 +2523,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -2529,7 +2532,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -2538,7 +2541,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -2547,7 +2550,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -2556,7 +2559,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -2565,7 +2568,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -2574,7 +2577,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>defaults<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -2583,7 +2586,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>expire<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -2592,7 +2595,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -2601,7 +2604,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -2610,7 +2613,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generic<wbr>Alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -2619,7 +2622,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>handshake<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -2628,7 +2631,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -2637,7 +2640,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mod<wbr>Ssl<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2646,7 +2649,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2655,7 +2658,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -2664,7 +2667,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -2673,7 +2676,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -2682,7 +2685,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>peer<wbr>Cert<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -2691,7 +2694,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>proxy<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -2700,7 +2703,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -2709,7 +2712,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -2718,7 +2721,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -2727,7 +2730,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>retain<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -2736,7 +2739,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>secure<wbr>Renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -2748,7 +2751,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -2757,7 +2760,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -2766,7 +2769,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session<wbr>Ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -2775,7 +2778,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>sni<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -2785,7 +2788,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>sni<wbr>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -2794,7 +2797,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -2803,7 +2806,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Forward<wbr>Proxy<wbr>Bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -2812,7 +2815,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl<wbr>Sign<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -2821,7 +2824,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>strict<wbr>Resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -2830,7 +2833,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>tm<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2838,7 +2841,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>unclean<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -2847,7 +2850,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>untrusted<wbr>Cert<wbr>Response<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -2863,7 +2866,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>alert_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Alert time out
 {{% /md %}}</dd>
@@ -2872,7 +2875,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Server authentication once / always (default is once).
 {{% /md %}}</dd>
@@ -2881,7 +2884,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>authenticate_<wbr>depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Client certificate chain traversal depth. Default 9.
 {{% /md %}}</dd>
@@ -2890,7 +2893,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ca_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Client certificate file path. Default None.
 {{% /md %}}</dd>
@@ -2899,7 +2902,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Cache size (sessions).
 {{% /md %}}</dd>
@@ -2908,7 +2911,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cache_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Cache time out
 {{% /md %}}</dd>
@@ -2917,7 +2920,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the certificate that the system uses for server-side SSL processing.
 {{% /md %}}</dd>
@@ -2926,7 +2929,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the certificates-key chain to associate with the SSL profile
 {{% /md %}}</dd>
@@ -2935,7 +2938,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the list of ciphers that the system supports. When creating a new profile, the default cipher list is provided by the parent profile.
 {{% /md %}}</dd>
@@ -2944,7 +2947,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>defaults_<wbr>from</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The parent template of this monitor template. Once this value has been set, it cannot be changed. By default, this value is `/Common/serverssl`.
 {{% /md %}}</dd>
@@ -2953,7 +2956,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>expire_<wbr>cert_<wbr>response_<wbr>control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Response if the cert is expired (drop / ignore).
 {{% /md %}}</dd>
@@ -2962,7 +2965,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>full_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}full path of the profile
 {{% /md %}}</dd>
@@ -2971,7 +2974,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}generation
 {{% /md %}}</dd>
@@ -2980,7 +2983,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>generic_<wbr>alert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Generic alerts enabled / disabled.
 {{% /md %}}</dd>
@@ -2989,7 +2992,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>handshake_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Handshake time out (seconds)
 {{% /md %}}</dd>
@@ -2998,7 +3001,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the file name of the SSL key.
 {{% /md %}}</dd>
@@ -3007,7 +3010,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mod_<wbr>ssl_<wbr>methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3016,7 +3019,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ModSSL Methods enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3025,7 +3028,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile. (type `string`)
 {{% /md %}}</dd>
@@ -3034,7 +3037,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>partition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Device partition to manage resources on.
 {{% /md %}}</dd>
@@ -3043,7 +3046,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>passphrase</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Client Certificate Constrained Delegation CA passphrase
 {{% /md %}}</dd>
@@ -3052,7 +3055,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>peer_<wbr>cert_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the way the system handles client certificates.When ignore, specifies that the system ignores certificates from client systems.When require, specifies that the system requires a client to present a valid certificate.When request, specifies that the system requests a valid certificate from a client but always authenticate the client.
 {{% /md %}}</dd>
@@ -3061,7 +3064,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>proxy_<wbr>ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Proxy SSL enabled / disabled. Default is disabled.
 {{% /md %}}</dd>
@@ -3070,7 +3073,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Period (seconds)
 {{% /md %}}</dd>
@@ -3079,7 +3082,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiate_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Renogotiate Size
 {{% /md %}}</dd>
@@ -3088,7 +3091,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables SSL renegotiation.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3097,7 +3100,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>retain_<wbr>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When `true`, client certificate is retained in SSL session.
 {{% /md %}}</dd>
@@ -3106,7 +3109,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>secure_<wbr>renegotiation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the method of secure renegotiations for SSL connections. When creating a new profile, the setting is provided by the parent profile.
 When `request` is set the system request secure renegotation of SSL connections.
@@ -3118,7 +3121,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>server_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications. When creating a new profile, the setting is provided by the parent profile.The server name can also be a wildcard string containing the asterisk `*` character.
 {{% /md %}}</dd>
@@ -3127,7 +3130,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session_<wbr>mirroring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Session Mirroring (enabled / disabled)
 {{% /md %}}</dd>
@@ -3136,7 +3139,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>session_<wbr>ticket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Session Ticket (enabled / disabled)
 {{% /md %}}</dd>
@@ -3145,7 +3148,7 @@ The `require-strict` setting the system requires strict renegotiation of SSL con
             title="Optional">
         <span>sni_<wbr>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates that the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support.When creating a new profile, the setting is provided by the parent profile.
 There can be only one SSL profile with this setting enabled.
@@ -3155,7 +3158,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>sni_<wbr>require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Requires that the network peers also provide SNI support, this setting only takes effect when `sni_default` is set to `true`.When creating a new profile, the setting is provided by the parent profile
 {{% /md %}}</dd>
@@ -3164,7 +3167,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy (enabled / disabled)
 {{% /md %}}</dd>
@@ -3173,7 +3176,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>forward_<wbr>proxy_<wbr>bypass</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL forward Proxy Bypass (enabled / disabled)
 {{% /md %}}</dd>
@@ -3182,7 +3185,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>ssl_<wbr>sign_<wbr>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSL sign hash (any, sha1, sha256, sha384)
 {{% /md %}}</dd>
@@ -3191,7 +3194,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>strict_<wbr>resume</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables the resumption of SSL sessions after an unclean shutdown.When creating a new profile, the setting is provided by the parent profile. 
 {{% /md %}}</dd>
@@ -3200,7 +3203,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>tm_<wbr>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3208,7 +3211,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>unclean_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (enabled / disabled)
 {{% /md %}}</dd>
@@ -3217,7 +3220,7 @@ There can be only one SSL profile with this setting enabled.
             title="Optional">
         <span>untrusted_<wbr>cert_<wbr>response_<wbr>control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unclean Shutdown (drop / ignore)
 {{% /md %}}</dd>
@@ -3241,6 +3244,7 @@ There can be only one SSL profile with this setting enabled.
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 </dl>
 
