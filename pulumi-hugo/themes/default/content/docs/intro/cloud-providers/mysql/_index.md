@@ -13,7 +13,7 @@ menu:
 The MySQL provider for Pulumi can be used to provision any of the resources available for MySQL.
 The MySQL provider must be configured with credentials to deploy and update resources in MySQL.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/mysql" >}}) for complete details of the available MySQL provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/mysql" >}}) for complete details of the available MySQL provider APIs.
 
 ## Setup
 
