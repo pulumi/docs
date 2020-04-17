@@ -11,6 +11,7 @@ block_external_search_index: true
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectlocation" title="ProjectLocation"><span class="symbol resource"></span>ProjectLocation</a></li>
 </ul>
 
 <h3>Package Details</h3>
@@ -19,6 +20,7 @@ block_external_search_index: true
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

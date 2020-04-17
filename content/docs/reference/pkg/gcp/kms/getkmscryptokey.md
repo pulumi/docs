@@ -14,7 +14,8 @@ and
 A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_kms_crypto_key.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -36,7 +37,7 @@ Google Cloud KMS KeyRing.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#LookupKMSCryptoKeyArgs">LookupKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#LookupKMSCryptoKeyResult">LookupKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#LookupKMSCryptoKeyArgs">LookupKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#LookupKMSCryptoKeyResult">LookupKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -59,7 +60,7 @@ The following arguments are supported:
             title="Required">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform KeyRing to which the key belongs.
 {{% /md %}}</dd>
@@ -68,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CryptoKey's name.
 A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
@@ -85,7 +86,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform KeyRing to which the key belongs.
 {{% /md %}}</dd>
@@ -94,7 +95,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CryptoKey's name.
 A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
@@ -111,7 +112,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform KeyRing to which the key belongs.
 {{% /md %}}</dd>
@@ -120,7 +121,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CryptoKey's name.
 A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
@@ -137,7 +138,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>key_<wbr>ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `self_link` of the Google Cloud Platform KeyRing to which the key belongs.
 {{% /md %}}</dd>
@@ -146,7 +147,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CryptoKey's name.
 A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
@@ -176,7 +177,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -185,7 +186,7 @@ The following output properties are available:
             title="">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -193,7 +194,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -201,7 +202,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -209,7 +210,7 @@ The following output properties are available:
             title="">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the cryptographic capabilities of the key.
 {{% /md %}}</dd>
@@ -218,7 +219,7 @@ The following output properties are available:
             title="">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
@@ -229,7 +230,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
@@ -253,7 +254,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -262,7 +263,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -278,7 +279,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -286,7 +287,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the cryptographic capabilities of the key.
 {{% /md %}}</dd>
@@ -295,7 +296,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
@@ -306,7 +307,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
@@ -330,7 +331,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -339,7 +340,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>key<wbr>Ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -355,7 +356,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -363,7 +364,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the cryptographic capabilities of the key.
 {{% /md %}}</dd>
@@ -372,7 +373,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
@@ -383,7 +384,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
@@ -407,7 +408,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -416,7 +417,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>key_<wbr>ring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -432,7 +433,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -440,7 +441,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>purpose</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the cryptographic capabilities of the key.
 {{% /md %}}</dd>
@@ -449,7 +450,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>rotation_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Every time this period passes, generate a new CryptoKeyVersion and set it as
 the primary. The first rotation will take place after the specified period. The rotation period has the format
@@ -460,7 +461,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 {{% /md %}}</dd>
@@ -491,7 +492,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -504,7 +505,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -512,7 +513,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>Protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +528,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -535,7 +536,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>Protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -550,7 +551,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -558,7 +559,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -573,7 +574,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -581,7 +582,7 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
             title="Required">
         <span>protection<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

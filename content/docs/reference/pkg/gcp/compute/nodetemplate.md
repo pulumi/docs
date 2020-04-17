@@ -17,8 +17,6 @@ To get more information about NodeTemplate, see:
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_node_template.html.markdown.
-
 
 
 ## Create a NodeTemplate Resource
@@ -26,7 +24,7 @@ To get more information about NodeTemplate, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplateArgs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplate">NodeTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#NodeTemplateArgs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -34,7 +32,7 @@ To get more information about NodeTemplate, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateArgs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplate">NodeTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateArgs">NodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplate">NodeTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -134,7 +132,7 @@ To get more information about NodeTemplate, see:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -143,7 +141,7 @@ To get more information about NodeTemplate, see:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -152,7 +150,7 @@ To get more information about NodeTemplate, see:
             title="Optional">
         <span>Node<wbr>Affinity<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
 {{% /md %}}</dd>
@@ -161,7 +159,7 @@ To get more information about NodeTemplate, see:
             title="Optional">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -171,7 +169,7 @@ be specified.
             title="Optional">
         <span>Node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -181,7 +179,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -191,7 +189,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -200,7 +198,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -217,7 +215,7 @@ maintenance event.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -226,7 +224,7 @@ maintenance event.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -244,7 +242,7 @@ maintenance event.
             title="Optional">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -254,7 +252,7 @@ be specified.
             title="Optional">
         <span>Node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">*Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -264,7 +262,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -274,7 +272,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -283,7 +281,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">*Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -300,7 +298,7 @@ maintenance event.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -309,7 +307,7 @@ maintenance event.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -318,7 +316,7 @@ maintenance event.
             title="Optional">
         <span>node<wbr>Affinity<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
 {{% /md %}}</dd>
@@ -327,7 +325,7 @@ maintenance event.
             title="Optional">
         <span>node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -337,7 +335,7 @@ be specified.
             title="Optional">
         <span>node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility?</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -347,7 +345,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -357,7 +355,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -366,7 +364,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding?</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -383,7 +381,7 @@ maintenance event.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -392,7 +390,7 @@ maintenance event.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -410,7 +408,7 @@ maintenance event.
             title="Optional">
         <span>node_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -430,7 +428,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -440,7 +438,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -478,94 +476,18 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional textual description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility?</a></span>
-    </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
 {{% /md %}}</dd>
 
 </dl>
@@ -579,94 +501,18 @@ maintenance event.
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional textual description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Affinity<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Type<wbr>Flexibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">*Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
-    </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
 {{% /md %}}</dd>
 
 </dl>
@@ -680,94 +526,18 @@ maintenance event.
             title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional textual description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Affinity<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Type<wbr>Flexibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility?</a></span>
-    </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
 {{% /md %}}</dd>
 
 </dl>
@@ -781,94 +551,18 @@ maintenance event.
             title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional textual description of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>affinity_<wbr>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
-be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>type_<wbr>flexibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Dict[Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility]</a></span>
-    </dt>
-    <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
-matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Dict[Node<wbr>Template<wbr>Server<wbr>Binding]</a></span>
-    </dt>
-    <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
-maintenance event.
 {{% /md %}}</dd>
 
 </dl>
@@ -896,7 +590,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplate">NodeTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateState">NodeTemplateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplate">NodeTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1010,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1019,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -1028,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -1037,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Affinity<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
 {{% /md %}}</dd>
@@ -1046,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -1056,7 +750,7 @@ be specified.
             title="Optional">
         <span>Node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -1066,7 +760,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1076,7 +770,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1085,7 +779,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1094,7 +788,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -1111,7 +805,7 @@ maintenance event.
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1120,7 +814,7 @@ maintenance event.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -1129,7 +823,7 @@ maintenance event.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -1147,7 +841,7 @@ maintenance event.
             title="Optional">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -1157,7 +851,7 @@ be specified.
             title="Optional">
         <span>Node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">*Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -1167,7 +861,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1177,7 +871,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1186,7 +880,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1195,7 +889,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">*Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -1212,7 +906,7 @@ maintenance event.
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1221,7 +915,7 @@ maintenance event.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -1230,7 +924,7 @@ maintenance event.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -1239,7 +933,7 @@ maintenance event.
             title="Optional">
         <span>node<wbr>Affinity<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to use for node affinity, which will be used in instance scheduling.
 {{% /md %}}</dd>
@@ -1248,7 +942,7 @@ maintenance event.
             title="Optional">
         <span>node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -1258,7 +952,7 @@ be specified.
             title="Optional">
         <span>node<wbr>Type<wbr>Flexibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility?</a></span>
+        <span class="property-type"><a href="#nodetemplatenodetypeflexibility">Node<wbr>Template<wbr>Node<wbr>Type<wbr>Flexibility</a></span>
     </dt>
     <dd>{{% md %}}Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that
 matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.
@@ -1268,7 +962,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1278,7 +972,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1287,7 +981,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1296,7 +990,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>server<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding?</a></span>
+        <span class="property-type"><a href="#nodetemplateserverbinding">Node<wbr>Template<wbr>Server<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The server binding policy for nodes using this template. Determines where the nodes should restart following a
 maintenance event.
@@ -1313,7 +1007,7 @@ maintenance event.
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1322,7 +1016,7 @@ maintenance event.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional textual description of the resource.
 {{% /md %}}</dd>
@@ -1331,7 +1025,7 @@ maintenance event.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource.
 {{% /md %}}</dd>
@@ -1349,7 +1043,7 @@ maintenance event.
             title="Optional">
         <span>node_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Node type to use for nodes group that are created from this template. Only one of nodeTypeFlexibility and nodeType can
 be specified.
@@ -1369,7 +1063,7 @@ matches these properties. Only one of nodeTypeFlexibility and nodeType can be sp
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1379,7 +1073,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region where nodes using the node template will be created. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1388,7 +1082,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1423,7 +1117,7 @@ maintenance event.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateNodeTypeFlexibilityOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1436,7 +1130,7 @@ maintenance event.
             title="Optional">
         <span>Cpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1444,7 +1138,7 @@ maintenance event.
             title="Optional">
         <span>Local<wbr>Ssd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1452,7 +1146,7 @@ maintenance event.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1467,7 +1161,7 @@ maintenance event.
             title="Optional">
         <span>Cpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1475,7 +1169,7 @@ maintenance event.
             title="Optional">
         <span>Local<wbr>Ssd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1483,7 +1177,7 @@ maintenance event.
             title="Optional">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1498,7 +1192,7 @@ maintenance event.
             title="Optional">
         <span>cpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1506,7 +1200,7 @@ maintenance event.
             title="Optional">
         <span>local<wbr>Ssd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1514,7 +1208,7 @@ maintenance event.
             title="Optional">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1529,7 +1223,7 @@ maintenance event.
             title="Optional">
         <span>cpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1537,7 +1231,7 @@ maintenance event.
             title="Optional">
         <span>local<wbr>Ssd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1545,7 +1239,7 @@ maintenance event.
             title="Optional">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1562,7 +1256,7 @@ maintenance event.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateServerBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#NodeTemplateServerBindingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#NodeTemplateServerBindingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1575,7 +1269,7 @@ maintenance event.
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1590,7 +1284,7 @@ maintenance event.
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1605,7 +1299,7 @@ maintenance event.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1620,7 +1314,7 @@ maintenance event.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1641,6 +1335,7 @@ maintenance event.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

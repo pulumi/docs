@@ -21,7 +21,8 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
    `gcp.organizations.IAMMember` or `gcp.organizations.IAMBinding`
    or they will fight over what your policy should be.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_policy.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -30,7 +31,7 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#IAMPolicy">IAMPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#IAMPolicyArgs">IAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#IAMPolicy">IAMPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#IAMPolicyArgs">IAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -38,7 +39,7 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#IAMPolicyArgs">IAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#IAMPolicy">IAMPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#IAMPolicyArgs">IAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#IAMPolicy">IAMPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -138,7 +139,7 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
             title="Required">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -147,7 +148,7 @@ Allows management of the entire IAM policy for an existing Google Cloud Platform
             title="Required">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -165,7 +166,7 @@ policy applied to the organization.
             title="Required">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -174,7 +175,7 @@ policy applied to the organization.
             title="Required">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -192,7 +193,7 @@ policy applied to the organization.
             title="Required">
         <span>org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -201,7 +202,7 @@ policy applied to the organization.
             title="Required">
         <span>policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -219,7 +220,7 @@ policy applied to the organization.
             title="Required">
         <span>org_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -228,7 +229,7 @@ policy applied to the organization.
             title="Required">
         <span>policy_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -258,29 +259,9 @@ The following output properties are available:
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
-the IAM policy that will be applied to the organization. This policy overrides any existing
-policy applied to the organization.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -293,29 +274,9 @@ policy applied to the organization.
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
-the IAM policy that will be applied to the organization. This policy overrides any existing
-policy applied to the organization.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -328,29 +289,9 @@ policy applied to the organization.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
-the IAM policy that will be applied to the organization. This policy overrides any existing
-policy applied to the organization.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -363,29 +304,9 @@ policy applied to the organization.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>org_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
-the IAM policy that will be applied to the organization. This policy overrides any existing
-policy applied to the organization.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -412,7 +333,7 @@ Get an existing IAMPolicy resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#IAMPolicyState">IAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#IAMPolicy">IAMPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#IAMPolicyState">IAMPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#IAMPolicy">IAMPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -526,7 +447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -534,7 +455,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -543,7 +464,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -561,7 +482,7 @@ policy applied to the organization.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -569,7 +490,7 @@ policy applied to the organization.
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -578,7 +499,7 @@ policy applied to the organization.
             title="Optional">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -596,7 +517,7 @@ policy applied to the organization.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -604,7 +525,7 @@ policy applied to the organization.
             title="Optional">
         <span>org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -613,7 +534,7 @@ policy applied to the organization.
             title="Optional">
         <span>policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -631,7 +552,7 @@ policy applied to the organization.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -639,7 +560,7 @@ policy applied to the organization.
             title="Optional">
         <span>org_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization in which you want to create a custom role.
 {{% /md %}}</dd>
@@ -648,7 +569,7 @@ policy applied to the organization.
             title="Optional">
         <span>policy_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `gcp.organizations.getIAMPolicy` data source that represents
 the IAM policy that will be applied to the organization. This policy overrides any existing
@@ -674,6 +595,7 @@ policy applied to the organization.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

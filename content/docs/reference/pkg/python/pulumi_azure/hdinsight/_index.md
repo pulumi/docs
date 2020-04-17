@@ -94,9 +94,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.hdinsight.HBaseCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">HBaseCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_account_gen2=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HBaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight HBase Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hbase_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hbase_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -434,9 +431,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.HadoopCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">HadoopCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_account_gen2=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.HadoopCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Hadoop Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hadoop_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_hadoop_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -810,9 +804,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.InteractiveQueryCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">InteractiveQueryCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_account_gen2=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.InteractiveQueryCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Interactive Query Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_interactive_query_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_interactive_query_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1150,9 +1141,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.KafkaCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">KafkaCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_account_gen2=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.KafkaCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Kafka Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_kafka_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_kafka_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1493,9 +1481,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.MLServicesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">MLServicesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">rstudio=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.MLServicesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight ML Services Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_ml_services_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_ml_services_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1831,9 +1816,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.RServerCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">RServerCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">rstudio=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.RServerCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight RServer Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_rserver_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_rserver_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2169,9 +2151,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.SparkCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">SparkCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_account_gen2=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.SparkCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Spark Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_spark_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_spark_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2509,9 +2488,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.StormCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">StormCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_version=None</em>, <em class="sig-param">component_version=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">storage_accounts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.StormCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a HDInsight Storm Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_storm_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hdinsight_storm_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2821,9 +2797,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hdinsight.get_cluster">
 <code class="sig-prename descclassname">pulumi_azure.hdinsight.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hdinsight.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing HDInsight Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/hdinsight_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/hdinsight_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

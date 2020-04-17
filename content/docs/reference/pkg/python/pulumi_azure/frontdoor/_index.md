@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.frontdoor.FirewallPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.frontdoor.</code><code class="sig-name descname">FirewallPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_block_response_body=None</em>, <em class="sig-param">custom_block_response_status_code=None</em>, <em class="sig-param">custom_rules=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">managed_rules=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_url=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.frontdoor.FirewallPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Front Door Web Application Firewall Policy instance.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor_firewall_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor_firewall_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -359,9 +356,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.</p></li>
 <li><p>Use Front Door for application layer security and DDoS protection for your application.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/frontdoor.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

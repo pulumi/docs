@@ -10,18 +10,21 @@ Get information about a Google Cloud Function. For more information see
 the [official documentation](https://cloud.google.com/functions/docs/)
 and [API](https://cloud.google.com/functions/docs/apis).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
+const my_function = gcp.cloudfunctions.getFunction({
     name: "function",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_cloudfunctions_function.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
 {{% /md %}}</dd>
@@ -75,7 +78,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -85,7 +88,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
@@ -102,7 +105,7 @@ is not provided, the provider region is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
 {{% /md %}}</dd>
@@ -111,7 +114,7 @@ is not provided, the provider region is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -121,7 +124,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
@@ -138,7 +141,7 @@ is not provided, the provider region is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
 {{% /md %}}</dd>
@@ -147,7 +150,7 @@ is not provided, the provider region is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -157,7 +160,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
@@ -174,7 +177,7 @@ is not provided, the provider region is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Function.
 {{% /md %}}</dd>
@@ -183,7 +186,7 @@ is not provided, the provider region is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -193,7 +196,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which the resource belongs. If it
 is not provided, the provider region is used.
@@ -223,7 +226,7 @@ The following output properties are available:
             title="">
         <span>Available<wbr>Memory<wbr>Mb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
@@ -232,7 +235,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd>
@@ -241,7 +244,7 @@ The following output properties are available:
             title="">
         <span>Entry<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd>
@@ -250,7 +253,7 @@ The following output properties are available:
             title="">
         <span>Environment<wbr>Variables</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -267,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Https<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
 {{% /md %}}</dd>
@@ -276,16 +279,25 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Ingress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls what traffic can reach the function.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of labels applied to this function.
 {{% /md %}}</dd>
@@ -294,7 +306,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -302,32 +314,16 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
 {{% /md %}}</dd>
@@ -336,7 +332,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
 {{% /md %}}</dd>
@@ -345,7 +341,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Archive<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd>
@@ -354,7 +350,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Archive<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd>
@@ -371,7 +367,7 @@ The following output properties are available:
             title="">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
 {{% /md %}}</dd>
@@ -380,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Trigger<wbr>Http</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
 {{% /md %}}</dd>
@@ -389,7 +385,33 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Connector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -404,7 +426,7 @@ The following output properties are available:
             title="">
         <span>Available<wbr>Memory<wbr>Mb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
@@ -413,7 +435,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd>
@@ -422,7 +444,7 @@ The following output properties are available:
             title="">
         <span>Entry<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd>
@@ -448,7 +470,7 @@ The following output properties are available:
             title="">
         <span>Https<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
 {{% /md %}}</dd>
@@ -457,9 +479,18 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ingress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls what traffic can reach the function.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -475,7 +506,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -483,32 +514,16 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
 {{% /md %}}</dd>
@@ -517,7 +532,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
 {{% /md %}}</dd>
@@ -526,7 +541,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Archive<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd>
@@ -535,7 +550,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Archive<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd>
@@ -552,7 +567,7 @@ The following output properties are available:
             title="">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
 {{% /md %}}</dd>
@@ -561,7 +576,7 @@ The following output properties are available:
             title="">
         <span>Trigger<wbr>Http</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
 {{% /md %}}</dd>
@@ -570,7 +585,33 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Connector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Connector<wbr>Egress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -585,7 +626,7 @@ The following output properties are available:
             title="">
         <span>available<wbr>Memory<wbr>Mb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
@@ -594,7 +635,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd>
@@ -603,7 +644,7 @@ The following output properties are available:
             title="">
         <span>entry<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd>
@@ -629,7 +670,7 @@ The following output properties are available:
             title="">
         <span>https<wbr>Trigger<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
 {{% /md %}}</dd>
@@ -638,9 +679,18 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ingress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Controls what traffic can reach the function.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -656,7 +706,7 @@ The following output properties are available:
             title="">
         <span>max<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -664,32 +714,16 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
 {{% /md %}}</dd>
@@ -698,7 +732,7 @@ The following output properties are available:
             title="">
         <span>service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
 {{% /md %}}</dd>
@@ -707,7 +741,7 @@ The following output properties are available:
             title="">
         <span>source<wbr>Archive<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd>
@@ -716,7 +750,7 @@ The following output properties are available:
             title="">
         <span>source<wbr>Archive<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd>
@@ -733,7 +767,7 @@ The following output properties are available:
             title="">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
 {{% /md %}}</dd>
@@ -742,7 +776,7 @@ The following output properties are available:
             title="">
         <span>trigger<wbr>Http</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
 {{% /md %}}</dd>
@@ -751,7 +785,33 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Connector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Connector<wbr>Egress<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -766,7 +826,7 @@ The following output properties are available:
             title="">
         <span>available_<wbr>memory_<wbr>mb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Available memory (in MB) to the function.
 {{% /md %}}</dd>
@@ -775,7 +835,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the function.
 {{% /md %}}</dd>
@@ -784,7 +844,7 @@ The following output properties are available:
             title="">
         <span>entry_<wbr>point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of a JavaScript function that will be executed when the Google Cloud Function is triggered.
 {{% /md %}}</dd>
@@ -810,7 +870,7 @@ The following output properties are available:
             title="">
         <span>https_<wbr>trigger_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, trigger URL is set here.
 {{% /md %}}</dd>
@@ -819,9 +879,18 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ingress_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Controls what traffic can reach the function.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -837,7 +906,7 @@ The following output properties are available:
             title="">
         <span>max_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -845,32 +914,16 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Function.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The runtime in which the function is running.
 {{% /md %}}</dd>
@@ -879,7 +932,7 @@ The following output properties are available:
             title="">
         <span>service_<wbr>account_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service account email to be assumed by the cloud function.
 {{% /md %}}</dd>
@@ -888,7 +941,7 @@ The following output properties are available:
             title="">
         <span>source_<wbr>archive_<wbr>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The GCS bucket containing the zip archive which contains the function.
 {{% /md %}}</dd>
@@ -897,7 +950,7 @@ The following output properties are available:
             title="">
         <span>source_<wbr>archive_<wbr>object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source archive object (file) in archive bucket.
 {{% /md %}}</dd>
@@ -914,7 +967,7 @@ The following output properties are available:
             title="">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Function execution timeout (in seconds).
 {{% /md %}}</dd>
@@ -923,7 +976,7 @@ The following output properties are available:
             title="">
         <span>trigger_<wbr>http</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If function is triggered by HTTP, this boolean is set.
 {{% /md %}}</dd>
@@ -932,7 +985,33 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>connector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Network Connector that this cloud function can connect to. 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>connector_<wbr>egress_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The egress settings for the connector, controlling what traffic is diverted through it.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -954,7 +1033,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTrigger">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTrigger">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -967,7 +1046,7 @@ The following output properties are available:
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
@@ -987,7 +1066,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
 {{% /md %}}</dd>
@@ -1003,7 +1082,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
@@ -1023,7 +1102,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
 {{% /md %}}</dd>
@@ -1039,7 +1118,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
@@ -1059,7 +1138,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
 {{% /md %}}</dd>
@@ -1075,7 +1154,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of event to observe. For example: `"google.storage.object.finalize"`.
 See the documentation on [calling Cloud Functions](https://cloud.google.com/functions/docs/calling/)
@@ -1095,7 +1174,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource whose events are being observed, for example, `"myBucket"`
 {{% /md %}}</dd>
@@ -1113,7 +1192,7 @@ for a full reference of accepted triggers.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTriggerFailurePolicy">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTriggerFailurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1126,7 +1205,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Retry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
 {{% /md %}}</dd>
@@ -1142,7 +1221,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Retry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
 {{% /md %}}</dd>
@@ -1158,7 +1237,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>retry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
 {{% /md %}}</dd>
@@ -1174,7 +1253,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>retry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the function should be retried on failure.
 {{% /md %}}</dd>
@@ -1192,7 +1271,7 @@ for a full reference of accepted triggers.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudfunctions?tab=doc#GetFunctionSourceRepository">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudfunctions?tab=doc#GetFunctionSourceRepository">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1205,7 +1284,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Deployed<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1213,7 +1292,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1228,7 +1307,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Deployed<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1236,7 +1315,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1251,7 +1330,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>deployed<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1259,7 +1338,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1274,7 +1353,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>deployed<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1282,7 +1361,7 @@ for a full reference of accepted triggers.
             title="Required">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

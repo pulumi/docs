@@ -32,8 +32,6 @@ certificates may entail some downtime while the certificate provisions.
 
 In conclusion: Be extremely cautious.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_managed_ssl_certificate.html.markdown.
-
 
 
 ## Create a ManagedSslCertificate Resource
@@ -41,7 +39,7 @@ In conclusion: Be extremely cautious.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ManagedSslCertificate">ManagedSslCertificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ManagedSslCertificateArgs">ManagedSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ManagedSslCertificate">ManagedSslCertificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ManagedSslCertificateArgs">ManagedSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,7 +47,7 @@ In conclusion: Be extremely cautious.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedSslCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificateArgs">ManagedSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificate">ManagedSslCertificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedSslCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificateArgs">ManagedSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificate">ManagedSslCertificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,7 +147,7 @@ In conclusion: Be extremely cautious.
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -158,7 +156,7 @@ In conclusion: Be extremely cautious.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -167,7 +165,7 @@ In conclusion: Be extremely cautious.
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args?</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -177,7 +175,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -190,7 +188,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -200,7 +198,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -216,7 +214,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -225,7 +223,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -234,7 +232,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">*Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -244,7 +242,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -257,7 +255,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -267,7 +265,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -283,7 +281,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -292,7 +290,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -301,7 +299,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed?</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -311,7 +309,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -324,7 +322,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -334,7 +332,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -350,7 +348,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>certificate_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -359,7 +357,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -378,7 +376,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -391,7 +389,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -401,7 +399,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -427,78 +425,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed?</a></span>
-    </dt>
-    <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of 'MANAGED' in 'type').
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -507,18 +454,9 @@ If it is not provided, the provider project is used.
             title="">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
 
 </dl>
@@ -530,78 +468,27 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">*Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
-    </dt>
-    <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of 'MANAGED' in 'type').
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -610,18 +497,9 @@ If it is not provided, the provider project is used.
             title="">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
 
 </dl>
@@ -633,78 +511,27 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed?</a></span>
-    </dt>
-    <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of 'MANAGED' in 'type').
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -713,18 +540,9 @@ If it is not provided, the provider project is used.
             title="">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
 
 </dl>
@@ -736,78 +554,27 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expire_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Dict[Managed<wbr>Ssl<wbr>Certificate<wbr>Managed]</a></span>
-    </dt>
-    <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
-of 'MANAGED' in 'type').
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash. These are in the same
-namespace as the managed SSL certificates.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -816,18 +583,9 @@ If it is not provided, the provider project is used.
             title="">
         <span>subject_<wbr>alternative_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
 
 </dl>
@@ -855,7 +613,7 @@ Get an existing ManagedSslCertificate resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedSslCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificateState">ManagedSslCertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificate">ManagedSslCertificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedSslCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificateState">ManagedSslCertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificate">ManagedSslCertificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -969,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -978,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -987,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -996,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
@@ -1005,7 +763,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args?</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -1015,7 +773,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1028,7 +786,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1038,7 +796,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1047,7 +805,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
 {{% /md %}}</dd>
@@ -1056,7 +814,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -1072,7 +830,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1081,7 +839,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1090,7 +848,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1099,7 +857,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
@@ -1108,7 +866,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">*Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -1118,7 +876,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1131,7 +889,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1141,7 +899,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1150,7 +908,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
 {{% /md %}}</dd>
@@ -1159,7 +917,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -1175,7 +933,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1184,7 +942,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1193,7 +951,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1202,7 +960,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
@@ -1211,7 +969,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed?</a></span>
+        <span class="property-type"><a href="#managedsslcertificatemanaged">Managed<wbr>Ssl<wbr>Certificate<wbr>Managed</a></span>
     </dt>
     <dd>{{% md %}}Properties relevant to a managed certificate. These will be used if the certificate is managed (as indicated by a value
 of 'MANAGED' in 'type').
@@ -1221,7 +979,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1234,7 +992,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1244,7 +1002,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1253,7 +1011,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
 {{% /md %}}</dd>
@@ -1262,7 +1020,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -1278,7 +1036,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>certificate_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1287,7 +1045,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1296,7 +1054,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1305,7 +1063,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expire_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Expire time of the certificate.
 {{% /md %}}</dd>
@@ -1324,7 +1082,7 @@ of 'MANAGED' in 'type').
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1337,7 +1095,7 @@ namespace as the managed SSL certificates.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1347,7 +1105,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1356,7 +1114,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>subject_<wbr>alternative_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Domains associated with the certificate via Subject Alternative Name.
 {{% /md %}}</dd>
@@ -1365,7 +1123,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Enum field whose value is always 'MANAGED' - used to signal to the API which type this is.
 {{% /md %}}</dd>
@@ -1390,7 +1148,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificateManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#ManagedSslCertificateManagedOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificateManagedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#ManagedSslCertificateManagedOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1403,7 +1161,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1418,7 +1176,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1433,7 +1191,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1448,7 +1206,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1469,6 +1227,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

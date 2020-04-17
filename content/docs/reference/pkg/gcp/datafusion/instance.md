@@ -14,8 +14,6 @@ To get more information about Instance, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/data_fusion_instance.html.markdown.
-
 
 
 ## Create a Instance Resource
@@ -23,7 +21,7 @@ To get more information about Instance, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/datafusion/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,11 +29,11 @@ To get more information about Instance, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Datafusion.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -127,11 +125,24 @@ To get more information about Instance, see:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
+memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
+and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
+streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
+features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -140,7 +151,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -149,7 +160,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -158,7 +169,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
 {{% /md %}}</dd>
@@ -167,7 +178,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -176,7 +187,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -185,7 +196,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -194,7 +205,7 @@ To get more information about Instance, see:
             title="Optional">
         <span>Private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -204,7 +215,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -214,22 +225,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -239,11 +237,24 @@ features available, such as support for streaming pipelines, higher number of co
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
+memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
+and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
+streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
+features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -252,7 +263,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -261,7 +272,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -279,7 +290,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -288,7 +299,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">*Instance<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -306,7 +317,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -316,7 +327,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -326,22 +337,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -351,11 +349,24 @@ features available, such as support for streaming pipelines, higher number of co
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
+memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
+and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
+streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
+features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -364,7 +375,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -373,7 +384,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -382,7 +393,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
 {{% /md %}}</dd>
@@ -391,7 +402,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -400,7 +411,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config?</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -409,7 +420,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -418,7 +429,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -428,7 +439,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -438,22 +449,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -463,11 +461,24 @@ features available, such as support for streaming pipelines, higher number of co
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
+memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
+and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
+streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
+features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -476,7 +487,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable_<wbr>stackdriver_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -485,7 +496,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable_<wbr>stackdriver_<wbr>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -503,7 +514,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -530,7 +541,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>private_<wbr>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -540,7 +551,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -550,22 +561,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 {{% /md %}}</dd>
 
 </dl>
@@ -591,108 +589,16 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Stackdriver<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -701,7 +607,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -710,7 +616,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -721,29 +627,16 @@ being upgraded - RESTARTING: Instance is being restarted
             title="">
         <span>State<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -752,7 +645,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -768,108 +661,16 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Stackdriver<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">*Instance<wbr>Network<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -878,7 +679,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>Service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -887,7 +688,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -898,29 +699,16 @@ being upgraded - RESTARTING: Instance is being restarted
             title="">
         <span>State<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -929,7 +717,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -945,108 +733,16 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Stackdriver<wbr>Logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Stackdriver<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -1055,7 +751,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -1064,7 +760,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -1075,29 +771,16 @@ being upgraded - RESTARTING: Instance is being restarted
             title="">
         <span>state<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1106,7 +789,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -1122,108 +805,16 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>stackdriver_<wbr>logging</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>stackdriver_<wbr>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Dict[Instance<wbr>Network<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
-addresses and will not be able to access the public internet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -1232,7 +823,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>service_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -1241,7 +832,7 @@ If it is not provided, the provider project is used.
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -1252,29 +843,16 @@ being upgraded - RESTARTING: Instance is being restarted
             title="">
         <span>state_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
-memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
-and click UI. However, there are certain limitations, such as fewer number of concurrent pipelines, no support for
-streaming pipelines, etc. - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more
-features available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>update_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1283,7 +861,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -1313,11 +891,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Datafusion.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Datafusion.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataFusion.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1427,7 +1005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1436,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -1445,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -1454,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -1463,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
 {{% /md %}}</dd>
@@ -1472,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -1481,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -1490,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -1499,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -1509,7 +1087,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1519,7 +1097,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
@@ -1528,7 +1106,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -1537,7 +1115,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -1546,7 +1124,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -1557,7 +1135,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>State<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
@@ -1566,7 +1144,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
 memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
@@ -1579,7 +1157,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1588,7 +1166,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -1604,7 +1182,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1613,7 +1191,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -1622,7 +1200,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -1631,7 +1209,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -1649,7 +1227,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -1658,7 +1236,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">*Instance<wbr>Network<wbr>Config</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -1676,7 +1254,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -1686,7 +1264,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1696,7 +1274,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
@@ -1705,7 +1283,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -1714,7 +1292,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -1723,7 +1301,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -1734,7 +1312,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>State<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
@@ -1743,7 +1321,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
 memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
@@ -1756,7 +1334,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1765,7 +1343,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -1781,7 +1359,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1790,7 +1368,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -1799,7 +1377,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable<wbr>Stackdriver<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -1808,7 +1386,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable<wbr>Stackdriver<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -1817,7 +1395,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources, such as Compute Engine VMs.
 {{% /md %}}</dd>
@@ -1826,7 +1404,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -1835,7 +1413,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>network<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config?</a></span>
+        <span class="property-type"><a href="#instancenetworkconfig">Instance<wbr>Network<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 {{% /md %}}</dd>
@@ -1844,7 +1422,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
 {{% /md %}}</dd>
@@ -1853,7 +1431,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>private<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -1863,7 +1441,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1873,7 +1451,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
@@ -1882,7 +1460,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -1891,7 +1469,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -1900,7 +1478,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -1911,7 +1489,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>state<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
@@ -1920,7 +1498,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
 memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
@@ -1933,7 +1511,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>update<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1942,7 +1520,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -1958,7 +1536,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -1967,7 +1545,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
 {{% /md %}}</dd>
@@ -1976,7 +1554,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable_<wbr>stackdriver_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
 {{% /md %}}</dd>
@@ -1985,7 +1563,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>enable_<wbr>stackdriver_<wbr>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
 {{% /md %}}</dd>
@@ -2003,7 +1581,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
@@ -2030,7 +1608,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>private_<wbr>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP
 addresses and will not be able to access the public internet.
@@ -2040,7 +1618,7 @@ addresses and will not be able to access the public internet.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2050,7 +1628,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
 {{% /md %}}</dd>
@@ -2059,7 +1637,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
 {{% /md %}}</dd>
@@ -2068,7 +1646,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
 {{% /md %}}</dd>
@@ -2077,7 +1655,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
@@ -2088,7 +1666,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>state_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
 {{% /md %}}</dd>
@@ -2097,7 +1675,7 @@ being upgraded - RESTARTING: Instance is being restarted
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and
 memory. - BASIC: Basic Data Fusion instance. In Basic type, the user will be able to create data pipelines using point
@@ -2110,7 +1688,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>update_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
@@ -2119,7 +1697,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
 {{% /md %}}</dd>
@@ -2144,7 +1722,7 @@ features available, such as support for streaming pipelines, higher number of co
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#InstanceNetworkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/datafusion?tab=doc#InstanceNetworkConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/datafusion?tab=doc#InstanceNetworkConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2157,7 +1735,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>Ip<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2165,7 +1743,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2180,7 +1758,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>Ip<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2188,7 +1766,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2203,7 +1781,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>ip<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2211,7 +1789,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2226,7 +1804,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>ip<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2234,7 +1812,7 @@ features available, such as support for streaming pipelines, higher number of co
             title="Required">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2255,6 +1833,7 @@ features available, such as support for streaming pipelines, higher number of co
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

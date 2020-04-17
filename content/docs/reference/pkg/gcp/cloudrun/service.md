@@ -63,6 +63,7 @@ const instance = new gcp.sql.DatabaseInstance("instance", {
     },
 });
 const defaultService = new gcp.cloudrun.Service("default", {
+    autogenerateRevisionName: true,
     location: "us-central1",
     template: {
         metadata: {
@@ -88,6 +89,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const defaultService = new gcp.cloudrun.Service("default", {
+    autogenerateRevisionName: true,
     location: "us-central1",
     template: {
         spec: {
@@ -113,8 +115,6 @@ const defaultService = new gcp.cloudrun.Service("default", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown.
-
 
 
 ## Create a Service Resource
@@ -122,19 +122,19 @@ const defaultService = new gcp.cloudrun.Service("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudrun/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Service</span><span class="p">(resource_name, opts=None, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -230,16 +230,29 @@ const defaultService = new gcp.cloudrun.Service("default", {
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -248,7 +261,7 @@ const defaultService = new gcp.cloudrun.Service("default", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -259,7 +272,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -269,7 +282,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -284,7 +297,7 @@ source.
             title="Optional">
         <span>Traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -300,16 +313,29 @@ source.
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">*Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -318,7 +344,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -329,7 +355,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -339,7 +365,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">*Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -370,16 +396,29 @@ source.
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -388,7 +427,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -399,7 +438,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -409,7 +448,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -424,7 +463,7 @@ source.
             title="Optional">
         <span>traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]?</a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -440,9 +479,22 @@ source.
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>autogenerate_<wbr>revision_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -458,7 +510,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -469,7 +521,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -520,74 +572,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template?</a></span>
-    </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Traffics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
 
 </dl>
@@ -599,74 +588,11 @@ source.
 
     <dt class="property-"
             title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">*Service<wbr>Template</a></span>
-    </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Traffics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">[]Service<wbr>Traffic</a></span>
-    </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
 
 </dl>
@@ -678,74 +604,11 @@ source.
 
     <dt class="property-"
             title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template?</a></span>
-    </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>traffics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
-    </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
 
 </dl>
@@ -757,74 +620,11 @@ source.
 
     <dt class="property-"
             title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the cloud run instance. eg us-central1
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Dict[Service<wbr>Metadata]</a></span>
-    </dt>
-    <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
-primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-http://kubernetes.io/docs/user-guide/identifiers#names
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicestatus">Dict[Service<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Dict[Service<wbr>Template]</a></span>
-    </dt>
-    <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
-and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
-force a Revision to be created when the spec doesn't otherwise change, a nonce label may be provided in the template
-metadata. For more details, see:
-https://github.com/knative/serving/blob/master/docs/client-conventions.md#associate-modifications-with-revisions Cloud
-Run does not currently support referencing a build that is responsible for materializing the container image from
-source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>traffics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List[Service<wbr>Traffic]</a></span>
-    </dt>
-    <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
 
 </dl>
@@ -848,15 +648,15 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>status=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autogenerate_revision_name=None<span class="p">, </span>location=None<span class="p">, </span>metadata=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>status=None<span class="p">, </span>template=None<span class="p">, </span>traffics=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudrun.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudRun.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -964,9 +764,22 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
@@ -975,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -984,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -995,7 +808,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1005,7 +818,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
@@ -1014,7 +827,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -1029,7 +842,7 @@ source.
             title="Optional">
         <span>Traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetraffic">List&lt;Service<wbr>Traffic<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -1043,9 +856,22 @@ source.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
@@ -1054,7 +880,7 @@ source.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">*Service<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -1063,7 +889,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -1074,7 +900,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1084,7 +910,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">*Service<wbr>Status</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
@@ -1093,7 +919,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">*Service<wbr>Template</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -1122,9 +948,22 @@ source.
 
     <dt class="property-optional"
             title="Optional">
+        <span>autogenerate<wbr>Revision<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
@@ -1133,7 +972,7 @@ source.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata?</a></span>
+        <span class="property-type"><a href="#servicemetadata">Service<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}Metadata associated with this Service, including name, namespace, labels, and annotations.
 {{% /md %}}</dd>
@@ -1142,7 +981,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -1153,7 +992,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1163,7 +1002,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatus">Service<wbr>Status?</a></span>
+        <span class="property-type"><a href="#servicestatus">Service<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The current status of the Service.
 {{% /md %}}</dd>
@@ -1172,7 +1011,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template?</a></span>
+        <span class="property-type"><a href="#servicetemplate">Service<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
@@ -1187,7 +1026,7 @@ source.
             title="Optional">
         <span>traffics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]?</a></span>
+        <span class="property-type"><a href="#servicetraffic">Service<wbr>Traffic[]</a></span>
     </dt>
     <dd>{{% md %}}Traffic specifies how to distribute traffic over a collection of Knative Revisions and Configurations
 {{% /md %}}</dd>
@@ -1201,9 +1040,22 @@ source.
 
     <dt class="property-optional"
             title="Optional">
+        <span>autogenerate_<wbr>revision_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
+is also set.
+(For legacy support, if `template.metadata.name` is unset in state while
+this field is set to false, the revision name will still autogenerate.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the cloud run instance. eg us-central1
 {{% /md %}}</dd>
@@ -1221,7 +1073,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
 primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
@@ -1232,7 +1084,7 @@ http://kubernetes.io/docs/user-guide/identifiers#names
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1291,7 +1143,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceMetadataOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1304,7 +1156,7 @@ source.
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1312,7 +1164,7 @@ source.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1320,7 +1172,7 @@ source.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1328,7 +1180,7 @@ source.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1336,7 +1188,7 @@ source.
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1344,7 +1196,7 @@ source.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1352,7 +1204,7 @@ source.
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1375,7 +1227,7 @@ source.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1391,7 +1243,7 @@ source.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1399,7 +1251,7 @@ source.
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1407,7 +1259,7 @@ source.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1415,7 +1267,7 @@ source.
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1430,7 +1282,7 @@ source.
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1438,7 +1290,7 @@ source.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1446,7 +1298,7 @@ source.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1454,7 +1306,7 @@ source.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1462,7 +1314,7 @@ source.
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1470,7 +1322,7 @@ source.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1478,7 +1330,7 @@ source.
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1501,7 +1353,7 @@ source.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1517,7 +1369,7 @@ source.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1525,7 +1377,7 @@ source.
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1533,7 +1385,7 @@ source.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1541,7 +1393,7 @@ source.
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1558,7 +1410,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceStatusOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1571,7 +1423,7 @@ source.
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">List&lt;Service<wbr>Status<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1579,7 +1431,7 @@ source.
             title="Optional">
         <span>Latest<wbr>Created<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1587,7 +1439,7 @@ source.
             title="Optional">
         <span>Latest<wbr>Ready<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1595,7 +1447,7 @@ source.
             title="Optional">
         <span>Observed<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1603,7 +1455,7 @@ source.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1626,7 +1478,7 @@ source.
             title="Optional">
         <span>Latest<wbr>Created<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1634,7 +1486,7 @@ source.
             title="Optional">
         <span>Latest<wbr>Ready<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1642,7 +1494,7 @@ source.
             title="Optional">
         <span>Observed<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1650,7 +1502,7 @@ source.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1665,7 +1517,7 @@ source.
             title="Optional">
         <span>conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]?</a></span>
+        <span class="property-type"><a href="#servicestatuscondition">Service<wbr>Status<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1673,7 +1525,7 @@ source.
             title="Optional">
         <span>latest<wbr>Created<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1681,7 +1533,7 @@ source.
             title="Optional">
         <span>latest<wbr>Ready<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1689,7 +1541,7 @@ source.
             title="Optional">
         <span>observed<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1697,7 +1549,7 @@ source.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1720,7 +1572,7 @@ source.
             title="Optional">
         <span>latest<wbr>Created<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1728,7 +1580,7 @@ source.
             title="Optional">
         <span>latest<wbr>Ready<wbr>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1736,7 +1588,7 @@ source.
             title="Optional">
         <span>observed<wbr>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1744,7 +1596,7 @@ source.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1761,7 +1613,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceStatusConditionOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceStatusConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1774,7 +1626,7 @@ source.
             title="Optional">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1782,7 +1634,7 @@ source.
             title="Optional">
         <span>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1790,7 +1642,7 @@ source.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1798,7 +1650,7 @@ source.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1813,7 +1665,7 @@ source.
             title="Optional">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1673,7 @@ source.
             title="Optional">
         <span>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1681,7 @@ source.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1689,7 @@ source.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1852,7 +1704,7 @@ source.
             title="Optional">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1860,7 +1712,7 @@ source.
             title="Optional">
         <span>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1868,7 +1720,7 @@ source.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1876,7 +1728,7 @@ source.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1891,7 +1743,7 @@ source.
             title="Optional">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1899,7 +1751,7 @@ source.
             title="Optional">
         <span>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1907,7 +1759,7 @@ source.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1915,7 +1767,7 @@ source.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1932,7 +1784,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1945,7 +1797,7 @@ source.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1953,7 +1805,7 @@ source.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1968,7 +1820,7 @@ source.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">*Service<wbr>Template<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1976,7 +1828,7 @@ source.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">*Service<wbr>Template<wbr>Spec</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1991,7 +1843,7 @@ source.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata?</a></span>
+        <span class="property-type"><a href="#servicetemplatemetadata">Service<wbr>Template<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1999,7 +1851,7 @@ source.
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#servicetemplatespec">Service<wbr>Template<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2039,7 +1891,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateMetadataOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2052,7 +1904,7 @@ source.
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2060,7 +1912,7 @@ source.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2068,7 +1920,7 @@ source.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2076,7 +1928,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2084,7 +1936,7 @@ source.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2092,7 +1944,7 @@ source.
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2100,7 +1952,7 @@ source.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2108,7 +1960,7 @@ source.
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2131,7 +1983,7 @@ source.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2147,7 +1999,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2155,7 +2007,7 @@ source.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2163,7 +2015,7 @@ source.
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2171,7 +2023,7 @@ source.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2179,7 +2031,7 @@ source.
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2194,7 +2046,7 @@ source.
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2202,7 +2054,7 @@ source.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2210,7 +2062,7 @@ source.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2218,7 +2070,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2226,7 +2078,7 @@ source.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2234,7 +2086,7 @@ source.
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2242,7 +2094,7 @@ source.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2250,7 +2102,7 @@ source.
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2273,7 +2125,7 @@ source.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2289,7 +2141,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2297,7 +2149,7 @@ source.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,7 +2157,7 @@ source.
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2313,7 +2165,7 @@ source.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2321,7 +2173,7 @@ source.
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2338,7 +2190,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2351,7 +2203,7 @@ source.
             title="Optional">
         <span>Container<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2359,7 +2211,7 @@ source.
             title="Optional">
         <span>Containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2367,7 +2219,7 @@ source.
             title="Optional">
         <span>Service<wbr>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2375,7 +2227,7 @@ source.
             title="Optional, Deprecated">
         <span>Serving<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2390,7 +2242,7 @@ source.
             title="Optional">
         <span>Container<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2406,7 +2258,7 @@ source.
             title="Optional">
         <span>Service<wbr>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2414,7 +2266,7 @@ source.
             title="Optional, Deprecated">
         <span>Serving<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2429,7 +2281,7 @@ source.
             title="Optional">
         <span>container<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2437,7 +2289,7 @@ source.
             title="Optional">
         <span>containers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainer">Service<wbr>Template<wbr>Spec<wbr>Container[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2445,7 +2297,7 @@ source.
             title="Optional">
         <span>service<wbr>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2453,7 +2305,7 @@ source.
             title="Optional, Deprecated">
         <span>serving<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2468,7 +2320,7 @@ source.
             title="Optional">
         <span>container<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2484,7 +2336,7 @@ source.
             title="Optional">
         <span>service<wbr>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2492,7 +2344,7 @@ source.
             title="Optional, Deprecated">
         <span>serving<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2509,7 +2361,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2518,11 +2370,19 @@ source.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2530,7 +2390,7 @@ source.
             title="Optional">
         <span>Commands</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2538,7 +2398,7 @@ source.
             title="Optional, Deprecated">
         <span>Env<wbr>Froms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2546,15 +2406,7 @@ source.
             title="Optional">
         <span>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">List&lt;Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2562,7 +2414,7 @@ source.
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2570,7 +2422,7 @@ source.
             title="Optional, Deprecated">
         <span>Working<wbr>Dir</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2581,11 +2433,19 @@ source.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2593,7 +2453,7 @@ source.
             title="Optional">
         <span>Commands</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2613,19 +2473,11 @@ source.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">*Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +2485,7 @@ source.
             title="Optional, Deprecated">
         <span>Working<wbr>Dir</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2644,11 +2496,19 @@ source.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2656,7 +2516,7 @@ source.
             title="Optional">
         <span>commands</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2664,7 +2524,7 @@ source.
             title="Optional, Deprecated">
         <span>env<wbr>Froms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfrom">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2672,15 +2532,7 @@ source.
             title="Optional">
         <span>envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenv">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2688,7 +2540,7 @@ source.
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerresources">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Resources</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2696,7 +2548,7 @@ source.
             title="Optional, Deprecated">
         <span>working<wbr>Dir</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2707,11 +2559,19 @@ source.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2719,7 +2579,7 @@ source.
             title="Optional">
         <span>commands</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2739,14 +2599,6 @@ source.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>resources</span>
@@ -2759,7 +2611,7 @@ source.
             title="Optional, Deprecated">
         <span>working<wbr>Dir</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Not supported by Cloud Run fully managed{{% /md %}}</p></dd>
 
@@ -2776,7 +2628,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2789,7 +2641,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2797,7 +2649,7 @@ source.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2812,7 +2664,7 @@ source.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2820,7 +2672,7 @@ source.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2835,7 +2687,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2843,7 +2695,7 @@ source.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2858,7 +2710,7 @@ source.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2866,7 +2718,7 @@ source.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2883,7 +2735,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2896,7 +2748,7 @@ source.
             title="Optional">
         <span>Config<wbr>Map<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2904,7 +2756,7 @@ source.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2912,7 +2764,7 @@ source.
             title="Optional">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2927,7 +2779,7 @@ source.
             title="Optional">
         <span>Config<wbr>Map<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">*Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2935,7 +2787,7 @@ source.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2943,7 +2795,7 @@ source.
             title="Optional">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">*Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2958,7 +2810,7 @@ source.
             title="Optional">
         <span>config<wbr>Map<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2966,7 +2818,7 @@ source.
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2974,7 +2826,7 @@ source.
             title="Optional">
         <span>secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretref">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2997,7 +2849,7 @@ source.
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3022,7 +2874,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3035,7 +2887,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3043,7 +2895,7 @@ source.
             title="Optional">
         <span>Optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3058,7 +2910,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">*Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +2918,7 @@ source.
             title="Optional">
         <span>Optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3081,7 +2933,7 @@ source.
             title="Optional">
         <span>local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromconfigmapreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Config<wbr>Map<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3089,7 +2941,7 @@ source.
             title="Optional">
         <span>optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3112,7 +2964,7 @@ source.
             title="Optional">
         <span>optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3129,7 +2981,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3142,7 +2994,7 @@ source.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3157,7 +3009,7 @@ source.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3172,7 +3024,7 @@ source.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3187,7 +3039,7 @@ source.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3204,7 +3056,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3217,7 +3069,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3225,7 +3077,7 @@ source.
             title="Optional">
         <span>Optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3240,7 +3092,7 @@ source.
             title="Optional">
         <span>Local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">*Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3248,7 +3100,7 @@ source.
             title="Optional">
         <span>Optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3263,7 +3115,7 @@ source.
             title="Optional">
         <span>local<wbr>Object<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference?</a></span>
+        <span class="property-type"><a href="#servicetemplatespeccontainerenvfromsecretreflocalobjectreference">Service<wbr>Template<wbr>Spec<wbr>Container<wbr>Env<wbr>From<wbr>Secret<wbr>Ref<wbr>Local<wbr>Object<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3271,7 +3123,7 @@ source.
             title="Optional">
         <span>optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3294,7 +3146,7 @@ source.
             title="Optional">
         <span>optional</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3311,7 +3163,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3324,7 +3176,7 @@ source.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3339,7 +3191,7 @@ source.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3354,7 +3206,7 @@ source.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3369,7 +3221,7 @@ source.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3386,7 +3238,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTemplateSpecContainerResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3399,7 +3251,7 @@ source.
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3407,7 +3259,7 @@ source.
             title="Optional">
         <span>Requests</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3445,7 +3297,7 @@ source.
             title="Optional">
         <span>limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3453,7 +3305,7 @@ source.
             title="Optional">
         <span>requests</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3493,7 +3345,7 @@ source.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTrafficArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/cloudrun?tab=doc#ServiceTrafficOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/cloudrun?tab=doc#ServiceTrafficOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3502,19 +3354,19 @@ source.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Latest<wbr>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Latest<wbr>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3522,7 +3374,7 @@ source.
             title="Optional">
         <span>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3533,19 +3385,19 @@ source.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Latest<wbr>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Latest<wbr>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3553,7 +3405,7 @@ source.
             title="Optional">
         <span>Revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3564,19 +3416,19 @@ source.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>latest<wbr>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>latest<wbr>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3584,7 +3436,7 @@ source.
             title="Optional">
         <span>revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3595,19 +3447,19 @@ source.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>latest<wbr>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>latest<wbr>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3615,7 +3467,7 @@ source.
             title="Optional">
         <span>revision<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3636,6 +3488,7 @@ source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

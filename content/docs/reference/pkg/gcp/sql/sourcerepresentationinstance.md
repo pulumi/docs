@@ -29,8 +29,6 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_source_representation_instance.html.markdown.
-
 
 
 ## Create a SourceRepresentationInstance Resource
@@ -38,7 +36,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstance">SourceRepresentationInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstanceArgs">SourceRepresentationInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstance">SourceRepresentationInstance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/sql/#SourceRepresentationInstanceArgs">SourceRepresentationInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -46,7 +44,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSourceRepresentationInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/sql?tab=doc#SourceRepresentationInstanceArgs">SourceRepresentationInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/sql?tab=doc#SourceRepresentationInstance">SourceRepresentationInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSourceRepresentationInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#SourceRepresentationInstanceArgs">SourceRepresentationInstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#SourceRepresentationInstance">SourceRepresentationInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -146,7 +144,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
             title="Required">
         <span>Database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -155,7 +153,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -164,7 +162,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -173,7 +171,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -182,7 +180,7 @@ const instance = new gcp.sql.SourceRepresentationInstance("instance", {
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -192,7 +190,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -208,7 +206,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -217,7 +215,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -226,7 +224,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -235,7 +233,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -244,7 +242,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -254,7 +252,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -270,7 +268,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -279,7 +277,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -288,7 +286,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -297,7 +295,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -306,7 +304,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -316,7 +314,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -332,7 +330,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>database_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -341,7 +339,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -350,7 +348,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -359,7 +357,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -368,7 +366,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -378,7 +376,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -387,264 +385,6 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SourceRepresentationInstance Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>database<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>database_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -668,7 +408,7 @@ Get an existing SourceRepresentationInstance resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSourceRepresentationInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/sql?tab=doc#SourceRepresentationInstanceState">SourceRepresentationInstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/sql?tab=doc#SourceRepresentationInstance">SourceRepresentationInstance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSourceRepresentationInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#SourceRepresentationInstanceState">SourceRepresentationInstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/sql?tab=doc#SourceRepresentationInstance">SourceRepresentationInstance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -782,7 +522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -791,7 +531,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -800,7 +540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -809,7 +549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -818,7 +558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -828,7 +568,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -844,7 +584,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -853,7 +593,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -862,7 +602,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -871,7 +611,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -880,7 +620,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -890,7 +630,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -906,7 +646,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>database<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -915,7 +655,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -924,7 +664,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -933,7 +673,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -942,7 +682,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -952,7 +692,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -968,7 +708,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>database_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server: MYSQL_5_6 or MYSQL_5_7.
 {{% /md %}}</dd>
@@ -977,7 +717,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible IPv4 address for the source database server.
 {{% /md %}}</dd>
@@ -986,7 +726,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the source representation instance. Use any valid Cloud SQL instance name.
 {{% /md %}}</dd>
@@ -995,7 +735,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The externally accessible port for the source database server. Defaults to 3306.
 {{% /md %}}</dd>
@@ -1004,7 +744,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1014,7 +754,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the created instance should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1038,6 +778,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

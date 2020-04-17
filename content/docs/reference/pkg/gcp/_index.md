@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing Google Cloud Platform resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-gcp` repo](https://github.com/pulumi/pulumi-gcp/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-google-beta` repo](https://github.com/terraform-providers/terraform-provider-google-beta/issues).
-
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="accesscontextmanager/" title="accesscontextmanager"><span class="symbol module"></span>accesscontextmanager</a></li>
@@ -62,7 +57,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="runtimeconfig/" title="runtimeconfig"><span class="symbol module"></span>runtimeconfig</a></li>
     <li><a href="secretmanager/" title="secretmanager"><span class="symbol module"></span>secretmanager</a></li>
     <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
-    <li><a href="serviceAccount/" title="serviceAccount"><span class="symbol module"></span>serviceAccount</a></li>
+    <li><a href="serviceaccount/" title="serviceAccount"><span class="symbol module"></span>serviceAccount</a></li>
     <li><a href="servicenetworking/" title="servicenetworking"><span class="symbol module"></span>servicenetworking</a></li>
     <li><a href="serviceusage/" title="serviceusage"><span class="symbol module"></span>serviceusage</a></li>
     <li><a href="sourcerepo/" title="sourcerepo"><span class="symbol module"></span>sourcerepo</a></li>
@@ -84,6 +79,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

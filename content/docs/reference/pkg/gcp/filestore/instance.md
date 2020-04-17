@@ -38,8 +38,6 @@ const instance = new gcp.filestore.Instance("instance", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/filestore_instance.html.markdown.
-
 
 
 ## Create a Instance Resource
@@ -47,7 +45,7 @@ const instance = new gcp.filestore.Instance("instance", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/filestore/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/filestore/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/filestore/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/filestore/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -55,7 +53,7 @@ const instance = new gcp.filestore.Instance("instance", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -151,15 +149,6 @@ const instance = new gcp.filestore.Instance("instance", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>File<wbr>Shares</span>
@@ -167,24 +156,6 @@ const instance = new gcp.filestore.Instance("instance", {
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -196,21 +167,11 @@ const instance = new gcp.filestore.Instance("instance", {
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -219,9 +180,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource labels to represent user-provided metadata.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -231,15 +229,6 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>File<wbr>Shares</span>
@@ -247,6 +236,42 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Tier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The service tier of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Filestore zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -262,46 +287,19 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -311,15 +309,6 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>file<wbr>Shares</span>
@@ -327,24 +316,6 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -356,21 +327,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -379,9 +340,46 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource labels to represent user-provided metadata.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The resource name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -391,15 +389,6 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>file_<wbr>shares</span>
@@ -407,6 +396,42 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
+    </dt>
+    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>tier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service tier of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Filestore zone of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -422,46 +447,19 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -487,91 +485,18 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>File<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
-    </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -585,91 +510,18 @@ If it is not provided, the provider project is used.
             title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>File<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
-    </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">[]Instance<wbr>Network</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,91 +535,18 @@ If it is not provided, the provider project is used.
             title="">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>file<wbr>Shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
-    </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -781,91 +560,18 @@ If it is not provided, the provider project is used.
             title="">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>file_<wbr>shares</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Dict[Instance<wbr>File<wbr>Shares]</a></span>
-    </dt>
-    <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The resource name of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>networks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List[Instance<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The service tier of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -893,7 +599,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1007,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1016,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
@@ -1025,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 {{% /md %}}</dd>
@@ -1034,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args?</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
 {{% /md %}}</dd>
@@ -1043,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
@@ -1052,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
@@ -1061,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancenetwork">List&lt;Instance<wbr>Network<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
@@ -1070,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1080,7 +786,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -1089,7 +795,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
@@ -1105,7 +811,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1114,7 +820,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
@@ -1123,7 +829,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 {{% /md %}}</dd>
@@ -1132,7 +838,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>File<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">*Instance<wbr>File<wbr>Shares</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
 {{% /md %}}</dd>
@@ -1150,7 +856,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
@@ -1168,7 +874,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1178,7 +884,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -1187,7 +893,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
@@ -1203,7 +909,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1212,7 +918,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
@@ -1221,7 +927,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 {{% /md %}}</dd>
@@ -1230,7 +936,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>file<wbr>Shares</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares?</a></span>
+        <span class="property-type"><a href="#instancefileshares">Instance<wbr>File<wbr>Shares</a></span>
     </dt>
     <dd>{{% md %}}File system shares on the instance. For this version, only a single file share is supported.
 {{% /md %}}</dd>
@@ -1239,7 +945,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
@@ -1248,7 +954,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
@@ -1257,7 +963,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>networks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]?</a></span>
+        <span class="property-type"><a href="#instancenetwork">Instance<wbr>Network[]</a></span>
     </dt>
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version, only a single network is supported.
 {{% /md %}}</dd>
@@ -1266,7 +972,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1276,7 +982,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -1285,7 +991,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
@@ -1301,7 +1007,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1310,7 +1016,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the instance.
 {{% /md %}}</dd>
@@ -1319,7 +1025,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 {{% /md %}}</dd>
@@ -1346,7 +1052,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the instance.
 {{% /md %}}</dd>
@@ -1364,7 +1070,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1374,7 +1080,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 {{% /md %}}</dd>
@@ -1383,7 +1089,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
 {{% /md %}}</dd>
@@ -1408,7 +1114,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceFileSharesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceFileSharesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceFileSharesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceFileSharesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1421,7 +1127,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Capacity<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1429,7 +1135,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1444,7 +1150,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Capacity<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1452,7 +1158,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1467,7 +1173,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>capacity<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1475,7 +1181,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1490,7 +1196,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>capacity<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1498,7 +1204,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1515,7 +1221,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/filestore?tab=doc#InstanceNetworkOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/filestore?tab=doc#InstanceNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1524,19 +1230,11 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1544,7 +1242,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1552,7 +1258,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Reserved<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1563,19 +1269,11 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1583,7 +1281,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1591,7 +1297,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Reserved<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1602,19 +1308,11 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1622,7 +1320,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1630,7 +1336,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>reserved<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1641,19 +1347,11 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1661,7 +1359,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip_<wbr>addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1669,7 +1375,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>reserved_<wbr>ip_<wbr>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1690,6 +1396,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -16,8 +16,6 @@ To get more information about TargetHttpsProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_target_https_proxy.html.markdown.
-
 
 
 ## Create a TargetHttpsProxy Resource
@@ -25,7 +23,7 @@ To get more information about TargetHttpsProxy, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxy">TargetHttpsProxy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxyArgs">TargetHttpsProxyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxy">TargetHttpsProxy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#TargetHttpsProxyArgs">TargetHttpsProxyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -33,7 +31,7 @@ To get more information about TargetHttpsProxy, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTargetHttpsProxy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#TargetHttpsProxyArgs">TargetHttpsProxyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#TargetHttpsProxy">TargetHttpsProxy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTargetHttpsProxy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#TargetHttpsProxyArgs">TargetHttpsProxyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#TargetHttpsProxy">TargetHttpsProxy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -129,11 +127,30 @@ To get more information about TargetHttpsProxy, see:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Ssl<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
+least one SSL certificate must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -142,7 +159,7 @@ To get more information about TargetHttpsProxy, see:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -154,7 +171,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -164,7 +181,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -172,33 +189,14 @@ policy with no user overrides, which is equivalent to DISABLE. Not specifying th
 NONE.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -208,11 +206,30 @@ TargetHttpsProxy resource will not have any SSL policy configured.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Ssl<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
+least one SSL certificate must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -221,7 +238,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -233,7 +250,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -243,7 +260,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -251,33 +268,14 @@ policy with no user overrides, which is equivalent to DISABLE. Not specifying th
 NONE.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,11 +285,30 @@ TargetHttpsProxy resource will not have any SSL policy configured.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>ssl<wbr>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
+least one SSL certificate must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url<wbr>Map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -300,7 +317,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -312,7 +329,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -322,7 +339,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -330,33 +347,14 @@ policy with no user overrides, which is equivalent to DISABLE. Not specifying th
 NONE.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -366,11 +364,30 @@ TargetHttpsProxy resource will not have any SSL policy configured.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>ssl_<wbr>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
+least one SSL certificate must be specified.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url_<wbr>map</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -379,7 +396,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -391,7 +408,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -401,7 +418,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>quic_<wbr>override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -409,33 +426,14 @@ policy with no user overrides, which is equivalent to DISABLE. Not specifying th
 NONE.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>ssl_<wbr>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ssl_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url_<wbr>map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -461,99 +459,27 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Quic<wbr>Override</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
-negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
-policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying
-NONE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
-TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -567,99 +493,27 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Quic<wbr>Override</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
-negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
-policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying
-NONE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
-TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -673,99 +527,27 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>quic<wbr>Override</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
-negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
-policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying
-NONE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl<wbr>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
-TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url<wbr>Map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -779,99 +561,27 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>proxy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>quic_<wbr>override</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
-negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
-policy with no user overrides, which is equivalent to DISABLE. Not specifying this field is equivalent to specifying
-NONE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl_<wbr>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
-least one SSL certificate must be specified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
-TargetHttpsProxy resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url_<wbr>map</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
 
 </dl>
@@ -899,7 +609,7 @@ Get an existing TargetHttpsProxy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTargetHttpsProxy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#TargetHttpsProxyState">TargetHttpsProxyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#TargetHttpsProxy">TargetHttpsProxy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTargetHttpsProxy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#TargetHttpsProxyState">TargetHttpsProxyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#TargetHttpsProxy">TargetHttpsProxy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1013,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1022,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1031,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1043,7 +753,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1053,7 +763,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1062,7 +772,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -1074,7 +784,7 @@ NONE.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1083,7 +793,7 @@ NONE.
             title="Optional">
         <span>Ssl<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
 least one SSL certificate must be specified.
@@ -1093,7 +803,7 @@ least one SSL certificate must be specified.
             title="Optional">
         <span>Ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
@@ -1103,7 +813,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Url<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
@@ -1119,7 +829,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1128,7 +838,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1137,7 +847,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1149,7 +859,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1159,7 +869,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1168,7 +878,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -1180,7 +890,7 @@ NONE.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1189,7 +899,7 @@ NONE.
             title="Optional">
         <span>Ssl<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
 least one SSL certificate must be specified.
@@ -1199,7 +909,7 @@ least one SSL certificate must be specified.
             title="Optional">
         <span>Ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
@@ -1209,7 +919,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>Url<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
@@ -1225,7 +935,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1234,7 +944,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1243,7 +953,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1255,7 +965,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1265,7 +975,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>proxy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1274,7 +984,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>quic<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -1286,7 +996,7 @@ NONE.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1295,7 +1005,7 @@ NONE.
             title="Optional">
         <span>ssl<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
 least one SSL certificate must be specified.
@@ -1305,7 +1015,7 @@ least one SSL certificate must be specified.
             title="Optional">
         <span>ssl<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
@@ -1315,7 +1025,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>url<wbr>Map</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
@@ -1331,7 +1041,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1340,7 +1050,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
@@ -1349,7 +1059,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1361,7 +1071,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1371,7 +1081,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>proxy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1380,7 +1090,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>quic_<wbr>override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the QUIC override policy for this resource. This determines whether the load balancer will attempt to
 negotiate QUIC with clients or not. Can specify one of NONE, ENABLE, or DISABLE. If NONE is specified, uses the QUIC
@@ -1392,7 +1102,7 @@ NONE.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1401,7 +1111,7 @@ NONE.
             title="Optional">
         <span>ssl_<wbr>certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate connections between users and the load balancer. At
 least one SSL certificate must be specified.
@@ -1411,7 +1121,7 @@ least one SSL certificate must be specified.
             title="Optional">
         <span>ssl_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the
 TargetHttpsProxy resource will not have any SSL policy configured.
@@ -1421,7 +1131,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
             title="Optional">
         <span>url_<wbr>map</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to the UrlMap resource that defines the mapping from URL to the BackendService.
 {{% /md %}}</dd>
@@ -1445,6 +1155,7 @@ TargetHttpsProxy resource will not have any SSL policy configured.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

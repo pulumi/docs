@@ -14,8 +14,6 @@ To get more information about GameServerConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_config.html.markdown.
-
 
 
 ## Create a GameServerConfig Resource
@@ -23,7 +21,7 @@ To get more information about GameServerConfig, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,11 +29,11 @@ To get more information about GameServerConfig, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGameServerConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGameServerConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerConfig.html">GameServerConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigArgs.html">GameServerConfigArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigArgs.html">GameServerConfigArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -131,7 +129,7 @@ To get more information about GameServerConfig, see:
             title="Required">
         <span>Config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -140,18 +138,9 @@ To get more information about GameServerConfig, see:
             title="Required">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -165,9 +154,18 @@ To get more information about GameServerConfig, see:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the game server config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
 {{% /md %}}</dd>
@@ -176,7 +174,7 @@ To get more information about GameServerConfig, see:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -185,7 +183,7 @@ To get more information about GameServerConfig, see:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -195,7 +193,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scaling<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
@@ -211,7 +209,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -220,18 +218,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -241,6 +230,15 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -256,7 +254,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -265,7 +263,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -291,7 +289,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -300,18 +298,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -325,9 +314,18 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the game server config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
 {{% /md %}}</dd>
@@ -336,7 +334,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -345,7 +343,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -355,7 +353,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scaling<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
@@ -371,7 +369,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>config_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -380,18 +378,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>deployment_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -401,6 +390,15 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -416,7 +414,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -425,7 +423,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -461,85 +459,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Config<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fleet<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -551,85 +476,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Config<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fleet<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -641,85 +493,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>config<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fleet<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
-    </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -731,85 +510,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>config_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fleet_<wbr>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">List[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling_<wbr>configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -837,11 +543,11 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GameServerConfigState.html">GameServerConfigState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigState.html">GameServerConfigState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -951,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -960,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
@@ -969,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
@@ -978,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fleet<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
 {{% /md %}}</dd>
@@ -987,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
 {{% /md %}}</dd>
@@ -996,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -1005,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
@@ -1015,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1025,7 +731,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scaling<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
@@ -1041,7 +747,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -1050,7 +756,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
@@ -1059,7 +765,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
@@ -1086,7 +792,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -1095,7 +801,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
@@ -1105,7 +811,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1131,7 +837,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>config<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -1140,7 +846,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
@@ -1149,7 +855,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
@@ -1158,7 +864,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fleet<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
 {{% /md %}}</dd>
@@ -1167,7 +873,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The labels associated with this game server config. Each label is a key-value pair.
 {{% /md %}}</dd>
@@ -1176,7 +882,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -1185,7 +891,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
@@ -1195,7 +901,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1205,7 +911,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scaling<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 {{% /md %}}</dd>
@@ -1221,7 +927,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>config_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
@@ -1230,7 +936,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>deployment_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
@@ -1239,7 +945,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
@@ -1266,7 +972,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
@@ -1275,7 +981,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource name of the game server config, in the form:
 'projects/{project_id}/locations/{location}/gameServerDeployments/{deployment_id}/configs/{config_id}'.
@@ -1285,7 +991,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1320,7 +1026,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1333,7 +1039,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Fleet<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1341,7 +1047,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1356,7 +1062,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Fleet<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1364,7 +1070,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1379,7 +1085,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>fleet<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1387,7 +1093,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1402,7 +1108,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>fleet<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1410,7 +1116,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1427,7 +1133,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1440,7 +1146,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Fleet<wbr>Autoscaler<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1448,7 +1154,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1456,7 +1162,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1464,7 +1170,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Selectors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1479,7 +1185,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Fleet<wbr>Autoscaler<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1487,7 +1193,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1518,7 +1224,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>fleet<wbr>Autoscaler<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1526,7 +1232,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1534,7 +1240,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>schedules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1542,7 +1248,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>selectors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]?</a></span>
+        <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1557,7 +1263,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>fleet<wbr>Autoscaler<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1565,7 +1271,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1598,7 +1304,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1611,7 +1317,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cron<wbr>Job<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1619,7 +1325,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cron<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1627,7 +1333,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1635,7 +1341,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1650,7 +1356,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cron<wbr>Job<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1658,7 +1364,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cron<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1666,7 +1372,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1674,7 +1380,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1689,7 +1395,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cron<wbr>Job<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1697,7 +1403,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cron<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1705,7 +1411,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>end<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1713,7 +1419,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1728,7 +1434,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cron<wbr>Job<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1736,7 +1442,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cron<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1744,7 +1450,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>end<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1752,7 +1458,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1769,7 +1475,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1782,7 +1488,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1812,7 +1518,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1848,6 +1554,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

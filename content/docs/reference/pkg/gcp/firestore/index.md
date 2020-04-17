@@ -44,8 +44,6 @@ const my_index = new gcp.firestore.Index("my-index", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown.
-
 
 
 ## Create a Index Resource
@@ -53,7 +51,7 @@ const my_index = new gcp.firestore.Index("my-index", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#Index">Index</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#IndexArgs">IndexArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#Index">Index</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/firestore/#IndexArgs">IndexArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -61,7 +59,7 @@ const my_index = new gcp.firestore.Index("my-index", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIndex<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#IndexArgs">IndexArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#Index">Index</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIndex<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexArgs">IndexArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#Index">Index</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -161,18 +159,9 @@ const my_index = new gcp.firestore.Index("my-index", {
             title="Required">
         <span>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -189,9 +178,18 @@ last field defined. If the final field in a composite index is not directional, 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Database</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -201,7 +199,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -217,18 +215,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -245,9 +234,18 @@ last field defined. If the final field in a composite index is not directional, 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Database</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -257,7 +255,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -273,18 +271,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -301,9 +290,18 @@ last field defined. If the final field in a composite index is not directional, 
 
     <dt class="property-optional"
             title="Optional">
+        <span>database</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -313,7 +311,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -329,18 +327,9 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -357,9 +346,18 @@ last field defined. If the final field in a composite index is not directional, 
 
     <dt class="property-optional"
             title="Optional">
+        <span>database</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -369,7 +367,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>query_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -395,61 +393,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">List&lt;Index<wbr>Field&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
 
 </dl>
@@ -461,61 +410,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">[]Index<wbr>Field</a></span>
-    </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
 
 </dl>
@@ -527,61 +427,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">Index<wbr>Field[]</a></span>
-    </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>query<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
 
 </dl>
@@ -593,61 +444,12 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The collection being indexed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fields</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">List[Index<wbr>Field]</a></span>
-    </dt>
-    <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
-'__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
-last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered
-'"ASCENDING"' (unless explicitly specified otherwise).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>query_<wbr>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
 
 </dl>
@@ -675,7 +477,7 @@ Get an existing Index resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIndex<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#IndexState">IndexState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#Index">Index</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIndex<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexState">IndexState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#Index">Index</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -789,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
 {{% /md %}}</dd>
@@ -798,7 +600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
@@ -807,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">List&lt;Index<wbr>Field<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#indexfield">List&lt;Index<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
 '__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
@@ -819,7 +621,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
@@ -829,7 +631,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -839,7 +641,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -855,7 +657,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
 {{% /md %}}</dd>
@@ -864,7 +666,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
@@ -885,7 +687,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
@@ -895,7 +697,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -905,7 +707,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -921,7 +723,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
 {{% /md %}}</dd>
@@ -930,7 +732,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
@@ -939,7 +741,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#indexfield">Index<wbr>Field[]?</a></span>
+        <span class="property-type"><a href="#indexfield">Index<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation,
 '__name__' was not specified as the last field, it will be added automatically with the same direction as that of the
@@ -951,7 +753,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
@@ -961,7 +763,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -971,7 +773,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>query<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -987,7 +789,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The collection being indexed.
 {{% /md %}}</dd>
@@ -996,7 +798,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Firestore database id. Defaults to '"(default)"'.
 {{% /md %}}</dd>
@@ -1017,7 +819,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format:
 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
@@ -1027,7 +829,7 @@ last field defined. If the final field in a composite index is not directional, 
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1037,7 +839,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>query_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope at which a query is run. One of '"COLLECTION"' or '"COLLECTION_GROUP"'. Defaults to '"COLLECTION"'.
 {{% /md %}}</dd>
@@ -1062,7 +864,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#IndexFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/firestore?tab=doc#IndexFieldOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/firestore?tab=doc#IndexFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1075,7 +877,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Array<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1083,7 +885,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Field<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1091,7 +893,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1106,7 +908,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Array<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1114,7 +916,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Field<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1122,7 +924,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1137,7 +939,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>array<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1145,7 +947,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>field<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1153,7 +955,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1168,7 +970,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>array<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1176,7 +978,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>field<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1184,7 +986,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1205,6 +1007,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

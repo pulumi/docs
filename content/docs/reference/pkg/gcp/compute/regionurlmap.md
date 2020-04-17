@@ -9,8 +9,6 @@ block_external_search_index: true
 UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_url_map.html.markdown.
-
 
 
 ## Create a RegionUrlMap Resource
@@ -18,7 +16,7 @@ that you define for the host and path of an incoming URL.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMap">RegionUrlMap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMap">RegionUrlMap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +24,7 @@ that you define for the host and path of an incoming URL.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapArgs">RegionUrlMapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,7 +124,7 @@ that you define for the host and path of an incoming URL.
             title="Required">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -135,7 +133,7 @@ that you define for the host and path of an incoming URL.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -144,7 +142,7 @@ that you define for the host and path of an incoming URL.
             title="Optional">
         <span>Host<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 {{% /md %}}</dd>
@@ -153,7 +151,7 @@ that you define for the host and path of an incoming URL.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -165,7 +163,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Path<wbr>Matchers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.
 {{% /md %}}</dd>
@@ -174,7 +172,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -184,7 +182,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -193,7 +191,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
@@ -209,7 +207,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -218,7 +216,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -236,7 +234,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -257,7 +255,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -267,7 +265,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -292,7 +290,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -301,7 +299,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -310,7 +308,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 {{% /md %}}</dd>
@@ -319,7 +317,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -331,7 +329,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>path<wbr>Matchers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.
 {{% /md %}}</dd>
@@ -340,7 +338,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -350,7 +348,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -359,7 +357,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]?</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
@@ -375,7 +373,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>default_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -384,7 +382,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -402,7 +400,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -423,7 +421,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -433,7 +431,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -470,112 +468,36 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path<wbr>Matchers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tests</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
 
 </dl>
@@ -589,112 +511,36 @@ If it is not provided, the provider project is used.
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Host<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">[]Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path<wbr>Matchers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">[]Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher</a></span>
-    </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tests</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">[]Region<wbr>Url<wbr>Map<wbr>Test</a></span>
-    </dt>
-    <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
 
 </dl>
@@ -708,112 +554,36 @@ If it is not provided, the provider project is used.
             title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>host<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path<wbr>Matchers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tests</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
 
 </dl>
@@ -827,112 +597,36 @@ If it is not provided, the provider project is used.
             title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>host_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List[Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of HostRules to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>map_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path_<wbr>matchers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of named PathMatchers to use against the URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tests</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List[Region<wbr>Url<wbr>Map<wbr>Test]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
 
 </dl>
@@ -960,7 +654,7 @@ Get an existing RegionUrlMap resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapState">RegionUrlMapState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionUrlMap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapState">RegionUrlMapState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMap">RegionUrlMap</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1074,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1083,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -1092,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1101,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
@@ -1110,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 {{% /md %}}</dd>
@@ -1119,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1128,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1140,7 +834,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Path<wbr>Matchers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.
 {{% /md %}}</dd>
@@ -1149,7 +843,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1159,7 +853,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1168,7 +862,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1177,7 +871,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Tests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">List&lt;Region<wbr>Url<wbr>Map<wbr>Test<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
@@ -1193,7 +887,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1202,7 +896,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -1211,7 +905,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1220,7 +914,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
@@ -1238,7 +932,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1247,7 +941,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1268,7 +962,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1278,7 +972,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1287,7 +981,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1312,7 +1006,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1321,7 +1015,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -1330,7 +1024,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1339,7 +1033,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
@@ -1348,7 +1042,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#regionurlmaphostrule">Region<wbr>Url<wbr>Map<wbr>Host<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The list of HostRules to use against the URL.
 {{% /md %}}</dd>
@@ -1357,7 +1051,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>map<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1366,7 +1060,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1378,7 +1072,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>path<wbr>Matchers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcher">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcher">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The list of named PathMatchers to use against the URL.
 {{% /md %}}</dd>
@@ -1387,7 +1081,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1397,7 +1091,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1406,7 +1100,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1415,7 +1109,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>tests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]?</a></span>
+        <span class="property-type"><a href="#regionurlmaptest">Region<wbr>Url<wbr>Map<wbr>Test[]</a></span>
     </dt>
     <dd>{{% md %}}The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.
 {{% /md %}}</dd>
@@ -1431,7 +1125,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1440,7 +1134,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>default_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to RegionBackendService resource if none of the hostRules match.
 {{% /md %}}</dd>
@@ -1449,7 +1143,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1458,7 +1152,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. This field is used internally during updates of this resource.
 {{% /md %}}</dd>
@@ -1476,7 +1170,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>map_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
 {{% /md %}}</dd>
@@ -1485,7 +1179,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1506,7 +1200,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1516,7 +1210,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Region in which the url map should reside. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
@@ -1525,7 +1219,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1559,7 +1253,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapHostRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapHostRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapHostRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapHostRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1568,19 +1262,11 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hosts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1588,7 +1274,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Path<wbr>Matcher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1599,19 +1293,11 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hosts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1619,7 +1305,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Path<wbr>Matcher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1630,19 +1324,11 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hosts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1650,7 +1336,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>path<wbr>Matcher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1661,19 +1355,11 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hosts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1681,7 +1367,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>path<wbr>Matcher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1698,7 +1392,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1711,15 +1405,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1727,7 +1413,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1735,7 +1429,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1743,7 +1437,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Route<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1758,15 +1452,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1774,7 +1460,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1805,15 +1499,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>default<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1507,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1523,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1531,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>route<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1852,15 +1546,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>default_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1868,7 +1554,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1901,7 +1595,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1914,7 +1608,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1922,7 +1616,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1930,7 +1624,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1938,7 +1632,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1953,7 +1647,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1961,7 +1655,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1969,7 +1663,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1977,7 +1671,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1992,7 +1686,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2000,7 +1694,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2008,7 +1702,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2016,7 +1710,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2031,7 +1725,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2047,7 +1741,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2072,7 +1766,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2085,7 +1779,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2093,7 +1787,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2101,7 +1795,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2109,7 +1803,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2117,7 +1811,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2125,7 +1819,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2133,7 +1827,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weighted<wbr>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2148,7 +1842,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2156,7 +1850,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2164,7 +1858,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2172,7 +1866,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2180,7 +1874,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2188,7 +1882,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2211,7 +1905,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2219,7 +1913,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2227,7 +1921,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2235,7 +1929,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2243,7 +1937,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2251,7 +1945,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2259,7 +1953,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weighted<wbr>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendservice">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2339,7 +2033,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2348,11 +2042,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Disabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2360,7 +2062,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2368,7 +2070,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2376,7 +2078,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2384,15 +2086,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Disabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2400,7 +2094,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2408,7 +2102,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2419,11 +2113,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Disabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2431,7 +2133,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2439,7 +2141,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2447,7 +2149,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2455,15 +2157,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Disabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2471,7 +2165,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2479,7 +2173,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2490,11 +2184,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>disabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2502,7 +2204,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2510,7 +2212,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2518,7 +2220,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2526,15 +2228,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>disabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2542,7 +2236,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2550,7 +2244,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2561,11 +2255,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>disabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2573,7 +2275,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2581,7 +2283,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2589,7 +2291,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2597,15 +2299,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>disabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2613,7 +2307,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2621,7 +2315,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2638,7 +2332,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2651,7 +2345,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2659,7 +2353,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2674,7 +2368,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2682,7 +2376,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2697,7 +2391,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2705,7 +2399,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2745,7 +2439,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2758,7 +2452,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2766,7 +2460,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2781,7 +2475,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2789,7 +2483,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2804,7 +2498,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2812,7 +2506,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2827,7 +2521,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2835,7 +2529,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2852,7 +2546,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2873,7 +2567,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2896,7 +2590,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2919,7 +2613,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2942,7 +2636,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2959,7 +2653,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2968,19 +2662,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2991,19 +2685,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3014,19 +2708,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3037,19 +2731,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +2760,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3079,7 +2773,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3094,7 +2788,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3109,7 +2803,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3124,7 +2818,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3141,7 +2835,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3154,7 +2848,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3162,7 +2856,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3170,7 +2864,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3185,7 +2879,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3193,7 +2887,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3201,7 +2895,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3216,7 +2910,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3224,7 +2918,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3232,7 +2926,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3247,7 +2941,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3263,7 +2957,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3280,7 +2974,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3289,19 +2983,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3312,19 +3006,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3335,19 +3029,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3358,19 +3052,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3387,7 +3081,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3396,19 +3090,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3419,19 +3113,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3442,19 +3136,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3465,19 +3159,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3494,7 +3188,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3507,7 +3201,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3515,7 +3209,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3530,7 +3224,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3538,7 +3232,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3553,7 +3247,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3561,7 +3255,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3576,7 +3270,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3584,7 +3278,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3601,7 +3295,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3614,15 +3308,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3630,7 +3316,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3645,15 +3339,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3661,7 +3347,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3676,15 +3370,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action?</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3692,7 +3378,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3707,7 +3401,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>weight</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3716,14 +3418,6 @@ If it is not provided, the provider project is used.
         <span>header_<wbr>action</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3740,7 +3434,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3753,7 +3447,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3761,7 +3455,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3769,7 +3463,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3777,7 +3471,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3800,7 +3494,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3816,7 +3510,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3831,7 +3525,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3839,7 +3533,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3847,7 +3541,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherpathrulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Path<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3855,7 +3549,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3878,7 +3572,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3894,7 +3588,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3911,7 +3605,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3924,7 +3618,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3932,7 +3626,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3940,7 +3634,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3955,7 +3649,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3963,7 +3657,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3971,7 +3665,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3986,7 +3680,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3994,7 +3688,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4002,7 +3696,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4017,7 +3711,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4025,7 +3719,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4033,7 +3727,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4050,7 +3744,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4063,7 +3757,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4071,7 +3765,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4079,7 +3773,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4094,7 +3788,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4102,7 +3796,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4110,7 +3804,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4125,7 +3819,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4133,7 +3827,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4141,7 +3835,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4156,7 +3850,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4164,7 +3858,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4172,7 +3866,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4189,7 +3883,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleUrlRedirectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherPathRuleUrlRedirectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4198,11 +3892,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4210,7 +3912,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4218,7 +3920,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4226,7 +3928,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4234,15 +3936,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Strip<wbr>Query</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4253,11 +3947,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4265,7 +3967,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4273,7 +3975,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4281,7 +3983,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4289,15 +3991,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Strip<wbr>Query</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4308,11 +4002,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4320,7 +4022,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4328,7 +4030,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4336,7 +4038,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4344,15 +4046,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>strip<wbr>Query</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4363,11 +4057,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>strip<wbr>Query</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4375,7 +4077,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4383,7 +4085,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4391,7 +4093,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4399,15 +4101,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>strip<wbr>Query</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4424,7 +4118,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4433,11 +4127,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Header<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4445,15 +4147,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Match<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4461,7 +4155,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4469,7 +4163,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4477,7 +4171,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4488,11 +4182,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Header<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4504,19 +4206,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4524,7 +4218,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4532,7 +4226,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4543,11 +4237,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>header<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4555,15 +4257,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>match<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrule">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4571,7 +4265,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>route<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4579,7 +4273,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4587,7 +4281,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>url<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleurlredirect">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Url<wbr>Redirect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4597,6 +4291,14 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4614,14 +4316,6 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>route<wbr>Action</span>
@@ -4634,7 +4328,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4659,7 +4353,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4672,7 +4366,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4680,7 +4374,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4688,7 +4382,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4696,7 +4390,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4719,7 +4413,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4735,7 +4429,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4750,7 +4444,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4758,7 +4452,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4766,7 +4460,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouteruleheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4774,7 +4468,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4797,7 +4491,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4813,7 +4507,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4830,7 +4524,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4843,7 +4537,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4851,7 +4545,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4859,7 +4553,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4874,7 +4568,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4882,7 +4576,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4890,7 +4584,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4905,7 +4599,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4913,7 +4607,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4921,7 +4615,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4936,7 +4630,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4944,7 +4638,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4952,7 +4646,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4969,7 +4663,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4982,7 +4676,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4990,7 +4684,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4998,7 +4692,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5013,7 +4707,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5021,7 +4715,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5029,7 +4723,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5044,7 +4738,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5052,7 +4746,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5060,7 +4754,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5075,7 +4769,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5083,7 +4777,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5091,7 +4785,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5108,7 +4802,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5121,7 +4815,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Full<wbr>Path<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5129,7 +4823,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Header<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5137,7 +4831,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ignore<wbr>Case</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5145,7 +4839,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Metadata<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5153,7 +4847,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5161,7 +4855,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Query<wbr>Parameter<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5169,7 +4863,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5184,7 +4878,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Full<wbr>Path<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5200,7 +4894,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Ignore<wbr>Case</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5216,7 +4910,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5232,7 +4926,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5247,7 +4941,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>full<wbr>Path<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5255,7 +4949,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>header<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5263,7 +4957,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>ignore<wbr>Case</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5271,7 +4965,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>metadata<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulemetadatafilter">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Metadata<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5279,7 +4973,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5287,7 +4981,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>query<wbr>Parameter<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchrulequeryparametermatch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Query<wbr>Parameter<wbr>Match[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5295,7 +4989,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5310,7 +5004,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>full<wbr>Path<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5326,7 +5020,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>ignore<wbr>Case</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5342,7 +5036,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5358,7 +5052,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5375,7 +5069,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5384,19 +5078,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5404,7 +5098,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Invert<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5412,7 +5106,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5420,7 +5114,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5428,7 +5122,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Range<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5436,7 +5130,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5444,7 +5138,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Suffix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5455,19 +5149,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5475,7 +5169,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Invert<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5483,7 +5177,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5491,7 +5185,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5499,7 +5193,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Range<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5507,7 +5201,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5515,7 +5209,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Suffix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5526,19 +5220,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5546,7 +5240,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>invert<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5554,7 +5248,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5562,7 +5256,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5570,7 +5264,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>range<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulematchruleheadermatchrangematch">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Match<wbr>Rule<wbr>Header<wbr>Match<wbr>Range<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5578,7 +5272,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5586,7 +5280,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>suffix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5597,19 +5291,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5617,7 +5311,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>invert<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5625,7 +5319,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5633,7 +5327,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5649,7 +5343,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5657,7 +5351,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>suffix<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5674,7 +5368,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5687,7 +5381,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Range<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5695,7 +5389,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Range<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5710,7 +5404,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Range<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5718,7 +5412,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Range<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5733,7 +5427,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>range<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5741,7 +5435,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>range<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5756,7 +5450,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>range<wbr>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5764,7 +5458,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>range<wbr>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5781,7 +5475,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5802,7 +5496,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Filter<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5825,7 +5519,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Filter<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5848,7 +5542,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>filter<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5871,7 +5565,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>filter<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5888,7 +5582,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5901,7 +5595,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5909,7 +5603,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5924,7 +5618,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5932,7 +5626,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5947,7 +5641,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5955,7 +5649,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5970,7 +5664,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5978,7 +5672,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5995,7 +5689,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6004,19 +5698,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6024,7 +5718,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6032,7 +5726,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6043,19 +5737,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6063,7 +5757,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6071,7 +5765,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6082,19 +5776,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6102,7 +5796,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6110,7 +5804,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6121,19 +5815,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exact<wbr>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exact<wbr>Match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6141,7 +5835,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>present<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6149,7 +5843,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>regex<wbr>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6166,7 +5860,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6179,7 +5873,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6187,7 +5881,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6195,7 +5889,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6203,7 +5897,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6211,7 +5905,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6219,7 +5913,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6227,7 +5921,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Weighted<wbr>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6242,7 +5936,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6250,7 +5944,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6258,7 +5952,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6266,7 +5960,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6274,7 +5968,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6282,7 +5976,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6305,7 +5999,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>cors<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactioncorspolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Cors<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6313,7 +6007,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fault<wbr>Injection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6321,7 +6015,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Mirror<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionrequestmirrorpolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Request<wbr>Mirror<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6329,7 +6023,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicy">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6337,7 +6031,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactiontimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6345,7 +6039,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>url<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionurlrewrite">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Url<wbr>Rewrite</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6353,7 +6047,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>weighted<wbr>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendservice">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6433,7 +6127,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6446,7 +6140,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6454,7 +6148,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6462,7 +6156,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6470,7 +6164,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6478,7 +6172,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6486,7 +6180,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6494,7 +6188,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6502,7 +6196,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6517,7 +6211,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6525,7 +6219,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6533,7 +6227,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6541,7 +6235,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6549,7 +6243,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6557,7 +6251,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6565,7 +6259,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6573,7 +6267,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6588,7 +6282,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6596,7 +6290,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6604,7 +6298,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6612,7 +6306,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6620,7 +6314,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6628,7 +6322,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6636,7 +6330,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6644,7 +6338,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6659,7 +6353,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6667,7 +6361,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6675,7 +6369,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6683,7 +6377,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origin<wbr>Regexes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6691,7 +6385,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>allow<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6699,7 +6393,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6707,7 +6401,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>expose<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6715,7 +6409,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6732,7 +6426,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6745,7 +6439,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6753,7 +6447,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6768,7 +6462,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6776,7 +6470,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6791,7 +6485,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>abort</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicyabort">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Abort</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6799,7 +6493,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6839,7 +6533,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6852,7 +6546,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6860,7 +6554,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6875,7 +6569,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6883,7 +6577,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6898,7 +6592,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6906,7 +6600,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6921,7 +6615,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>http<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6929,7 +6623,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6946,7 +6640,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6959,7 +6653,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fixed<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6967,7 +6661,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6982,7 +6676,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Fixed<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6990,7 +6684,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7005,7 +6699,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>fixed<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionfaultinjectionpolicydelayfixeddelay">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Fault<wbr>Injection<wbr>Policy<wbr>Delay<wbr>Fixed<wbr>Delay</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7013,7 +6707,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7036,7 +6730,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7053,7 +6747,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7062,19 +6756,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7085,19 +6779,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7108,19 +6802,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7131,19 +6825,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7160,7 +6854,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7173,7 +6867,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7188,7 +6882,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7203,7 +6897,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7218,7 +6912,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7235,7 +6929,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7248,7 +6942,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7256,7 +6950,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7264,7 +6958,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7279,7 +6973,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7287,7 +6981,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7295,7 +6989,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7310,7 +7004,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7318,7 +7012,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>per<wbr>Try<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionretrypolicypertrytimeout">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Retry<wbr>Policy<wbr>Per<wbr>Try<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7326,7 +7020,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7341,7 +7035,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>num<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7357,7 +7051,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>retry<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7374,7 +7068,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7383,19 +7077,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7406,19 +7100,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7429,19 +7123,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7452,19 +7146,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7481,7 +7175,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7490,19 +7184,19 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7513,19 +7207,19 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7536,19 +7230,19 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7559,19 +7253,19 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>nanos</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nanos</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7588,7 +7282,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionUrlRewriteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7601,7 +7295,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7609,7 +7303,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7624,7 +7318,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7632,7 +7326,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7647,7 +7341,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7655,7 +7349,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7670,7 +7364,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7678,7 +7372,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Prefix<wbr>Rewrite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7695,7 +7389,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7708,15 +7402,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args?</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7724,7 +7410,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7739,15 +7433,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">*Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7755,7 +7441,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7770,15 +7464,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>header<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action?</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7786,7 +7472,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>header<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7801,7 +7495,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>backend_<wbr>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>weight</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7810,14 +7512,6 @@ If it is not provided, the provider project is used.
         <span>header_<wbr>action</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderaction">Dict[Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7834,7 +7528,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7847,7 +7541,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7855,7 +7549,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7863,7 +7557,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">List&lt;Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7871,7 +7565,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7894,7 +7588,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7910,7 +7604,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7925,7 +7619,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionrequestheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Request<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7933,7 +7627,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7941,7 +7635,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Adds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]?</a></span>
+        <span class="property-type"><a href="#regionurlmappathmatcherrouterulerouteactionweightedbackendserviceheaderactionresponseheaderstoadd">Region<wbr>Url<wbr>Map<wbr>Path<wbr>Matcher<wbr>Route<wbr>Rule<wbr>Route<wbr>Action<wbr>Weighted<wbr>Backend<wbr>Service<wbr>Header<wbr>Action<wbr>Response<wbr>Headers<wbr>To<wbr>Add[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7949,7 +7643,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7972,7 +7666,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>request<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7988,7 +7682,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>response<wbr>Headers<wbr>To<wbr>Removes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8005,7 +7699,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8018,7 +7712,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8026,7 +7720,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8034,7 +7728,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8049,7 +7743,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8057,7 +7751,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8065,7 +7759,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8080,7 +7774,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8088,7 +7782,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8096,7 +7790,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8111,7 +7805,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8119,7 +7813,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8127,7 +7821,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8144,7 +7838,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderActionResponseHeadersToAddOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8157,7 +7851,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8165,7 +7859,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8173,7 +7867,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8188,7 +7882,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8196,7 +7890,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8204,7 +7898,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8219,7 +7913,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8227,7 +7921,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8235,7 +7929,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8250,7 +7944,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8258,7 +7952,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8266,7 +7960,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>replace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8283,7 +7977,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleUrlRedirectOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapPathMatcherRouteRuleUrlRedirectOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8296,7 +7990,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8304,7 +7998,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8312,7 +8006,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8320,7 +8014,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8328,7 +8022,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8336,7 +8030,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Strip<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8351,7 +8045,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8359,7 +8053,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8367,7 +8061,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8375,7 +8069,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8383,7 +8077,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8391,7 +8085,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Strip<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8406,7 +8100,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8414,7 +8108,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8422,7 +8116,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8430,7 +8124,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8438,7 +8132,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8446,7 +8140,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>strip<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8461,7 +8155,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>host<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8469,7 +8163,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>https<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8477,7 +8171,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>path<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8485,7 +8179,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>prefix<wbr>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8493,7 +8187,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>redirect<wbr>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8501,7 +8195,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>strip<wbr>Query</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8518,7 +8212,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapTestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionUrlMapTestOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapTestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionUrlMapTestOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -8527,19 +8221,11 @@ If it is not provided, the provider project is used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8547,7 +8233,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8555,7 +8241,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8566,19 +8260,11 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8586,7 +8272,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8594,7 +8280,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8605,19 +8299,11 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8625,7 +8311,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8633,7 +8319,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8644,19 +8338,11 @@ If it is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8664,7 +8350,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8672,7 +8358,15 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8693,6 +8387,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

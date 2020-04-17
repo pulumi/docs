@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.managedapplication.Definition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.managedapplication.</code><code class="sig-name descname">Definition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authorizations=None</em>, <em class="sig-param">create_ui_definition=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">lock_level=None</em>, <em class="sig-param">main_template=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">package_enabled=None</em>, <em class="sig-param">package_file_uri=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managedapplication.Definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Application Definition.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_application_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/managed_application_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -213,9 +210,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.managedapplication.get_definition">
 <code class="sig-prename descclassname">pulumi_azure.managedapplication.</code><code class="sig-name descname">get_definition</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.managedapplication.get_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing Managed Application Definition.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_application_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/managed_application_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -16,8 +16,6 @@ Three different resources help you manage your IAM policy for Service Management
 
 > **Note:** `gcp.endpoints.ServiceIamBinding` resources **can be** used in conjunction with `gcp.endpoints.ServiceIamMember` resources **only if** they do not grant privilege to the same role.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown.
-
 
 
 ## Create a ServiceIamPolicy Resource
@@ -25,7 +23,7 @@ Three different resources help you manage your IAM policy for Service Management
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/endpoints/#ServiceIamPolicy">ServiceIamPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/endpoints/#ServiceIamPolicyArgs">ServiceIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/endpoints/#ServiceIamPolicy">ServiceIamPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/endpoints/#ServiceIamPolicyArgs">ServiceIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -33,7 +31,7 @@ Three different resources help you manage your IAM policy for Service Management
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceIamPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/endpoints?tab=doc#ServiceIamPolicyArgs">ServiceIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/endpoints?tab=doc#ServiceIamPolicy">ServiceIamPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceIamPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceIamPolicyArgs">ServiceIamPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceIamPolicy">ServiceIamPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -133,7 +131,7 @@ Three different resources help you manage your IAM policy for Service Management
             title="Required">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -143,7 +141,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -159,7 +157,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -169,7 +167,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -185,7 +183,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -195,7 +193,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -211,7 +209,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>policy_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -221,7 +219,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Required">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -249,28 +247,9 @@ The following output properties are available:
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy data generated by
-a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -284,28 +263,9 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy data generated by
-a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -319,28 +279,9 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy data generated by
-a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -354,28 +295,9 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy data generated by
-a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -403,7 +325,7 @@ Get an existing ServiceIamPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIamPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/endpoints?tab=doc#ServiceIamPolicyState">ServiceIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/endpoints?tab=doc#ServiceIamPolicy">ServiceIamPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIamPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceIamPolicyState">ServiceIamPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/endpoints?tab=doc#ServiceIamPolicy">ServiceIamPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -517,7 +439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -526,7 +448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -536,7 +458,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -552,7 +474,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -561,7 +483,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -571,7 +493,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -587,7 +509,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -596,7 +518,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -606,7 +528,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -622,7 +544,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -631,7 +553,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>policy_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
@@ -641,7 +563,7 @@ a `gcp.organizations.getIAMPolicy` data source.
             title="Optional">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -665,6 +587,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

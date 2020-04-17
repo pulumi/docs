@@ -97,8 +97,6 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown.
-
 
 
 ## Create a Metric Resource
@@ -106,7 +104,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#Metric">Metric</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -114,7 +112,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricArgs">MetricArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -210,44 +208,14 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -261,9 +229,39 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
 
     <dt class="property-optional"
             title="Optional">
+        <span>Bucket<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Label<wbr>Extractors</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -274,7 +272,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -284,7 +282,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -301,44 +299,14 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">*Metric<wbr>Bucket<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -352,9 +320,39 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
 
     <dt class="property-optional"
             title="Optional">
+        <span>Bucket<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Label<wbr>Extractors</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -365,7 +363,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -375,7 +373,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -392,44 +390,14 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -443,9 +411,39 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
 
     <dt class="property-optional"
             title="Optional">
+        <span>bucket<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>label<wbr>Extractors</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
+as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
+map. The syntax of the extractor expression is the same as for the valueExtractor field.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -456,7 +454,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -466,7 +464,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -483,6 +481,25 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
+entries.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>metric_<wbr>descriptor</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
+    </dt>
+    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>bucket_<wbr>options</span>
@@ -497,19 +514,9 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
-entries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -523,20 +530,11 @@ as the label value. Each label key specified in the LabelDescriptor must have an
 map. The syntax of the extractor expression is the same as for the valueExtractor field.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric_<wbr>descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
-    </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -547,7 +545,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -557,7 +555,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>value_<wbr>extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -571,380 +569,6 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Metric Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
-entries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
-    </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Extractor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">*Metric<wbr>Bucket<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
-entries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
-    </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Extractor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
-entries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label<wbr>Extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
-    </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value<wbr>Extractor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bucket_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Dict[Metric<wbr>Bucket<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
-boundaries used to create a histogram of the extracted values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
-entries.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label_<wbr>extractors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
-as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
-map. The syntax of the extractor expression is the same as for the valueExtractor field.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric_<wbr>descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Dict[Metric<wbr>Metric<wbr>Descriptor]</a></span>
-    </dt>
-    <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
-characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
-forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be the first character of the name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value_<wbr>extractor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
-entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
-are 1. field - The name of the log entry field from which the value is to be extracted. 2. regex - A regular expression
-using the Google RE2 syntax (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from
-the specified log entry field. The value of the field is converted to a string before applying the regex. It is an error
-to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -968,7 +592,7 @@ Get an existing Metric resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetric<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricState">MetricState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#Metric">Metric</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1082,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
 boundaries used to create a histogram of the extracted values.
@@ -1092,7 +716,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
@@ -1101,7 +725,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
@@ -1111,7 +735,7 @@ entries.
             title="Optional">
         <span>Label<wbr>Extractors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
 as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
@@ -1122,7 +746,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>Metric<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 {{% /md %}}</dd>
@@ -1131,7 +755,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -1142,7 +766,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1152,7 +776,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -1173,7 +797,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Bucket<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">*Metric<wbr>Bucket<wbr>Options</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
 boundaries used to create a histogram of the extracted values.
@@ -1183,7 +807,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
@@ -1192,7 +816,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
@@ -1213,7 +837,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>Metric<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">*Metric<wbr>Metric<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 {{% /md %}}</dd>
@@ -1222,7 +846,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -1233,7 +857,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1243,7 +867,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -1264,7 +888,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>bucket<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options?</a></span>
+        <span class="property-type"><a href="#metricbucketoptions">Metric<wbr>Bucket<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
 boundaries used to create a histogram of the extracted values.
@@ -1274,7 +898,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
@@ -1283,7 +907,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
@@ -1293,7 +917,7 @@ entries.
             title="Optional">
         <span>label<wbr>Extractors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map from a label key string to an extractor expression which is used to extract data from a log entry field and assign
 as the label value. Each label key specified in the LabelDescriptor must have an associated extractor expression in this
@@ -1304,7 +928,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>metric<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor?</a></span>
+        <span class="property-type"><a href="#metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 {{% /md %}}</dd>
@@ -1313,7 +937,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -1324,7 +948,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1334,7 +958,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>value<wbr>Extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -1365,7 +989,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
@@ -1374,7 +998,7 @@ boundaries used to create a histogram of the extracted values.
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which is used to match log
 entries.
@@ -1404,7 +1028,7 @@ map. The syntax of the extractor expression is the same as for the valueExtracto
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The client-assigned metric identifier. Examples - "error_count", "nginx/requests". Metric identifiers are limited to 100
 characters and can include only the following characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The
@@ -1415,7 +1039,7 @@ forward-slash character (/) denotes a hierarchy of name pieces, and it cannot be
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1425,7 +1049,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>value_<wbr>extractor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A valueExtractor is required when using a distribution logs-based metric to extract the values to record from a log
 entry. Two functions are supported for value extraction - EXTRACT(field) or REGEXP_EXTRACT(field, regex). The argument
@@ -1455,7 +1079,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1468,7 +1092,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Explicit<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1476,7 +1100,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Exponential<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1484,7 +1108,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Linear<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1499,7 +1123,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Explicit<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">*Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1507,7 +1131,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Exponential<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">*Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1515,7 +1139,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Linear<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">*Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1530,7 +1154,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>explicit<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1538,7 +1162,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>exponential<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1546,7 +1170,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>linear<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets?</a></span>
+        <span class="property-type"><a href="#metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1594,7 +1218,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExplicitBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1607,7 +1231,7 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>Bounds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<double></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1622,7 +1246,7 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>Bounds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1637,7 +1261,7 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>bounds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1652,7 +1276,7 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>bounds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Number]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Number]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1669,7 +1293,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsExponentialBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1682,7 +1306,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Growth<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1690,7 +1314,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1698,7 +1322,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1713,7 +1337,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Growth<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1721,7 +1345,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1729,7 +1353,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1744,7 +1368,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>growth<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1752,7 +1376,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1760,7 +1384,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1775,7 +1399,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>growth<wbr>Factor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1783,7 +1407,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1791,7 +1415,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1808,7 +1432,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricBucketOptionsLinearBucketsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1821,7 +1445,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1453,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Offset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1461,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Width</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1852,7 +1476,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1860,7 +1484,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Offset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1868,7 +1492,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Width</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1883,7 +1507,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1891,7 +1515,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>offset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1899,7 +1523,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>width</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1914,7 +1538,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>num<wbr>Finite<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1922,7 +1546,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>offset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1930,7 +1554,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>width</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1947,7 +1571,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricMetricDescriptorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricMetricDescriptorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1956,35 +1580,11 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">List&lt;Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric<wbr>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1992,7 +1592,31 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">List&lt;Metric<wbr>Metric<wbr>Descriptor<wbr>Label<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2003,11 +1627,27 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2019,27 +1659,11 @@ to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Metric<wbr>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Value<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2050,35 +1674,11 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>metric<wbr>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2086,7 +1686,31 @@ to specify a regex that does not include exactly one capture group.
             title="Required">
         <span>value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2097,11 +1721,27 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2113,27 +1753,11 @@ to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>metric<wbr>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>value<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2150,7 +1774,7 @@ to specify a regex that does not include exactly one capture group.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/logging?tab=doc#MetricMetricDescriptorLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2159,19 +1783,19 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2179,7 +1803,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2190,19 +1814,19 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2210,7 +1834,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>Value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2221,19 +1845,19 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2241,7 +1865,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2252,19 +1876,19 @@ to specify a regex that does not include exactly one capture group.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2272,7 +1896,7 @@ to specify a regex that does not include exactly one capture group.
             title="Optional">
         <span>value<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2293,6 +1917,7 @@ to specify a regex that does not include exactly one capture group.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

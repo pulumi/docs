@@ -8,8 +8,6 @@ block_external_search_index: true
 
 Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_netblock_ip_ranges.html.markdown.
-
 
 
 
@@ -30,7 +28,7 @@ Use this data source to get the IP addresses from different special IP ranges on
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetblockIPRanges<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#LookupNetblockIPRangesArgs">LookupNetblockIPRangesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#LookupNetblockIPRangesResult">LookupNetblockIPRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetblockIPRanges<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupNetblockIPRangesArgs">LookupNetblockIPRangesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#LookupNetblockIPRangesResult">LookupNetblockIPRangesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -53,7 +51,7 @@ The following arguments are supported:
             title="Optional">
         <span>Range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of range for which to provide results.
 {{% /md %}}</dd>
@@ -69,7 +67,7 @@ The following arguments are supported:
             title="Optional">
         <span>Range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of range for which to provide results.
 {{% /md %}}</dd>
@@ -85,7 +83,7 @@ The following arguments are supported:
             title="Optional">
         <span>range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of range for which to provide results.
 {{% /md %}}</dd>
@@ -101,7 +99,7 @@ The following arguments are supported:
             title="Optional">
         <span>range_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of range for which to provide results.
 {{% /md %}}</dd>
@@ -130,7 +128,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of all CIDR blocks.
 {{% /md %}}</dd>
@@ -139,7 +137,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks<wbr>Ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv4 CIDR blocks
 {{% /md %}}</dd>
@@ -148,7 +146,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks<wbr>Ipv6s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv6 CIDR blocks, if available.
 {{% /md %}}</dd>
@@ -157,7 +155,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -166,7 +164,7 @@ The following output properties are available:
             title="">
         <span>Range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -181,7 +179,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of all CIDR blocks.
 {{% /md %}}</dd>
@@ -190,7 +188,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks<wbr>Ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv4 CIDR blocks
 {{% /md %}}</dd>
@@ -199,7 +197,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks<wbr>Ipv6s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv6 CIDR blocks, if available.
 {{% /md %}}</dd>
@@ -208,7 +206,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -217,7 +215,7 @@ The following output properties are available:
             title="">
         <span>Range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -232,7 +230,7 @@ The following output properties are available:
             title="">
         <span>cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of all CIDR blocks.
 {{% /md %}}</dd>
@@ -241,7 +239,7 @@ The following output properties are available:
             title="">
         <span>cidr<wbr>Blocks<wbr>Ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv4 CIDR blocks
 {{% /md %}}</dd>
@@ -250,7 +248,7 @@ The following output properties are available:
             title="">
         <span>cidr<wbr>Blocks<wbr>Ipv6s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv6 CIDR blocks, if available.
 {{% /md %}}</dd>
@@ -259,7 +257,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -268,7 +266,7 @@ The following output properties are available:
             title="">
         <span>range<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -283,7 +281,7 @@ The following output properties are available:
             title="">
         <span>cidr_<wbr>blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of all CIDR blocks.
 {{% /md %}}</dd>
@@ -292,7 +290,7 @@ The following output properties are available:
             title="">
         <span>cidr_<wbr>blocks_<wbr>ipv4s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv4 CIDR blocks
 {{% /md %}}</dd>
@@ -301,7 +299,7 @@ The following output properties are available:
             title="">
         <span>cidr_<wbr>blocks_<wbr>ipv6s</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Retrieve list of the IPv6 CIDR blocks, if available.
 {{% /md %}}</dd>
@@ -310,7 +308,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -319,7 +317,7 @@ The following output properties are available:
             title="">
         <span>range_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

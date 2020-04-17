@@ -16,7 +16,9 @@ resource must have `roles/resourcemanager.projectCreator`. See the
 [Access Control for Organizations Using IAM](https://cloud.google.com/resource-manager/docs/access-control-org)
 doc for more information.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown.
+
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -25,7 +27,7 @@ doc for more information.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -33,7 +35,7 @@ doc for more information.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -129,11 +131,20 @@ doc for more information.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -145,7 +156,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>Billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -158,7 +169,7 @@ for more details.
             title="Optional">
         <span>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -171,7 +182,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
@@ -180,7 +191,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -189,7 +200,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -199,20 +210,11 @@ this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -225,11 +227,20 @@ without deleting the Project via the Google API.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -241,7 +252,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>Billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -254,7 +265,7 @@ for more details.
             title="Optional">
         <span>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -276,7 +287,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -285,7 +296,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -295,20 +306,11 @@ this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -321,11 +323,20 @@ without deleting the Project via the Google API.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -337,7 +348,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -350,7 +361,7 @@ for more details.
             title="Optional">
         <span>folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -363,7 +374,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
@@ -372,7 +383,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -381,7 +392,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -391,20 +402,11 @@ this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -417,11 +419,20 @@ without deleting the Project via the Google API.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto_<wbr>create_<wbr>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -433,7 +444,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>billing_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -446,7 +457,7 @@ for more details.
             title="Optional">
         <span>folder_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -468,7 +479,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -477,7 +488,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>org_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -487,20 +498,11 @@ this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>skip_<wbr>delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -527,100 +529,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Create<wbr>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
-If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project successfully, even if
-you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Billing<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with the provider
-must have Billing Account Administrator privileges (`roles/billing.admin`) in
-the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
-for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the folder this project should be
-created under. Only one of `org_id` or `folder_id` may be
-specified. If the `folder_id` is specified, then the project is
-created under the specified folder. Changing this forces the
-project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization this project belongs to.
-Changing this forces a new project to be created.  Only one of
-`org_id` or `folder_id` may be specified. If the `org_id` is
-specified then the project is created at the top level. Changing
-this forces the project to be migrated to the newly specified
-organization.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the resource can be deleted
-without deleting the Project via the Google API.
 {{% /md %}}</dd>
 
 </dl>
@@ -632,100 +545,11 @@ without deleting the Project via the Google API.
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Create<wbr>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
-If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project successfully, even if
-you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Billing<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with the provider
-must have Billing Account Administrator privileges (`roles/billing.admin`) in
-the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
-for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the folder this project should be
-created under. Only one of `org_id` or `folder_id` may be
-specified. If the `folder_id` is specified, then the project is
-created under the specified folder. Changing this forces the
-project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization this project belongs to.
-Changing this forces a new project to be created.  Only one of
-`org_id` or `folder_id` may be specified. If the `org_id` is
-specified then the project is created at the top level. Changing
-this forces the project to be migrated to the newly specified
-organization.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the resource can be deleted
-without deleting the Project via the Google API.
 {{% /md %}}</dd>
 
 </dl>
@@ -737,100 +561,11 @@ without deleting the Project via the Google API.
 
     <dt class="property-"
             title="">
-        <span>auto<wbr>Create<wbr>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
-If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project successfully, even if
-you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>billing<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with the provider
-must have Billing Account Administrator privileges (`roles/billing.admin`) in
-the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
-for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>folder<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the folder this project should be
-created under. Only one of `org_id` or `folder_id` may be
-specified. If the `folder_id` is specified, then the project is
-created under the specified folder. Changing this forces the
-project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>org<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization this project belongs to.
-Changing this forces a new project to be created.  Only one of
-`org_id` or `folder_id` may be specified. If the `org_id` is
-specified then the project is created at the top level. Changing
-this forces the project to be migrated to the newly specified
-organization.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If true, the resource can be deleted
-without deleting the Project via the Google API.
 {{% /md %}}</dd>
 
 </dl>
@@ -842,100 +577,11 @@ without deleting the Project via the Google API.
 
     <dt class="property-"
             title="">
-        <span>auto_<wbr>create_<wbr>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
-If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
-will still need to have 1 network slot available to create the project successfully, even if
-you set `auto_create_network` to `false`, since the network will exist momentarily.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>billing_<wbr>account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alphanumeric ID of the billing account this project
-belongs to. The user or service account performing this operation with the provider
-must have Billing Account Administrator privileges (`roles/billing.admin`) in
-the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
-for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>folder_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the folder this project should be
-created under. Only one of `org_id` or `folder_id` may be
-specified. If the `folder_id` is specified, then the project is
-created under the specified folder. Changing this forces the
-project to be migrated to the newly specified folder.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A set of key/value label pairs to assign to the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The display name of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>org_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The numeric ID of the organization this project belongs to.
-Changing this forces a new project to be created.  Only one of
-`org_id` or `folder_id` may be specified. If the `org_id` is
-specified then the project is created at the top level. Changing
-this forces the project to be migrated to the newly specified
-organization.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip_<wbr>delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the resource can be deleted
-without deleting the Project via the Google API.
 {{% /md %}}</dd>
 
 </dl>
@@ -963,7 +609,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1077,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -1089,7 +735,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>Billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1102,7 +748,7 @@ for more details.
             title="Optional">
         <span>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1115,7 +761,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
@@ -1124,7 +770,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -1133,7 +779,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
@@ -1142,7 +788,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1156,7 +802,7 @@ organization.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
@@ -1165,7 +811,7 @@ organization.
             title="Optional">
         <span>Skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -1182,7 +828,7 @@ without deleting the Project via the Google API.
             title="Optional">
         <span>Auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -1194,7 +840,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>Billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1207,7 +853,7 @@ for more details.
             title="Optional">
         <span>Folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1229,7 +875,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -1238,7 +884,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
@@ -1247,7 +893,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>Org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1261,7 +907,7 @@ organization.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
@@ -1270,7 +916,7 @@ organization.
             title="Optional">
         <span>Skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -1287,7 +933,7 @@ without deleting the Project via the Google API.
             title="Optional">
         <span>auto<wbr>Create<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -1299,7 +945,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>billing<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1312,7 +958,7 @@ for more details.
             title="Optional">
         <span>folder<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1325,7 +971,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
@@ -1334,7 +980,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -1343,7 +989,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
@@ -1352,7 +998,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>org<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1366,7 +1012,7 @@ organization.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
@@ -1375,7 +1021,7 @@ organization.
             title="Optional">
         <span>skip<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -1392,7 +1038,7 @@ without deleting the Project via the Google API.
             title="Optional">
         <span>auto_<wbr>create_<wbr>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
@@ -1404,7 +1050,7 @@ you set `auto_create_network` to `false`, since the network will exist momentari
             title="Optional">
         <span>billing_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1417,7 +1063,7 @@ for more details.
             title="Optional">
         <span>folder_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1439,7 +1085,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
@@ -1448,7 +1094,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
@@ -1457,7 +1103,7 @@ project to be migrated to the newly specified folder.
             title="Optional">
         <span>org_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1471,7 +1117,7 @@ organization.
             title="Optional">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
@@ -1480,7 +1126,7 @@ organization.
             title="Optional">
         <span>skip_<wbr>delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
@@ -1505,6 +1151,7 @@ without deleting the Project via the Google API.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

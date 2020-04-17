@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a NetApp Account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Azure allows only one active directory can be joined to a single subscription at a time for NetApp Account.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_account.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -281,9 +280,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Pool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Pool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_level=None</em>, <em class="sig-param">size_in_tb=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Pool within a NetApp Account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -406,9 +402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NetApp Snapshot.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -531,9 +524,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_name=None</em>, <em class="sig-param">export_policy_rules=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">protocols=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">service_level=None</em>, <em class="sig-param">storage_quota_in_gb=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_path=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NetApp Volume.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/netapp_volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -728,9 +718,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_account">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_account.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -745,9 +732,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_pool">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_pool</code><span class="sig-paren">(</span><em class="sig-param">account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -763,9 +747,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_snapshot">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param">account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">volume_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Snapshot.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -783,9 +764,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.netapp.get_volume">
 <code class="sig-prename descclassname">pulumi_azure.netapp.</code><code class="sig-name descname">get_volume</code><span class="sig-paren">(</span><em class="sig-param">account_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pool_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.netapp.get_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses this data source to access information about an existing NetApp Volume.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_volume.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
