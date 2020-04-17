@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">DataGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">records=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.DataGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.DataGroup</span></code> Manages internal (in-line) datagroup configuration</p>
 <p>Resource should be named with their “full path”. The full path is the combination of the partition + name of the resource, for example /Common/my-datagroup.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_datagroup.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_datagroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -126,9 +123,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">IRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">irule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.IRule" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.IRule</span></code> Creates iRule on BIG-IP F5 device</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_irule.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_irule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -212,9 +206,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adaptive=None</em>, <em class="sig-param">adaptive_limit=None</em>, <em class="sig-param">compatibility=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filename=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">ip_dscp=None</em>, <em class="sig-param">manual_resume=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">receive=None</em>, <em class="sig-param">receive_disable=None</em>, <em class="sig-param">reverse=None</em>, <em class="sig-param">send=None</em>, <em class="sig-param">time_until_up=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">transparent=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Monitor" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Monitor</span></code> Configures a custom monitor for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_monitor.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -426,9 +417,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">connection_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamic_ratio=None</em>, <em class="sig-param">fqdn=None</em>, <em class="sig-param">monitor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rate_limit=None</em>, <em class="sig-param">ratio=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Node</span></code> Manages a node configuration</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_node.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_node.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -603,9 +591,6 @@ If this is configured specify <code class="docutils literal notranslate"><span c
 <p><code class="docutils literal notranslate"><span class="pre">hash_length</span></code> (Optional) (Integer) Length of hash to apply to cookie</p>
 <p><code class="docutils literal notranslate"><span class="pre">hash_offset</span></code> (Optional) (Integer) Number of characters to skip in the cookie for the hash</p>
 <p><code class="docutils literal notranslate"><span class="pre">httponly</span></code> (Optional) (enabled or disabled) Sending only over http</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_cookie.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_cookie.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -823,9 +808,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
 <p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_dstaddr.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_dstaddr.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -997,9 +979,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><code class="docutils literal notranslate"><span class="pre">hash_algorithm</span></code> (Optional) Specify the hash algorithm</p>
 <p><code class="docutils literal notranslate"><span class="pre">mask</span></code> (Optional) Identify a range of source IP addresses to manage together as a single source address affinity persistent connection when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
 <p><code class="docutils literal notranslate"><span class="pre">map_proxies</span></code> (Optional) (enabled or disabled) Directs all to the same single pool member</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_srcaddr.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_srcaddr.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1178,9 +1157,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><code class="docutils literal notranslate"><span class="pre">mirror</span></code> (Optional) (enabled or disabled) mirror persistence record</p>
 <p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
 <p><code class="docutils literal notranslate"><span class="pre">override_conn_limit</span></code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_persistence_profile_ssl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1323,9 +1299,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">controls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">published_copy=None</em>, <em class="sig-param">requires=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">strategy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Policy</span></code> Configures Virtual Server</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2052,9 +2025,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Pool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_nat=None</em>, <em class="sig-param">allow_snat=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">load_balancing_mode=None</em>, <em class="sig-param">monitors=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">reselect_tries=None</em>, <em class="sig-param">service_down_action=None</em>, <em class="sig-param">slow_ramp_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Pool" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Pool</span></code> Manages a pool configuration.</p>
 <p>Resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2195,9 +2165,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.PoolAttachment</span></code> Manages nodes membership in pools</p>
 <p>Resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
 <p>Note: node must be the full path to the node followed by the port. For example /Common/my-node:80</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_pool_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_pool_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2280,9 +2247,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.ltm.ProfileClientSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileClientSsl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alert_timeout=None</em>, <em class="sig-param">allow_non_ssl=None</em>, <em class="sig-param">authenticate=None</em>, <em class="sig-param">authenticate_depth=None</em>, <em class="sig-param">ca_file=None</em>, <em class="sig-param">cache_size=None</em>, <em class="sig-param">cache_timeout=None</em>, <em class="sig-param">cert=None</em>, <em class="sig-param">cert_extension_includes=None</em>, <em class="sig-param">cert_key_chains=None</em>, <em class="sig-param">cert_life_span=None</em>, <em class="sig-param">cert_lookup_by_ipaddr_port=None</em>, <em class="sig-param">chain=None</em>, <em class="sig-param">ciphers=None</em>, <em class="sig-param">client_cert_ca=None</em>, <em class="sig-param">crl_file=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">forward_proxy_bypass_default_action=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">generic_alert=None</em>, <em class="sig-param">handshake_timeout=None</em>, <em class="sig-param">inherit_cert_keychain=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">mod_ssl_methods=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">passphrase=None</em>, <em class="sig-param">peer_cert_mode=None</em>, <em class="sig-param">proxy_ca_cert=None</em>, <em class="sig-param">proxy_ca_key=None</em>, <em class="sig-param">proxy_ca_passphrase=None</em>, <em class="sig-param">proxy_ssl=None</em>, <em class="sig-param">proxy_ssl_passthrough=None</em>, <em class="sig-param">renegotiate_period=None</em>, <em class="sig-param">renegotiate_size=None</em>, <em class="sig-param">renegotiation=None</em>, <em class="sig-param">retain_certificate=None</em>, <em class="sig-param">secure_renegotiation=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">session_mirroring=None</em>, <em class="sig-param">session_ticket=None</em>, <em class="sig-param">sni_default=None</em>, <em class="sig-param">sni_require=None</em>, <em class="sig-param">ssl_forward_proxy=None</em>, <em class="sig-param">ssl_forward_proxy_bypass=None</em>, <em class="sig-param">ssl_sign_hash=None</em>, <em class="sig-param">strict_resume=None</em>, <em class="sig-param">tm_options=None</em>, <em class="sig-param">unclean_shutdown=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileClientSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileClientSsl</span></code> Manages client SSL profiles on a BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_client_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_client_ssl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2773,9 +2737,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileFastHttp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connpool_maxreuse=None</em>, <em class="sig-param">connpool_maxsize=None</em>, <em class="sig-param">connpool_minsize=None</em>, <em class="sig-param">connpool_replenish=None</em>, <em class="sig-param">connpool_step=None</em>, <em class="sig-param">connpoolidle_timeoutoverride=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">forcehttp10response=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">maxheader_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileFastHttp</span></code> Configures a custom profile_fasthttp for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_fasthttp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_fasthttp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2931,9 +2892,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileFastL4</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_timeout=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">explicitflow_migration=None</em>, <em class="sig-param">hardware_syncookie=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">iptos_toclient=None</em>, <em class="sig-param">iptos_toserver=None</em>, <em class="sig-param">keepalive_interval=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileFastL4" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileFastL4</span></code> Configures a custom profile_fastl4 for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_fastl4.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_fastl4.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3081,9 +3039,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accept_xff=None</em>, <em class="sig-param">app_service=None</em>, <em class="sig-param">basic_auth_realm=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">encrypt_cookie_secret=None</em>, <em class="sig-param">encrypt_cookies=None</em>, <em class="sig-param">fallback_host=None</em>, <em class="sig-param">fallback_status_codes=None</em>, <em class="sig-param">head_erase=None</em>, <em class="sig-param">head_insert=None</em>, <em class="sig-param">insert_xforwarded_for=None</em>, <em class="sig-param">lws_separator=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">oneconnect_transformations=None</em>, <em class="sig-param">proxy_type=None</em>, <em class="sig-param">redirect_rewrite=None</em>, <em class="sig-param">request_chunking=None</em>, <em class="sig-param">response_chunking=None</em>, <em class="sig-param">response_headers_permitteds=None</em>, <em class="sig-param">server_agent_name=None</em>, <em class="sig-param">tm_partition=None</em>, <em class="sig-param">via_host_name=None</em>, <em class="sig-param">via_request=None</em>, <em class="sig-param">via_response=None</em>, <em class="sig-param">xff_alternative_names=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttp</span></code> Configures a custom profile_http for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_http.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_http.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3365,9 +3320,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttp2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">activation_modes=None</em>, <em class="sig-param">concurrent_streams_per_connection=None</em>, <em class="sig-param">connection_idle_timeout=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">header_table_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttp2" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttp2</span></code> Configures a custom profile_http2 for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_http2.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_http2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3483,9 +3435,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileHttpCompress</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_type_excludes=None</em>, <em class="sig-param">content_type_includes=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">uri_excludes=None</em>, <em class="sig-param">uri_includes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileHttpCompress" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileHttpCompress</span></code>  Virtual server HTTP compression profile configuration</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_httpcompress.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_httpcompress.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3601,9 +3550,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileOneConnect</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">idle_timeout_override=None</em>, <em class="sig-param">max_age=None</em>, <em class="sig-param">max_reuse=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">share_pools=None</em>, <em class="sig-param">source_mask=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileOneConnect" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileOneConnect</span></code> Configures a custom profile_oneconnect for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_oneconnect.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_oneconnect.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3742,9 +3688,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.ltm.ProfileServerSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileServerSsl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alert_timeout=None</em>, <em class="sig-param">authenticate=None</em>, <em class="sig-param">authenticate_depth=None</em>, <em class="sig-param">ca_file=None</em>, <em class="sig-param">cache_size=None</em>, <em class="sig-param">cache_timeout=None</em>, <em class="sig-param">cert=None</em>, <em class="sig-param">chain=None</em>, <em class="sig-param">ciphers=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">expire_cert_response_control=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">generation=None</em>, <em class="sig-param">generic_alert=None</em>, <em class="sig-param">handshake_timeout=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">mod_ssl_methods=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">passphrase=None</em>, <em class="sig-param">peer_cert_mode=None</em>, <em class="sig-param">proxy_ssl=None</em>, <em class="sig-param">renegotiate_period=None</em>, <em class="sig-param">renegotiate_size=None</em>, <em class="sig-param">renegotiation=None</em>, <em class="sig-param">retain_certificate=None</em>, <em class="sig-param">secure_renegotiation=None</em>, <em class="sig-param">server_name=None</em>, <em class="sig-param">session_mirroring=None</em>, <em class="sig-param">session_ticket=None</em>, <em class="sig-param">sni_default=None</em>, <em class="sig-param">sni_require=None</em>, <em class="sig-param">ssl_forward_proxy=None</em>, <em class="sig-param">ssl_forward_proxy_bypass=None</em>, <em class="sig-param">ssl_sign_hash=None</em>, <em class="sig-param">strict_resume=None</em>, <em class="sig-param">tm_options=None</em>, <em class="sig-param">unclean_shutdown=None</em>, <em class="sig-param">untrusted_cert_response_control=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileServerSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileServerSsl</span></code> Manages server SSL profiles on a BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_server_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_server_ssl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4136,9 +4079,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">ProfileTcp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">close_wait_timeout=None</em>, <em class="sig-param">defaults_from=None</em>, <em class="sig-param">deferred_accept=None</em>, <em class="sig-param">fast_open=None</em>, <em class="sig-param">finwait2timeout=None</em>, <em class="sig-param">finwait_timeout=None</em>, <em class="sig-param">idle_timeout=None</em>, <em class="sig-param">keepalive_interval=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.ProfileTcp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.ProfileTcp</span></code> Configures a custom profile_tcp for use by health checks.</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_tcp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_tcp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4286,9 +4226,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">Snat</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autolasthop=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">mirror=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">snatpool=None</em>, <em class="sig-param">sourceport=None</em>, <em class="sig-param">translation=None</em>, <em class="sig-param">vlans=None</em>, <em class="sig-param">vlansdisabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.Snat" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.Snat</span></code> Manages a snat configuration</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_snat.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_snat.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4458,9 +4395,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">SnatPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.SnatPool" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.SnatPool</span></code> Collections of SNAT translation addresses</p>
 <p>Resource should be named with their “full path”. The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_snatpool.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_snatpool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4544,9 +4478,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">VirtualAddress</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">advertize_route=None</em>, <em class="sig-param">arp=None</em>, <em class="sig-param">auto_delete=None</em>, <em class="sig-param">conn_limit=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">icmp_echo=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">traffic_group=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.VirtualAddress</span></code> Configures Virtual Server</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_virtual_address.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_virtual_address.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4678,9 +4609,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.ltm.</code><code class="sig-name descname">VirtualServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_profiles=None</em>, <em class="sig-param">default_persistence_profile=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">fallback_persistence_profile=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">irules=None</em>, <em class="sig-param">mask=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">persistence_profiles=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">pool=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">profiles=None</em>, <em class="sig-param">server_profiles=None</em>, <em class="sig-param">snatpool=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">source_address_translation=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">translate_address=None</em>, <em class="sig-param">translate_port=None</em>, <em class="sig-param">vlans=None</em>, <em class="sig-param">vlans_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.ltm.VirtualServer" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ltm.VirtualServer</span></code> Configures Virtual Server</p>
 <p>For resources should be named with their “full path”. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_virtual_server.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_virtual_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

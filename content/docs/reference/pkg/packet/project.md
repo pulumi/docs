@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ block_external_search_index: true
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ block_external_search_index: true
             title="Optional">
         <span>Backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ block_external_search_index: true
             title="Optional">
         <span>Organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ block_external_search_index: true
             title="Optional">
         <span>Payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ block_external_search_index: true
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ block_external_search_index: true
             title="Optional">
         <span>backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ block_external_search_index: true
             title="Optional">
         <span>organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ block_external_search_index: true
             title="Optional">
         <span>payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ block_external_search_index: true
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ block_external_search_index: true
             title="Optional">
         <span>backend_<wbr>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ block_external_search_index: true
             title="Optional">
         <span>organization_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ block_external_search_index: true
             title="Optional">
         <span>payment_<wbr>method_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ The following output properties are available:
             title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ The following output properties are available:
             title="">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ The following output properties are available:
             title="">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -570,7 +570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -606,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -658,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -676,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -694,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -710,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>backend<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -737,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -746,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>organization<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -755,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>payment<wbr>Method<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>backend_<wbr>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable or disable [Backend Transfer](https://www.packet.com/developers/docs/network/basic/backend-transfer/), default is false
 {{% /md %}}</dd>
@@ -798,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the project was created
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the project
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>organization_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>payment_<wbr>method_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with `organization_id`, or default).
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the project was updated
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#ProjectBgpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#ProjectBgpConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#ProjectBgpConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#ProjectBgpConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -872,7 +872,7 @@ The following state arguments are supported:
             title="Required">
         <span>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Numer for local BGP deployment
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The following state arguments are supported:
             title="Required">
         <span>Deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
@@ -899,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
@@ -908,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following state arguments are supported:
             title="Required">
         <span>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Numer for local BGP deployment
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following state arguments are supported:
             title="Required">
         <span>Deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
@@ -951,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
@@ -960,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ The following state arguments are supported:
             title="Required">
         <span>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Numer for local BGP deployment
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The following state arguments are supported:
             title="Required">
         <span>deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
 {{% /md %}}</dd>
@@ -1028,7 +1028,7 @@ The following state arguments are supported:
             title="Required">
         <span>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Autonomous System Numer for local BGP deployment
 {{% /md %}}</dd>
@@ -1037,7 +1037,7 @@ The following state arguments are supported:
             title="Required">
         <span>deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`private` or `public`, the `private` is likely to be usable immediately, the `public` will need to be review by Packet engineers
 {{% /md %}}</dd>
@@ -1046,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of route filters allowed per server
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Password for BGP session in plaintext (not a checksum)
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}status of BGP configuration in the project
 {{% /md %}}</dd>
@@ -1086,6 +1086,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-packet">https://github.com/pulumi/pulumi-packet</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 </dl>
 

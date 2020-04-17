@@ -13,7 +13,9 @@ modify, and delete devices.
  the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown.
+
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -30,7 +32,7 @@ modify, and delete devices.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,7 +150,7 @@ modify, and delete devices.
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -175,7 +177,7 @@ modify, and delete devices.
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -184,7 +186,7 @@ modify, and delete devices.
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -194,7 +196,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -203,7 +205,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -212,7 +214,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -231,7 +233,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -251,7 +253,7 @@ doc.
             title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -259,7 +261,7 @@ doc.
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -270,7 +272,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -279,7 +281,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -288,7 +290,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -297,7 +299,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -331,7 +333,7 @@ information is in the
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -358,7 +360,7 @@ information is in the
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -367,7 +369,7 @@ information is in the
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -377,7 +379,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -386,7 +388,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -395,7 +397,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -414,7 +416,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -434,7 +436,7 @@ doc.
             title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -442,7 +444,7 @@ doc.
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -453,7 +455,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -462,7 +464,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -471,7 +473,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -480,7 +482,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -514,7 +516,7 @@ information is in the
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -541,7 +543,7 @@ information is in the
             title="Required">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -550,7 +552,7 @@ information is in the
             title="Optional">
         <span>always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -560,7 +562,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -569,7 +571,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -578,7 +580,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -597,7 +599,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -617,7 +619,7 @@ doc.
             title="Optional">
         <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -625,7 +627,7 @@ doc.
             title="Optional, Deprecated">
         <span>public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -636,7 +638,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -645,7 +647,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -654,7 +656,7 @@ information is in the
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -663,7 +665,7 @@ information is in the
             title="Optional">
         <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -697,7 +699,7 @@ information is in the
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -724,7 +726,7 @@ information is in the
             title="Required">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -733,7 +735,7 @@ information is in the
             title="Optional">
         <span>always_<wbr>pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -743,7 +745,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -752,7 +754,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>force_<wbr>detach_<wbr>volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -761,7 +763,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hardware_<wbr>reservation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -780,7 +782,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ipxe_<wbr>script_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -800,7 +802,7 @@ doc.
             title="Optional">
         <span>project_<wbr>ssh_<wbr>key_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -808,7 +810,7 @@ doc.
             title="Optional, Deprecated">
         <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -819,7 +821,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -828,7 +830,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -837,7 +839,7 @@ information is in the
             title="Optional">
         <span>user_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -846,7 +848,7 @@ information is in the
             title="Optional">
         <span>wait_<wbr>for_<wbr>reservation_<wbr>deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -874,7 +876,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -883,7 +885,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -892,7 +894,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -901,7 +903,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -910,7 +912,7 @@ The following output properties are available:
             title="">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -919,7 +921,7 @@ The following output properties are available:
             title="">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -951,7 +953,7 @@ The fields of the network attributes are:
             title="">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -960,7 +962,7 @@ The fields of the network attributes are:
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -969,7 +971,7 @@ The fields of the network attributes are:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -978,7 +980,7 @@ The fields of the network attributes are:
             title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -994,7 +996,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -1003,7 +1005,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1012,7 +1014,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1021,7 +1023,7 @@ The fields of the network attributes are:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -1030,7 +1032,7 @@ The fields of the network attributes are:
             title="">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -1039,7 +1041,7 @@ The fields of the network attributes are:
             title="">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -1071,7 +1073,7 @@ The fields of the network attributes are:
             title="">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -1080,7 +1082,7 @@ The fields of the network attributes are:
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -1089,7 +1091,7 @@ The fields of the network attributes are:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -1098,7 +1100,7 @@ The fields of the network attributes are:
             title="">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -1114,7 +1116,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -1123,7 +1125,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1132,7 +1134,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1141,7 +1143,7 @@ The fields of the network attributes are:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -1150,7 +1152,7 @@ The fields of the network attributes are:
             title="">
         <span>deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -1159,7 +1161,7 @@ The fields of the network attributes are:
             title="">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -1191,7 +1193,7 @@ The fields of the network attributes are:
             title="">
         <span>root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -1200,7 +1202,7 @@ The fields of the network attributes are:
             title="">
         <span>ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -1209,7 +1211,7 @@ The fields of the network attributes are:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -1218,7 +1220,7 @@ The fields of the network attributes are:
             title="">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -1234,7 +1236,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>private_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -1243,7 +1245,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>public_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1252,7 +1254,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>public_<wbr>ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1261,7 +1263,7 @@ The fields of the network attributes are:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -1270,7 +1272,7 @@ The fields of the network attributes are:
             title="">
         <span>deployed_<wbr>facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -1279,7 +1281,7 @@ The fields of the network attributes are:
             title="">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -1311,7 +1313,7 @@ The fields of the network attributes are:
             title="">
         <span>root_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -1320,7 +1322,7 @@ The fields of the network attributes are:
             title="">
         <span>ssh_<wbr>key_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -1329,7 +1331,7 @@ The fields of the network attributes are:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -1338,7 +1340,7 @@ The fields of the network attributes are:
             title="">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -1368,7 +1370,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1482,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -1491,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1500,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1509,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -1528,7 +1530,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -1537,7 +1539,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -1546,7 +1548,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -1564,7 +1566,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -1573,7 +1575,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -1583,7 +1585,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -1601,7 +1603,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -1613,7 +1615,7 @@ doc.
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -1671,7 +1673,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -1680,7 +1682,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1688,7 +1690,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -1699,7 +1701,7 @@ information is in the
             title="Optional">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -1708,7 +1710,7 @@ information is in the
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -1717,7 +1719,7 @@ information is in the
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -1726,7 +1728,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -1735,7 +1737,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -1744,7 +1746,7 @@ information is in the
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -1753,7 +1755,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -1762,7 +1764,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -1778,7 +1780,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -1787,7 +1789,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1796,7 +1798,7 @@ information is in the
             title="Optional">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -1805,7 +1807,7 @@ information is in the
             title="Optional">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -1824,7 +1826,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -1833,7 +1835,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -1842,7 +1844,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -1860,7 +1862,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -1869,7 +1871,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -1879,7 +1881,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -1897,7 +1899,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -1909,7 +1911,7 @@ doc.
             title="Optional">
         <span>Locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -1967,7 +1969,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -1976,7 +1978,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>Project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1984,7 +1986,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -1995,7 +1997,7 @@ information is in the
             title="Optional">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -2004,7 +2006,7 @@ information is in the
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -2013,7 +2015,7 @@ information is in the
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -2022,7 +2024,7 @@ information is in the
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -2031,7 +2033,7 @@ information is in the
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -2040,7 +2042,7 @@ information is in the
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -2049,7 +2051,7 @@ information is in the
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -2058,7 +2060,7 @@ information is in the
             title="Optional">
         <span>Wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -2074,7 +2076,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -2083,7 +2085,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2092,7 +2094,7 @@ information is in the
             title="Optional">
         <span>access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2101,7 +2103,7 @@ information is in the
             title="Optional">
         <span>always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2120,7 +2122,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -2129,7 +2131,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>deployed<wbr>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -2138,7 +2140,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -2156,7 +2158,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>force<wbr>Detach<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -2165,7 +2167,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -2175,7 +2177,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -2193,7 +2195,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2205,7 +2207,7 @@ doc.
             title="Optional">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -2263,7 +2265,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -2272,7 +2274,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project<wbr>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2280,7 +2282,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -2291,7 +2293,7 @@ information is in the
             title="Optional">
         <span>root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -2300,7 +2302,7 @@ information is in the
             title="Optional">
         <span>ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -2309,7 +2311,7 @@ information is in the
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -2318,7 +2320,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -2327,7 +2329,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -2336,7 +2338,7 @@ information is in the
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -2345,7 +2347,7 @@ information is in the
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -2354,7 +2356,7 @@ information is in the
             title="Optional">
         <span>wait<wbr>For<wbr>Reservation<wbr>Deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -2370,7 +2372,7 @@ information is in the
             title="Optional">
         <span>access_<wbr>private_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -2379,7 +2381,7 @@ information is in the
             title="Optional">
         <span>access_<wbr>public_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2388,7 +2390,7 @@ information is in the
             title="Optional">
         <span>access_<wbr>public_<wbr>ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 maintenance IP assigned to the device
 {{% /md %}}</dd>
@@ -2397,7 +2399,7 @@ information is in the
             title="Optional">
         <span>always_<wbr>pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, a device with OS `custom_ipxe` will
 continue to boot via iPXE on reboots.
@@ -2416,7 +2418,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for when the device was created
 {{% /md %}}</dd>
@@ -2425,7 +2427,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>deployed_<wbr>facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -2434,7 +2436,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -2452,7 +2454,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>force_<wbr>detach_<wbr>volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Delete device even if it has volumes attached. Only applies for destroy action.
 {{% /md %}}</dd>
@@ -2461,7 +2463,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hardware_<wbr>reservation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of hardware reservation which this device occupies
 * `hostname`- The hostname of the device
@@ -2471,7 +2473,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -2489,7 +2491,7 @@ continue to boot via iPXE on reboots.
             title="Optional">
         <span>ipxe_<wbr>script_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL pointing to a hosted iPXE script. More
 information is in the
@@ -2501,7 +2503,7 @@ doc.
             title="Optional">
         <span>locked</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the device is locked
 {{% /md %}}</dd>
@@ -2559,7 +2561,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which to create the device
 {{% /md %}}</dd>
@@ -2568,7 +2570,7 @@ The fields of the network attributes are:
             title="Optional">
         <span>project_<wbr>ssh_<wbr>key_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2576,7 +2578,7 @@ The fields of the network attributes are:
             title="Optional, Deprecated">
         <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Size of allocated subnet, more
 information is in the
@@ -2587,7 +2589,7 @@ information is in the
             title="Optional">
         <span>root_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (disabled after 24 hours)
 {{% /md %}}</dd>
@@ -2596,7 +2598,7 @@ information is in the
             title="Optional">
         <span>ssh_<wbr>key_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user and project SSH keys
 {{% /md %}}</dd>
@@ -2605,7 +2607,7 @@ information is in the
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the device
 {{% /md %}}</dd>
@@ -2614,7 +2616,7 @@ information is in the
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}JSON for custom partitioning. Only usable on reserved hardware. More information in in the [Custom Partitioning and RAID](https://www.packet.com/developers/docs/servers/key-features/cpr/) doc.
 {{% /md %}}</dd>
@@ -2623,7 +2625,7 @@ information is in the
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -2632,7 +2634,7 @@ information is in the
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timestamp for the last time the device was updated
 {{% /md %}}</dd>
@@ -2641,7 +2643,7 @@ information is in the
             title="Optional">
         <span>user_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string of the desired User Data for the device.
 {{% /md %}}</dd>
@@ -2650,7 +2652,7 @@ information is in the
             title="Optional">
         <span>wait_<wbr>for_<wbr>reservation_<wbr>deprovision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Only used for devices in reserved hardware. If set, the deletion of this device will block until the hardware reservation is marked provisionable (about 4 minutes in August 2019).
 {{% /md %}}</dd>
@@ -2675,7 +2677,7 @@ information is in the
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceIpAddressOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceIpAddressOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2688,7 +2690,7 @@ information is in the
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -2697,7 +2699,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2706,7 +2708,7 @@ information is in the
             title="Optional">
         <span>Reservation<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2721,7 +2723,7 @@ information is in the
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -2730,7 +2732,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2739,7 +2741,7 @@ information is in the
             title="Optional">
         <span>Reservation<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2754,7 +2756,7 @@ information is in the
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -2763,7 +2765,7 @@ information is in the
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2772,7 +2774,7 @@ information is in the
             title="Optional">
         <span>reservation<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2787,7 +2789,7 @@ information is in the
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -2796,7 +2798,7 @@ information is in the
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2805,7 +2807,7 @@ information is in the
             title="Optional">
         <span>reservation<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2822,7 +2824,7 @@ information is in the
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DeviceNetworkOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DeviceNetworkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2835,7 +2837,7 @@ information is in the
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -2844,7 +2846,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2853,7 +2855,7 @@ information is in the
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -2862,7 +2864,7 @@ information is in the
             title="Optional">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -2871,7 +2873,7 @@ information is in the
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -2887,7 +2889,7 @@ information is in the
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -2896,7 +2898,7 @@ information is in the
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2905,7 +2907,7 @@ information is in the
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -2914,7 +2916,7 @@ information is in the
             title="Optional">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -2923,7 +2925,7 @@ information is in the
             title="Optional">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -2939,7 +2941,7 @@ information is in the
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -2948,7 +2950,7 @@ information is in the
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -2957,7 +2959,7 @@ information is in the
             title="Optional">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -2966,7 +2968,7 @@ information is in the
             title="Optional">
         <span>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -2975,7 +2977,7 @@ information is in the
             title="Optional">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -2991,7 +2993,7 @@ information is in the
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -3000,7 +3002,7 @@ information is in the
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}CIDR suffix for IP address block to be assigned, i.e. amount of addresses.
 {{% /md %}}</dd>
@@ -3009,7 +3011,7 @@ information is in the
             title="Optional">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -3018,7 +3020,7 @@ information is in the
             title="Optional">
         <span>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}address of router
 {{% /md %}}</dd>
@@ -3027,7 +3029,7 @@ information is in the
             title="Optional">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -3045,7 +3047,7 @@ information is in the
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#DevicePortOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#DevicePortOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3058,7 +3060,7 @@ information is in the
             title="Optional">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3068,7 +3070,7 @@ information is in the
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3077,7 +3079,7 @@ information is in the
             title="Optional">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3086,7 +3088,7 @@ information is in the
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3095,7 +3097,7 @@ information is in the
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3111,7 +3113,7 @@ information is in the
             title="Optional">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3121,7 +3123,7 @@ information is in the
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3130,7 +3132,7 @@ information is in the
             title="Optional">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3139,7 +3141,7 @@ information is in the
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3148,7 +3150,7 @@ information is in the
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3164,7 +3166,7 @@ information is in the
             title="Optional">
         <span>bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3174,7 +3176,7 @@ information is in the
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3183,7 +3185,7 @@ information is in the
             title="Optional">
         <span>mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3192,7 +3194,7 @@ information is in the
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3201,7 +3203,7 @@ information is in the
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3217,7 +3219,7 @@ information is in the
             title="Optional">
         <span>bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 * `project_id`- The ID of the project the device belongs to
@@ -3227,7 +3229,7 @@ information is in the
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -3236,7 +3238,7 @@ information is in the
             title="Optional">
         <span>mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -3245,7 +3247,7 @@ information is in the
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -3254,7 +3256,7 @@ information is in the
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}One of [`private_ipv4`, `public_ipv4`, `public_ipv6`]
 {{% /md %}}</dd>
@@ -3276,6 +3278,7 @@ information is in the
 	<dd><a href="https://github.com/pulumi/pulumi-packet">https://github.com/pulumi/pulumi-packet</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`packet` Terraform Provider](https://github.com/terraform-providers/terraform-provider-packet).</dd>
 </dl>
 

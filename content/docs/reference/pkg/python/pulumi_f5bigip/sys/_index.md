@@ -93,9 +93,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Dns">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Dns</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">number_of_dots=None</em>, <em class="sig-param">searches=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Dns" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Dns</span></code> Configures DNS server on F5 BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_dns.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_dns.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,9 +191,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.IApp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">IApp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">devicegroup=None</em>, <em class="sig-param">execute_action=None</em>, <em class="sig-param">inherited_devicegroup=None</em>, <em class="sig-param">inherited_traffic_group=None</em>, <em class="sig-param">jsonfile=None</em>, <em class="sig-param">lists=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">partition=None</em>, <em class="sig-param">strict_updates=None</em>, <em class="sig-param">tables=None</em>, <em class="sig-param">template=None</em>, <em class="sig-param">template_modified=None</em>, <em class="sig-param">template_prerequisite_errors=None</em>, <em class="sig-param">traffic_group=None</em>, <em class="sig-param">variables=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.IApp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.IApp</span></code> resource helps you to deploy Application Services template that can be used to automate and orchestrate Layer 4-7 applications service deployments using F5 Network.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_iapp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_iapp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -422,9 +416,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Ntp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Ntp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Ntp</span></code> provides details about a specific bigip</p>
 <p>This resource is helpful when configuring NTP server on the BIG-IP.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_ntp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_ntp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -515,9 +506,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Provision">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Provision</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_ratio=None</em>, <em class="sig-param">disk_ratio=None</em>, <em class="sig-param">full_path=None</em>, <em class="sig-param">level=None</em>, <em class="sig-param">memory_ratio=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Provision" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Provision</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -632,9 +620,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.Snmp">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">Snmp</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowedaddresses=None</em>, <em class="sig-param">sys_contact=None</em>, <em class="sig-param">sys_location=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.Snmp" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.Snmp</span></code> provides details bout how to enable “ilx”, “asm” “apm” resource on BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -725,9 +710,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_f5bigip.sys.SnmpTraps">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_f5bigip.sys.</code><code class="sig-name descname">SnmpTraps</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_passwordencrypted=None</em>, <em class="sig-param">auth_protocol=None</em>, <em class="sig-param">community=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">engine_id=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">privacy_password=None</em>, <em class="sig-param">privacy_password_encrypted=None</em>, <em class="sig-param">privacy_protocol=None</em>, <em class="sig-param">security_level=None</em>, <em class="sig-param">security_name=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_f5bigip.sys.SnmpTraps" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">sys.SnmpTraps</span></code> provides details bout how to enable snmp_traps resource on BIG-IP</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp_traps.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp_traps.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
