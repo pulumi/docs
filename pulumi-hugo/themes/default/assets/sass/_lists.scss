@@ -71,7 +71,10 @@ dl {
             &.property-deprecated {
                 ~ dd {
                     .property-message {
-                        @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+                        @apply bg-orange-200 text-orange-600 my-4 px-5 py-4 rounded text-sm;
+                    }
+                    code {
+                        @apply bg-orange-200;
                     }
                 }
             }
