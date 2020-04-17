@@ -66,6 +66,7 @@ generate_docs() {
         OVERLAY_SCHEMA_FILE="./overlays/kubernetes/overlays.json"
     else
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+        OVERLAY_SCHEMA_FILE=""
     fi
 
     echo "Removing the ${PACKDIR}/${provider} dir..."
