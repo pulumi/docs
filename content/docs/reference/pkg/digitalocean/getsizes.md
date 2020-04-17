@@ -10,7 +10,8 @@ Retrieves information about the Droplet sizes that DigitalOcean supports, with
 the ability to filter and sort the results. If no filters are specified, all sizes
 will be returned.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/sizes.html.md.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -32,7 +33,7 @@ will be returned.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSizes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesArgs">GetSizesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupSizesResult">LookupSizesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSizes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesArgs">GetSizesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupSizesResult">LookupSizesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -176,7 +177,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -216,7 +217,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -256,7 +257,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -296,7 +297,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -343,7 +344,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -356,7 +357,7 @@ The following output properties are available:
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `slug`,
 `regions`, `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`,
@@ -367,7 +368,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves images which keys has value that matches
 one of the values provided here.
@@ -384,7 +385,7 @@ one of the values provided here.
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `slug`,
 `regions`, `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`,
@@ -395,7 +396,7 @@ one of the values provided here.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves images which keys has value that matches
 one of the values provided here.
@@ -412,7 +413,7 @@ one of the values provided here.
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `slug`,
 `regions`, `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`,
@@ -423,7 +424,7 @@ one of the values provided here.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves images which keys has value that matches
 one of the values provided here.
@@ -440,7 +441,7 @@ one of the values provided here.
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Filter the sizes by this key. This may be one of `slug`,
 `regions`, `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`,
@@ -451,7 +452,7 @@ one of the values provided here.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Only retrieves images which keys has value that matches
 one of the values provided here.
@@ -470,7 +471,7 @@ one of the values provided here.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesSize">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSize">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -483,7 +484,7 @@ one of the values provided here.
             title="Required">
         <span>Available</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}This represents whether new Droplets can be created with this size.
 {{% /md %}}</dd>
@@ -492,7 +493,7 @@ one of the values provided here.
             title="Required">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of disk space set aside for Droplets of this size. The value is measured in gigabytes.
 {{% /md %}}</dd>
@@ -501,7 +502,7 @@ one of the values provided here.
             title="Required">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of RAM allocated to Droplets created of this size. The value is measured in megabytes.
 {{% /md %}}</dd>
@@ -510,7 +511,7 @@ one of the values provided here.
             title="Required">
         <span>Price<wbr>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The hourly cost of Droplets created in this size as measured hourly. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -519,7 +520,7 @@ one of the values provided here.
             title="Required">
         <span>Price<wbr>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The monthly cost of Droplets created in this size if they are kept for an entire month. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -528,7 +529,7 @@ one of the values provided here.
             title="Required">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of region slugs where Droplets can be created in this size.
 {{% /md %}}</dd>
@@ -537,7 +538,7 @@ one of the values provided here.
             title="Required">
         <span>Slug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used to uniquely identify each size.
 {{% /md %}}</dd>
@@ -546,7 +547,7 @@ one of the values provided here.
             title="Required">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
 {{% /md %}}</dd>
@@ -555,7 +556,7 @@ one of the values provided here.
             title="Required">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of CPUs allocated to Droplets of this size.
 {{% /md %}}</dd>
@@ -571,7 +572,7 @@ one of the values provided here.
             title="Required">
         <span>Available</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}This represents whether new Droplets can be created with this size.
 {{% /md %}}</dd>
@@ -580,7 +581,7 @@ one of the values provided here.
             title="Required">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of disk space set aside for Droplets of this size. The value is measured in gigabytes.
 {{% /md %}}</dd>
@@ -589,7 +590,7 @@ one of the values provided here.
             title="Required">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of RAM allocated to Droplets created of this size. The value is measured in megabytes.
 {{% /md %}}</dd>
@@ -598,7 +599,7 @@ one of the values provided here.
             title="Required">
         <span>Price<wbr>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The hourly cost of Droplets created in this size as measured hourly. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -607,7 +608,7 @@ one of the values provided here.
             title="Required">
         <span>Price<wbr>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The monthly cost of Droplets created in this size if they are kept for an entire month. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -616,7 +617,7 @@ one of the values provided here.
             title="Required">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of region slugs where Droplets can be created in this size.
 {{% /md %}}</dd>
@@ -625,7 +626,7 @@ one of the values provided here.
             title="Required">
         <span>Slug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used to uniquely identify each size.
 {{% /md %}}</dd>
@@ -634,7 +635,7 @@ one of the values provided here.
             title="Required">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
 {{% /md %}}</dd>
@@ -643,7 +644,7 @@ one of the values provided here.
             title="Required">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of CPUs allocated to Droplets of this size.
 {{% /md %}}</dd>
@@ -659,7 +660,7 @@ one of the values provided here.
             title="Required">
         <span>available</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}This represents whether new Droplets can be created with this size.
 {{% /md %}}</dd>
@@ -668,7 +669,7 @@ one of the values provided here.
             title="Required">
         <span>disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of disk space set aside for Droplets of this size. The value is measured in gigabytes.
 {{% /md %}}</dd>
@@ -677,7 +678,7 @@ one of the values provided here.
             title="Required">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of RAM allocated to Droplets created of this size. The value is measured in megabytes.
 {{% /md %}}</dd>
@@ -686,7 +687,7 @@ one of the values provided here.
             title="Required">
         <span>price<wbr>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The hourly cost of Droplets created in this size as measured hourly. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -695,7 +696,7 @@ one of the values provided here.
             title="Required">
         <span>price<wbr>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The monthly cost of Droplets created in this size if they are kept for an entire month. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -704,7 +705,7 @@ one of the values provided here.
             title="Required">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of region slugs where Droplets can be created in this size.
 {{% /md %}}</dd>
@@ -713,7 +714,7 @@ one of the values provided here.
             title="Required">
         <span>slug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used to uniquely identify each size.
 {{% /md %}}</dd>
@@ -722,7 +723,7 @@ one of the values provided here.
             title="Required">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
 {{% /md %}}</dd>
@@ -731,7 +732,7 @@ one of the values provided here.
             title="Required">
         <span>vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of CPUs allocated to Droplets of this size.
 {{% /md %}}</dd>
@@ -747,7 +748,7 @@ one of the values provided here.
             title="Required">
         <span>available</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}This represents whether new Droplets can be created with this size.
 {{% /md %}}</dd>
@@ -756,7 +757,7 @@ one of the values provided here.
             title="Required">
         <span>disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of disk space set aside for Droplets of this size. The value is measured in gigabytes.
 {{% /md %}}</dd>
@@ -765,7 +766,7 @@ one of the values provided here.
             title="Required">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of RAM allocated to Droplets created of this size. The value is measured in megabytes.
 {{% /md %}}</dd>
@@ -774,7 +775,7 @@ one of the values provided here.
             title="Required">
         <span>price_<wbr>hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The hourly cost of Droplets created in this size as measured hourly. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -783,7 +784,7 @@ one of the values provided here.
             title="Required">
         <span>price_<wbr>monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The monthly cost of Droplets created in this size if they are kept for an entire month. The value is measured in US dollars.
 {{% /md %}}</dd>
@@ -792,7 +793,7 @@ one of the values provided here.
             title="Required">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of region slugs where Droplets can be created in this size.
 {{% /md %}}</dd>
@@ -801,7 +802,7 @@ one of the values provided here.
             title="Required">
         <span>slug</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A human-readable string that is used to uniquely identify each size.
 {{% /md %}}</dd>
@@ -810,7 +811,7 @@ one of the values provided here.
             title="Required">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of transfer bandwidth that is available for Droplets created in this size. This only counts traffic on the public interface. The value is given in terabytes.
 {{% /md %}}</dd>
@@ -819,7 +820,7 @@ one of the values provided here.
             title="Required">
         <span>vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of CPUs allocated to Droplets of this size.
 {{% /md %}}</dd>
@@ -837,7 +838,7 @@ one of the values provided here.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesSort">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetSizesSort">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -850,7 +851,7 @@ one of the values provided here.
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
@@ -860,7 +861,7 @@ one of the values provided here.
             title="Optional">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
@@ -876,7 +877,7 @@ one of the values provided here.
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
@@ -886,7 +887,7 @@ one of the values provided here.
             title="Optional">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
@@ -902,7 +903,7 @@ one of the values provided here.
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
@@ -912,7 +913,7 @@ one of the values provided here.
             title="Optional">
         <span>direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
@@ -928,7 +929,7 @@ one of the values provided here.
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
@@ -938,7 +939,7 @@ one of the values provided here.
             title="Optional">
         <span>direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
