@@ -29,9 +29,6 @@ experienced user of both tools.</p>
 deployments in preview as recreate-only for any update operation other
 than actually deploying an in-preview deployment (i.e. <code class="docutils literal notranslate"><span class="pre">preview=true</span></code> to
 <code class="docutils literal notranslate"><span class="pre">preview=false</span></code>).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/deployment_manager_deployment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
