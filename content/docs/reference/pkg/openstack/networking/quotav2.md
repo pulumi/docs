@@ -13,7 +13,8 @@ Manages a V2 networking quota resource within OpenStack.
 > **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
     in case of delete call.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_quota_v2.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -30,7 +31,7 @@ Manages a V2 networking quota resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#QuotaV2Args">QuotaV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#QuotaV2">QuotaV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#QuotaV2Args">QuotaV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#QuotaV2">QuotaV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -130,7 +131,7 @@ Manages a V2 networking quota resource within OpenStack.
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -140,7 +141,7 @@ creates new quota.
             title="Optional">
         <span>Floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -150,7 +151,7 @@ existing quota.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -160,7 +161,7 @@ existing quota.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -170,7 +171,7 @@ existing quota.
             title="Optional">
         <span>Rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -180,7 +181,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -191,7 +192,7 @@ creates new quota.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -201,7 +202,7 @@ existing quota.
             title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -211,7 +212,7 @@ this updates the existing quota.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -221,7 +222,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -231,7 +232,7 @@ this updates the existing quota.
             title="Optional">
         <span>Subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -248,7 +249,7 @@ Changing this updates the existing quota.
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -258,7 +259,7 @@ creates new quota.
             title="Optional">
         <span>Floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -268,7 +269,7 @@ existing quota.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -278,7 +279,7 @@ existing quota.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -288,7 +289,7 @@ existing quota.
             title="Optional">
         <span>Rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -298,7 +299,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -309,7 +310,7 @@ creates new quota.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -319,7 +320,7 @@ existing quota.
             title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -329,7 +330,7 @@ this updates the existing quota.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -339,7 +340,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -349,7 +350,7 @@ this updates the existing quota.
             title="Optional">
         <span>Subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -366,7 +367,7 @@ Changing this updates the existing quota.
             title="Required">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -376,7 +377,7 @@ creates new quota.
             title="Optional">
         <span>floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -386,7 +387,7 @@ existing quota.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -396,7 +397,7 @@ existing quota.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -406,7 +407,7 @@ existing quota.
             title="Optional">
         <span>rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -416,7 +417,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -427,7 +428,7 @@ creates new quota.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -437,7 +438,7 @@ existing quota.
             title="Optional">
         <span>security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -447,7 +448,7 @@ this updates the existing quota.
             title="Optional">
         <span>security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -457,7 +458,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -467,7 +468,7 @@ this updates the existing quota.
             title="Optional">
         <span>subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -484,7 +485,7 @@ Changing this updates the existing quota.
             title="Required">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -494,7 +495,7 @@ creates new quota.
             title="Optional">
         <span>floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -504,7 +505,7 @@ existing quota.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -514,7 +515,7 @@ existing quota.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -524,7 +525,7 @@ existing quota.
             title="Optional">
         <span>rbac_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -534,7 +535,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -545,7 +546,7 @@ creates new quota.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -555,7 +556,7 @@ existing quota.
             title="Optional">
         <span>security_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -565,7 +566,7 @@ this updates the existing quota.
             title="Optional">
         <span>security_<wbr>group_<wbr>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -575,7 +576,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -585,7 +586,7 @@ this updates the existing quota.
             title="Optional">
         <span>subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -618,7 +619,7 @@ Get an existing QuotaV2 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQuotaV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#QuotaV2State">QuotaV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#QuotaV2">QuotaV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQuotaV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#QuotaV2State">QuotaV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#QuotaV2">QuotaV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -732,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -742,7 +743,7 @@ existing quota.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -752,7 +753,7 @@ existing quota.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -762,7 +763,7 @@ existing quota.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -772,7 +773,7 @@ creates new quota.
             title="Optional">
         <span>Rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -782,7 +783,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -793,7 +794,7 @@ creates new quota.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -803,7 +804,7 @@ existing quota.
             title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -813,7 +814,7 @@ this updates the existing quota.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -823,7 +824,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -833,7 +834,7 @@ this updates the existing quota.
             title="Optional">
         <span>Subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -850,7 +851,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -860,7 +861,7 @@ existing quota.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -870,7 +871,7 @@ existing quota.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -880,7 +881,7 @@ existing quota.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -890,7 +891,7 @@ creates new quota.
             title="Optional">
         <span>Rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -900,7 +901,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -911,7 +912,7 @@ creates new quota.
             title="Optional">
         <span>Router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -921,7 +922,7 @@ existing quota.
             title="Optional">
         <span>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -931,7 +932,7 @@ this updates the existing quota.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -941,7 +942,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -951,7 +952,7 @@ this updates the existing quota.
             title="Optional">
         <span>Subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -968,7 +969,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -978,7 +979,7 @@ existing quota.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -988,7 +989,7 @@ existing quota.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -998,7 +999,7 @@ existing quota.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -1008,7 +1009,7 @@ creates new quota.
             title="Optional">
         <span>rbac<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -1018,7 +1019,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1029,7 +1030,7 @@ creates new quota.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -1039,7 +1040,7 @@ existing quota.
             title="Optional">
         <span>security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -1049,7 +1050,7 @@ this updates the existing quota.
             title="Optional">
         <span>security<wbr>Group<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -1059,7 +1060,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -1069,7 +1070,7 @@ this updates the existing quota.
             title="Optional">
         <span>subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -1086,7 +1087,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>floatingip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs. Changing this updates the
 existing quota.
@@ -1096,7 +1097,7 @@ existing quota.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for networks. Changing this updates the
 existing quota.
@@ -1106,7 +1107,7 @@ existing quota.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for ports. Changing this updates the
 existing quota.
@@ -1116,7 +1117,7 @@ existing quota.
             title="Optional">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quota. Changing this
 creates new quota.
@@ -1126,7 +1127,7 @@ creates new quota.
             title="Optional">
         <span>rbac_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RBAC policies.
 Changing this updates the existing quota.
@@ -1136,7 +1137,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the quota. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1147,7 +1148,7 @@ creates new quota.
             title="Optional">
         <span>router</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for routers. Changing this updates the
 existing quota.
@@ -1157,7 +1158,7 @@ existing quota.
             title="Optional">
         <span>security_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups. Changing
 this updates the existing quota.
@@ -1167,7 +1168,7 @@ this updates the existing quota.
             title="Optional">
         <span>security_<wbr>group_<wbr>rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quota.
@@ -1177,7 +1178,7 @@ Changing this updates the existing quota.
             title="Optional">
         <span>subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnets. Changing
 this updates the existing quota.
@@ -1187,7 +1188,7 @@ this updates the existing quota.
             title="Optional">
         <span>subnetpool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for subnetpools.
 Changing this updates the existing quota.
@@ -1212,6 +1213,7 @@ Changing this updates the existing quota.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

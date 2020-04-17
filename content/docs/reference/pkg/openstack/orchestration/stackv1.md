@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a V1 stack resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -40,7 +42,8 @@ resources:
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/orchestration_stack_v1.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -57,7 +60,7 @@ resources:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1Args">StackV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -169,7 +172,7 @@ Template Opts.
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -178,7 +181,7 @@ Template Opts.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -190,7 +193,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -199,7 +202,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -222,7 +225,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -232,7 +235,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -260,7 +263,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -271,7 +274,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -280,7 +283,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -289,7 +292,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -298,7 +301,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -307,7 +310,7 @@ creates a new stack.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -316,7 +319,7 @@ creates a new stack.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -347,7 +350,7 @@ Template Opts.
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -356,7 +359,7 @@ Template Opts.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -368,7 +371,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -377,7 +380,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -400,7 +403,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -410,7 +413,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -438,7 +441,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -449,7 +452,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -458,7 +461,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -467,7 +470,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -476,7 +479,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -485,7 +488,7 @@ creates a new stack.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -494,7 +497,7 @@ creates a new stack.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -525,7 +528,7 @@ Template Opts.
             title="Optional">
         <span>capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -534,7 +537,7 @@ Template Opts.
             title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -546,7 +549,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -555,7 +558,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -578,7 +581,7 @@ Environment Opts.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -588,7 +591,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -616,7 +619,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -627,7 +630,7 @@ creates a new stack.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -636,7 +639,7 @@ creates a new stack.
             title="Optional">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -645,7 +648,7 @@ creates a new stack.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -654,7 +657,7 @@ creates a new stack.
             title="Optional">
         <span>template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -663,7 +666,7 @@ creates a new stack.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -672,7 +675,7 @@ creates a new stack.
             title="Optional">
         <span>updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -703,7 +706,7 @@ Template Opts.
             title="Optional">
         <span>capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -712,7 +715,7 @@ Template Opts.
             title="Optional">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -724,7 +727,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -733,7 +736,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>disable_<wbr>rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -756,7 +759,7 @@ Environment Opts.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -766,7 +769,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>notification_<wbr>topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -794,7 +797,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -805,7 +808,7 @@ creates a new stack.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -814,7 +817,7 @@ creates a new stack.
             title="Optional">
         <span>status_<wbr>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -823,7 +826,7 @@ creates a new stack.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -832,7 +835,7 @@ creates a new stack.
             title="Optional">
         <span>template_<wbr>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -841,7 +844,7 @@ creates a new stack.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -850,7 +853,7 @@ creates a new stack.
             title="Optional">
         <span>updated_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -885,7 +888,7 @@ Get an existing StackV1 resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1State">StackV1State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStackV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1State">StackV1State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1">StackV1</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -999,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -1008,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1020,7 +1023,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1029,7 +1032,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1052,7 +1055,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1062,7 +1065,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -1090,7 +1093,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1101,7 +1104,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -1110,7 +1113,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -1119,7 +1122,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -1128,7 +1131,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -1149,7 +1152,7 @@ Template Opts.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -1158,7 +1161,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1177,7 +1180,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -1186,7 +1189,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1198,7 +1201,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1207,7 +1210,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1230,7 +1233,7 @@ Environment Opts.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1240,7 +1243,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>Notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -1268,7 +1271,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1279,7 +1282,7 @@ creates a new stack.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -1288,7 +1291,7 @@ creates a new stack.
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -1297,7 +1300,7 @@ creates a new stack.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -1306,7 +1309,7 @@ creates a new stack.
             title="Optional">
         <span>Template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -1327,7 +1330,7 @@ Template Opts.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -1336,7 +1339,7 @@ Template Opts.
             title="Optional">
         <span>Updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1355,7 +1358,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -1364,7 +1367,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1376,7 +1379,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1385,7 +1388,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>disable<wbr>Rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1408,7 +1411,7 @@ Environment Opts.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1418,7 +1421,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>notification<wbr>Topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -1446,7 +1449,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1457,7 +1460,7 @@ creates a new stack.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -1466,7 +1469,7 @@ creates a new stack.
             title="Optional">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -1475,7 +1478,7 @@ creates a new stack.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -1484,7 +1487,7 @@ creates a new stack.
             title="Optional">
         <span>template<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -1505,7 +1508,7 @@ Template Opts.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -1514,7 +1517,7 @@ Template Opts.
             title="Optional">
         <span>updated<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1533,7 +1536,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>capabilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of stack capabilities for stack.
 {{% /md %}}</dd>
@@ -1542,7 +1545,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was created. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1554,7 +1557,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1563,7 +1566,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>disable_<wbr>rollback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables deletion of all stack
 resources when a stack creation fails. Default is true, meaning all
@@ -1586,7 +1589,7 @@ Environment Opts.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
@@ -1596,7 +1599,7 @@ alphabetic character. Changing this updates the stack's name.
             title="Optional">
         <span>notification_<wbr>topics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of notification topics for stack.
 {{% /md %}}</dd>
@@ -1624,7 +1627,7 @@ to the template. Changing this updates the existing stack parameters.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the stack. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1635,7 +1638,7 @@ creates a new stack.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the stack.
 {{% /md %}}</dd>
@@ -1644,7 +1647,7 @@ creates a new stack.
             title="Optional">
         <span>status_<wbr>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The reason for the current status of the stack.
 {{% /md %}}</dd>
@@ -1653,7 +1656,7 @@ creates a new stack.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to assosciate with the Stack
 {{% /md %}}</dd>
@@ -1662,7 +1665,7 @@ creates a new stack.
             title="Optional">
         <span>template_<wbr>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack template.
 {{% /md %}}</dd>
@@ -1683,7 +1686,7 @@ Template Opts.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timeout for stack action in minutes.
 {{% /md %}}</dd>
@@ -1692,7 +1695,7 @@ Template Opts.
             title="Optional">
         <span>updated_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time when the resource was updated. The date
 and time stamp format is ISO 8601: CCYY-MM-DDThh:mm:ss±hh:mm
@@ -1720,7 +1723,7 @@ is the time zone as an offset from UTC.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1OutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/orchestration?tab=doc#StackV1OutputOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/orchestration?tab=doc#StackV1OutputOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1733,7 +1736,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>Output<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1741,7 +1744,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>Output<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1749,7 +1752,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1765,7 +1768,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>Output<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1773,7 +1776,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>Output<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1781,7 +1784,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1797,7 +1800,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>output<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1805,7 +1808,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>output<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1813,7 +1816,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1829,7 +1832,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>output<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1840,7 @@ is the time zone as an offset from UTC.
             title="Required">
         <span>output<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1845,7 +1848,7 @@ is the time zone as an offset from UTC.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the stack resource.
 {{% /md %}}</dd>
@@ -1867,6 +1870,7 @@ is the time zone as an offset from UTC.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

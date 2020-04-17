@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a v1 firewall resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,7 +41,8 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_firewall_v1.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -56,7 +59,7 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -156,7 +159,7 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
             title="Required">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -166,7 +169,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -177,7 +180,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -188,7 +191,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -198,7 +201,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -208,7 +211,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -219,7 +222,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -231,7 +234,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -258,7 +261,7 @@ firewall.
             title="Required">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -268,7 +271,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -279,7 +282,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -290,7 +293,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -300,7 +303,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -310,7 +313,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -321,7 +324,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -333,7 +336,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -360,7 +363,7 @@ firewall.
             title="Required">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -370,7 +373,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -381,7 +384,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -392,7 +395,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -402,7 +405,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -412,7 +415,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>no<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -423,7 +426,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -435,7 +438,7 @@ firewall.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -462,7 +465,7 @@ firewall.
             title="Required">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -472,7 +475,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -483,7 +486,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>associated_<wbr>routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -494,7 +497,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -504,7 +507,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -514,7 +517,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>no_<wbr>routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -525,7 +528,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -537,7 +540,7 @@ firewall.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -580,7 +583,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#FirewallState">FirewallState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall?tab=doc#FirewallState">FirewallState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -694,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -705,7 +708,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -716,7 +719,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -726,7 +729,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -736,7 +739,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -747,7 +750,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -757,7 +760,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -769,7 +772,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -796,7 +799,7 @@ firewall.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -807,7 +810,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -818,7 +821,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -828,7 +831,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -838,7 +841,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -849,7 +852,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -859,7 +862,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -871,7 +874,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -898,7 +901,7 @@ firewall.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -909,7 +912,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -920,7 +923,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -930,7 +933,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -940,7 +943,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>no<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -951,7 +954,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -961,7 +964,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -973,7 +976,7 @@ firewall.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -1000,7 +1003,7 @@ firewall.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -1011,7 +1014,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>associated_<wbr>routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -1022,7 +1025,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -1032,7 +1035,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -1042,7 +1045,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>no_<wbr>routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -1053,7 +1056,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -1063,7 +1066,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -1075,7 +1078,7 @@ firewall.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -1110,6 +1113,7 @@ firewall.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

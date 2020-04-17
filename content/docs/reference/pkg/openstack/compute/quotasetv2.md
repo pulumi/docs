@@ -13,7 +13,8 @@ Manages a V2 compute quotaset resource within OpenStack.
 > **Note:** This resource has a no-op deletion so no actual actions will be done against the OpenStack API 
     in case of delete call.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -30,7 +31,7 @@ Manages a V2 compute quotaset resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#QuotaSetV2Args">QuotaSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -130,7 +131,7 @@ Manages a V2 compute quotaset resource within OpenStack.
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -140,7 +141,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -150,7 +151,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -160,7 +161,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -170,7 +171,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -180,7 +181,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -190,7 +191,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -200,7 +201,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -210,7 +211,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -220,7 +221,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -230,7 +231,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -240,7 +241,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -251,7 +252,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -261,7 +262,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -271,7 +272,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -281,7 +282,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -298,7 +299,7 @@ Changing this updates the existing quotaset.
             title="Required">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -308,7 +309,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -318,7 +319,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -328,7 +329,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -338,7 +339,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -348,7 +349,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -358,7 +359,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -368,7 +369,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -378,7 +379,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -388,7 +389,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -398,7 +399,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -408,7 +409,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -419,7 +420,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -429,7 +430,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -439,7 +440,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -449,7 +450,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -466,7 +467,7 @@ Changing this updates the existing quotaset.
             title="Required">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -476,7 +477,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -486,7 +487,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -496,7 +497,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -506,7 +507,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -516,7 +517,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -526,7 +527,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -536,7 +537,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -546,7 +547,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -556,7 +557,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -566,7 +567,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -576,7 +577,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -587,7 +588,7 @@ creates a new quotaset.
             title="Optional">
         <span>security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -597,7 +598,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -607,7 +608,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -617,7 +618,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -634,7 +635,7 @@ Changing this updates the existing quotaset.
             title="Required">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -644,7 +645,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -654,7 +655,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>fixed_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -664,7 +665,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>floating_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -674,7 +675,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>file_<wbr>content_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -684,7 +685,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>file_<wbr>path_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -694,7 +695,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -704,7 +705,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -714,7 +715,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>key_<wbr>pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -724,7 +725,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>metadata_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -734,7 +735,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -744,7 +745,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -755,7 +756,7 @@ creates a new quotaset.
             title="Optional">
         <span>security_<wbr>group_<wbr>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -765,7 +766,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -775,7 +776,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server_<wbr>group_<wbr>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -785,7 +786,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -818,7 +819,7 @@ Get an existing QuotaSetV2 resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2State">QuotaSetV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetQuotaSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#QuotaSetV2State">QuotaSetV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#QuotaSetV2">QuotaSetV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -932,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -942,7 +943,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -952,7 +953,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -962,7 +963,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -972,7 +973,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -982,7 +983,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -992,7 +993,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1002,7 +1003,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1012,7 +1013,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1022,7 +1023,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1032,7 +1033,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1042,7 +1043,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1053,7 +1054,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1063,7 +1064,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1073,7 +1074,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1083,7 +1084,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1100,7 +1101,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1110,7 +1111,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1120,7 +1121,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1130,7 +1131,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1140,7 +1141,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -1150,7 +1151,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>Injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -1160,7 +1161,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1170,7 +1171,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1180,7 +1181,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1190,7 +1191,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1200,7 +1201,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>Ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1210,7 +1211,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1221,7 +1222,7 @@ creates a new quotaset.
             title="Optional">
         <span>Security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1231,7 +1232,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1241,7 +1242,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1251,7 +1252,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1268,7 +1269,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1278,7 +1279,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1288,7 +1289,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>floating<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1298,7 +1299,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Content<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1308,7 +1309,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>File<wbr>Path<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -1318,7 +1319,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected<wbr>Files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -1328,7 +1329,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1338,7 +1339,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>key<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1348,7 +1349,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>metadata<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1358,7 +1359,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1368,7 +1369,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1378,7 +1379,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1389,7 +1390,7 @@ creates a new quotaset.
             title="Optional">
         <span>security<wbr>Group<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1399,7 +1400,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1409,7 +1410,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Group<wbr>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1419,7 +1420,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1436,7 +1437,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>cores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for cores.
 Changing this updates the existing quotaset.
@@ -1446,7 +1447,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>fixed_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for fixed IPs.
 Changing this updates the existing quotaset.
@@ -1456,7 +1457,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>floating_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for floating IPs.
 Changing this updates the existing quotaset.
@@ -1466,7 +1467,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>file_<wbr>content_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for content bytes
 of injected files. Changing this updates the existing quotaset.
@@ -1476,7 +1477,7 @@ of injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>file_<wbr>path_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for path bytes of
 injected files. Changing this updates the existing quotaset.
@@ -1486,7 +1487,7 @@ injected files. Changing this updates the existing quotaset.
             title="Optional">
         <span>injected_<wbr>files</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for injected files.
 Changing this updates the existing quotaset.
@@ -1496,7 +1497,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for instances.
 Changing this updates the existing quotaset.
@@ -1506,7 +1507,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>key_<wbr>pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for key pairs.
 Changing this updates the existing quotaset.
@@ -1516,7 +1517,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>metadata_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for metadata items.
 Changing this updates the existing quotaset.
@@ -1526,7 +1527,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas.
 Changing this creates a new quotaset.
@@ -1536,7 +1537,7 @@ Changing this creates a new quotaset.
             title="Optional">
         <span>ram</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for RAM.
 Changing this updates the existing quotaset.
@@ -1546,7 +1547,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1557,7 +1558,7 @@ creates a new quotaset.
             title="Optional">
         <span>security_<wbr>group_<wbr>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security group rules.
 Changing this updates the existing quotaset.
@@ -1567,7 +1568,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for security groups.
 Changing this updates the existing quotaset.
@@ -1577,7 +1578,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server_<wbr>group_<wbr>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups members.
 Changing this updates the existing quotaset.
@@ -1587,7 +1588,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>server_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Quota value for server groups.
 Changing this updates the existing quotaset.
@@ -1612,6 +1613,7 @@ Changing this updates the existing quotaset.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 
