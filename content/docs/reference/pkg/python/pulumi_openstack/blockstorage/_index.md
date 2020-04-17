@@ -313,7 +313,6 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 <dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
 </dd>
 </dl>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -489,7 +488,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
 </dd>
 </dl>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -659,9 +657,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">consistency_group_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_online_resize=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_replica=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 volume resource within OpenStack.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -911,9 +906,6 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code class="docutils literal notranslate"><span class="pre">compute.VolumeAttach</span></code> resource for that.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1135,9 +1127,6 @@ such as a bare-metal server or a remote virtual machine in a
 different cloud provider.</p>
 <p>This does not actually attach a volume to an instance. Please use
 the <code class="docutils literal notranslate"><span class="pre">compute.VolumeAttach</span></code> resource for that.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1349,9 +1338,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.VolumeV1">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV1</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V1 volume resource within OpenStack.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1553,9 +1539,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.VolumeV2">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">VolumeV2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">consistency_group_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_replica=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 volume resource within OpenStack.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1776,9 +1759,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_availability_zones_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_availability_zones_v3</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_availability_zones_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Block Storage availability zones from OpenStack</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1795,9 +1775,6 @@ either be <code class="docutils literal notranslate"><span class="pre">available
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v2">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v2</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1817,9 +1794,6 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v3</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1839,9 +1813,6 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_volume_v2">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v2</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing volume.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1861,9 +1832,6 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_openstack.blockstorage.get_volume_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_volume_v3</code><span class="sig-paren">(</span><em class="sig-param">bootable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_volume_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing volume.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_volume_v3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
