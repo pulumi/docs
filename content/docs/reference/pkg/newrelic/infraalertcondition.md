@@ -8,6 +8,8 @@ block_external_search_index: true
 
 Use this resource to create and manage Infrastructure alert conditions in New Relic.
 
+{{% examples %}}
+{{% /examples %}}
 ## Thresholds
 
 The `critical` and `warning` threshold mapping supports the following arguments:
@@ -16,8 +18,6 @@ The `critical` and `warning` threshold mapping supports the following arguments:
   * `value` - (Optional) Threshold value, computed against the `comparison` operator. Supported by `infra_metric` and `infra_process_running` alert condition types.
   * `time_function` - (Optional) Indicates if the condition needs to be sustained or to just break the threshold once; `all` or `any`. Supported by the `infra_metric` alert condition type.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/infra_alert_condition.html.markdown.
-
 
 
 ## Create a InfraAlertCondition Resource
@@ -25,7 +25,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#InfraAlertConditionArgs">InfraAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#InfraAlertCondition">InfraAlertCondition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#InfraAlertConditionArgs">InfraAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -33,11 +33,11 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInfraAlertCondition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionArgs">InfraAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertCondition">InfraAlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInfraAlertCondition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionArgs">InfraAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertCondition">InfraAlertCondition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic..InfraAlertCondition.html">InfraAlertCondition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic.InfraAlertConditionArgs.html">InfraAlertConditionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic.InfraAlertCondition.html">InfraAlertCondition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.NewRelic.InfraAlertConditionArgs.html">InfraAlertConditionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -129,11 +129,29 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -142,7 +160,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args?</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -151,7 +169,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -160,7 +178,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -169,7 +187,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -178,25 +196,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -205,7 +214,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -214,25 +223,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -262,11 +262,29 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -275,7 +293,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">*Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -284,7 +302,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -293,7 +311,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -302,7 +320,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -311,25 +329,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -338,7 +347,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -347,25 +356,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">*Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -395,11 +395,29 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -408,7 +426,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical?</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -417,7 +435,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -426,7 +444,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -435,7 +453,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -444,25 +462,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -471,7 +480,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -480,25 +489,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning?</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -528,11 +528,29 @@ The `critical` and `warning` threshold mapping supports the following arguments:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -550,7 +568,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -559,7 +577,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -568,7 +586,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>integration_<wbr>provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -577,25 +595,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>process_<wbr>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -604,7 +613,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>runbook_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -613,25 +622,16 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>violation_<wbr>close_<wbr>timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ The `critical` and `warning` threshold mapping supports the following arguments:
             title="Optional">
         <span>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -675,146 +675,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Critical</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical?</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Process<wbr>Where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runbook<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Select</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Violation<wbr>Close<wbr>Timer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Warning</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning?</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
 
 </dl>
@@ -826,146 +700,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Critical</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">*Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Event</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Process<wbr>Where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Runbook<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Select</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Violation<wbr>Close<wbr>Timer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Warning</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">*Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
 
 </dl>
@@ -977,146 +725,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>critical</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical?</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration<wbr>Provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>process<wbr>Where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runbook<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>select</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>violation<wbr>Close<wbr>Timer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>warning</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning?</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1128,146 +750,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>critical</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Critical]</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>event</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration_<wbr>provider</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Infrastructure alert condition's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The ID of the alert policy where this condition should be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>process_<wbr>where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>runbook_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>select</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>violation_<wbr>close_<wbr>timer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>warning</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Dict[Infra<wbr>Alert<wbr>Condition<wbr>Warning]</a></span>
-    </dt>
-    <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>where</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1295,11 +791,11 @@ Get an existing InfraAlertCondition resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInfraAlertCondition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionState">InfraAlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertCondition">InfraAlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInfraAlertCondition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionState">InfraAlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertCondition">InfraAlertCondition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic..InfraAlertCondition.html">InfraAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic..InfraAlertConditionState.html">InfraAlertConditionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic.InfraAlertCondition.html">InfraAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Newrelic/Pulumi.Newrelic..InfraAlertConditionState.html">InfraAlertConditionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1409,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -1418,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
@@ -1427,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args?</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1436,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1445,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1454,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1463,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
 {{% /md %}}</dd>
@@ -1472,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
@@ -1481,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -1490,7 +986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -1499,7 +995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1508,7 +1004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
@@ -1517,7 +1013,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
 {{% /md %}}</dd>
@@ -1526,7 +1022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -1535,7 +1031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args?</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Infra<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1544,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -1560,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -1569,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
@@ -1578,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">*Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1587,7 +1083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1596,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1605,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1614,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
 {{% /md %}}</dd>
@@ -1623,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
@@ -1632,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -1641,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -1650,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1659,7 +1155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
@@ -1668,7 +1164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
 {{% /md %}}</dd>
@@ -1677,7 +1173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -1686,7 +1182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">*Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1695,7 +1191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -1711,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -1720,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
@@ -1729,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>critical</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical?</a></span>
+        <span class="property-type"><a href="#infraalertconditioncritical">Infra<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a critical alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1738,7 +1234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1747,7 +1243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1756,7 +1252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>integration<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1765,7 +1261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
 {{% /md %}}</dd>
@@ -1774,7 +1270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
@@ -1783,7 +1279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>process<wbr>Where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -1792,7 +1288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>runbook<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -1801,7 +1297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1810,7 +1306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
@@ -1819,7 +1315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
 {{% /md %}}</dd>
@@ -1828,7 +1324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>violation<wbr>Close<wbr>Timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -1837,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>warning</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning?</a></span>
+        <span class="property-type"><a href="#infraalertconditionwarning">Infra<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}Identifies the threshold parameters for opening a warning alert violation. See Thresholds below for details.
 {{% /md %}}</dd>
@@ -1846,7 +1342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -1862,7 +1358,7 @@ The following state arguments are supported:
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The operator used to evaluate the threshold value.  Valid values are `above`, `below`, and `equal`.  Supported by the `infra_metric` and `infra_process_running` condition types.
 {{% /md %}}</dd>
@@ -1871,7 +1367,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was created.
 {{% /md %}}</dd>
@@ -1889,7 +1385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the condition is turned on or off.  Valid values are `true` and `false`.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1898,7 +1394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The metric event; for example, `SystemSample` or `StorageSample`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1907,7 +1403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>integration_<wbr>provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}For alerts on integrations, use this instead of `event`.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1916,7 +1412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Infrastructure alert condition's name.
 {{% /md %}}</dd>
@@ -1925,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The ID of the alert policy where this condition should be used.
 {{% /md %}}</dd>
@@ -1934,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>process_<wbr>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Any filters applied to processes; for example: `commandName = 'java'`.  Supported by the `infra_process_running` condition type.
 {{% /md %}}</dd>
@@ -1943,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>runbook_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
 {{% /md %}}</dd>
@@ -1952,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>select</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The attribute name to identify the metric being targeted; for example, `cpuPercent`, `diskFreePercent`, or `memoryResidentSizeBytes`.  The underlying API will automatically populate this value for Infrastructure integrations (for example `diskFreePercent`), so make sure to explicitly include this value to avoid diff issues.  Supported by the `infra_metric` condition type.
 {{% /md %}}</dd>
@@ -1961,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of Infrastructure alert condition.  Valid values are  `infra_process_running`, `infra_metric`, and `infra_host_not_reporting`.
 {{% /md %}}</dd>
@@ -1970,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The timestamp the alert condition was last updated.
 {{% /md %}}</dd>
@@ -1979,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>violation_<wbr>close_<wbr>timer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Determines how much time will pass before a violation is automatically closed. Setting the time limit to 0 prevents a violation from being force-closed.
 {{% /md %}}</dd>
@@ -1997,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>where</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If applicable, this identifies any Infrastructure host filters used; for example: `hostname LIKE '%cassandra%'`.
 {{% /md %}}</dd>
@@ -2022,7 +1518,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionCriticalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionCriticalOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionCriticalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionCriticalOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2035,7 +1531,7 @@ The following state arguments are supported:
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2043,7 +1539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2051,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2066,7 +1562,7 @@ The following state arguments are supported:
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2074,7 +1570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2082,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2097,7 +1593,7 @@ The following state arguments are supported:
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2105,7 +1601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2113,7 +1609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2128,7 +1624,7 @@ The following state arguments are supported:
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2136,7 +1632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2144,7 +1640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2161,7 +1657,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionWarningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/go/newrelic/?tab=doc#InfraAlertConditionWarningOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionWarningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v2/go/newrelic/?tab=doc#InfraAlertConditionWarningOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2174,7 +1670,7 @@ The following state arguments are supported:
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2182,7 +1678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2190,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2205,7 +1701,7 @@ The following state arguments are supported:
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2213,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2221,7 +1717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2236,7 +1732,7 @@ The following state arguments are supported:
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2244,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2252,7 +1748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2267,7 +1763,7 @@ The following state arguments are supported:
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2275,7 +1771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>Function</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2283,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2304,6 +1800,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-newrelic">https://github.com/pulumi/pulumi-newrelic</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/terraform-providers/terraform-provider-newrelic).</dd>
 </dl>
 
