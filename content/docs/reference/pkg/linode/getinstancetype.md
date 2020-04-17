@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Provides information about a Linode instance type
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might use this data source to access information about a Linode Instance type.
 
@@ -16,11 +18,13 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const defaultInstanceType = pulumi.output(linode.getInstanceType({
+const defaultInstanceType = linode.getInstanceType({
     id: "g6-standard-2",
-}, { async: true }));
+});
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Instance Type resource exports the following attributes:
@@ -40,8 +44,6 @@ The Linode Instance Type resource exports the following attributes:
 * `addons.0.backups.0.price.0.hourly` - The cost (in US dollars) per hour to add Backups service.
 
 * `addons.0.backups.0.price.0.monthly` - The cost (in US dollars) per month to add Backups service.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.md.
 
 
 
@@ -63,7 +65,7 @@ The Linode Instance Type resource exports the following attributes:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetInstanceTypeArgs">GetInstanceTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupInstanceTypeResult">LookupInstanceTypeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceType<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeArgs">GetInstanceTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupInstanceTypeResult">LookupInstanceTypeResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -86,7 +88,7 @@ The following arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Label used to identify instance type
 {{% /md %}}</dd>
@@ -95,7 +97,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -110,7 +112,7 @@ The following arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Label used to identify instance type
 {{% /md %}}</dd>
@@ -119,7 +121,7 @@ The following arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -134,7 +136,7 @@ The following arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Label used to identify instance type
 {{% /md %}}</dd>
@@ -143,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -158,7 +160,7 @@ The following arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Label used to identify instance type
 {{% /md %}}</dd>
@@ -167,7 +169,7 @@ The following arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -203,7 +205,7 @@ The following output properties are available:
             title="">
         <span>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -211,7 +213,7 @@ The following output properties are available:
             title="">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -219,7 +221,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +229,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -235,7 +237,7 @@ The following output properties are available:
             title="">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -243,7 +245,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -259,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -267,7 +269,7 @@ The following output properties are available:
             title="">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -290,7 +292,7 @@ The following output properties are available:
             title="">
         <span>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -298,7 +300,7 @@ The following output properties are available:
             title="">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -306,7 +308,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -314,7 +316,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -322,7 +324,7 @@ The following output properties are available:
             title="">
         <span>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -330,7 +332,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -346,7 +348,7 @@ The following output properties are available:
             title="">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -354,7 +356,7 @@ The following output properties are available:
             title="">
         <span>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -377,7 +379,7 @@ The following output properties are available:
             title="">
         <span>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -385,7 +387,7 @@ The following output properties are available:
             title="">
         <span>disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -393,7 +395,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -401,7 +403,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -409,7 +411,7 @@ The following output properties are available:
             title="">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -417,7 +419,7 @@ The following output properties are available:
             title="">
         <span>network<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -433,7 +435,7 @@ The following output properties are available:
             title="">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -441,7 +443,7 @@ The following output properties are available:
             title="">
         <span>vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -464,7 +466,7 @@ The following output properties are available:
             title="">
         <span>class_</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -472,7 +474,7 @@ The following output properties are available:
             title="">
         <span>disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -480,7 +482,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +490,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -496,7 +498,7 @@ The following output properties are available:
             title="">
         <span>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -504,7 +506,7 @@ The following output properties are available:
             title="">
         <span>network_<wbr>out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -520,7 +522,7 @@ The following output properties are available:
             title="">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -528,7 +530,7 @@ The following output properties are available:
             title="">
         <span>vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -550,7 +552,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetInstanceTypeAddons">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddons">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -625,7 +627,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetInstanceTypeAddonsBackups">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddonsBackups">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -700,7 +702,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetInstanceTypeAddonsBackupsPrice">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypeAddonsBackupsPrice">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -713,7 +715,7 @@ The following output properties are available:
             title="Required">
         <span>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -721,7 +723,7 @@ The following output properties are available:
             title="Required">
         <span>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -736,7 +738,7 @@ The following output properties are available:
             title="Required">
         <span>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -744,7 +746,7 @@ The following output properties are available:
             title="Required">
         <span>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -759,7 +761,7 @@ The following output properties are available:
             title="Required">
         <span>hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -767,7 +769,7 @@ The following output properties are available:
             title="Required">
         <span>monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -782,7 +784,7 @@ The following output properties are available:
             title="Required">
         <span>hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -790,7 +792,7 @@ The following output properties are available:
             title="Required">
         <span>monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -807,7 +809,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetInstanceTypePrice">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetInstanceTypePrice">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -820,7 +822,7 @@ The following output properties are available:
             title="Required">
         <span>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -828,7 +830,7 @@ The following output properties are available:
             title="Required">
         <span>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -843,7 +845,7 @@ The following output properties are available:
             title="Required">
         <span>Hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -851,7 +853,7 @@ The following output properties are available:
             title="Required">
         <span>Monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -866,7 +868,7 @@ The following output properties are available:
             title="Required">
         <span>hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -874,7 +876,7 @@ The following output properties are available:
             title="Required">
         <span>monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -889,7 +891,7 @@ The following output properties are available:
             title="Required">
         <span>hourly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -897,7 +899,7 @@ The following output properties are available:
             title="Required">
         <span>monthly</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

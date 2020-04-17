@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Provides information about a Linode domain.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might use this data source to access information about a Linode domain.
 
@@ -16,14 +18,16 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getDomain({
+const foo = linode.getDomain({
     id: "1234567",
-}, { async: true }));
-const bar = pulumi.output(linode.getDomain({
+});
+const bar = linode.getDomain({
     domain: "bar.example.com",
-}, { async: true }));
+});
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The Linode Domain resource exports the following attributes:
@@ -56,8 +60,6 @@ The Linode Domain resource exports the following attributes:
 
 * `tags` - An array of tags applied to this object.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.md.
-
 
 
 
@@ -78,7 +80,7 @@ The Linode Domain resource exports the following attributes:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetDomainArgs">GetDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetDomainArgs">GetDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -101,7 +103,7 @@ The following arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique domain name of the Domain record to query.
 {{% /md %}}</dd>
@@ -110,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique numeric ID of the Domain record to query.
 {{% /md %}}</dd>
@@ -126,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique domain name of the Domain record to query.
 {{% /md %}}</dd>
@@ -135,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique numeric ID of the Domain record to query.
 {{% /md %}}</dd>
@@ -151,7 +153,7 @@ The following arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique domain name of the Domain record to query.
 {{% /md %}}</dd>
@@ -160,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique numeric ID of the Domain record to query.
 {{% /md %}}</dd>
@@ -176,7 +178,7 @@ The following arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique domain name of the Domain record to query.
 {{% /md %}}</dd>
@@ -185,7 +187,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique numeric ID of the Domain record to query.
 {{% /md %}}</dd>
@@ -214,7 +216,7 @@ The following output properties are available:
             title="">
         <span>Axfr<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -222,7 +224,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -230,7 +232,7 @@ The following output properties are available:
             title="">
         <span>Expire<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -238,7 +240,7 @@ The following output properties are available:
             title="">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -246,7 +248,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -254,7 +256,7 @@ The following output properties are available:
             title="">
         <span>Refresh<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -262,7 +264,7 @@ The following output properties are available:
             title="">
         <span>Retry<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -270,7 +272,7 @@ The following output properties are available:
             title="">
         <span>Soa<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -278,7 +280,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -286,7 +288,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -294,7 +296,7 @@ The following output properties are available:
             title="">
         <span>Ttl<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -302,7 +304,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -310,7 +312,7 @@ The following output properties are available:
             title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -318,7 +320,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -333,7 +335,7 @@ The following output properties are available:
             title="">
         <span>Axfr<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -341,7 +343,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -349,7 +351,7 @@ The following output properties are available:
             title="">
         <span>Expire<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -357,7 +359,7 @@ The following output properties are available:
             title="">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -365,7 +367,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -373,7 +375,7 @@ The following output properties are available:
             title="">
         <span>Refresh<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -381,7 +383,7 @@ The following output properties are available:
             title="">
         <span>Retry<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -389,7 +391,7 @@ The following output properties are available:
             title="">
         <span>Soa<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,7 +399,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +407,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -413,7 +415,7 @@ The following output properties are available:
             title="">
         <span>Ttl<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -421,7 +423,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -429,7 +431,7 @@ The following output properties are available:
             title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -437,7 +439,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -452,7 +454,7 @@ The following output properties are available:
             title="">
         <span>axfr<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -460,7 +462,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -468,7 +470,7 @@ The following output properties are available:
             title="">
         <span>expire<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -476,7 +478,7 @@ The following output properties are available:
             title="">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -484,7 +486,7 @@ The following output properties are available:
             title="">
         <span>master<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -492,7 +494,7 @@ The following output properties are available:
             title="">
         <span>refresh<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -500,7 +502,7 @@ The following output properties are available:
             title="">
         <span>retry<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -508,7 +510,7 @@ The following output properties are available:
             title="">
         <span>soa<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -516,7 +518,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -524,7 +526,7 @@ The following output properties are available:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -532,7 +534,7 @@ The following output properties are available:
             title="">
         <span>ttl<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -540,7 +542,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -548,7 +550,7 @@ The following output properties are available:
             title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -556,7 +558,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -571,7 +573,7 @@ The following output properties are available:
             title="">
         <span>axfr_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -579,7 +581,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -587,7 +589,7 @@ The following output properties are available:
             title="">
         <span>expire_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -595,7 +597,7 @@ The following output properties are available:
             title="">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -603,7 +605,7 @@ The following output properties are available:
             title="">
         <span>master_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -611,7 +613,7 @@ The following output properties are available:
             title="">
         <span>refresh_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -619,7 +621,7 @@ The following output properties are available:
             title="">
         <span>retry_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -627,7 +629,7 @@ The following output properties are available:
             title="">
         <span>soa_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -635,7 +637,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -643,7 +645,7 @@ The following output properties are available:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -651,7 +653,7 @@ The following output properties are available:
             title="">
         <span>ttl_<wbr>sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -659,7 +661,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -667,7 +669,7 @@ The following output properties are available:
             title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -675,7 +677,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

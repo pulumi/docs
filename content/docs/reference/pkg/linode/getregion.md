@@ -8,7 +8,9 @@ block_external_search_index: true
 
 `linode..getRegion` provides details about a specific Linode region.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how the resource might be used to obtain additional information about a Linode region.
 
@@ -16,12 +18,13 @@ The following example shows how the resource might be used to obtain additional 
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const region = pulumi.output(linode.getRegion({
+const region = linode.getRegion({
     id: "us-east",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.md.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const region = pulumi.output(linode.getRegion({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetRegionArgs">GetRegionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupRegionResult">LookupRegionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetRegionArgs">GetRegionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupRegionResult">LookupRegionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -74,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -89,7 +92,7 @@ The following arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -97,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -112,7 +115,7 @@ The following arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -120,7 +123,7 @@ The following arguments are supported:
             title="Optional">
         <span>country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -135,7 +138,7 @@ The following arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -143,7 +146,7 @@ The following arguments are supported:
             title="Optional">
         <span>country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -171,7 +174,7 @@ The following output properties are available:
             title="">
         <span>Country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -179,7 +182,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -194,7 +197,7 @@ The following output properties are available:
             title="">
         <span>Country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -202,7 +205,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -217,7 +220,7 @@ The following output properties are available:
             title="">
         <span>country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -225,7 +228,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -240,7 +243,7 @@ The following output properties are available:
             title="">
         <span>country</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -248,7 +251,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -8,7 +8,9 @@ block_external_search_index: true
 
 `linode..SshKey` provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how the resource might be used to obtain the name of the SSH Key configured on the Linode user profile.
 
@@ -16,12 +18,13 @@ The following example shows how the resource might be used to obtain the name of
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = pulumi.output(linode.getSshKey({
+const foo = linode.getSshKey({
     label: "foo",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.md.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const foo = pulumi.output(linode.getSshKey({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSshKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#GetSshKeyArgs">GetSshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#LookupSshKeyResult">LookupSshKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSshKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#GetSshKeyArgs">GetSshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupSshKeyResult">LookupSshKeyResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -81,7 +84,7 @@ The following arguments are supported:
             title="Required">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -96,7 +99,7 @@ The following arguments are supported:
             title="Required">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -111,7 +114,7 @@ The following arguments are supported:
             title="Required">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -139,7 +142,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -147,7 +150,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -156,7 +159,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -164,7 +167,7 @@ The following output properties are available:
             title="">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -179,7 +182,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -187,7 +190,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -196,7 +199,7 @@ The following output properties are available:
             title="">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -204,7 +207,7 @@ The following output properties are available:
             title="">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -219,7 +222,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +230,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -236,7 +239,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -244,7 +247,7 @@ The following output properties are available:
             title="">
         <span>ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -259,7 +262,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -267,7 +270,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -276,7 +279,7 @@ The following output properties are available:
             title="">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -284,7 +287,7 @@ The following output properties are available:
             title="">
         <span>ssh_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
