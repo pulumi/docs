@@ -21,9 +21,6 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider. Otherwise you’ll receive a 4xx error.</p>
 </div></blockquote>
 <p>Fields that expect an Azure service will work with one of: “microsoft.sql/servers/elasticpools” “microsoft.storage/storageaccounts” “microsoft.storage/storageaccountsservices/tableservices” “microsoft.storage/storageaccountsservices/blobservices” “microsoft.storage/storageaccounts/queueservices” “microsoft.storage/storageaccounts/fileservices” “microsoft.compute/virtualmachinescalesets” “microsoft.compute/virtualmachinescalesets/virtualmachines” “microsoft.compute/virtualmachines” “microsoft.devices/iothubs” “microsoft.eventHub/namespaces” “microsoft.batch/batchaccounts” “microsoft.sql/servers/databases” “microsoft.cache/redis” “microsoft.logic/workflows”.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/azure_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
