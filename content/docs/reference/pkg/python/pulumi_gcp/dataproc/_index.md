@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_gcp.dataproc.AutoscalingPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.dataproc.</code><code class="sig-name descname">AutoscalingPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">basic_algorithm=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">secondary_worker_config=None</em>, <em class="sig-param">worker_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.dataproc.AutoscalingPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes an autoscaling policy for Dataproc cluster autoscaler.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_autoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_autoscaling_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -225,9 +222,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>!&gt; <strong>Warning:</strong> Due to limitations of the API, all arguments except
 <code class="docutils literal notranslate"><span class="pre">labels</span></code>,<code class="docutils literal notranslate"><span class="pre">cluster_config.worker_config.num_instances</span></code> and <code class="docutils literal notranslate"><span class="pre">cluster_config.preemptible_worker_config.num_instances</span></code> are non-updatable. Changing others will cause recreation of the
 whole cluster!</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1049,7 +1043,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1188,7 +1181,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1327,7 +1319,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the cluster as <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.ClusterIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1442,9 +1433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a job resource within a Dataproc cluster within GCE. For more information see
 <a class="reference external" href="https://cloud.google.com/dataproc/">the official dataproc documentation</a>.</p>
 <p>!&gt; <strong>Note:</strong> This resource does not support ‘update’ and changing any attributes will cause the resource to be recreated.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1789,7 +1777,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1920,7 +1907,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2051,7 +2037,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">dataproc.JobIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

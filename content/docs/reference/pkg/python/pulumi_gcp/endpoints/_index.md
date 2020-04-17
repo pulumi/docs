@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_gcp.endpoints.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.endpoints.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">grpc_config=None</em>, <em class="sig-param">openapi_config=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">protoc_output_base64=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.endpoints.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource creates and rolls out a Cloud Endpoints service using OpenAPI or gRPC.  View the relevant docs for <a class="reference external" href="https://cloud.google.com/endpoints/docs/openapi/">OpenAPI</a> and <a class="reference external" href="https://cloud.google.com/endpoints/docs/grpc/">gRPC</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -113,7 +110,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -230,7 +226,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -347,7 +342,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">endpoints.ServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/endpoints_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -26,9 +26,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -151,7 +148,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -277,7 +273,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,7 +398,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DatasetIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -516,9 +510,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -663,7 +654,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -789,7 +779,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -915,7 +904,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.DicomStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1028,9 +1016,6 @@ standard for Healthcare information exchange</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1263,7 +1248,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1389,7 +1373,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1515,7 +1498,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.FhirStoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1628,9 +1610,6 @@ standard for Healthcare information exchange</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1797,7 +1776,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1923,7 +1901,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2049,7 +2026,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">healthcare.Hl7StoreIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -49,7 +49,6 @@ against GCP Cloud Composer before filing bugs against this provider.</p></li>
 <li><p><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment 
 deletion. <a class="reference external" href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer’s use of Cloud Storage</a>.</p></li>
 </ul>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -250,9 +249,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.composer.get_image_versions">
 <code class="sig-prename descclassname">pulumi_gcp.composer.</code><code class="sig-name descname">get_image_versions</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.get_image_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Cloud Composer versions in a region for a given project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_composer_image_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_composer_image_versions.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

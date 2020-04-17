@@ -66,7 +66,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -194,7 +193,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -338,7 +336,6 @@ made available again. This means a deleted role that has been deleted for more t
 by the provider, and new roles cannot share that name.</p>
 </dd>
 </dl>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam_custom_role.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam_custom_role.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -480,7 +477,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -622,7 +618,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code>, <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code>, or <code class="docutils literal notranslate"><span class="pre">projects.IAMAuditConfig</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">projects.IAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">projects.IAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -728,9 +723,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a> and
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/setOrgPolicy">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_organization_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -937,9 +929,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of a single API service for an existing Google Cloud Platform project.</p>
 <p>For a list of services available, visit the
 <a class="reference external" href="https://console.cloud.google.com/apis/library">API library page</a> or run <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">services</span> <span class="pre">list</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1047,9 +1036,6 @@ See the <a class="reference external" href="https://cloud.google.com/resource-ma
 resource must have <code class="docutils literal notranslate"><span class="pre">roles/resourcemanager.projectCreator</span></code>. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/access-control-org">Access Control for Organizations Using IAM</a>
 doc for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1118,9 +1104,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Allows management of Organization policies for a Google Project. For more information see
 <a class="reference external" href="https://cloud.google.com/resource-manager/docs/organization-policy/overview">the official
 documentation</a></p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_project_organization_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_project_organization_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1138,9 +1121,6 @@ documentation</a></p>
 <dd><p>Retrieve information about a set of projects based on a filter. See the
 <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list">REST API</a>
 for more details.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_projects.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_projects.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filter</strong> (<em>str</em>) – <p>A string filter as defined in the <a class="reference external" href="https://cloud.google.com/resource-manager/reference/rest/v1/projects/list#query-parameters">REST API</a>.</p>
