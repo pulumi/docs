@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.trustedorigin.</code><code class="sig-name descname">Origin</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">origin=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.trustedorigin.Origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Trusted Origin.</p>
 <p>This resource allows you to create and configure an Trusted Origin.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/trusted_origin.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/trusted_origin.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
