@@ -31,18 +31,14 @@ popd
 generate_docs() {
     provider=$1
 
-    # Checkout the master branch of the provider repo, rather than
-    # using the update_repos script. This is only temporary until
-    # 2.0 is GA.
-    # ./scripts/update_repos.sh "pulumi-${provider}"
-
     echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
     pushd "../pulumi-${provider}"
     git fetch --tags
 
     if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-        # For the moment, choose only v1 tags, by default unless an override was provided.
-        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags='v1*'`)
+        plugin_version=$(git describe --tags $(git rev-list --max-count=1 --tags --not --tags='*-dev'))
+        # If a plugin version was passed, then use that.
+        # The provider repo will also be checked out at that version below.
         if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
             plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
         elif [[ ${plugin_version} = sdk* ]]; then
@@ -50,10 +46,10 @@ generate_docs() {
         fi
 
         echo -e "\033[0;93mCheckout repo at tag $plugin_version\033[0m"
-        git -c advice.detachedHead=false checkout $plugin_version >/dev/null
+        git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
 
         echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-        pulumi plugin install resource ${provider} ${plugin_version}
+        pulumi plugin install resource "${provider}" "${plugin_version}"
     fi
 
     TFGEN=pulumi-tfgen-${provider}
@@ -61,7 +57,7 @@ generate_docs() {
     make generate_schema
     popd
 
-    if [ $provider = "kubernetes" ]; then
+    if [ "$provider" = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
     else
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"

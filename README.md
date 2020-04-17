@@ -142,6 +142,21 @@ PKGS=yourpackagename ./scripts/run_typedoc.sh
 
 Docs for additional packages can be added by updating `./scripts/run_typedoc.sh` to include the package, and then updating `./config.toml` to include the package in the TOC as a `[[menu.reference]]` entry.
 
+## Updating resource docs
+
+> Resource docs are only available for providers for which we can generate a Pulumi schema.
+
+The primary script is `./scripts/gen_resource_docs.sh`. The script takes the following arguments (in order):
+
+* The provider package name, ex. `aws`.
+* Whether to install the resource plugin (almost always should be `true`): `true` or `false`.
+* The version of the provider so that the provider repo will be checked out at that version, as well as the resource plugin for that version will be installed.
+  * The version must match a release tag exactly.
+
+We currently have CI in-place to call the above script whenever a new provider version is released. See [`build-package-docs.sh`](https://github.com/pulumi/scripts/blob/master/ci/build-package-docs.sh#L62) in the `pulumi/scripts` repo.
+
+If you are looking to generate resource docs for _all_ providers, then you might find `./scripts/gen_all_resource_docs.sh` useful. The only use-case for this script is if you need to regenerate docs for all supported providers out-of-band from CI on your local machine and then a PR for it.
+
 ## Deploying updates
 
 When changes are merged into `master`, https://www.pulumi.com/ is automatically deployed. You can use the [Travis UI](https://travis-ci.com/pulumi/docs) to check on the status of the deployment.
