@@ -39,7 +39,7 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	if len(args) < 2 {
-		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file> <overlay-schema-file>\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "error: usage: %s <out-dir> <provider-schema-file> [overlay-schema-file]>\n", os.Args[0])
 		os.Exit(1)
 	}
 
@@ -49,13 +49,13 @@ func main() {
 
 	schema, err := ioutil.ReadFile(schemaFile)
 	if err != nil {
-		fmt.Printf("error reading schema file from path: %v", err)
+		glog.Infof("error reading schema file from path: %v", err)
 		os.Exit(1)
 	}
 
 	mainSpec := &pschema.PackageSpec{}
 	if err := json.Unmarshal(schema, mainSpec); err != nil {
-		fmt.Printf("error unmarshalling schema into a PackageSpec: %v", err)
+		glog.Infof("error unmarshalling schema into a PackageSpec: %v", err)
 		os.Exit(1)
 	}
 
@@ -63,11 +63,11 @@ func main() {
 		overlaySpec := &pschema.PackageSpec{}
 		overlaysSchema, err := ioutil.ReadFile(overlaysSchemaFile)
 		if err != nil {
-			fmt.Printf("error reading overlay schema file from path: %v", err)
+			glog.Infof("error reading overlay schema file from path: %v", err)
 			os.Exit(1)
 		}
 		if err := json.Unmarshal(overlaysSchema, overlaySpec); err != nil {
-			fmt.Printf("error unmarshalling overlay schema into a PackageSpec: %v", err)
+			glog.Infof("error unmarshalling overlay schema into a PackageSpec: %v", err)
 			os.Exit(1)
 		}
 
@@ -75,7 +75,7 @@ func main() {
 	}
 
 	if err := generateDocsFromSchema(outDir, mainSpec); err != nil {
-		fmt.Printf("error generating docs from schema: %v", err)
+		glog.Infof("error generating docs from schema: %v", err)
 		os.Exit(1)
 	}
 }
@@ -85,9 +85,17 @@ func main() {
 func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.PackageSpec) error {
 	// Merge the overlay schema spec into the main schema spec.
 	for key, value := range overlaySpec.Types {
+		if _, ok := mainSpec.Types[key]; ok {
+			glog.Infoln(key, "was skipped because it was already in the main schema spec")
+			continue
+		}
 		mainSpec.Types[key] = value
 	}
 	for key, value := range overlaySpec.Resources {
+		if _, ok := mainSpec.Resources[key]; ok {
+			glog.Infoln(key, "was skipped because it was already in the main schema spec")
+			continue
+		}
 		mainSpec.Resources[key] = value
 	}
 	for lang, overlayLanguageInfo := range overlaySpec.Language {
@@ -104,10 +112,11 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			}
 
 			for key, value := range overlaySchemaPkgInfo.ModuleToPackage {
+				if _, ok := mainSchemaPkgInfo.ModuleToPackage[key]; ok {
+					glog.Infoln("Go ModuleToPackage key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
 				mainSchemaPkgInfo.ModuleToPackage[key] = value
-			}
-			for key, value := range overlaySchemaPkgInfo.PackageImportAliases {
-				mainSchemaPkgInfo.PackageImportAliases[key] = value
 			}
 
 			// Override the language info for Go in the main schema spec.
@@ -128,6 +137,10 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			}
 
 			for key, value := range overlaySchemaPkgInfo.ModuleToPackage {
+				if _, ok := mainSchemaPkgInfo.ModuleToPackage[key]; ok {
+					glog.Infoln("NodeJS ModuleToPackage key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
 				mainSchemaPkgInfo.ModuleToPackage[key] = value
 			}
 
@@ -149,6 +162,10 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 			}
 
 			for key, value := range overlaySchemaPkgInfo.Namespaces {
+				if _, ok := mainSchemaPkgInfo.Namespaces[key]; ok {
+					glog.Infoln("C# Namespaces key", key, "was skipped because it was already in the main schema's language info")
+					continue
+				}
 				mainSchemaPkgInfo.Namespaces[key] = value
 			}
 			// Override the language info for C# in the main schema spec.
