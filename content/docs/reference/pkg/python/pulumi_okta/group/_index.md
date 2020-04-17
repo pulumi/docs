@@ -70,9 +70,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Group.</p>
 <p>This resource allows you to create and configure an Okta Group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -164,9 +161,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Roles</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Roles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates Group level Admin Role Assignments.</p>
 <p>This resource allows you to create and configure Group level Admin Role Assignments.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -250,9 +244,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">Rule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">expression_type=None</em>, <em class="sig-param">expression_value=None</em>, <em class="sig-param">group_assignments=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.Rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta Group Rule.</p>
 <p>This resource allows you to create and configure an Okta Group Rule.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -359,18 +350,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.group.get_everyone_group">
 <code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">get_everyone_group</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.get_everyone_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the Everyone group from Okta. The same can be achieved with the <code class="docutils literal notranslate"><span class="pre">group.Group</span></code> data source with <code class="docutils literal notranslate"><span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;Everyone&quot;</span></code>. This is simply a shortcut.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/everyone_group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/everyone_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.group.get_group">
 <code class="sig-prename descclassname">pulumi_okta.group.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param">include_users=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.group.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a group from Okta.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
