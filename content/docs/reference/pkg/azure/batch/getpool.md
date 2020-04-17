@@ -8,20 +8,23 @@ block_external_search_index: true
 
 Use this data source to access information about an existing Batch pool
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.batch.getPool({
+const example = azure.batch.getPool({
     accountName: "testbatchaccount",
     name: "testbatchpool",
     resourceGroupName: "test",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/batch_pool.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const example = pulumi.output(azure.batch.getPool({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#LookupPoolArgs">LookupPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#LookupPoolResult">LookupPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPool<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#LookupPoolArgs">LookupPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#LookupPoolResult">LookupPoolResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,42 +69,42 @@ The following arguments are supported:
             title="Required">
         <span>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Network<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -109,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>Start<wbr>Task</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args?</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -125,10 +128,27 @@ The following arguments are supported:
             title="Required">
         <span>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -139,28 +159,11 @@ The following arguments are supported:
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Network<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">*Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -168,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>Start<wbr>Task</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">*Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -184,42 +187,42 @@ The following arguments are supported:
             title="Required">
         <span>account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>network<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#getpoolnetworkconfiguration">Get<wbr>Pool<wbr>Network<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +230,7 @@ The following arguments are supported:
             title="Optional">
         <span>start<wbr>Task</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
@@ -243,10 +246,27 @@ The following arguments are supported:
             title="Required">
         <span>account_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -257,28 +277,11 @@ The following arguments are supported:
     <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>network_<wbr>configuration</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolnetworkconfiguration">Dict[Get<wbr>Pool<wbr>Network<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -315,7 +318,7 @@ The following output properties are available:
             title="">
         <span>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
@@ -331,15 +334,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Container<wbr>Configurations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolcontainerconfiguration">List&lt;Get<wbr>Pool<wbr>Container<wbr>Configuration&gt;</a></span>
@@ -351,7 +345,7 @@ The following output properties are available:
             title="">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -368,7 +362,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -377,7 +371,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Tasks<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
 {{% /md %}}</dd>
@@ -386,7 +380,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -394,7 +388,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -411,7 +405,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Agent<wbr>Sku<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
 {{% /md %}}</dd>
@@ -420,18 +414,9 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Start<wbr>Task</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
-    </dt>
-    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -446,9 +431,27 @@ The following output properties are available:
             title="">
         <span>Vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List&lt;Get<wbr>Pool<wbr>Certificate&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -462,7 +465,7 @@ The following output properties are available:
             title="">
         <span>Account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
@@ -478,15 +481,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Container<wbr>Configurations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolcontainerconfiguration">[]Get<wbr>Pool<wbr>Container<wbr>Configuration</a></span>
@@ -498,7 +492,7 @@ The following output properties are available:
             title="">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -515,7 +509,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -524,7 +518,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Tasks<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
 {{% /md %}}</dd>
@@ -541,7 +535,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -558,7 +552,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Agent<wbr>Sku<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
 {{% /md %}}</dd>
@@ -567,18 +561,9 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Start<wbr>Task</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">*Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -593,9 +578,27 @@ The following output properties are available:
             title="">
         <span>Vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">[]Get<wbr>Pool<wbr>Certificate</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -609,7 +612,7 @@ The following output properties are available:
             title="">
         <span>account<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
@@ -625,15 +628,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>container<wbr>Configurations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolcontainerconfiguration">Get<wbr>Pool<wbr>Container<wbr>Configuration[]</a></span>
@@ -645,7 +639,7 @@ The following output properties are available:
             title="">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -662,7 +656,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -671,7 +665,7 @@ The following output properties are available:
             title="">
         <span>max<wbr>Tasks<wbr>Per<wbr>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
 {{% /md %}}</dd>
@@ -688,7 +682,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -705,7 +699,7 @@ The following output properties are available:
             title="">
         <span>node<wbr>Agent<wbr>Sku<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
 {{% /md %}}</dd>
@@ -714,18 +708,9 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>start<wbr>Task</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task?</a></span>
-    </dt>
-    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -740,9 +725,27 @@ The following output properties are available:
             title="">
         <span>vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">Get<wbr>Pool<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>start<wbr>Task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Get<wbr>Pool<wbr>Start<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -756,7 +759,7 @@ The following output properties are available:
             title="">
         <span>account_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Batch account.
 {{% /md %}}</dd>
@@ -772,15 +775,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>container_<wbr>configurations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpoolcontainerconfiguration">List[Get<wbr>Pool<wbr>Container<wbr>Configuration]</a></span>
@@ -792,7 +786,7 @@ The following output properties are available:
             title="">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -809,7 +803,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -818,7 +812,7 @@ The following output properties are available:
             title="">
         <span>max_<wbr>tasks_<wbr>per_<wbr>node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of tasks that can run concurrently on a single compute node in the pool.
 {{% /md %}}</dd>
@@ -835,7 +829,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -852,7 +846,7 @@ The following output properties are available:
             title="">
         <span>node_<wbr>agent_<wbr>sku_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Sku of the node agents in the Batch pool.
 {{% /md %}}</dd>
@@ -861,18 +855,9 @@ The following output properties are available:
             title="">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>start_<wbr>task</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -887,9 +872,27 @@ The following output properties are available:
             title="">
         <span>vm_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The size of the VM created in the Batch pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolcertificate">List[Get<wbr>Pool<wbr>Certificate]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>start_<wbr>task</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpoolstarttask">Dict[Get<wbr>Pool<wbr>Start<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}A `start_task` block that describes the start task settings for the Batch pool.
 {{% /md %}}</dd>
 
 </dl>
@@ -910,7 +913,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolAutoScale">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolAutoScale">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -923,7 +926,7 @@ The following output properties are available:
             title="Required">
         <span>Evaluation<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
 {{% /md %}}</dd>
@@ -932,7 +935,7 @@ The following output properties are available:
             title="Required">
         <span>Formula</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd>
@@ -948,7 +951,7 @@ The following output properties are available:
             title="Required">
         <span>Evaluation<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
 {{% /md %}}</dd>
@@ -957,7 +960,7 @@ The following output properties are available:
             title="Required">
         <span>Formula</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd>
@@ -973,7 +976,7 @@ The following output properties are available:
             title="Required">
         <span>evaluation<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
 {{% /md %}}</dd>
@@ -982,7 +985,7 @@ The following output properties are available:
             title="Required">
         <span>formula</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd>
@@ -998,7 +1001,7 @@ The following output properties are available:
             title="Required">
         <span>evaluation<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The interval to wait before evaluating if the pool needs to be scaled.
 {{% /md %}}</dd>
@@ -1007,7 +1010,7 @@ The following output properties are available:
             title="Required">
         <span>formula</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The autoscale formula that needs to be used for scaling the Batch pool.
 {{% /md %}}</dd>
@@ -1025,7 +1028,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolCertificate">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolCertificate">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1038,7 +1041,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -1047,7 +1050,7 @@ The following output properties are available:
             title="Required">
         <span>Store<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd>
@@ -1056,7 +1059,7 @@ The following output properties are available:
             title="Optional">
         <span>Store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
 {{% /md %}}</dd>
@@ -1065,7 +1068,7 @@ The following output properties are available:
             title="Optional">
         <span>Visibilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
 {{% /md %}}</dd>
@@ -1081,7 +1084,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -1090,7 +1093,7 @@ The following output properties are available:
             title="Required">
         <span>Store<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd>
@@ -1099,7 +1102,7 @@ The following output properties are available:
             title="Optional">
         <span>Store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
 {{% /md %}}</dd>
@@ -1108,7 +1111,7 @@ The following output properties are available:
             title="Optional">
         <span>Visibilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
 {{% /md %}}</dd>
@@ -1124,7 +1127,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -1133,7 +1136,7 @@ The following output properties are available:
             title="Required">
         <span>store<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd>
@@ -1142,7 +1145,7 @@ The following output properties are available:
             title="Optional">
         <span>store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
 {{% /md %}}</dd>
@@ -1151,7 +1154,7 @@ The following output properties are available:
             title="Optional">
         <span>visibilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
 {{% /md %}}</dd>
@@ -1167,7 +1170,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -1176,7 +1179,7 @@ The following output properties are available:
             title="Required">
         <span>store<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the certificate store on the compute node into which the certificate is installed, either `CurrentUser` or `LocalMachine`.
 {{% /md %}}</dd>
@@ -1185,7 +1188,7 @@ The following output properties are available:
             title="Optional">
         <span>store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the certificate store on the compute node into which the certificate is installed.
 {{% /md %}}</dd>
@@ -1194,7 +1197,7 @@ The following output properties are available:
             title="Optional">
         <span>visibilities</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Which user accounts on the compute node have access to the private data of the certificate.
 {{% /md %}}</dd>
@@ -1212,7 +1215,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolContainerConfiguration">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolContainerConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1234,7 +1237,7 @@ The following output properties are available:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
 {{% /md %}}</dd>
@@ -1259,7 +1262,7 @@ The following output properties are available:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
 {{% /md %}}</dd>
@@ -1284,7 +1287,7 @@ The following output properties are available:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
 {{% /md %}}</dd>
@@ -1309,7 +1312,7 @@ The following output properties are available:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of container configuration.
 {{% /md %}}</dd>
@@ -1327,7 +1330,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolContainerConfigurationContainerRegistry">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolContainerConfigurationContainerRegistry">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1340,7 +1343,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
 {{% /md %}}</dd>
@@ -1349,7 +1352,7 @@ The following output properties are available:
             title="Required">
         <span>Registry<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
 {{% /md %}}</dd>
@@ -1358,7 +1361,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -1374,7 +1377,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
 {{% /md %}}</dd>
@@ -1383,7 +1386,7 @@ The following output properties are available:
             title="Required">
         <span>Registry<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
 {{% /md %}}</dd>
@@ -1392,7 +1395,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -1408,7 +1411,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
 {{% /md %}}</dd>
@@ -1417,7 +1420,7 @@ The following output properties are available:
             title="Required">
         <span>registry<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
 {{% /md %}}</dd>
@@ -1426,7 +1429,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -1442,7 +1445,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to log into the registry server.
 {{% /md %}}</dd>
@@ -1451,7 +1454,7 @@ The following output properties are available:
             title="Required">
         <span>registry<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container registry URL. The default is "docker.io".
 {{% /md %}}</dd>
@@ -1460,7 +1463,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -1478,7 +1481,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolFixedScale">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolFixedScale">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1491,7 +1494,7 @@ The following output properties are available:
             title="Required">
         <span>Resize<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
 {{% /md %}}</dd>
@@ -1500,7 +1503,7 @@ The following output properties are available:
             title="Required">
         <span>Target<wbr>Dedicated<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1509,7 +1512,7 @@ The following output properties are available:
             title="Required">
         <span>Target<wbr>Low<wbr>Priority<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1525,7 +1528,7 @@ The following output properties are available:
             title="Required">
         <span>Resize<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
 {{% /md %}}</dd>
@@ -1534,7 +1537,7 @@ The following output properties are available:
             title="Required">
         <span>Target<wbr>Dedicated<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1543,7 +1546,7 @@ The following output properties are available:
             title="Required">
         <span>Target<wbr>Low<wbr>Priority<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1559,7 +1562,7 @@ The following output properties are available:
             title="Required">
         <span>resize<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
 {{% /md %}}</dd>
@@ -1568,7 +1571,7 @@ The following output properties are available:
             title="Required">
         <span>target<wbr>Dedicated<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1577,7 +1580,7 @@ The following output properties are available:
             title="Required">
         <span>target<wbr>Low<wbr>Priority<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1593,7 +1596,7 @@ The following output properties are available:
             title="Required">
         <span>resize<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The timeout for resize operations.
 {{% /md %}}</dd>
@@ -1602,7 +1605,7 @@ The following output properties are available:
             title="Required">
         <span>target<wbr>Dedicated<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1611,7 +1614,7 @@ The following output properties are available:
             title="Required">
         <span>target<wbr>Low<wbr>Priority<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of low priority nodes in the Batch pool.
 {{% /md %}}</dd>
@@ -1629,7 +1632,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfiguration">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1651,7 +1654,7 @@ The following output properties are available:
             title="Required">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
 {{% /md %}}</dd>
@@ -1676,7 +1679,7 @@ The following output properties are available:
             title="Required">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
 {{% /md %}}</dd>
@@ -1701,7 +1704,7 @@ The following output properties are available:
             title="Required">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
 {{% /md %}}</dd>
@@ -1726,7 +1729,7 @@ The following output properties are available:
             title="Required">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARM resource identifier of the virtual network subnet which the compute nodes of the pool are joined too.
 {{% /md %}}</dd>
@@ -1744,7 +1747,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfiguration">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1757,7 +1760,7 @@ The following output properties are available:
             title="Required">
         <span>Backend<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
 {{% /md %}}</dd>
@@ -1766,7 +1769,7 @@ The following output properties are available:
             title="Required">
         <span>Frontend<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
 {{% /md %}}</dd>
@@ -1775,7 +1778,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -1793,7 +1796,7 @@ The following output properties are available:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
 {{% /md %}}</dd>
@@ -1809,7 +1812,7 @@ The following output properties are available:
             title="Required">
         <span>Backend<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
 {{% /md %}}</dd>
@@ -1818,7 +1821,7 @@ The following output properties are available:
             title="Required">
         <span>Frontend<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
 {{% /md %}}</dd>
@@ -1827,7 +1830,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -1845,7 +1848,7 @@ The following output properties are available:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
 {{% /md %}}</dd>
@@ -1861,7 +1864,7 @@ The following output properties are available:
             title="Required">
         <span>backend<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
 {{% /md %}}</dd>
@@ -1870,7 +1873,7 @@ The following output properties are available:
             title="Required">
         <span>frontend<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
 {{% /md %}}</dd>
@@ -1879,7 +1882,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -1897,7 +1900,7 @@ The following output properties are available:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
 {{% /md %}}</dd>
@@ -1913,7 +1916,7 @@ The following output properties are available:
             title="Required">
         <span>backend_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port number on the compute node.
 {{% /md %}}</dd>
@@ -1922,7 +1925,7 @@ The following output properties are available:
             title="Required">
         <span>frontend<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The range of external ports that are used to provide inbound access to the backendPort on the individual compute nodes in the format of `1000-1100`.
 {{% /md %}}</dd>
@@ -1931,7 +1934,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint.
 {{% /md %}}</dd>
@@ -1949,7 +1952,7 @@ The following output properties are available:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the endpoint.
 {{% /md %}}</dd>
@@ -1967,7 +1970,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1980,7 +1983,7 @@ The following output properties are available:
             title="Required">
         <span>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
 {{% /md %}}</dd>
@@ -1989,7 +1992,7 @@ The following output properties are available:
             title="Required">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
 {{% /md %}}</dd>
@@ -1998,7 +2001,7 @@ The following output properties are available:
             title="Required">
         <span>Source<wbr>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
 {{% /md %}}</dd>
@@ -2014,7 +2017,7 @@ The following output properties are available:
             title="Required">
         <span>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
 {{% /md %}}</dd>
@@ -2023,7 +2026,7 @@ The following output properties are available:
             title="Required">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
 {{% /md %}}</dd>
@@ -2032,7 +2035,7 @@ The following output properties are available:
             title="Required">
         <span>Source<wbr>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
 {{% /md %}}</dd>
@@ -2048,7 +2051,7 @@ The following output properties are available:
             title="Required">
         <span>access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
 {{% /md %}}</dd>
@@ -2057,7 +2060,7 @@ The following output properties are available:
             title="Required">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
 {{% /md %}}</dd>
@@ -2066,7 +2069,7 @@ The following output properties are available:
             title="Required">
         <span>source<wbr>Address<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
 {{% /md %}}</dd>
@@ -2082,7 +2085,7 @@ The following output properties are available:
             title="Required">
         <span>access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action that should be taken for a specified IP address, subnet range or tag.
 {{% /md %}}</dd>
@@ -2091,7 +2094,7 @@ The following output properties are available:
             title="Required">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The priority for this rule.
 {{% /md %}}</dd>
@@ -2100,7 +2103,7 @@ The following output properties are available:
             title="Required">
         <span>source_<wbr>address_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source address prefix or tag to match for the rule.
 {{% /md %}}</dd>
@@ -2118,7 +2121,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTask">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTask">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2131,27 +2134,9 @@ The following output properties are available:
             title="Required">
         <span>Command<wbr>Line</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of retry count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2174,9 +2159,27 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wait<wbr>For<wbr>Success</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
 {{% /md %}}</dd>
@@ -2192,27 +2195,9 @@ The following output properties are available:
             title="Required">
         <span>Command<wbr>Line</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of retry count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2235,9 +2220,27 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Wait<wbr>For<wbr>Success</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
 {{% /md %}}</dd>
@@ -2253,27 +2256,9 @@ The following output properties are available:
             title="Required">
         <span>command<wbr>Line</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of retry count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2296,9 +2281,27 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>wait<wbr>For<wbr>Success</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
 {{% /md %}}</dd>
@@ -2314,27 +2317,9 @@ The following output properties are available:
             title="Required">
         <span>command<wbr>Line</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The command line executed by the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of retry count.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2357,9 +2342,27 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of strings (key,value) that represents the environment variables to set in the start task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Task<wbr>Retry<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of retry count.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>wait<wbr>For<wbr>Success</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A flag that indicates if the Batch pool should wait for the start task to be completed.
 {{% /md %}}</dd>
@@ -2377,7 +2380,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskResourceFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskResourceFile">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskResourceFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskResourceFile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2390,7 +2393,7 @@ The following output properties are available:
             title="Required">
         <span>Auto<wbr>Storage<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd>
@@ -2399,7 +2402,7 @@ The following output properties are available:
             title="Required">
         <span>Blob<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
 {{% /md %}}</dd>
@@ -2408,7 +2411,7 @@ The following output properties are available:
             title="Required">
         <span>File<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
 {{% /md %}}</dd>
@@ -2417,7 +2420,7 @@ The following output properties are available:
             title="Required">
         <span>File<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
 {{% /md %}}</dd>
@@ -2426,7 +2429,7 @@ The following output properties are available:
             title="Required">
         <span>Http<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
 {{% /md %}}</dd>
@@ -2435,7 +2438,7 @@ The following output properties are available:
             title="Required">
         <span>Storage<wbr>Container<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
 {{% /md %}}</dd>
@@ -2451,7 +2454,7 @@ The following output properties are available:
             title="Required">
         <span>Auto<wbr>Storage<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd>
@@ -2460,7 +2463,7 @@ The following output properties are available:
             title="Required">
         <span>Blob<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
 {{% /md %}}</dd>
@@ -2469,7 +2472,7 @@ The following output properties are available:
             title="Required">
         <span>File<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
 {{% /md %}}</dd>
@@ -2478,7 +2481,7 @@ The following output properties are available:
             title="Required">
         <span>File<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
 {{% /md %}}</dd>
@@ -2487,7 +2490,7 @@ The following output properties are available:
             title="Required">
         <span>Http<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
 {{% /md %}}</dd>
@@ -2496,7 +2499,7 @@ The following output properties are available:
             title="Required">
         <span>Storage<wbr>Container<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
 {{% /md %}}</dd>
@@ -2512,7 +2515,7 @@ The following output properties are available:
             title="Required">
         <span>auto<wbr>Storage<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd>
@@ -2521,7 +2524,7 @@ The following output properties are available:
             title="Required">
         <span>blob<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
 {{% /md %}}</dd>
@@ -2530,7 +2533,7 @@ The following output properties are available:
             title="Required">
         <span>file<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
 {{% /md %}}</dd>
@@ -2539,7 +2542,7 @@ The following output properties are available:
             title="Required">
         <span>file<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
 {{% /md %}}</dd>
@@ -2548,7 +2551,7 @@ The following output properties are available:
             title="Required">
         <span>http<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
 {{% /md %}}</dd>
@@ -2557,7 +2560,7 @@ The following output properties are available:
             title="Required">
         <span>storage<wbr>Container<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
 {{% /md %}}</dd>
@@ -2573,7 +2576,7 @@ The following output properties are available:
             title="Required">
         <span>auto<wbr>Storage<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The storage container name in the auto storage account.
 {{% /md %}}</dd>
@@ -2582,7 +2585,7 @@ The following output properties are available:
             title="Required">
         <span>blob<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The blob prefix used when downloading blobs from an Azure Storage container.
 {{% /md %}}</dd>
@@ -2591,7 +2594,7 @@ The following output properties are available:
             title="Required">
         <span>file<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The file permission mode attribute represented as a string in octal format (e.g. `"0644"`).
 {{% /md %}}</dd>
@@ -2600,7 +2603,7 @@ The following output properties are available:
             title="Required">
         <span>file<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location on the compute node to which to download the file, relative to the task's working directory. If the `http_url` property is specified, the `file_path` is required and describes the path which the file will be downloaded to, including the filename. Otherwise, if the `auto_storage_container_name` or `storage_container_url` property is specified.
 {{% /md %}}</dd>
@@ -2609,7 +2612,7 @@ The following output properties are available:
             title="Required">
         <span>http<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the file to download. If the URL is Azure Blob Storage, it must be readable using anonymous access.
 {{% /md %}}</dd>
@@ -2618,7 +2621,7 @@ The following output properties are available:
             title="Required">
         <span>storage<wbr>Container<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the blob container within Azure Blob Storage.
 {{% /md %}}</dd>
@@ -2636,7 +2639,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentity">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentity">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2658,7 +2661,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -2683,7 +2686,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -2708,7 +2711,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -2733,7 +2736,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to log into the registry server.
 {{% /md %}}</dd>
@@ -2751,7 +2754,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUser">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStartTaskUserIdentityAutoUser">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2764,7 +2767,7 @@ The following output properties are available:
             title="Required">
         <span>Elevation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2773,7 +2776,7 @@ The following output properties are available:
             title="Required">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2789,7 +2792,7 @@ The following output properties are available:
             title="Required">
         <span>Elevation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2798,7 +2801,7 @@ The following output properties are available:
             title="Required">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2814,7 +2817,7 @@ The following output properties are available:
             title="Required">
         <span>elevation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2823,7 +2826,7 @@ The following output properties are available:
             title="Required">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2839,7 +2842,7 @@ The following output properties are available:
             title="Required">
         <span>elevation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The elevation level of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2848,7 +2851,7 @@ The following output properties are available:
             title="Required">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope of the user identity under which the start task runs.
 {{% /md %}}</dd>
@@ -2866,7 +2869,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/batch?tab=doc#GetPoolStorageImageReference">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/batch?tab=doc#GetPoolStorageImageReference">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2879,7 +2882,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -2888,7 +2891,7 @@ The following output properties are available:
             title="Required">
         <span>Offer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2896,7 +2899,7 @@ The following output properties are available:
             title="Required">
         <span>Publisher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2904,7 +2907,7 @@ The following output properties are available:
             title="Required">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2912,7 +2915,7 @@ The following output properties are available:
             title="Required">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2927,7 +2930,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -2936,7 +2939,7 @@ The following output properties are available:
             title="Required">
         <span>Offer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2944,7 +2947,7 @@ The following output properties are available:
             title="Required">
         <span>Publisher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2952,7 +2955,7 @@ The following output properties are available:
             title="Required">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2960,7 +2963,7 @@ The following output properties are available:
             title="Required">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2975,7 +2978,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -2984,7 +2987,7 @@ The following output properties are available:
             title="Required">
         <span>offer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2992,7 +2995,7 @@ The following output properties are available:
             title="Required">
         <span>publisher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3000,7 +3003,7 @@ The following output properties are available:
             title="Required">
         <span>sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3008,7 +3011,7 @@ The following output properties are available:
             title="Required">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3023,7 +3026,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified ID of the certificate installed on the pool.
 {{% /md %}}</dd>
@@ -3032,7 +3035,7 @@ The following output properties are available:
             title="Required">
         <span>offer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3040,7 +3043,7 @@ The following output properties are available:
             title="Required">
         <span>publisher</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3048,7 +3051,7 @@ The following output properties are available:
             title="Required">
         <span>sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +3059,7 @@ The following output properties are available:
             title="Required">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

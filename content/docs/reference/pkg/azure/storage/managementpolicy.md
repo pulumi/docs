@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an Azure Storage Account Management Policy.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_management_policy.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an Azure Storage Account Management Policy.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#ManagementPolicy">ManagementPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#ManagementPolicyArgs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#ManagementPolicy">ManagementPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#ManagementPolicyArgs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,7 +26,7 @@ Manages an Azure Storage Account Management Policy.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagementPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyArgs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicy">ManagementPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagementPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyArgs">ManagementPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicy">ManagementPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -121,22 +122,22 @@ Manages an Azure Storage Account Management Policy.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -145,6 +146,15 @@ Manages an Azure Storage Account Management Policy.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Storage<wbr>Account<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -155,15 +165,6 @@ Manages an Azure Storage Account Management Policy.
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -171,22 +172,22 @@ Manages an Azure Storage Account Management Policy.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -195,6 +196,15 @@ Manages an Azure Storage Account Management Policy.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>storage_<wbr>account_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -205,129 +215,10 @@ Manages an Azure Storage Account Management Policy.
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>storage_<wbr>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ManagementPolicy Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List[Management<wbr>Policy<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A `rule` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage_<wbr>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -351,7 +242,7 @@ Get an existing ManagementPolicy resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagementPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyState">ManagementPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicy">ManagementPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagementPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyState">ManagementPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicy">ManagementPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -465,7 +356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">List&lt;Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
@@ -474,7 +365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
 {{% /md %}}</dd>
@@ -499,7 +390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
 {{% /md %}}</dd>
@@ -515,7 +406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A `rule` block as documented below.
 {{% /md %}}</dd>
@@ -524,7 +415,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
 {{% /md %}}</dd>
@@ -549,7 +440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage_<wbr>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the id of the storage account to apply the management policy to.
 {{% /md %}}</dd>
@@ -574,7 +465,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -596,27 +487,27 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -639,27 +530,27 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">*Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
-    </dt>
-    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
+    </dt>
+    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -682,27 +573,27 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters?</a></span>
-    </dt>
-    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managementpolicyrulefilters">Management<wbr>Policy<wbr>Rule<wbr>Filters</a></span>
+    </dt>
+    <dd>{{% md %}}A `filter` block as documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -725,9 +616,18 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to specify whether the rule is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -737,15 +637,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managementpolicyrulefilters">Dict[Management<wbr>Policy<wbr>Rule<wbr>Filters]</a></span>
     </dt>
     <dd>{{% md %}}A `filter` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
 {{% /md %}}</dd>
 
 </dl>
@@ -761,7 +652,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -774,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Blob</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args?</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -783,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args?</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -799,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Blob</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">*Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -808,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">*Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -824,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base<wbr>Blob</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob?</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionsbaseblob">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}A `base_blob` block as documented below.
 {{% /md %}}</dd>
@@ -833,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot?</a></span>
+        <span class="property-type"><a href="#managementpolicyruleactionssnapshot">Management<wbr>Policy<wbr>Rule<wbr>Actions<wbr>Snapshot</a></span>
     </dt>
     <dd>{{% md %}}A `snapshot` block as documented below.
 {{% /md %}}</dd>
@@ -876,7 +767,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsBaseBlobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsBaseBlobOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsBaseBlobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsBaseBlobOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -889,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
 {{% /md %}}</dd>
@@ -898,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -907,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -923,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
 {{% /md %}}</dd>
@@ -932,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -941,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -957,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
 {{% /md %}}</dd>
@@ -966,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -975,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -991,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to delete the blob. Must be at least 0.
 {{% /md %}}</dd>
@@ -1000,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tier<wbr>To<wbr>Archive<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to archive storage. Supports blob currently at Hot or Cool tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -1009,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tier<wbr>To<wbr>Cool<wbr>After<wbr>Days<wbr>Since<wbr>Modification<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The age in days after last modification to tier blobs to cool storage. Supports blob currently at Hot tier. Must be at least 0.
 {{% /md %}}</dd>
@@ -1027,7 +918,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsSnapshotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleActionsSnapshotOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsSnapshotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleActionsSnapshotOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1040,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
 {{% /md %}}</dd>
@@ -1056,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
 {{% /md %}}</dd>
@@ -1072,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
 {{% /md %}}</dd>
@@ -1088,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>After<wbr>Days<wbr>Since<wbr>Creation<wbr>Greater<wbr>Than</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The age in days after create to delete the snaphot. Must be at least 0.
 {{% /md %}}</dd>
@@ -1106,7 +997,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleFiltersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/storage?tab=doc#ManagementPolicyRuleFiltersOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleFiltersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#ManagementPolicyRuleFiltersOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1119,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blob<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Only `blockBlob` is supported.
 {{% /md %}}</dd>
@@ -1128,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
 {{% /md %}}</dd>
@@ -1144,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blob<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Only `blockBlob` is supported.
 {{% /md %}}</dd>
@@ -1153,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
 {{% /md %}}</dd>
@@ -1169,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>blob<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Only `blockBlob` is supported.
 {{% /md %}}</dd>
@@ -1178,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prefix<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
 {{% /md %}}</dd>
@@ -1194,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>blob<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of predefined values. Only `blockBlob` is supported.
 {{% /md %}}</dd>
@@ -1203,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prefix<wbr>Matches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be matched.
 {{% /md %}}</dd>
@@ -1225,6 +1116,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

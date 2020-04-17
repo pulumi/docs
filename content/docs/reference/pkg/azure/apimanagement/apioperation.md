@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an API Operation within an API Management Service.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management_api_operation.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an API Operation within an API Management Service.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperation">ApiOperation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperationArgs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperation">ApiOperation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ApiOperationArgs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +26,11 @@ Manages an API Operation within an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationArgs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationArgs">ApiOperationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperationArgs.html">ApiOperationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperation.html">ApiOperation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperationArgs.html">ApiOperationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -125,7 +126,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -134,25 +135,16 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -161,7 +153,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -170,34 +162,52 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url<wbr>Template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -206,18 +216,9 @@ Manages an API Operation within an API Management Service.
             title="Optional">
         <span>Template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
 
 </dl>
@@ -231,7 +232,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -240,25 +241,16 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -267,7 +259,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -276,27 +268,45 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>Operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">*Api<wbr>Operation<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Url<wbr>Template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -317,15 +327,6 @@ Manages an API Operation within an API Management Service.
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -337,7 +338,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -346,25 +347,16 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -373,7 +365,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -382,34 +374,52 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request?</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url<wbr>Template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -418,18 +428,9 @@ Manages an API Operation within an API Management Service.
             title="Optional">
         <span>template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
 
 </dl>
@@ -443,7 +444,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>api_<wbr>management_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -452,25 +453,16 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>api_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -479,7 +471,7 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -488,9 +480,36 @@ Manages an API Operation within an API Management Service.
             title="Required">
         <span>operation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url_<wbr>template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -500,15 +519,6 @@ Manages an API Operation within an API Management Service.
         <span class="property-type"><a href="#apioperationrequest">Dict[Api<wbr>Operation<wbr>Request]</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -529,453 +539,10 @@ Manages an API Operation within an API Management Service.
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>url_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ApiOperation Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Management<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Display Name for this API Management Operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Operation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Responses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `response` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Management<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Display Name for this API Management Operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Operation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Responses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">[]Api<wbr>Operation<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `response` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">[]Api<wbr>Operation<wbr>Template<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api<wbr>Management<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>api<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Display Name for this API Management Operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>operation<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>responses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `response` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url<wbr>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>management_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Display Name for this API Management Operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>operation_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Dict[Api<wbr>Operation<wbr>Request]</a></span>
-    </dt>
-    <dd>{{% md %}}A `request` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>responses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List[Api<wbr>Operation<wbr>Response]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `response` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List[Api<wbr>Operation<wbr>Template<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url_<wbr>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -999,11 +566,11 @@ Get an existing ApiOperation resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApiOperation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationState">ApiOperationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperation">ApiOperation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperation.html">ApiOperation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ApiOperationState.html">ApiOperationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperation.html">ApiOperation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ApiOperationState.html">ApiOperationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1113,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1122,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1131,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
@@ -1140,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -1149,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -1158,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1167,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args?</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -1176,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1185,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">List&lt;Api<wbr>Operation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -1194,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">List&lt;Api<wbr>Operation<wbr>Template<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -1203,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
@@ -1219,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1228,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1237,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
@@ -1246,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -1255,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -1264,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1273,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">*Api<wbr>Operation<wbr>Request</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -1282,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1309,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
@@ -1325,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Management<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1334,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1343,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
@@ -1352,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -1361,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -1370,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>operation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1379,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request?</a></span>
+        <span class="property-type"><a href="#apioperationrequest">Api<wbr>Operation<wbr>Request</a></span>
     </dt>
     <dd>{{% md %}}A `request` block as defined below.
 {{% /md %}}</dd>
@@ -1388,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1397,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]?</a></span>
+        <span class="property-type"><a href="#apioperationresponse">Api<wbr>Operation<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `response` blocks as defined below.
 {{% /md %}}</dd>
@@ -1406,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `template_parameter` blocks as defined below.
 {{% /md %}}</dd>
@@ -1415,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
@@ -1431,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api_<wbr>management_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the API Management Service where the API exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1440,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API within the API Management Service where this API Operation should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1449,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description for this API Operation, which may include HTML formatting tags.
 {{% /md %}}</dd>
@@ -1458,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Display Name for this API Management Operation.
 {{% /md %}}</dd>
@@ -1467,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The HTTP Method used for this API Management Operation, like `GET`, `DELETE`, `PUT` or `POST` - but not limited to these values.
 {{% /md %}}</dd>
@@ -1476,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>operation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique identifier for this API Operation. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1494,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1521,7 +1088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url_<wbr>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The relative URL Template identifying the target resource for this operation, which may include parameters.
 {{% /md %}}</dd>
@@ -1546,7 +1113,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1559,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd>
@@ -1568,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">List&lt;Api<wbr>Operation<wbr>Request<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -1577,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Query<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd>
@@ -1586,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -1602,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd>
@@ -1645,7 +1212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd>
@@ -1654,7 +1221,7 @@ The following state arguments are supported:
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header[]?</a></span>
+        <span class="property-type"><a href="#apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -1663,7 +1230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>query<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `query_parameter` blocks as defined above.
 {{% /md %}}</dd>
@@ -1672,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation[]?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
@@ -1688,7 +1255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Request, which may include HTML tags.
 {{% /md %}}</dd>
@@ -1733,7 +1300,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1742,29 +1309,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -1773,7 +1322,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -1782,16 +1331,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -1803,29 +1370,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -1834,7 +1383,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -1843,16 +1392,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -1864,29 +1431,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -1895,7 +1444,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -1904,16 +1453,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -1925,29 +1492,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -1956,7 +1505,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -1965,16 +1514,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -1992,7 +1559,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestQueryParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestQueryParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestQueryParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestQueryParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2001,29 +1568,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Query Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Query Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd>
@@ -2032,7 +1581,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd>
@@ -2041,16 +1590,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd>
@@ -2062,29 +1629,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Query Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Query Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd>
@@ -2093,7 +1642,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd>
@@ -2102,16 +1651,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd>
@@ -2123,29 +1690,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Query Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Query Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd>
@@ -2154,7 +1703,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd>
@@ -2163,16 +1712,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd>
@@ -2184,29 +1751,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Query Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Query Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Query Parameter.
 {{% /md %}}</dd>
@@ -2215,7 +1764,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Query Parameter Required?
 {{% /md %}}</dd>
@@ -2224,16 +1773,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Query Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Query Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Query Parameter.
 {{% /md %}}</dd>
@@ -2251,7 +1818,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2264,7 +1831,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -2273,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -2282,7 +1849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -2291,7 +1858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -2300,7 +1867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -2316,7 +1883,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -2334,7 +1901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -2343,7 +1910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -2352,7 +1919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -2368,7 +1935,7 @@ The following state arguments are supported:
             title="Required">
         <span>content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -2377,7 +1944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -2386,7 +1953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -2395,7 +1962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -2404,7 +1971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -2420,7 +1987,7 @@ The following state arguments are supported:
             title="Required">
         <span>content_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -2438,7 +2005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -2447,7 +2014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -2456,7 +2023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -2474,7 +2041,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationFormParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationFormParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationFormParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationRequestRepresentationFormParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2483,29 +2050,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -2514,7 +2063,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -2523,16 +2072,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -2544,29 +2111,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -2575,7 +2124,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -2584,16 +2133,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -2605,29 +2172,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -2636,7 +2185,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -2645,16 +2194,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -2666,29 +2233,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -2697,7 +2246,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -2706,16 +2255,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -2733,7 +2300,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2742,11 +2309,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status Code.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd>
@@ -2755,7 +2331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">List&lt;Api<wbr>Operation<wbr>Response<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -2764,18 +2340,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Status<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Status Code.
 {{% /md %}}</dd>
 
 </dl>
@@ -2785,11 +2352,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Status<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status Code.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd>
@@ -2812,15 +2388,6 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Status<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Status Code.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2828,11 +2395,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>status<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status Code.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd>
@@ -2841,7 +2417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header[]?</a></span>
+        <span class="property-type"><a href="#apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `header` blocks as defined above.
 {{% /md %}}</dd>
@@ -2850,18 +2426,9 @@ The following state arguments are supported:
             title="Optional">
         <span>representations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation[]?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `representation` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>status<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Status Code.
 {{% /md %}}</dd>
 
 </dl>
@@ -2871,11 +2438,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>status<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Status Code.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the HTTP Response, which may include HTML tags.
 {{% /md %}}</dd>
@@ -2898,15 +2474,6 @@ The following state arguments are supported:
     <dd>{{% md %}}One or more `representation` blocks as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>status<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Status Code.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2920,7 +2487,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2929,29 +2496,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -2960,7 +2509,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -2969,16 +2518,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -2990,29 +2557,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -3021,7 +2570,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -3030,16 +2579,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -3051,29 +2618,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -3082,7 +2631,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -3091,16 +2640,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -3112,29 +2679,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Header.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Header.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Header.
 {{% /md %}}</dd>
@@ -3143,7 +2692,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Header Required?
 {{% /md %}}</dd>
@@ -3152,16 +2701,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Header, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Header.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Header.
 {{% /md %}}</dd>
@@ -3179,7 +2746,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3192,7 +2759,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -3201,7 +2768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">List&lt;Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -3210,7 +2777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -3219,7 +2786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -3228,7 +2795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -3244,7 +2811,7 @@ The following state arguments are supported:
             title="Required">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -3262,7 +2829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -3271,7 +2838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -3280,7 +2847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -3296,7 +2863,7 @@ The following state arguments are supported:
             title="Required">
         <span>content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -3305,7 +2872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>form<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `form_parameter` block as defined above.
 {{% /md %}}</dd>
@@ -3314,7 +2881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -3323,7 +2890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -3332,7 +2899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -3348,7 +2915,7 @@ The following state arguments are supported:
             title="Required">
         <span>content_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Content Type of this representation, such as `application/json`.
 {{% /md %}}</dd>
@@ -3366,7 +2933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sample</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An example of this representation.
 {{% /md %}}</dd>
@@ -3375,7 +2942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of an API Management Schema which represents this Response.
 {{% /md %}}</dd>
@@ -3384,7 +2951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type Name defined by the Schema.
 {{% /md %}}</dd>
@@ -3402,7 +2969,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationFormParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationFormParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationFormParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationResponseRepresentationFormParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3411,29 +2978,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -3442,7 +2991,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -3451,16 +3000,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -3472,29 +3039,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -3503,7 +3052,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -3512,16 +3061,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -3533,29 +3100,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -3564,7 +3113,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -3573,16 +3122,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -3594,29 +3161,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Form Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Form Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Form Parameter.
 {{% /md %}}</dd>
@@ -3625,7 +3174,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Form Parameter Required?
 {{% /md %}}</dd>
@@ -3634,16 +3183,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Form Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Form Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Form Parameter.
 {{% /md %}}</dd>
@@ -3661,7 +3228,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationTemplateParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ApiOperationTemplateParameterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationTemplateParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiOperationTemplateParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3670,29 +3237,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Template Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Template Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd>
@@ -3701,7 +3250,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd>
@@ -3710,16 +3259,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd>
@@ -3731,29 +3298,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Template Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of this Template Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd>
@@ -3762,7 +3311,7 @@ The following state arguments are supported:
             title="Required">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd>
@@ -3771,16 +3320,34 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd>
@@ -3792,29 +3359,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Template Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of this Template Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd>
@@ -3823,7 +3372,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd>
@@ -3832,16 +3381,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd>
@@ -3853,29 +3420,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default value for this Template Parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of this Template Parameter.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of this Template Parameter.
 {{% /md %}}</dd>
@@ -3884,7 +3433,7 @@ The following state arguments are supported:
             title="Required">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Template Parameter Required?
 {{% /md %}}</dd>
@@ -3893,16 +3442,34 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of this Template Parameter, such as a `string`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The default value for this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A description of this Template Parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}One or more acceptable values for this Template Parameter.
 {{% /md %}}</dd>
@@ -3924,6 +3491,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

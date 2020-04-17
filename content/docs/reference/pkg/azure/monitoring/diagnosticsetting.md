@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a Diagnostic Setting for an existing Resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,11 +22,11 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
 const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
     name: "examplestoracc",
     resourceGroupName: name,
-}, { async: true }));
+}));
 const exampleKeyVault = exampleResourceGroup.name.apply(name => azure.keyvault.getKeyVault({
     name: "example-vault",
     resourceGroupName: name,
-}, { async: true }));
+}));
 const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example", {
     logs: [{
         category: "AuditEvent",
@@ -44,7 +46,8 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_diagnostic_setting.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -53,7 +56,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSettingArgs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSetting">DiagnosticSetting</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#DiagnosticSettingArgs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -61,7 +64,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDiagnosticSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingArgs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSetting">DiagnosticSetting</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDiagnosticSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingArgs">DiagnosticSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSetting">DiagnosticSetting</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,11 +160,20 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -170,7 +182,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -179,7 +191,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -188,7 +200,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -197,7 +209,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List&lt;Diagnostic<wbr>Setting<wbr>Log<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">List&lt;Diagnostic<wbr>Setting<wbr>Log<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -206,7 +218,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Metrics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List&lt;Diagnostic<wbr>Setting<wbr>Metric<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">List&lt;Diagnostic<wbr>Setting<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -215,7 +227,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -224,18 +236,9 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -245,11 +248,20 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -258,7 +270,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -267,7 +279,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -276,7 +288,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -303,7 +315,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -312,18 +324,9 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -333,11 +336,20 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -346,7 +358,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -355,7 +367,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -364,7 +376,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -373,7 +385,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">Diagnostic<wbr>Setting<wbr>Log[]?</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">Diagnostic<wbr>Setting<wbr>Log[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -382,7 +394,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>metrics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">Diagnostic<wbr>Setting<wbr>Metric[]?</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">Diagnostic<wbr>Setting<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -391,7 +403,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -400,18 +412,9 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -421,11 +424,20 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>eventhub_<wbr>authorization_<wbr>rule_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -434,7 +446,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>eventhub_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -443,7 +455,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>log_<wbr>analytics_<wbr>destination_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -452,7 +464,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -479,7 +491,7 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -488,386 +500,15 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
             title="Optional">
         <span>storage_<wbr>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DiagnosticSetting Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eventhub<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List&lt;Diagnostic<wbr>Setting<wbr>Log&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `log` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metrics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List&lt;Diagnostic<wbr>Setting<wbr>Metric&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `metric` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eventhub<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">[]Diagnostic<wbr>Setting<wbr>Log</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `log` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metrics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">[]Diagnostic<wbr>Setting<wbr>Metric</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `metric` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eventhub<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log<wbr>Analytics<wbr>Destination<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">Diagnostic<wbr>Setting<wbr>Log[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `log` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metrics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">Diagnostic<wbr>Setting<wbr>Metric[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `metric` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>eventhub_<wbr>authorization_<wbr>rule_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eventhub_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log_<wbr>analytics_<wbr>destination_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List[Diagnostic<wbr>Setting<wbr>Log]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `log` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metrics</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List[Diagnostic<wbr>Setting<wbr>Metric]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `metric` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage_<wbr>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -891,7 +532,7 @@ Get an existing DiagnosticSetting resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDiagnosticSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingState">DiagnosticSettingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSetting">DiagnosticSetting</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDiagnosticSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingState">DiagnosticSettingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSetting">DiagnosticSetting</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1005,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1014,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1023,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -1032,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1041,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">List&lt;Diagnostic<wbr>Setting<wbr>Log<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">List&lt;Diagnostic<wbr>Setting<wbr>Log<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -1050,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metrics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">List&lt;Diagnostic<wbr>Setting<wbr>Metric<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">List&lt;Diagnostic<wbr>Setting<wbr>Metric<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -1059,7 +700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1068,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1077,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1093,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1102,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1111,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -1120,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1147,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1156,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1165,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1181,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eventhub<wbr>Authorization<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1190,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eventhub<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1199,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Analytics<wbr>Destination<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -1208,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1217,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettinglog">Diagnostic<wbr>Setting<wbr>Log[]?</a></span>
+        <span class="property-type"><a href="#diagnosticsettinglog">Diagnostic<wbr>Setting<wbr>Log[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `log` blocks as defined below.
 {{% /md %}}</dd>
@@ -1226,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metrics</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#diagnosticsettingmetric">Diagnostic<wbr>Setting<wbr>Metric[]?</a></span>
+        <span class="property-type"><a href="#diagnosticsettingmetric">Diagnostic<wbr>Setting<wbr>Metric[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `metric` blocks as defined below.
 {{% /md %}}</dd>
@@ -1235,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1244,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1253,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1269,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eventhub_<wbr>authorization_<wbr>rule_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1278,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eventhub_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1287,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log_<wbr>analytics_<wbr>destination_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 {{% /md %}}</dd>
@@ -1296,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1323,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1332,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage_<wbr>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1341,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>resource_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1366,7 +1007,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingLogOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1379,18 +1020,9 @@ The following state arguments are supported:
             title="Required">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1400,6 +1032,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1413,18 +1054,9 @@ The following state arguments are supported:
             title="Required">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1434,6 +1066,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1447,18 +1088,9 @@ The following state arguments are supported:
             title="Required">
         <span>category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1468,6 +1100,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1481,18 +1122,9 @@ The following state arguments are supported:
             title="Required">
         <span>category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Log Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1502,6 +1134,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettinglogretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Log<wbr>Retention<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Log enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1517,7 +1158,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingLogRetentionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1526,22 +1167,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1551,22 +1192,22 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1576,22 +1217,22 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1601,22 +1242,22 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1632,7 +1273,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingMetricOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1645,18 +1286,9 @@ The following state arguments are supported:
             title="Required">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1666,6 +1298,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1679,18 +1320,9 @@ The following state arguments are supported:
             title="Required">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1700,6 +1332,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1713,18 +1354,9 @@ The following state arguments are supported:
             title="Required">
         <span>category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1734,6 +1366,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1747,18 +1388,9 @@ The following state arguments are supported:
             title="Required">
         <span>category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a Diagnostic Metric Category for this Resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1768,6 +1400,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#diagnosticsettingmetricretentionpolicy">Dict[Diagnostic<wbr>Setting<wbr>Metric<wbr>Retention<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}A `retention_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Is this Diagnostic Metric enabled? Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1783,7 +1424,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#DiagnosticSettingMetricRetentionPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1792,22 +1433,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1817,22 +1458,22 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1842,22 +1483,22 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1867,22 +1508,22 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Retention Policy enabled?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days for which this Retention Policy should apply.
 {{% /md %}}</dd>
 
 </dl>
@@ -1902,6 +1543,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

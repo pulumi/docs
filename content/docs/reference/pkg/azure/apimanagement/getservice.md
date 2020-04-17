@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Use this data source to access information about an existing API Management Service.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/api_management.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -30,7 +31,7 @@ Use this data source to access information about an existing API Management Serv
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#LookupServiceArgs">LookupServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#LookupServiceResult">LookupServiceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -53,7 +54,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.
 {{% /md %}}</dd>
@@ -62,7 +63,7 @@ The following arguments are supported:
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists.
 {{% /md %}}</dd>
@@ -78,7 +79,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.
 {{% /md %}}</dd>
@@ -87,7 +88,7 @@ The following arguments are supported:
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists.
 {{% /md %}}</dd>
@@ -103,7 +104,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.
 {{% /md %}}</dd>
@@ -112,7 +113,7 @@ The following arguments are supported:
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists.
 {{% /md %}}</dd>
@@ -128,7 +129,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.
 {{% /md %}}</dd>
@@ -137,7 +138,7 @@ The following arguments are supported:
             title="Required">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Resource Group in which the API Management Service exists.
 {{% /md %}}</dd>
@@ -175,7 +176,7 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -184,7 +185,7 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the API Management Service's Gateway.
 {{% /md %}}</dd>
@@ -202,7 +203,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -211,7 +212,7 @@ The following output properties are available:
             title="">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -220,7 +221,7 @@ The following output properties are available:
             title="">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API.
 {{% /md %}}</dd>
@@ -229,7 +230,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the plan's pricing tier.
 {{% /md %}}</dd>
@@ -238,7 +239,7 @@ The following output properties are available:
             title="">
         <span>Notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -247,7 +248,7 @@ The following output properties are available:
             title="">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Publisher Portal.
 {{% /md %}}</dd>
@@ -256,7 +257,7 @@ The following output properties are available:
             title="">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -265,7 +266,7 @@ The following output properties are available:
             title="">
         <span>Publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email of Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -274,7 +275,7 @@ The following output properties are available:
             title="">
         <span>Publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -283,7 +284,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -291,7 +292,7 @@ The following output properties are available:
             title="">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SCM (Source Code Management) endpoint.
 {{% /md %}}</dd>
@@ -300,7 +301,7 @@ The following output properties are available:
             title="">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -308,7 +309,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -333,7 +334,7 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -342,7 +343,7 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the API Management Service's Gateway.
 {{% /md %}}</dd>
@@ -360,7 +361,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -369,7 +370,7 @@ The following output properties are available:
             title="">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -378,7 +379,7 @@ The following output properties are available:
             title="">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API.
 {{% /md %}}</dd>
@@ -387,7 +388,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the plan's pricing tier.
 {{% /md %}}</dd>
@@ -396,7 +397,7 @@ The following output properties are available:
             title="">
         <span>Notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -405,7 +406,7 @@ The following output properties are available:
             title="">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Publisher Portal.
 {{% /md %}}</dd>
@@ -414,7 +415,7 @@ The following output properties are available:
             title="">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -423,7 +424,7 @@ The following output properties are available:
             title="">
         <span>Publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email of Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -432,7 +433,7 @@ The following output properties are available:
             title="">
         <span>Publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -441,7 +442,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -449,7 +450,7 @@ The following output properties are available:
             title="">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SCM (Source Code Management) endpoint.
 {{% /md %}}</dd>
@@ -458,7 +459,7 @@ The following output properties are available:
             title="">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -491,7 +492,7 @@ The following output properties are available:
             title="">
         <span>gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -500,7 +501,7 @@ The following output properties are available:
             title="">
         <span>gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the API Management Service's Gateway.
 {{% /md %}}</dd>
@@ -518,7 +519,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -527,7 +528,7 @@ The following output properties are available:
             title="">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -536,7 +537,7 @@ The following output properties are available:
             title="">
         <span>management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API.
 {{% /md %}}</dd>
@@ -545,7 +546,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the plan's pricing tier.
 {{% /md %}}</dd>
@@ -554,7 +555,7 @@ The following output properties are available:
             title="">
         <span>notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -563,7 +564,7 @@ The following output properties are available:
             title="">
         <span>portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Publisher Portal.
 {{% /md %}}</dd>
@@ -572,7 +573,7 @@ The following output properties are available:
             title="">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -581,7 +582,7 @@ The following output properties are available:
             title="">
         <span>publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email of Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -590,7 +591,7 @@ The following output properties are available:
             title="">
         <span>publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -599,7 +600,7 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -607,7 +608,7 @@ The following output properties are available:
             title="">
         <span>scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SCM (Source Code Management) endpoint.
 {{% /md %}}</dd>
@@ -616,7 +617,7 @@ The following output properties are available:
             title="">
         <span>sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -649,7 +650,7 @@ The following output properties are available:
             title="">
         <span>gateway_<wbr>regional_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -658,7 +659,7 @@ The following output properties are available:
             title="">
         <span>gateway_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the API Management Service's Gateway.
 {{% /md %}}</dd>
@@ -676,7 +677,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -685,7 +686,7 @@ The following output properties are available:
             title="">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -694,7 +695,7 @@ The following output properties are available:
             title="">
         <span>management_<wbr>api_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API.
 {{% /md %}}</dd>
@@ -703,7 +704,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the plan's pricing tier.
 {{% /md %}}</dd>
@@ -712,7 +713,7 @@ The following output properties are available:
             title="">
         <span>notification_<wbr>sender_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -721,7 +722,7 @@ The following output properties are available:
             title="">
         <span>portal_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Publisher Portal.
 {{% /md %}}</dd>
@@ -730,7 +731,7 @@ The following output properties are available:
             title="">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -739,7 +740,7 @@ The following output properties are available:
             title="">
         <span>publisher_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email of Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -748,7 +749,7 @@ The following output properties are available:
             title="">
         <span>publisher_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Publisher/Company of the API Management Service.
 {{% /md %}}</dd>
@@ -757,7 +758,7 @@ The following output properties are available:
             title="">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -765,7 +766,7 @@ The following output properties are available:
             title="">
         <span>scm_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SCM (Source Code Management) endpoint.
 {{% /md %}}</dd>
@@ -774,7 +775,7 @@ The following output properties are available:
             title="">
         <span>sku_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -805,7 +806,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceAdditionalLocation">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceAdditionalLocation">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -818,7 +819,7 @@ The following output properties are available:
             title="Required">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -827,7 +828,7 @@ The following output properties are available:
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -836,7 +837,7 @@ The following output properties are available:
             title="Required">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -852,7 +853,7 @@ The following output properties are available:
             title="Required">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -861,7 +862,7 @@ The following output properties are available:
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -870,7 +871,7 @@ The following output properties are available:
             title="Required">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -886,7 +887,7 @@ The following output properties are available:
             title="Required">
         <span>gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -895,7 +896,7 @@ The following output properties are available:
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -904,7 +905,7 @@ The following output properties are available:
             title="Required">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -920,7 +921,7 @@ The following output properties are available:
             title="Required">
         <span>gateway_<wbr>regional_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Gateway URL of the API Management service in the Region.
 {{% /md %}}</dd>
@@ -929,7 +930,7 @@ The following output properties are available:
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location name of the additional region among Azure Data center regions.
 {{% /md %}}</dd>
@@ -938,7 +939,7 @@ The following output properties are available:
             title="Required">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -956,7 +957,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceHostnameConfiguration">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceHostnameConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1143,7 +1144,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationManagement">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationManagement">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1156,7 +1157,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1165,7 +1166,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1174,7 +1175,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1190,7 +1191,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1199,7 +1200,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1208,7 +1209,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1224,7 +1225,7 @@ The following output properties are available:
             title="Required">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1233,7 +1234,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1242,7 +1243,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1258,7 +1259,7 @@ The following output properties are available:
             title="Required">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1267,7 +1268,7 @@ The following output properties are available:
             title="Required">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1276,7 +1277,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1294,7 +1295,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationPortal">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationPortal">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1307,7 +1308,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1316,7 +1317,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1325,7 +1326,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1341,7 +1342,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1350,7 +1351,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1359,7 +1360,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1375,7 +1376,7 @@ The following output properties are available:
             title="Required">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1384,7 +1385,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1393,7 +1394,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1409,7 +1410,7 @@ The following output properties are available:
             title="Required">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1418,7 +1419,7 @@ The following output properties are available:
             title="Required">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1427,7 +1428,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1445,7 +1446,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationProxy">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationProxy">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1458,7 +1459,7 @@ The following output properties are available:
             title="Required">
         <span>Default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this the default SSL Binding?
 {{% /md %}}</dd>
@@ -1467,7 +1468,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1476,7 +1477,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1485,7 +1486,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1501,7 +1502,7 @@ The following output properties are available:
             title="Required">
         <span>Default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this the default SSL Binding?
 {{% /md %}}</dd>
@@ -1510,7 +1511,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1519,7 +1520,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1528,7 +1529,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1544,7 +1545,7 @@ The following output properties are available:
             title="Required">
         <span>default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this the default SSL Binding?
 {{% /md %}}</dd>
@@ -1553,7 +1554,7 @@ The following output properties are available:
             title="Required">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1562,7 +1563,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1571,7 +1572,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1587,7 +1588,7 @@ The following output properties are available:
             title="Required">
         <span>default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this the default SSL Binding?
 {{% /md %}}</dd>
@@ -1596,7 +1597,7 @@ The following output properties are available:
             title="Required">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1605,7 +1606,7 @@ The following output properties are available:
             title="Required">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1614,7 +1615,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1632,7 +1633,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationScm">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#GetServiceHostnameConfigurationScm">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1645,7 +1646,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1654,7 +1655,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1663,7 +1664,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1679,7 +1680,7 @@ The following output properties are available:
             title="Required">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1688,7 +1689,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1697,7 +1698,7 @@ The following output properties are available:
             title="Required">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1713,7 +1714,7 @@ The following output properties are available:
             title="Required">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1722,7 +1723,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1731,7 +1732,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>
@@ -1747,7 +1748,7 @@ The following output properties are available:
             title="Required">
         <span>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Hostname used for the SCM URL.
 {{% /md %}}</dd>
@@ -1756,7 +1757,7 @@ The following output properties are available:
             title="Required">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret which contains the SSL Certificate.
 {{% /md %}}</dd>
@@ -1765,7 +1766,7 @@ The following output properties are available:
             title="Required">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Client Certificate Negotiation enabled?
 {{% /md %}}</dd>

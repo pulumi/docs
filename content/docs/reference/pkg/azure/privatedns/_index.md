@@ -17,6 +17,7 @@ block_external_search_index: true
     <li><a href="mxrecord" title="MxRecord"><span class="symbol resource"></span>MxRecord</a></li>
     <li><a href="ptrrecord" title="PTRRecord"><span class="symbol resource"></span>PTRRecord</a></li>
     <li><a href="srvrecord" title="SRVRecord"><span class="symbol resource"></span>SRVRecord</a></li>
+    <li><a href="txtrecord" title="TxtRecord"><span class="symbol resource"></span>TxtRecord</a></li>
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
     <li><a href="zonevirtualnetworklink" title="ZoneVirtualNetworkLink"><span class="symbol resource"></span>ZoneVirtualNetworkLink</a></li>
 </ul>
@@ -27,6 +28,7 @@ block_external_search_index: true
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

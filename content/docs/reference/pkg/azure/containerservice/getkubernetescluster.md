@@ -8,19 +8,22 @@ block_external_search_index: true
 
 Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.containerservice.getKubernetesCluster({
+const example = azure.containerservice.getKubernetesCluster({
     name: "myakscluster",
     resourceGroupName: "my-example-resource-group",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -42,7 +45,7 @@ const example = pulumi.output(azure.containerservice.getKubernetesCluster({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterArgs">LookupKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#LookupKubernetesClusterArgs">LookupKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -65,7 +68,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -74,7 +77,7 @@ The following arguments are supported:
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -90,7 +93,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -99,7 +102,7 @@ The following arguments are supported:
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -115,7 +118,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -124,7 +127,7 @@ The following arguments are supported:
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -140,7 +143,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -149,7 +152,7 @@ The following arguments are supported:
             title="Required">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -196,7 +199,7 @@ The following output properties are available:
             title="">
         <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
 {{% /md %}}</dd>
@@ -205,7 +208,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
 {{% /md %}}</dd>
@@ -214,7 +217,7 @@ The following output properties are available:
             title="">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
@@ -223,7 +226,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -232,7 +235,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -250,7 +253,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
 {{% /md %}}</dd>
@@ -268,7 +271,7 @@ The following output properties are available:
             title="">
         <span>Kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -286,7 +289,7 @@ The following output properties are available:
             title="">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -295,7 +298,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
 {{% /md %}}</dd>
@@ -313,7 +316,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
 {{% /md %}}</dd>
@@ -322,7 +325,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
@@ -331,7 +334,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
 {{% /md %}}</dd>
@@ -340,7 +343,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -366,7 +369,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -409,7 +412,7 @@ The following output properties are available:
             title="">
         <span>Api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
 {{% /md %}}</dd>
@@ -418,7 +421,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
 {{% /md %}}</dd>
@@ -427,7 +430,7 @@ The following output properties are available:
             title="">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
@@ -436,7 +439,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -445,7 +448,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -463,7 +466,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
 {{% /md %}}</dd>
@@ -481,7 +484,7 @@ The following output properties are available:
             title="">
         <span>Kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -499,7 +502,7 @@ The following output properties are available:
             title="">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -508,7 +511,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
 {{% /md %}}</dd>
@@ -526,7 +529,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
 {{% /md %}}</dd>
@@ -535,7 +538,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
@@ -544,7 +547,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
 {{% /md %}}</dd>
@@ -553,7 +556,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -622,7 +625,7 @@ The following output properties are available:
             title="">
         <span>api<wbr>Server<wbr>Authorized<wbr>Ip<wbr>Ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
 {{% /md %}}</dd>
@@ -631,7 +634,7 @@ The following output properties are available:
             title="">
         <span>dns<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
 {{% /md %}}</dd>
@@ -640,7 +643,7 @@ The following output properties are available:
             title="">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
@@ -649,7 +652,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -658,7 +661,7 @@ The following output properties are available:
             title="">
         <span>kube<wbr>Admin<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -676,7 +679,7 @@ The following output properties are available:
             title="">
         <span>kube<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
 {{% /md %}}</dd>
@@ -694,7 +697,7 @@ The following output properties are available:
             title="">
         <span>kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -712,7 +715,7 @@ The following output properties are available:
             title="">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -721,7 +724,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
 {{% /md %}}</dd>
@@ -739,7 +742,7 @@ The following output properties are available:
             title="">
         <span>node<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
 {{% /md %}}</dd>
@@ -748,7 +751,7 @@ The following output properties are available:
             title="">
         <span>private<wbr>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
@@ -757,7 +760,7 @@ The following output properties are available:
             title="">
         <span>private<wbr>Link<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
 {{% /md %}}</dd>
@@ -766,7 +769,7 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -835,7 +838,7 @@ The following output properties are available:
             title="">
         <span>api_<wbr>server_<wbr>authorized_<wbr>ip_<wbr>ranges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IP ranges to whitelist for incoming traffic to the masters.
 {{% /md %}}</dd>
@@ -844,7 +847,7 @@ The following output properties are available:
             title="">
         <span>dns_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS Prefix of the managed Kubernetes cluster.
 {{% /md %}}</dd>
@@ -853,7 +856,7 @@ The following output properties are available:
             title="">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
@@ -862,7 +865,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -871,7 +874,7 @@ The following output properties are available:
             title="">
         <span>kube_<wbr>admin_<wbr>config_<wbr>raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Raw Kubernetes config for the admin account to be used by [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) and other compatible tools. This is only available when Role Based Access Control with Azure Active Directory is enabled.
 {{% /md %}}</dd>
@@ -889,7 +892,7 @@ The following output properties are available:
             title="">
         <span>kube_<wbr>config_<wbr>raw</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded Kubernetes configuration.
 {{% /md %}}</dd>
@@ -907,7 +910,7 @@ The following output properties are available:
             title="">
         <span>kubernetes_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of Kubernetes used on the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -925,7 +928,7 @@ The following output properties are available:
             title="">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure Region in which the managed Kubernetes Cluster exists.
 {{% /md %}}</dd>
@@ -934,7 +937,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name assigned to this pool of agents.
 {{% /md %}}</dd>
@@ -952,7 +955,7 @@ The following output properties are available:
             title="">
         <span>node_<wbr>resource_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Auto-generated Resource Group containing AKS Cluster resources.
 {{% /md %}}</dd>
@@ -961,7 +964,7 @@ The following output properties are available:
             title="">
         <span>private_<wbr>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The FQDN of this Kubernetes Cluster when private link has been enabled. This name is only resolvable inside the Virtual Network where the Azure Kubernetes Service is located                   
 {{% /md %}}</dd>
@@ -970,7 +973,7 @@ The following output properties are available:
             title="">
         <span>private_<wbr>link_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Kubernetes Cluster have the Kubernetes API exposed via Private Link?                           
 {{% /md %}}</dd>
@@ -979,7 +982,7 @@ The following output properties are available:
             title="">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1037,7 +1040,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfile">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1224,7 +1227,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileAzurePolicy">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileAzurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1237,7 +1240,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1253,7 +1256,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1269,7 +1272,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1285,7 +1288,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1303,7 +1306,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileHttpApplicationRouting">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileHttpApplicationRouting">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1316,7 +1319,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1325,7 +1328,7 @@ The following output properties are available:
             title="Required">
         <span>Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
 {{% /md %}}</dd>
@@ -1341,7 +1344,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1350,7 +1353,7 @@ The following output properties are available:
             title="Required">
         <span>Http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
 {{% /md %}}</dd>
@@ -1366,7 +1369,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1375,7 +1378,7 @@ The following output properties are available:
             title="Required">
         <span>http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
 {{% /md %}}</dd>
@@ -1391,7 +1394,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1400,7 +1403,7 @@ The following output properties are available:
             title="Required">
         <span>http<wbr>Application<wbr>Routing<wbr>Zone<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Zone Name of the HTTP Application Routing.
 {{% /md %}}</dd>
@@ -1418,7 +1421,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileKubeDashboard">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileKubeDashboard">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1431,7 +1434,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1447,7 +1450,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1463,7 +1466,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1479,7 +1482,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1497,7 +1500,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileOmsAgent">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAddonProfileOmsAgent">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1510,7 +1513,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1519,7 +1522,7 @@ The following output properties are available:
             title="Required">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
@@ -1535,7 +1538,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1544,7 +1547,7 @@ The following output properties are available:
             title="Required">
         <span>Log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
@@ -1560,7 +1563,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1569,7 +1572,7 @@ The following output properties are available:
             title="Required">
         <span>log<wbr>Analytics<wbr>Workspace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
@@ -1585,7 +1588,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -1594,7 +1597,7 @@ The following output properties are available:
             title="Required">
         <span>log_<wbr>analytics_<wbr>workspace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace which the OMS Agent should send data to.
 {{% /md %}}</dd>
@@ -1612,7 +1615,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterAgentPoolProfile">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterAgentPoolProfile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1625,7 +1628,7 @@ The following output properties are available:
             title="Required">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
 {{% /md %}}</dd>
@@ -1634,7 +1637,7 @@ The following output properties are available:
             title="Required">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
 {{% /md %}}</dd>
@@ -1643,24 +1646,16 @@ The following output properties are available:
             title="Required">
         <span>Enable<wbr>Auto<wbr>Scaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Max<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1669,7 +1664,7 @@ The following output properties are available:
             title="Required">
         <span>Max<wbr>Pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
 {{% /md %}}</dd>
@@ -1678,7 +1673,7 @@ The following output properties are available:
             title="Required">
         <span>Min<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1687,7 +1682,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -1696,24 +1691,15 @@ The following output properties are available:
             title="Required">
         <span>Node<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Os<wbr>Disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
 {{% /md %}}</dd>
@@ -1722,7 +1708,7 @@ The following output properties are available:
             title="Required">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
 {{% /md %}}</dd>
@@ -1731,7 +1717,7 @@ The following output properties are available:
             title="Required">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1740,7 +1726,7 @@ The following output properties are available:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Agent Pool.
 {{% /md %}}</dd>
@@ -1749,7 +1735,7 @@ The following output properties are available:
             title="Required">
         <span>Vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
 {{% /md %}}</dd>
@@ -1758,9 +1744,26 @@ The following output properties are available:
             title="Required">
         <span>Vnet<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Taints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
 
 </dl>
@@ -1774,7 +1777,7 @@ The following output properties are available:
             title="Required">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
 {{% /md %}}</dd>
@@ -1783,7 +1786,7 @@ The following output properties are available:
             title="Required">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
 {{% /md %}}</dd>
@@ -1792,24 +1795,16 @@ The following output properties are available:
             title="Required">
         <span>Enable<wbr>Auto<wbr>Scaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Max<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1818,7 +1813,7 @@ The following output properties are available:
             title="Required">
         <span>Max<wbr>Pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
 {{% /md %}}</dd>
@@ -1827,7 +1822,7 @@ The following output properties are available:
             title="Required">
         <span>Min<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1836,7 +1831,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -1849,20 +1844,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Os<wbr>Disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
 {{% /md %}}</dd>
@@ -1871,7 +1857,7 @@ The following output properties are available:
             title="Required">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
 {{% /md %}}</dd>
@@ -1889,7 +1875,7 @@ The following output properties are available:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Agent Pool.
 {{% /md %}}</dd>
@@ -1898,7 +1884,7 @@ The following output properties are available:
             title="Required">
         <span>Vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
 {{% /md %}}</dd>
@@ -1907,9 +1893,26 @@ The following output properties are available:
             title="Required">
         <span>Vnet<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Taints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
 
 </dl>
@@ -1923,7 +1926,7 @@ The following output properties are available:
             title="Required">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
 {{% /md %}}</dd>
@@ -1932,7 +1935,7 @@ The following output properties are available:
             title="Required">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
 {{% /md %}}</dd>
@@ -1941,24 +1944,16 @@ The following output properties are available:
             title="Required">
         <span>enable<wbr>Auto<wbr>Scaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Node<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>max<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1967,7 +1962,7 @@ The following output properties are available:
             title="Required">
         <span>max<wbr>Pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
 {{% /md %}}</dd>
@@ -1976,7 +1971,7 @@ The following output properties are available:
             title="Required">
         <span>min<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -1985,7 +1980,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -1998,20 +1993,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>node<wbr>Taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>os<wbr>Disk<wbr>Size<wbr>Gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
 {{% /md %}}</dd>
@@ -2020,7 +2006,7 @@ The following output properties are available:
             title="Required">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
 {{% /md %}}</dd>
@@ -2038,7 +2024,7 @@ The following output properties are available:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Agent Pool.
 {{% /md %}}</dd>
@@ -2047,7 +2033,7 @@ The following output properties are available:
             title="Required">
         <span>vm<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
 {{% /md %}}</dd>
@@ -2056,9 +2042,26 @@ The following output properties are available:
             title="Required">
         <span>vnet<wbr>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Node<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>node<wbr>Taints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
 
 </dl>
@@ -2072,7 +2075,7 @@ The following output properties are available:
             title="Required">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used for the nodes.
 {{% /md %}}</dd>
@@ -2081,7 +2084,7 @@ The following output properties are available:
             title="Required">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of Agents (VM's) in the Pool.
 {{% /md %}}</dd>
@@ -2090,24 +2093,16 @@ The following output properties are available:
             title="Required">
         <span>enable_<wbr>auto_<wbr>scaling</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If the auto-scaler is enabled.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable_<wbr>node_<wbr>public_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>max_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -2116,7 +2111,7 @@ The following output properties are available:
             title="Required">
         <span>max_<wbr>pods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of pods that can run on each agent.
 {{% /md %}}</dd>
@@ -2125,7 +2120,7 @@ The following output properties are available:
             title="Required">
         <span>min_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum number of nodes for auto-scaling
 {{% /md %}}</dd>
@@ -2134,7 +2129,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -2147,20 +2142,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>node_<wbr>taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>os_<wbr>disk_<wbr>size_<wbr>gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the Agent VM's Operating System Disk in GB.
 {{% /md %}}</dd>
@@ -2169,7 +2155,7 @@ The following output properties are available:
             title="Required">
         <span>os_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Operating System used for the Agents.
 {{% /md %}}</dd>
@@ -2187,7 +2173,7 @@ The following output properties are available:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the Agent Pool.
 {{% /md %}}</dd>
@@ -2196,7 +2182,7 @@ The following output properties are available:
             title="Required">
         <span>vm_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The size of each VM in the Agent Pool (e.g. `Standard_F1`).
 {{% /md %}}</dd>
@@ -2205,9 +2191,26 @@ The following output properties are available:
             title="Required">
         <span>vnet_<wbr>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet where the Agents in the Pool are provisioned.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>node_<wbr>public_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>node_<wbr>taints</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Kubernetes taints which are applied to nodes in the agent pool
 {{% /md %}}</dd>
 
 </dl>
@@ -2223,7 +2226,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeAdminConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeAdminConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2236,7 +2239,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2245,7 +2248,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2254,7 +2257,7 @@ The following output properties are available:
             title="Required">
         <span>Cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2263,7 +2266,7 @@ The following output properties are available:
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2272,7 +2275,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2281,7 +2284,7 @@ The following output properties are available:
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2297,7 +2300,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2306,7 +2309,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2315,7 +2318,7 @@ The following output properties are available:
             title="Required">
         <span>Cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2324,7 +2327,7 @@ The following output properties are available:
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2333,7 +2336,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2342,7 +2345,7 @@ The following output properties are available:
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2358,7 +2361,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2367,7 +2370,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2376,7 +2379,7 @@ The following output properties are available:
             title="Required">
         <span>cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2385,7 +2388,7 @@ The following output properties are available:
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2394,7 +2397,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2403,7 +2406,7 @@ The following output properties are available:
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2419,7 +2422,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2428,7 +2431,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2437,7 +2440,7 @@ The following output properties are available:
             title="Required">
         <span>cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2446,7 +2449,7 @@ The following output properties are available:
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2455,7 +2458,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2464,7 +2467,7 @@ The following output properties are available:
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2482,7 +2485,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2495,7 +2498,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2504,7 +2507,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2513,7 +2516,7 @@ The following output properties are available:
             title="Required">
         <span>Cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2522,7 +2525,7 @@ The following output properties are available:
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2531,7 +2534,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2540,7 +2543,7 @@ The following output properties are available:
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2556,7 +2559,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2565,7 +2568,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2574,7 +2577,7 @@ The following output properties are available:
             title="Required">
         <span>Cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2583,7 +2586,7 @@ The following output properties are available:
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2592,7 +2595,7 @@ The following output properties are available:
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2601,7 +2604,7 @@ The following output properties are available:
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2617,7 +2620,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2626,7 +2629,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2635,7 +2638,7 @@ The following output properties are available:
             title="Required">
         <span>cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2644,7 +2647,7 @@ The following output properties are available:
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2653,7 +2656,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2662,7 +2665,7 @@ The following output properties are available:
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2678,7 +2681,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public certificate used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2687,7 +2690,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded private key used by clients to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2696,7 +2699,7 @@ The following output properties are available:
             title="Required">
         <span>cluster<wbr>Ca<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base64 encoded public CA certificate used as the root of trust for the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2705,7 +2708,7 @@ The following output properties are available:
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Kubernetes cluster server host.
 {{% /md %}}</dd>
@@ -2714,7 +2717,7 @@ The following output properties are available:
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A password or token used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2723,7 +2726,7 @@ The following output properties are available:
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A username used to authenticate to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -2741,7 +2744,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfile">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2754,7 +2757,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -2779,7 +2782,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -2804,7 +2807,7 @@ The following output properties are available:
             title="Required">
         <span>admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -2829,7 +2832,7 @@ The following output properties are available:
             title="Required">
         <span>admin_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -2856,7 +2859,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfileSshKey">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterLinuxProfileSshKey">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2869,7 +2872,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
 {{% /md %}}</dd>
@@ -2885,7 +2888,7 @@ The following output properties are available:
             title="Required">
         <span>Key<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
 {{% /md %}}</dd>
@@ -2901,7 +2904,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
 {{% /md %}}</dd>
@@ -2917,7 +2920,7 @@ The following output properties are available:
             title="Required">
         <span>key<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Public SSH Key used to access the cluster.
 {{% /md %}}</dd>
@@ -2935,7 +2938,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterNetworkProfile">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterNetworkProfile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2948,7 +2951,7 @@ The following output properties are available:
             title="Required">
         <span>Dns<wbr>Service<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
 {{% /md %}}</dd>
@@ -2957,7 +2960,7 @@ The following output properties are available:
             title="Required">
         <span>Docker<wbr>Bridge<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
 {{% /md %}}</dd>
@@ -2966,7 +2969,7 @@ The following output properties are available:
             title="Required">
         <span>Load<wbr>Balancer<wbr>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2974,7 +2977,7 @@ The following output properties are available:
             title="Required">
         <span>Network<wbr>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
 {{% /md %}}</dd>
@@ -2983,7 +2986,7 @@ The following output properties are available:
             title="Required">
         <span>Network<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
 {{% /md %}}</dd>
@@ -2992,7 +2995,7 @@ The following output properties are available:
             title="Required">
         <span>Pod<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
 {{% /md %}}</dd>
@@ -3001,7 +3004,7 @@ The following output properties are available:
             title="Required">
         <span>Service<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
 {{% /md %}}</dd>
@@ -3017,7 +3020,7 @@ The following output properties are available:
             title="Required">
         <span>Dns<wbr>Service<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
 {{% /md %}}</dd>
@@ -3026,7 +3029,7 @@ The following output properties are available:
             title="Required">
         <span>Docker<wbr>Bridge<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
 {{% /md %}}</dd>
@@ -3035,7 +3038,7 @@ The following output properties are available:
             title="Required">
         <span>Load<wbr>Balancer<wbr>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3043,7 +3046,7 @@ The following output properties are available:
             title="Required">
         <span>Network<wbr>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
 {{% /md %}}</dd>
@@ -3052,7 +3055,7 @@ The following output properties are available:
             title="Required">
         <span>Network<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
 {{% /md %}}</dd>
@@ -3061,7 +3064,7 @@ The following output properties are available:
             title="Required">
         <span>Pod<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
 {{% /md %}}</dd>
@@ -3070,7 +3073,7 @@ The following output properties are available:
             title="Required">
         <span>Service<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
 {{% /md %}}</dd>
@@ -3086,7 +3089,7 @@ The following output properties are available:
             title="Required">
         <span>dns<wbr>Service<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
 {{% /md %}}</dd>
@@ -3095,7 +3098,7 @@ The following output properties are available:
             title="Required">
         <span>docker<wbr>Bridge<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
 {{% /md %}}</dd>
@@ -3104,7 +3107,7 @@ The following output properties are available:
             title="Required">
         <span>load<wbr>Balancer<wbr>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3112,7 +3115,7 @@ The following output properties are available:
             title="Required">
         <span>network<wbr>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
 {{% /md %}}</dd>
@@ -3121,7 +3124,7 @@ The following output properties are available:
             title="Required">
         <span>network<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
 {{% /md %}}</dd>
@@ -3130,7 +3133,7 @@ The following output properties are available:
             title="Required">
         <span>pod<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
 {{% /md %}}</dd>
@@ -3139,7 +3142,7 @@ The following output properties are available:
             title="Required">
         <span>service<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
 {{% /md %}}</dd>
@@ -3155,7 +3158,7 @@ The following output properties are available:
             title="Required">
         <span>dns<wbr>Service<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address within the Kubernetes service address range used by cluster service discovery (kube-dns).
 {{% /md %}}</dd>
@@ -3164,7 +3167,7 @@ The following output properties are available:
             title="Required">
         <span>docker<wbr>Bridge<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address (in CIDR notation) used as the Docker bridge IP address on nodes.
 {{% /md %}}</dd>
@@ -3173,7 +3176,7 @@ The following output properties are available:
             title="Required">
         <span>load<wbr>Balancer<wbr>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3181,7 +3184,7 @@ The following output properties are available:
             title="Required">
         <span>network<wbr>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network plugin used such as `azure` or `kubenet`.
 {{% /md %}}</dd>
@@ -3190,7 +3193,7 @@ The following output properties are available:
             title="Required">
         <span>network<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network policy to be used with Azure CNI. Eg: `calico` or `azure`
 {{% /md %}}</dd>
@@ -3199,7 +3202,7 @@ The following output properties are available:
             title="Required">
         <span>pod<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CIDR used for pod IP addresses.
 {{% /md %}}</dd>
@@ -3208,7 +3211,7 @@ The following output properties are available:
             title="Required">
         <span>service<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network range used by the Kubernetes service.
 {{% /md %}}</dd>
@@ -3226,7 +3229,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControl">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3248,7 +3251,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -3273,7 +3276,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -3298,7 +3301,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -3323,7 +3326,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is Role Based Access Control enabled?
 {{% /md %}}</dd>
@@ -3341,7 +3344,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterRoleBasedAccessControlAzureActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3354,7 +3357,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3363,7 +3366,7 @@ The following output properties are available:
             title="Required">
         <span>Server<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3372,7 +3375,7 @@ The following output properties are available:
             title="Required">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3388,7 +3391,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3397,7 +3400,7 @@ The following output properties are available:
             title="Required">
         <span>Server<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3406,7 +3409,7 @@ The following output properties are available:
             title="Required">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3422,7 +3425,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3431,7 +3434,7 @@ The following output properties are available:
             title="Required">
         <span>server<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3440,7 +3443,7 @@ The following output properties are available:
             title="Required">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3456,7 +3459,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3465,7 +3468,7 @@ The following output properties are available:
             title="Required">
         <span>server<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Server ID of an Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3474,7 +3477,7 @@ The following output properties are available:
             title="Required">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application.
 {{% /md %}}</dd>
@@ -3492,7 +3495,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterServicePrincipal">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterServicePrincipal">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3505,7 +3508,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -3521,7 +3524,7 @@ The following output properties are available:
             title="Required">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -3537,7 +3540,7 @@ The following output properties are available:
             title="Required">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -3553,7 +3556,7 @@ The following output properties are available:
             title="Required">
         <span>client_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Client ID of the Service Principal used by this Managed Kubernetes Cluster.
 {{% /md %}}</dd>
@@ -3571,7 +3574,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/containerservice?tab=doc#GetKubernetesClusterWindowsProfile">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetKubernetesClusterWindowsProfile">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3584,7 +3587,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -3600,7 +3603,7 @@ The following output properties are available:
             title="Required">
         <span>Admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -3616,7 +3619,7 @@ The following output properties are available:
             title="Required">
         <span>admin<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>
@@ -3632,7 +3635,7 @@ The following output properties are available:
             title="Required">
         <span>admin_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username associated with the administrator account of the Windows VMs.
 {{% /md %}}</dd>

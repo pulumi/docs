@@ -10,7 +10,8 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 
 > **Note:** Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_network_gateway.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -19,7 +20,7 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkGatewayArgs">VirtualNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkGateway">VirtualNetworkGateway</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#VirtualNetworkGatewayArgs">VirtualNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,7 +28,7 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNetworkGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayArgs">VirtualNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGateway">VirtualNetworkGateway</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNetworkGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayArgs">VirtualNetworkGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGateway">VirtualNetworkGateway</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -123,58 +124,6 @@ Manages a Virtual Network Gateway to establish secure, cross-premises connectivi
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Active<wbr>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a `HighPerformance` or an
-`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
-Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bgp<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the local network gateway
-through which outbound Internet traffic from the virtual network in which the
-gateway is created will be routed (*forced tunneling*). Refer to the
-[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-If not specified, forced tunneling is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Bgp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ip<wbr>Configurations</span>
@@ -186,30 +135,11 @@ An active-standby gateway requires exactly one `ip_configuration` block whereas
 an active-active gateway requires exactly two `ip_configuration` blocks.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -220,7 +150,7 @@ a new resource to be created.
             title="Required">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -231,20 +161,11 @@ A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerfor
 sku is only supported by an `ExpressRoute` gateway.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
@@ -252,37 +173,9 @@ sku is only supported by an `ExpressRoute` gateway.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Vpn<wbr>Client<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `vpn_client_configuration` block which
-is documented below. In this block the Virtual Network Gateway can be configured
-to accept IPSec point-to-site connections.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Vpn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
-options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Active<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -294,7 +187,7 @@ Defaults to `false`.
             title="Optional">
         <span>Bgp<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">*Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -302,7 +195,7 @@ Defaults to `false`.
             title="Optional">
         <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -315,7 +208,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>Enable<wbr>Bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -325,10 +218,66 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
+located. Changing the location/region forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A user-defined name of the revoked certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Client<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `vpn_client_configuration` block which
+is documented below. In this block the Virtual Network Gateway can be configured
+to accept IPSec point-to-site connections.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
+options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -341,30 +290,11 @@ An active-standby gateway requires exactly one `ip_configuration` block whereas
 an active-active gateway requires exactly two `ip_configuration` blocks.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -375,7 +305,7 @@ a new resource to be created.
             title="Required">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -384,6 +314,87 @@ gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerform
 `generation` arguments.
 A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
 sku is only supported by an `ExpressRoute` gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
+`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Active<wbr>Active</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
+will be created. An active-active gateway requires a `HighPerformance` or an
+`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
+Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the local network gateway
+through which outbound Internet traffic from the virtual network in which the
+gateway is created will be routed (*forced tunneling*). Refer to the
+[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
+If not specified, forced tunneling is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Bgp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
+for this Virtual Network Gateway. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
+located. Changing the location/region forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -395,21 +406,11 @@ sku is only supported by an `ExpressRoute` gateway.
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Vpn<wbr>Client<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">*Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -420,7 +421,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>Vpn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -433,11 +434,58 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>ip<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
+An active-standby gateway requires exactly one `ip_configuration` block whereas
+an active-active gateway requires exactly two `ip_configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the Virtual Network Gateway. Changing the resource group name forces
+a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
+gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
+`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
+`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
+`generation` arguments.
+A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
+sku is only supported by an `ExpressRoute` gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
+`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>active<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -449,7 +497,7 @@ Defaults to `false`.
             title="Optional">
         <span>bgp<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -457,7 +505,7 @@ Defaults to `false`.
             title="Optional">
         <span>default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -470,7 +518,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>enable<wbr>Bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -480,27 +528,16 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ip<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -510,61 +547,25 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>vpn<wbr>Client<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -575,7 +576,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>vpn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -588,11 +589,58 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>ip_<wbr>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
+An active-standby gateway requires exactly one `ip_configuration` block whereas
+an active-active gateway requires exactly two `ip_configuration` blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group in which to
+create the Virtual Network Gateway. Changing the resource group name forces
+a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
+gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
+`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
+`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
+`generation` arguments.
+A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
+sku is only supported by an `ExpressRoute` gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
+`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>active_<wbr>active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -612,7 +660,7 @@ Defaults to `false`.
             title="Optional">
         <span>default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -625,7 +673,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>enable_<wbr>bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -635,27 +683,16 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ip_<wbr>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -665,35 +702,9 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -703,16 +714,6 @@ sku is only supported by an `ExpressRoute` gateway.
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -730,7 +731,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>vpn_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -740,636 +741,6 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VirtualNetworkGateway Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active<wbr>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a `HighPerformance` or an
-`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
-Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bgp<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the local network gateway
-through which outbound Internet traffic from the virtual network in which the
-gateway is created will be routed (*forced tunneling*). Refer to the
-[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-If not specified, forced tunneling is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Bgp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Client<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}A `vpn_client_configuration` block which
-is documented below. In this block the Virtual Network Gateway can be configured
-to accept IPSec point-to-site connections.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
-options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active<wbr>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a `HighPerformance` or an
-`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
-Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bgp<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the local network gateway
-through which outbound Internet traffic from the virtual network in which the
-gateway is created will be routed (*forced tunneling*). Refer to the
-[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-If not specified, forced tunneling is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Bgp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">[]Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Client<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">*Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `vpn_client_configuration` block which
-is documented below. In this block the Virtual Network Gateway can be configured
-to accept IPSec point-to-site connections.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
-options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active<wbr>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a `HighPerformance` or an
-`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
-Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bgp<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the local network gateway
-through which outbound Internet traffic from the virtual network in which the
-gateway is created will be routed (*forced tunneling*). Refer to the
-[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-If not specified, forced tunneling is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Bgp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn<wbr>Client<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}A `vpn_client_configuration` block which
-is documented below. In this block the Virtual Network Gateway can be configured
-to accept IPSec point-to-site connections.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
-options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active_<wbr>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
-will be created. An active-active gateway requires a `HighPerformance` or an
-`UltraPerformance` sku. If `false`, an active-standby gateway will be created.
-Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bgp_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the local network gateway
-through which outbound Internet traffic from the virtual network in which the
-gateway is created will be routed (*forced tunneling*). Refer to the
-[Azure documentation on forced tunneling](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-forced-tunneling-rm).
-If not specified, forced tunneling is disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>bgp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
-for this Virtual Network Gateway. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List[Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
-An active-standby gateway requires exactly one `ip_configuration` block whereas
-an active-active gateway requires exactly two `ip_configuration` blocks.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location/region where the Virtual Network Gateway is
-located. Changing the location/region forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A user-defined name of the revoked certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group in which to
-create the Virtual Network Gateway. Changing the resource group name forces
-a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Configuration of the size and capacity of the virtual network
-gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
-`ErGw1AZ`, `ErGw2AZ`, `ErGw3AZ`, `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw4`,`VpnGw5`, `VpnGw1AZ`,
-`VpnGw2AZ`, `VpnGw3AZ`,`VpnGw4AZ` and `VpnGw5AZ` and depend on the `type`, `vpn_type` and
-`generation` arguments.
-A `PolicyBased` gateway only supports the `Basic` sku. Further, the `UltraPerformance`
-sku is only supported by an `ExpressRoute` gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
-`Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn_<wbr>client_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Dict[Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}A `vpn_client_configuration` block which
-is documented below. In this block the Virtual Network Gateway can be configured
-to accept IPSec point-to-site connections.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpn_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
-options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1393,7 +764,7 @@ Get an existing VirtualNetworkGateway resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetworkGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayState">VirtualNetworkGatewayState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGateway">VirtualNetworkGateway</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNetworkGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayState">VirtualNetworkGatewayState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGateway">VirtualNetworkGateway</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1507,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -1519,7 +890,7 @@ Defaults to `false`.
             title="Optional">
         <span>Bgp<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1527,7 +898,7 @@ Defaults to `false`.
             title="Optional">
         <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -1540,7 +911,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>Enable<wbr>Bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -1550,7 +921,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
 {{% /md %}}</dd>
@@ -1559,7 +930,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>Ip<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -1570,7 +941,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -1580,7 +951,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -1589,7 +960,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -1600,7 +971,7 @@ a new resource to be created.
             title="Optional">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -1615,7 +986,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1624,7 +995,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
@@ -1634,7 +1005,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>Vpn<wbr>Client<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -1645,7 +1016,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>Vpn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -1662,7 +1033,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
             title="Optional">
         <span>Active<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -1674,7 +1045,7 @@ Defaults to `false`.
             title="Optional">
         <span>Bgp<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">*Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1682,7 +1053,7 @@ Defaults to `false`.
             title="Optional">
         <span>Default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -1695,7 +1066,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>Enable<wbr>Bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -1705,7 +1076,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
 {{% /md %}}</dd>
@@ -1725,7 +1096,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -1735,7 +1106,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -1744,7 +1115,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -1755,7 +1126,7 @@ a new resource to be created.
             title="Optional">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -1779,7 +1150,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
@@ -1789,7 +1160,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>Vpn<wbr>Client<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">*Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -1800,7 +1171,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>Vpn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -1817,7 +1188,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
             title="Optional">
         <span>active<wbr>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -1829,7 +1200,7 @@ Defaults to `false`.
             title="Optional">
         <span>bgp<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1208,7 @@ Defaults to `false`.
             title="Optional">
         <span>default<wbr>Local<wbr>Network<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -1850,7 +1221,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>enable<wbr>Bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -1860,7 +1231,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
 {{% /md %}}</dd>
@@ -1869,7 +1240,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>ip<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayipconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}One or two `ip_configuration` blocks documented below.
 An active-standby gateway requires exactly one `ip_configuration` block whereas
@@ -1880,7 +1251,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -1890,7 +1261,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -1899,7 +1270,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -1910,7 +1281,7 @@ a new resource to be created.
             title="Optional">
         <span>sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -1925,7 +1296,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1934,7 +1305,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
@@ -1944,7 +1315,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>vpn<wbr>Client<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfiguration">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `vpn_client_configuration` block which
 is documented below. In this block the Virtual Network Gateway can be configured
@@ -1955,7 +1326,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>vpn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -1972,7 +1343,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
             title="Optional">
         <span>active_<wbr>active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, an active-active Virtual Network Gateway
 will be created. An active-active gateway requires a `HighPerformance` or an
@@ -1992,7 +1363,7 @@ Defaults to `false`.
             title="Optional">
         <span>default_<wbr>local_<wbr>network_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 through which outbound Internet traffic from the virtual network in which the
@@ -2005,7 +1376,7 @@ If not specified, forced tunneling is disabled.
             title="Optional">
         <span>enable_<wbr>bgp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) will be enabled
 for this Virtual Network Gateway. Defaults to `false`.
@@ -2015,7 +1386,7 @@ for this Virtual Network Gateway. Defaults to `false`.
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Generation of the Virtual Network gateway. Possible values include `Generation1`, `Generation2` or `None`.
 {{% /md %}}</dd>
@@ -2035,7 +1406,7 @@ an active-active gateway requires exactly two `ip_configuration` blocks.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.
@@ -2045,7 +1416,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2054,7 +1425,7 @@ located. Changing the location/region forces a new resource to be created.
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
@@ -2065,7 +1436,7 @@ a new resource to be created.
             title="Optional">
         <span>sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the size and capacity of the virtual network
 gateway. Valid options are `Basic`, `Standard`, `HighPerformance`, `UltraPerformance`,
@@ -2089,7 +1460,7 @@ sku is only supported by an `ExpressRoute` gateway.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the Virtual Network Gateway. Valid options are
 `Vpn` or `ExpressRoute`. Changing the type forces a new resource to be created.
@@ -2110,7 +1481,7 @@ to accept IPSec point-to-site connections.
             title="Optional">
         <span>vpn_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The routing type of the Virtual Network Gateway. Valid
 options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
@@ -2136,7 +1507,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayBgpSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2149,7 +1520,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
             title="Optional">
         <span>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
 {{% /md %}}</dd>
@@ -2158,7 +1529,7 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
             title="Optional">
         <span>Peer<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
@@ -2168,7 +1539,7 @@ through BGP peering. Valid values can be between `0` and `100`.
             title="Optional">
         <span>Peering<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
@@ -2187,7 +1558,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
 {{% /md %}}</dd>
@@ -2196,7 +1567,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>Peer<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
@@ -2206,7 +1577,7 @@ through BGP peering. Valid values can be between `0` and `100`.
             title="Optional">
         <span>Peering<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
@@ -2225,7 +1596,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
 {{% /md %}}</dd>
@@ -2234,7 +1605,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>peer<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
@@ -2244,7 +1615,7 @@ through BGP peering. Valid values can be between `0` and `100`.
             title="Optional">
         <span>peering<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
@@ -2263,7 +1634,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) to use as part of the BGP.
 {{% /md %}}</dd>
@@ -2272,7 +1643,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>peer<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
@@ -2282,7 +1653,7 @@ through BGP peering. Valid values can be between `0` and `100`.
             title="Optional">
         <span>peering<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The BGP peer IP address of the virtual network
 gateway. This address is needed to configure the created gateway as a BGP Peer
@@ -2303,7 +1674,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayIpConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2312,11 +1683,23 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named `GatewaySubnet`. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2325,7 +1708,7 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are `Static` or
@@ -2336,22 +1719,10 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
             title="Optional">
         <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the public ip address to associate
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
-which the virtual network gateway will be created. It is mandatory that
-the associated subnet is named `GatewaySubnet`. Therefore, each virtual
-network can contain at most a single Virtual Network Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -2361,11 +1732,23 @@ network can contain at most a single Virtual Network Gateway.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named `GatewaySubnet`. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2374,7 +1757,7 @@ network can contain at most a single Virtual Network Gateway.
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are `Static` or
@@ -2385,22 +1768,10 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
             title="Optional">
         <span>Public<wbr>Ip<wbr>Address<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the public ip address to associate
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
-which the virtual network gateway will be created. It is mandatory that
-the associated subnet is named `GatewaySubnet`. Therefore, each virtual
-network can contain at most a single Virtual Network Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -2410,11 +1781,23 @@ network can contain at most a single Virtual Network Gateway.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named `GatewaySubnet`. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2423,7 +1806,7 @@ network can contain at most a single Virtual Network Gateway.
             title="Optional">
         <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are `Static` or
@@ -2434,22 +1817,10 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
             title="Optional">
         <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the public ip address to associate
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
-which the virtual network gateway will be created. It is mandatory that
-the associated subnet is named `GatewaySubnet`. Therefore, each virtual
-network can contain at most a single Virtual Network Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -2459,11 +1830,23 @@ network can contain at most a single Virtual Network Gateway.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named `GatewaySubnet`. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2472,7 +1855,7 @@ network can contain at most a single Virtual Network Gateway.
             title="Optional">
         <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines how the private IP address
 of the gateways virtual interface is assigned. Valid options are `Static` or
@@ -2483,22 +1866,10 @@ of the gateways virtual interface is assigned. Valid options are `Static` or
             title="Optional">
         <span>public<wbr>Ip<wbr>Address<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the public ip address to associate
 with the Virtual Network Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the gateway subnet of a virtual network in
-which the virtual network gateway will be created. It is mandatory that
-the associated subnet is named `GatewaySubnet`. Therefore, each virtual
-network can contain at most a single Virtual Network Gateway.
 {{% /md %}}</dd>
 
 </dl>
@@ -2514,7 +1885,7 @@ network can contain at most a single Virtual Network Gateway.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2527,7 +1898,7 @@ network can contain at most a single Virtual Network Gateway.
             title="Required">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
@@ -2538,7 +1909,7 @@ in CIDR notation.
             title="Optional">
         <span>Radius<wbr>Server<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2548,7 +1919,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>Radius<wbr>Server<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2558,7 +1929,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>Revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -2569,7 +1940,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>Root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -2581,7 +1952,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>Vpn<wbr>Client<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
@@ -2598,7 +1969,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
@@ -2609,7 +1980,7 @@ in CIDR notation.
             title="Optional">
         <span>Radius<wbr>Server<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2619,7 +1990,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>Radius<wbr>Server<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2652,7 +2023,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>Vpn<wbr>Client<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
@@ -2669,7 +2040,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>address<wbr>Spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
@@ -2680,7 +2051,7 @@ in CIDR notation.
             title="Optional">
         <span>radius<wbr>Server<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2690,7 +2061,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>radius<wbr>Server<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2700,7 +2071,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>revoked<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrevokedcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Revoked<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `revoked_certificate` blocks which
 are defined below.
@@ -2711,7 +2082,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>root<wbr>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#virtualnetworkgatewayvpnclientconfigurationrootcertificate">Virtual<wbr>Network<wbr>Gateway<wbr>Vpn<wbr>Client<wbr>Configuration<wbr>Root<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `root_certificate` blocks which are
 defined below. These root certificates are used to sign the client certificate
@@ -2723,7 +2094,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>vpn<wbr>Client<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
@@ -2740,7 +2111,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>address_<wbr>spaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The address space out of which ip addresses for
 vpn clients will be taken. You can provide more than one address space, e.g.
@@ -2751,7 +2122,7 @@ in CIDR notation.
             title="Optional">
         <span>radius<wbr>Server<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The address of the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2761,7 +2132,7 @@ This setting is incompatible with the use of `root_certificate` and `revoked_cer
             title="Optional">
         <span>radius<wbr>Server<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret used by the Radius server.
 This setting is incompatible with the use of `root_certificate` and `revoked_certificate`.
@@ -2794,7 +2165,7 @@ This setting is incompatible with the use of `radius_server_address` and `radius
             title="Optional">
         <span>vpn<wbr>Client<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of the protocols supported by the vpn client.
 The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
@@ -2813,7 +2184,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRevokedCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2826,7 +2197,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2835,7 +2206,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2850,7 +2221,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2859,7 +2230,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2874,7 +2245,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2883,7 +2254,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2898,7 +2269,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2907,7 +2278,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2924,7 +2295,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#VirtualNetworkGatewayVpnClientConfigurationRootCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2937,7 +2308,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2946,7 +2317,7 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
 revoked.
@@ -2963,7 +2334,7 @@ revoked.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2972,7 +2343,7 @@ revoked.
             title="Required">
         <span>Public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
 revoked.
@@ -2989,7 +2360,7 @@ revoked.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -2998,7 +2369,7 @@ revoked.
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
 revoked.
@@ -3015,7 +2386,7 @@ revoked.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user-defined name of the revoked certificate.
 {{% /md %}}</dd>
@@ -3024,7 +2395,7 @@ revoked.
             title="Required">
         <span>public<wbr>Cert<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SHA1 thumbprint of the certificate to be
 revoked.
@@ -3047,6 +2418,7 @@ revoked.
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

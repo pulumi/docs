@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages a Microsoft SQL Virtual Machine
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/mssql_virtual_machine.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages a Microsoft SQL Virtual Machine
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +26,11 @@ Manages a Microsoft SQL Virtual Machine
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Mssql.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineArgs.html">VirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineArgs.html">VirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,11 +122,29 @@ Manages a Microsoft SQL Virtual Machine
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>License<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -134,7 +153,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -143,7 +162,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>RServices<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -152,7 +171,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -161,7 +180,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -170,7 +189,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -179,36 +198,18 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -218,11 +219,29 @@ Manages a Microsoft SQL Virtual Machine
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>License<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">*Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -231,7 +250,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">*Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -240,7 +259,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>RServices<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -249,7 +268,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -258,7 +277,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -267,7 +286,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -276,18 +295,9 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -299,15 +309,6 @@ Manages a Microsoft SQL Virtual Machine
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -315,11 +316,29 @@ Manages a Microsoft SQL Virtual Machine
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>sql<wbr>License<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching?</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -328,7 +347,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential?</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -337,7 +356,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>r<wbr>Services<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -346,7 +365,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -355,7 +374,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -364,7 +383,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -373,36 +392,18 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
 </dl>
@@ -411,6 +412,24 @@ Manages a Microsoft SQL Virtual Machine
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>sql_<wbr>license_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +453,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>r_<wbr>services_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -443,7 +462,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -452,7 +471,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -461,7 +480,7 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>update_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -470,18 +489,9 @@ Manages a Microsoft SQL Virtual Machine
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>update_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sql_<wbr>license_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -493,417 +503,10 @@ Manages a Microsoft SQL Virtual Machine
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VirtualMachine Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Patching</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching?</a></span>
-    </dt>
-    <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Vault<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential?</a></span>
-    </dt>
-    <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>RServices<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Patching</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">*Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
-    </dt>
-    <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Vault<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">*Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
-    </dt>
-    <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>RServices<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Patching</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching?</a></span>
-    </dt>
-    <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Vault<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential?</a></span>
-    </dt>
-    <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>r<wbr>Services<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>Connectivity<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>Connectivity<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql<wbr>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>patching</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Dict[Virtual<wbr>Machine<wbr>Auto<wbr>Patching]</a></span>
-    </dt>
-    <dd>{{% md %}}An `auto_patching` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>vault_<wbr>credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Dict[Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential]</a></span>
-    </dt>
-    <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>r_<wbr>services_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should R Services be enabled?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>connectivity_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>connectivity_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>connectivity_<wbr>update_<wbr>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server sysadmin login to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sql_<wbr>license_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual_<wbr>machine_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -927,11 +530,11 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Mssql.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Mssql.VirtualMachineState.html">VirtualMachineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineState.html">VirtualMachineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1041,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -1050,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args?</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1059,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>RServices<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -1068,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -1077,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -1086,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -1095,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd>
@@ -1104,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1113,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1122,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1138,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">*Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -1147,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">*Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1156,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>RServices<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -1165,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -1174,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -1183,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -1192,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd>
@@ -1201,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sql<wbr>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1219,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1235,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Patching</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching?</a></span>
+        <span class="property-type"><a href="#virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</a></span>
     </dt>
     <dd>{{% md %}}An `auto_patching` block as defined below.
 {{% /md %}}</dd>
@@ -1244,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Vault<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential?</a></span>
+        <span class="property-type"><a href="#virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</a></span>
     </dt>
     <dd>{{% md %}}(Optional) An `key_vault_credential` block as defined below.
 {{% /md %}}</dd>
@@ -1253,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>r<wbr>Services<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -1262,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -1271,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -1280,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Update<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -1289,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>Connectivity<wbr>Update<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd>
@@ -1298,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql<wbr>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1307,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1316,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1350,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>r_<wbr>services_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should R Services be enabled?
 {{% /md %}}</dd>
@@ -1359,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server port. Defaults to `1433`.
 {{% /md %}}</dd>
@@ -1368,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The connectivity type used for this SQL Server. Defaults to `PRIVATE`.
 {{% /md %}}</dd>
@@ -1377,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>update_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login password.
 {{% /md %}}</dd>
@@ -1386,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql_<wbr>connectivity_<wbr>update_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server sysadmin login to create.
 {{% /md %}}</dd>
@@ -1395,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sql_<wbr>license_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SQL Server license type. Possible values are `AHUB` (Azure Hybrid Benefit) and `PAYG` (Pay-As-You-Go). Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1413,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>virtual_<wbr>machine_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1438,7 +1041,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1451,7 +1054,7 @@ The following state arguments are supported:
             title="Required">
         <span>Day<wbr>Of<wbr>Week</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd>
@@ -1460,7 +1063,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd>
@@ -1469,7 +1072,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd>
@@ -1485,7 +1088,7 @@ The following state arguments are supported:
             title="Required">
         <span>Day<wbr>Of<wbr>Week</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd>
@@ -1494,7 +1097,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd>
@@ -1503,7 +1106,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd>
@@ -1519,7 +1122,7 @@ The following state arguments are supported:
             title="Required">
         <span>day<wbr>Of<wbr>Week</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd>
@@ -1528,7 +1131,7 @@ The following state arguments are supported:
             title="Required">
         <span>maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd>
@@ -1537,7 +1140,7 @@ The following state arguments are supported:
             title="Required">
         <span>maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd>
@@ -1553,7 +1156,7 @@ The following state arguments are supported:
             title="Required">
         <span>day<wbr>Of<wbr>Week</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The day of week to apply the patch on.
 {{% /md %}}</dd>
@@ -1562,7 +1165,7 @@ The following state arguments are supported:
             title="Required">
         <span>maintenance<wbr>Window<wbr>Duration<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the Maintenance Window in minutes.
 {{% /md %}}</dd>
@@ -1571,7 +1174,7 @@ The following state arguments are supported:
             title="Required">
         <span>maintenance<wbr>Window<wbr>Starting<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Hour, in the Virtual Machine Time-Zone when the patching maintenance window should begin.
 {{% /md %}}</dd>
@@ -1589,7 +1192,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1602,7 +1205,7 @@ The following state arguments are supported:
             title="Required">
         <span>Key<wbr>Vault<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1611,7 +1214,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd>
@@ -1620,7 +1223,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Principal<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1629,7 +1232,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Principal<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1645,7 +1248,7 @@ The following state arguments are supported:
             title="Required">
         <span>Key<wbr>Vault<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1654,7 +1257,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd>
@@ -1663,7 +1266,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Principal<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1672,7 +1275,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Principal<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1688,7 +1291,7 @@ The following state arguments are supported:
             title="Required">
         <span>key<wbr>Vault<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1697,7 +1300,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd>
@@ -1706,7 +1309,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Principal<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1715,7 +1318,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Principal<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1731,7 +1334,7 @@ The following state arguments are supported:
             title="Required">
         <span>key<wbr>Vault<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The azure Key Vault url. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1740,7 +1343,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The credential name.
 {{% /md %}}</dd>
@@ -1749,7 +1352,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Principal<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service principal name to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1758,7 +1361,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Principal<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service principal name secret to access key vault. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1780,6 +1383,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 
