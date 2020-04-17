@@ -248,9 +248,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see <a class="reference external" href="https://www.linode.com/docs/platform/manager/dns-manager/">DNS Manager</a> and the <a class="reference external" href="https://developers.linode.com/api/v4#operation/createDomainRecord">Linode APIv4 docs</a>.</p>
 <p>This resource exports no additional attributes.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -544,9 +541,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> - Only Images created automatically (from a deleted Linode; type=automatic) will expire.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vendor</span></code> - The upstream distribution vendor. Nil for private Images.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1705,9 +1699,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_linode.ObjectStorageBucket">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">ObjectStorageBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">label=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.ObjectStorageBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Object Storage Bucket resource. This can be used to create, modify, and delete Linodes Object Storage Buckets.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_bucket.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1795,9 +1786,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">access_key</span></code> - This keypair’s access key. This is not secret.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">secret_key</span></code> - This keypair’s secret key.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/object_storage_key.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1889,9 +1877,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1948,9 +1933,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Linode RDNS resource.  This can be used to create and modify RDNS records.</p>
 <p>Linode RDNS names must have a matching address value in an A or AAAA record.  This A or AAAA name must be resolvable at the time the RDNS resource is being associated.</p>
 <p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/docs/v4#operation/updateIP">Linode APIv4 docs</a> and the <a class="reference external" href="https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/">Configure your Linode for Reverse DNS</a> guide.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2038,9 +2020,6 @@ For more information, see the <a class="reference external" href="https://develo
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this SSH Key was created.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2423,9 +2402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The label of the Linode Volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">filesystem_path</span></code> - The full filesystem path for the Volume based on the Volume’s label. The path is “/dev/disk/by-id/scsi-0Linode<em>Volume</em>” + the Volume label</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2564,9 +2540,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">zip</span></code> - The zip code of this Account’s billing address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">balance</span></code> - This Account’s balance, in US dollars.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/account.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/account.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2591,9 +2564,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">soa_email</span></code> - Start of Authority email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - An array of tags applied to this object.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2623,9 +2593,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> - The service this Record identified. Only valid for SRV records.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> - The tag portion of a CAA record.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain_record.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain_record.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2644,9 +2611,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - How the Image was created. Manual Images can be created at any time. image”Automatic” Images are created automatically from a deleted Linode.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vendor</span></code> - The upstream distribution vendor. <code class="docutils literal notranslate"><span class="pre">None</span></code> for private Images.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/image.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/image.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The unique ID of this Image.  The ID of private images begin with <code class="docutils literal notranslate"><span class="pre">private/</span></code> followed by the numeric identifier of the private image, for example <code class="docutils literal notranslate"><span class="pre">private/12345</span></code>.</p>
@@ -2669,9 +2633,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">addons.0.backups.0.price.0.hourly</span></code> - The cost (in US dollars) per hour to add Backups service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">addons.0.backups.0.price.0.monthly</span></code> - The cost (in US dollars) per month to add Backups service.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – Label used to identify instance type</p>
@@ -2695,9 +2656,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">linode_id</span></code> - The ID of the Linode this address currently belongs to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> - The Region this IP address resides in.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>address</strong> (<em>str</em>) – The IP Address to access.  The address must be associated with the account and a resource that the user has access to view.</p>
@@ -2716,9 +2674,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> - The region this cluster is located in.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">static_site_domain</span></code> - The base URL for this cluster used when hosting static sites.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/object_storage_cluster.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/object_storage_cluster.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The unique ID of this cluster.</p>
@@ -2749,27 +2704,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">referrals.0.code</span></code> - The Profile referral code.  If new accounts use this when signing up for Linode, referring account will receive credit.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">referrals.0.url</span></code> - The referral URL.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/profile.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/profile.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_linode.get_region">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_region</code><span class="sig-paren">(</span><em class="sig-param">country=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_region" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">.getRegion</span></code> provides details about a specific Linode region.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_linode.get_ssh_key">
 <code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">get_ssh_key</code><span class="sig-paren">(</span><em class="sig-param">label=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.get_ssh_key" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">.SshKey</span></code> provides access to a specifically labeled SSH Key in the Profile of the User identified by the access token.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -2801,9 +2747,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/stackscript.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/stackscript.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>id</strong> (<em>float</em>) – The unique numeric ID of the StackScript to query.</p>
@@ -2830,9 +2773,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> - The email address for this User, for account management communications, and may be used for other communications as configured.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">restricted</span></code> - If true, this User must be granted access to perform actions or access entities on this Account.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/user.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The unique username of this User.</p>
@@ -2857,9 +2797,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">linode_id</span></code> - If a Volume is attached to a specific Linode, the ID of that Linode will be displayed here. If the Volume is unattached, this value will be null.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">filesystem_path</span></code> - The full filesystem path for the Volume based on the Volume’s label. Path is /dev/disk/by-id/scsi-0LinodeVolume + Volume label.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/volume.html.md">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/volume.html.md</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>
