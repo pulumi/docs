@@ -39,7 +39,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEnvironmentEC2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloud9?tab=doc#EnvironmentEC2Args">EnvironmentEC2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloud9?tab=doc#EnvironmentEC2">EnvironmentEC2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEnvironmentEC2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloud9?tab=doc#EnvironmentEC2Args">EnvironmentEC2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloud9?tab=doc#EnvironmentEC2">EnvironmentEC2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,7 +139,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -148,7 +148,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -166,7 +166,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -227,7 +227,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -236,7 +236,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Required">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Required">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>automatic_<wbr>stop_<wbr>time_<wbr>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>owner_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ const example = new aws.cloud9.EnvironmentEC2("example", {
             title="Optional">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ Get an existing EnvironmentEC2 resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironmentEC2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloud9?tab=doc#EnvironmentEC2State">EnvironmentEC2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloud9?tab=doc#EnvironmentEC2">EnvironmentEC2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnvironmentEC2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloud9?tab=doc#EnvironmentEC2State">EnvironmentEC2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloud9?tab=doc#EnvironmentEC2">EnvironmentEC2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -659,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -677,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -747,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>automatic<wbr>Stop<wbr>Time<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -907,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>
@@ -923,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment.
 {{% /md %}}</dd>
@@ -932,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>automatic_<wbr>stop_<wbr>time_<wbr>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes until the running instance is shut down after the environment has last been used.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the environment.
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of instance to connect to the environment, e.g. `t2.micro`.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the environment.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the environment (e.g. `ssh` or `ec2`)
 {{% /md %}}</dd>

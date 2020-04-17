@@ -31,8 +31,8 @@ const main = new aws.ec2.Vpc("main", {
 });
 const peerVpc = new aws.ec2.Vpc("peer", {
     cidrBlock: "10.1.0.0/16",
-}, { provider: peer });
-const peerCallerIdentity = pulumi.output(aws.getCallerIdentity({ provider: peer, async: true }));
+}, {provider: peer});
+const peerCallerIdentity = aws.getCallerIdentity({provider: peer});
 // Requester's side of the connection.
 const peerVpcPeeringConnection = new aws.ec2.VpcPeeringConnection("peer", {
     autoAccept: false,
@@ -51,7 +51,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
         Side: "Accepter",
     },
     vpcPeeringConnectionId: peerVpcPeeringConnection.id,
-}, { provider: peer });
+}, {provider: peer});
 ```
 
 {{% /example %}}
@@ -72,7 +72,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcPeeringConnectionAccepter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterArgs">VpcPeeringConnectionAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcPeeringConnectionAccepter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterArgs">VpcPeeringConnectionAccepterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -172,7 +172,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Required">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Optional">
         <span>Auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Required">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Optional">
         <span>Auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Required">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Optional">
         <span>auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Required">
         <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ const peerVpcPeeringConnectionAccepter = new aws.ec2.VpcPeeringConnectionAccepte
             title="Optional">
         <span>auto_<wbr>accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ The following output properties are available:
             title="">
         <span>Accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -436,7 +436,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ The following output properties are available:
             title="">
         <span>Accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ The following output properties are available:
             title="">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ The following output properties are available:
             title="">
         <span>accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ The following output properties are available:
             title="">
         <span>peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ The following output properties are available:
             title="">
         <span>peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ The following output properties are available:
             title="">
         <span>peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -556,7 +556,7 @@ The following output properties are available:
             title="">
         <span>accept_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -565,7 +565,7 @@ The following output properties are available:
             title="">
         <span>peer_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ The following output properties are available:
             title="">
         <span>peer_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The following output properties are available:
             title="">
         <span>peer_<wbr>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -622,7 +622,7 @@ Get an existing VpcPeeringConnectionAccepter resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcPeeringConnectionAccepter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterState">VpcPeeringConnectionAccepterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcPeeringConnectionAccepter<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterState">VpcPeeringConnectionAccepterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepter">VpcPeeringConnectionAccepter</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -736,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -755,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -934,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>accept<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -971,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -1008,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -1017,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>accept_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
 {{% /md %}}</dd>
@@ -1052,7 +1052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>accept</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to accept the peering request. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1061,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC.
 {{% /md %}}</dd>
@@ -1070,7 +1070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC.
 {{% /md %}}</dd>
@@ -1079,7 +1079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>peer_<wbr>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
 {{% /md %}}</dd>
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC.
 {{% /md %}}</dd>
@@ -1116,7 +1116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC Peering Connection ID to manage.
 {{% /md %}}</dd>
@@ -1141,7 +1141,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterAccepterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterAccepterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterAccepterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterAccepterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1164,7 +1164,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1174,7 +1174,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1191,7 +1191,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1201,7 +1201,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1211,7 +1211,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1228,7 +1228,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1238,7 +1238,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1248,7 +1248,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1265,7 +1265,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1275,7 +1275,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1285,7 +1285,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1304,7 +1304,7 @@ connection in the peer VPC over the VPC Peering Connection.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterRequesterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterRequesterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterRequesterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcPeeringConnectionAccepterRequesterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1317,7 +1317,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1327,7 +1327,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1337,7 +1337,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1354,7 +1354,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1364,7 +1364,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1374,7 +1374,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1391,7 +1391,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1401,7 +1401,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1411,7 +1411,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.
@@ -1428,7 +1428,7 @@ connection in the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local ClassicLink connection can communicate
 with the peer VPC over the VPC Peering Connection.
@@ -1438,7 +1438,7 @@ with the peer VPC over the VPC Peering Connection.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can resolve public DNS hostnames to
 private IP addresses when queried from instances in a peer VPC.
@@ -1448,7 +1448,7 @@ private IP addresses when queried from instances in a peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a local VPC can communicate with a ClassicLink
 connection in the peer VPC over the VPC Peering Connection.

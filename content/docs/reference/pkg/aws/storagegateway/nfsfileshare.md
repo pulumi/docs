@@ -42,7 +42,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNfsFileShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShareArgs">NfsFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShare">NfsFileShare</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNfsFileShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareArgs">NfsFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShare">NfsFileShare</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -142,7 +142,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -151,7 +151,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -338,7 +338,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -356,7 +356,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>Squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>client_<wbr>lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -550,7 +550,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>gateway_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>location_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Required">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>default_<wbr>storage_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -586,7 +586,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>guess_<wbr>mime_<wbr>type_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -595,7 +595,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>kms_<wbr>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -622,7 +622,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>object_<wbr>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>requester_<wbr>pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ const example = new aws.storagegateway.NfsFileShare("example", {
             title="Optional">
         <span>squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following output properties are available:
             title="">
         <span>Fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following output properties are available:
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -720,7 +720,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -729,7 +729,7 @@ The following output properties are available:
             title="">
         <span>Fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ The following output properties are available:
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The following output properties are available:
             title="">
         <span>fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ The following output properties are available:
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ The following output properties are available:
             title="">
         <span>fileshare_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -806,7 +806,7 @@ The following output properties are available:
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -836,7 +836,7 @@ Get an existing NfsFileShare resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNfsFileShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShareState">NfsFileShareState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShare">NfsFileShare</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNfsFileShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareState">NfsFileShareState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShare">NfsFileShare</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -950,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -986,7 +986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -995,7 +995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1004,7 +1004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1040,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1067,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -1146,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1155,7 +1155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1164,7 +1164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1173,7 +1173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1182,7 +1182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1200,7 +1200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1209,7 +1209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1245,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -1279,7 +1279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -1288,7 +1288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1297,7 +1297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fileshare<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -1306,7 +1306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1315,7 +1315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>guess<wbr>Mime<wbr>Type<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1324,7 +1324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1333,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1342,7 +1342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1360,7 +1360,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object<wbr>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1369,7 +1369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1378,7 +1378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>read<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1387,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>requester<wbr>Pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1396,7 +1396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -1430,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the NFS File Share.
 {{% /md %}}</dd>
@@ -1439,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client_<wbr>lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default_<wbr>storage_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fileshare_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the NFS File Share.
 {{% /md %}}</dd>
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1475,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>guess_<wbr>mime_<wbr>type_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1484,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1502,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object_<wbr>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1529,7 +1529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1538,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>requester_<wbr>pays</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1565,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>squash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Maps a user to anonymous user. Defaults to `RootSquash`. Valid values: `RootSquash` (only root is mapped to anonymous user), `NoSquash` (no one is mapped to anonymous user), `AllSquash` (everyone is mapped to anonymous user)
 {{% /md %}}</dd>
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/storagegateway?tab=doc#NfsFileShareNfsFileShareDefaultsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1612,7 +1612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd>
@@ -1621,7 +1621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd>
@@ -1630,7 +1630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd>
@@ -1664,7 +1664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd>
@@ -1707,7 +1707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>file<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd>
@@ -1716,7 +1716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1725,7 +1725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
 {{% /md %}}</dd>
@@ -1750,7 +1750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>file<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
 {{% /md %}}</dd>
@@ -1759,7 +1759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>
@@ -1768,7 +1768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
 {{% /md %}}</dd>

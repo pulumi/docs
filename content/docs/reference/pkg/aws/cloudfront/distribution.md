@@ -224,7 +224,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionArgs">DistributionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -334,7 +334,7 @@ one).
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -375,7 +375,7 @@ one).
             title="Optional">
         <span>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -385,7 +385,7 @@ this distribution.
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -404,7 +404,7 @@ distribution.
             title="Optional">
         <span>Default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -414,7 +414,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>Http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -425,7 +425,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>Is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -466,7 +466,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -476,7 +476,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -496,7 +496,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>Wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -507,7 +507,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>Web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -537,7 +537,7 @@ one).
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -578,7 +578,7 @@ one).
             title="Optional">
         <span>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -588,7 +588,7 @@ this distribution.
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -607,7 +607,7 @@ distribution.
             title="Optional">
         <span>Default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -617,7 +617,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>Http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -628,7 +628,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>Is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -669,7 +669,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -679,7 +679,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -699,7 +699,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>Wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -710,7 +710,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>Web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -740,7 +740,7 @@ one).
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -781,7 +781,7 @@ one).
             title="Optional">
         <span>aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -791,7 +791,7 @@ this distribution.
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -810,7 +810,7 @@ distribution.
             title="Optional">
         <span>default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -820,7 +820,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -831,7 +831,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -882,7 +882,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -902,7 +902,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -913,7 +913,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -943,7 +943,7 @@ one).
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -984,7 +984,7 @@ one).
             title="Optional">
         <span>aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -994,7 +994,7 @@ this distribution.
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -1013,7 +1013,7 @@ distribution.
             title="Optional">
         <span>default_<wbr>root_<wbr>object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -1023,7 +1023,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>http_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -1034,7 +1034,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>is_<wbr>ipv6_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -1075,7 +1075,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>price_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -1085,7 +1085,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>retain_<wbr>on_<wbr>delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -1105,7 +1105,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>wait_<wbr>for_<wbr>deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -1116,7 +1116,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>web_<wbr>acl_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -1159,7 +1159,7 @@ with signed URLs.
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1168,7 +1168,7 @@ with signed URLs.
             title="">
         <span>Caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -1178,7 +1178,7 @@ updates to the distribution configuration.
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -1188,7 +1188,7 @@ web site of your custom origin.
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -1198,7 +1198,7 @@ web site of your custom origin.
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -1209,7 +1209,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1219,7 +1219,7 @@ currently in progress.
             title="">
         <span>Last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -1228,7 +1228,7 @@ currently in progress.
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -1257,7 +1257,7 @@ with signed URLs.
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1266,7 +1266,7 @@ with signed URLs.
             title="">
         <span>Caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -1276,7 +1276,7 @@ updates to the distribution configuration.
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -1286,7 +1286,7 @@ web site of your custom origin.
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -1296,7 +1296,7 @@ web site of your custom origin.
             title="">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -1307,7 +1307,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1317,7 +1317,7 @@ currently in progress.
             title="">
         <span>Last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -1326,7 +1326,7 @@ currently in progress.
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -1355,7 +1355,7 @@ with signed URLs.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1364,7 +1364,7 @@ with signed URLs.
             title="">
         <span>caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -1374,7 +1374,7 @@ updates to the distribution configuration.
             title="">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -1384,7 +1384,7 @@ web site of your custom origin.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -1394,7 +1394,7 @@ web site of your custom origin.
             title="">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -1405,7 +1405,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="">
         <span>in<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1415,7 +1415,7 @@ currently in progress.
             title="">
         <span>last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -1424,7 +1424,7 @@ currently in progress.
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -1453,7 +1453,7 @@ with signed URLs.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ with signed URLs.
             title="">
         <span>caller_<wbr>reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -1472,7 +1472,7 @@ updates to the distribution configuration.
             title="">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -1482,7 +1482,7 @@ web site of your custom origin.
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -1492,7 +1492,7 @@ web site of your custom origin.
             title="">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -1503,7 +1503,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="">
         <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1513,7 +1513,7 @@ currently in progress.
             title="">
         <span>last_<wbr>modified_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -1522,7 +1522,7 @@ currently in progress.
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -1554,7 +1554,7 @@ Get an existing Distribution resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistribution<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionState">DistributionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#Distribution">Distribution</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1679,7 +1679,7 @@ with signed URLs.
             title="Optional">
         <span>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -1689,7 +1689,7 @@ this distribution.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ this distribution.
             title="Optional">
         <span>Caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -1708,7 +1708,7 @@ updates to the distribution configuration.
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -1737,7 +1737,7 @@ one).
             title="Optional">
         <span>Default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -1747,7 +1747,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -1757,7 +1757,7 @@ web site of your custom origin.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -1767,7 +1767,7 @@ user requests for content.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -1777,7 +1777,7 @@ user requests for content.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -1788,7 +1788,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="Optional">
         <span>Http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -1799,7 +1799,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -1809,7 +1809,7 @@ currently in progress.
             title="Optional">
         <span>Is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -1818,7 +1818,7 @@ currently in progress.
             title="Optional">
         <span>Last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -1869,7 +1869,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -1889,7 +1889,7 @@ configuration for this distribution (maximum one).
             title="Optional">
         <span>Retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -1900,7 +1900,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -1931,7 +1931,7 @@ one).
             title="Optional">
         <span>Wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -1942,7 +1942,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>Web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -1973,7 +1973,7 @@ with signed URLs.
             title="Optional">
         <span>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -1983,7 +1983,7 @@ this distribution.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -1992,7 +1992,7 @@ this distribution.
             title="Optional">
         <span>Caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -2002,7 +2002,7 @@ updates to the distribution configuration.
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -2031,7 +2031,7 @@ one).
             title="Optional">
         <span>Default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -2041,7 +2041,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -2051,7 +2051,7 @@ web site of your custom origin.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -2061,7 +2061,7 @@ user requests for content.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -2071,7 +2071,7 @@ user requests for content.
             title="Optional">
         <span>Hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -2082,7 +2082,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="Optional">
         <span>Http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -2093,7 +2093,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -2103,7 +2103,7 @@ currently in progress.
             title="Optional">
         <span>Is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -2112,7 +2112,7 @@ currently in progress.
             title="Optional">
         <span>Last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -2163,7 +2163,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>Price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -2183,7 +2183,7 @@ configuration for this distribution (maximum one).
             title="Optional">
         <span>Retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -2194,7 +2194,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -2225,7 +2225,7 @@ one).
             title="Optional">
         <span>Wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -2236,7 +2236,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>Web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -2267,7 +2267,7 @@ with signed URLs.
             title="Optional">
         <span>aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -2277,7 +2277,7 @@ this distribution.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -2286,7 +2286,7 @@ this distribution.
             title="Optional">
         <span>caller<wbr>Reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -2296,7 +2296,7 @@ updates to the distribution configuration.
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -2325,7 +2325,7 @@ one).
             title="Optional">
         <span>default<wbr>Root<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -2335,7 +2335,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -2345,7 +2345,7 @@ web site of your custom origin.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -2355,7 +2355,7 @@ user requests for content.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -2365,7 +2365,7 @@ user requests for content.
             title="Optional">
         <span>hosted<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -2376,7 +2376,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="Optional">
         <span>http<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -2387,7 +2387,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>in<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -2397,7 +2397,7 @@ currently in progress.
             title="Optional">
         <span>is<wbr>Ipv6Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -2406,7 +2406,7 @@ currently in progress.
             title="Optional">
         <span>last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -2457,7 +2457,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>price<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -2477,7 +2477,7 @@ configuration for this distribution (maximum one).
             title="Optional">
         <span>retain<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -2488,7 +2488,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -2519,7 +2519,7 @@ one).
             title="Optional">
         <span>wait<wbr>For<wbr>Deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -2530,7 +2530,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>web<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -2561,7 +2561,7 @@ with signed URLs.
             title="Optional">
         <span>aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
@@ -2571,7 +2571,7 @@ this distribution.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.
 {{% /md %}}</dd>
@@ -2580,7 +2580,7 @@ this distribution.
             title="Optional">
         <span>caller_<wbr>reference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
@@ -2590,7 +2590,7 @@ updates to the distribution configuration.
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
@@ -2619,7 +2619,7 @@ one).
             title="Optional">
         <span>default_<wbr>root_<wbr>object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
@@ -2629,7 +2629,7 @@ return (for example, index.html) when an end user requests the root URL.
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -2639,7 +2639,7 @@ web site of your custom origin.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
@@ -2649,7 +2649,7 @@ user requests for content.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
@@ -2659,7 +2659,7 @@ user requests for content.
             title="Optional">
         <span>hosted_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set][7] to. This attribute is simply an
@@ -2670,7 +2670,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
             title="Optional">
         <span>http_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
@@ -2681,7 +2681,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
             title="Optional">
         <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
@@ -2691,7 +2691,7 @@ currently in progress.
             title="Optional">
         <span>is_<wbr>ipv6_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
 {{% /md %}}</dd>
@@ -2700,7 +2700,7 @@ currently in progress.
             title="Optional">
         <span>last_<wbr>modified_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
 {{% /md %}}</dd>
@@ -2751,7 +2751,7 @@ distribution (multiples allowed).
             title="Optional">
         <span>price_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
@@ -2771,7 +2771,7 @@ configuration for this distribution (maximum one).
             title="Optional">
         <span>retain_<wbr>on_<wbr>delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
@@ -2782,7 +2782,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
@@ -2813,7 +2813,7 @@ one).
             title="Optional">
         <span>wait_<wbr>for_<wbr>deployment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
@@ -2824,7 +2824,7 @@ this to`false` will skip the process. Default: `true`.
             title="Optional">
         <span>web_<wbr>acl_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If you're using AWS WAF to filter CloudFront
 requests, the Id of the AWS WAF web ACL that is associated with the
@@ -2853,7 +2853,7 @@ region and the credentials configuring this argument must have
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionCustomErrorResponseOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2866,7 +2866,7 @@ region and the credentials configuring this argument must have
             title="Required">
         <span>Error<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -2876,7 +2876,7 @@ customize.
             title="Optional">
         <span>Error<wbr>Caching<wbr>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -2887,7 +2887,7 @@ origin to see whether the object has been updated.
             title="Optional">
         <span>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -2897,7 +2897,7 @@ to return with the custom error page to the viewer.
             title="Optional">
         <span>Response<wbr>Page<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -2914,7 +2914,7 @@ example, `/custom_404.html`).
             title="Required">
         <span>Error<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -2924,7 +2924,7 @@ customize.
             title="Optional">
         <span>Error<wbr>Caching<wbr>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -2935,7 +2935,7 @@ origin to see whether the object has been updated.
             title="Optional">
         <span>Response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -2945,7 +2945,7 @@ to return with the custom error page to the viewer.
             title="Optional">
         <span>Response<wbr>Page<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -2962,7 +2962,7 @@ example, `/custom_404.html`).
             title="Required">
         <span>error<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -2972,7 +2972,7 @@ customize.
             title="Optional">
         <span>error<wbr>Caching<wbr>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -2983,7 +2983,7 @@ origin to see whether the object has been updated.
             title="Optional">
         <span>response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -2993,7 +2993,7 @@ to return with the custom error page to the viewer.
             title="Optional">
         <span>response<wbr>Page<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -3010,7 +3010,7 @@ example, `/custom_404.html`).
             title="Required">
         <span>error<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
@@ -3020,7 +3020,7 @@ customize.
             title="Optional">
         <span>error<wbr>Caching<wbr>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
@@ -3031,7 +3031,7 @@ origin to see whether the object has been updated.
             title="Optional">
         <span>response<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
@@ -3041,7 +3041,7 @@ to return with the custom error page to the viewer.
             title="Optional">
         <span>response<wbr>Page<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
@@ -3060,7 +3060,7 @@ example, `/custom_404.html`).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3073,7 +3073,7 @@ example, `/custom_404.html`).
             title="Required">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -3083,7 +3083,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>Cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -3103,7 +3103,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>Target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -3114,7 +3114,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>Viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -3126,7 +3126,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -3137,7 +3137,7 @@ the request header (default: `false`).
             title="Optional">
         <span>Default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3149,7 +3149,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -3168,7 +3168,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3181,7 +3181,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -3192,7 +3192,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>Smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -3203,7 +3203,7 @@ associated with this cache behavior.
             title="Optional">
         <span>Trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -3220,7 +3220,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -3230,7 +3230,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>Cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -3250,7 +3250,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>Target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -3261,7 +3261,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>Viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -3273,7 +3273,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -3284,7 +3284,7 @@ the request header (default: `false`).
             title="Optional">
         <span>Default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3296,7 +3296,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -3315,7 +3315,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3328,7 +3328,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -3339,7 +3339,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>Smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -3350,7 +3350,7 @@ associated with this cache behavior.
             title="Optional">
         <span>Trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -3367,7 +3367,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -3377,7 +3377,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -3397,7 +3397,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -3408,7 +3408,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -3420,7 +3420,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -3431,7 +3431,7 @@ the request header (default: `false`).
             title="Optional">
         <span>default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3443,7 +3443,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -3462,7 +3462,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3475,7 +3475,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -3486,7 +3486,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -3497,7 +3497,7 @@ associated with this cache behavior.
             title="Optional">
         <span>trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -3514,7 +3514,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -3524,7 +3524,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -3544,7 +3544,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -3555,7 +3555,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -3567,7 +3567,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -3578,7 +3578,7 @@ the request header (default: `false`).
             title="Optional">
         <span>default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3590,7 +3590,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -3609,7 +3609,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -3622,7 +3622,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -3633,7 +3633,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -3644,7 +3644,7 @@ associated with this cache behavior.
             title="Optional">
         <span>trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -3663,7 +3663,7 @@ allow to create signed URLs for private content.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3686,7 +3686,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>Query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -3696,7 +3696,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -3707,7 +3707,7 @@ headers.
             title="Optional">
         <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -3736,7 +3736,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>Query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -3746,7 +3746,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -3757,7 +3757,7 @@ headers.
             title="Optional">
         <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -3786,7 +3786,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -3796,7 +3796,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -3807,7 +3807,7 @@ headers.
             title="Optional">
         <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -3836,7 +3836,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -3846,7 +3846,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -3857,7 +3857,7 @@ headers.
             title="Optional">
         <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -3878,7 +3878,7 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3891,7 +3891,7 @@ value of `true` for `query_string`, all query string keys are cached.
             title="Required">
         <span>Forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -3903,7 +3903,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>Whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -3921,7 +3921,7 @@ your origin.
             title="Required">
         <span>Forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -3933,7 +3933,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>Whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -3951,7 +3951,7 @@ your origin.
             title="Required">
         <span>forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -3963,7 +3963,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -3981,7 +3981,7 @@ your origin.
             title="Required">
         <span>forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -3993,7 +3993,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -4013,7 +4013,7 @@ your origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionDefaultCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4026,7 +4026,7 @@ your origin.
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4037,7 +4037,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -4046,7 +4046,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -4062,7 +4062,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4073,7 +4073,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -4082,7 +4082,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -4098,7 +4098,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4109,7 +4109,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -4118,7 +4118,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -4134,7 +4134,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -4145,7 +4145,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -4154,7 +4154,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -4172,7 +4172,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionLoggingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4185,7 +4185,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4195,7 +4195,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
             title="Optional">
         <span>Include<wbr>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4205,7 +4205,7 @@ include cookies in access logs (default: `false`).
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -4222,7 +4222,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4232,7 +4232,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
             title="Optional">
         <span>Include<wbr>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4242,7 +4242,7 @@ include cookies in access logs (default: `false`).
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -4259,7 +4259,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4269,7 +4269,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
             title="Optional">
         <span>include<wbr>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4279,7 +4279,7 @@ include cookies in access logs (default: `false`).
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -4296,7 +4296,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
@@ -4306,7 +4306,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
             title="Optional">
         <span>include<wbr>Cookies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
@@ -4316,7 +4316,7 @@ include cookies in access logs (default: `false`).
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
@@ -4335,7 +4335,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4348,7 +4348,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
             title="Required">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4358,7 +4358,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>Cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4378,7 +4378,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>Path<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -4388,7 +4388,7 @@ specifies which requests you want this cache behavior to apply to.
             title="Required">
         <span>Target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4399,7 +4399,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>Viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4411,7 +4411,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4422,7 +4422,7 @@ the request header (default: `false`).
             title="Optional">
         <span>Default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4434,7 +4434,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -4453,7 +4453,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4466,7 +4466,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4477,7 +4477,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>Smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -4488,7 +4488,7 @@ associated with this cache behavior.
             title="Optional">
         <span>Trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -4505,7 +4505,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4515,7 +4515,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>Cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4535,7 +4535,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>Path<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -4545,7 +4545,7 @@ specifies which requests you want this cache behavior to apply to.
             title="Required">
         <span>Target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4556,7 +4556,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>Viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4568,7 +4568,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>Compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4579,7 +4579,7 @@ the request header (default: `false`).
             title="Optional">
         <span>Default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4591,7 +4591,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>Field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -4610,7 +4610,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4623,7 +4623,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>Min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4634,7 +4634,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>Smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -4645,7 +4645,7 @@ associated with this cache behavior.
             title="Optional">
         <span>Trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -4662,7 +4662,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4672,7 +4672,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4692,7 +4692,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>path<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -4702,7 +4702,7 @@ specifies which requests you want this cache behavior to apply to.
             title="Required">
         <span>target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4713,7 +4713,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4725,7 +4725,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4736,7 +4736,7 @@ the request header (default: `false`).
             title="Optional">
         <span>default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4748,7 +4748,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -4767,7 +4767,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4780,7 +4780,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4791,7 +4791,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -4802,7 +4802,7 @@ associated with this cache behavior.
             title="Optional">
         <span>trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -4819,7 +4819,7 @@ allow to create signed URLs for private content.
             title="Required">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
@@ -4829,7 +4829,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
             title="Required">
         <span>cached<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
@@ -4849,7 +4849,7 @@ handles query strings, cookies and headers (maximum one).
             title="Required">
         <span>path<wbr>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
@@ -4859,7 +4859,7 @@ specifies which requests you want this cache behavior to apply to.
             title="Required">
         <span>target<wbr>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
@@ -4870,7 +4870,7 @@ either for a cache behavior or for the default cache behavior.
             title="Required">
         <span>viewer<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Use this element to specify the
 protocol that users can use to access the files in the origin specified by
@@ -4882,7 +4882,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
             title="Optional">
         <span>compress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
@@ -4893,7 +4893,7 @@ the request header (default: `false`).
             title="Optional">
         <span>default<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4905,7 +4905,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header. Defaults to
             title="Optional">
         <span>field<wbr>Level<wbr>Encryption<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
 {{% /md %}}</dd>
@@ -4924,7 +4924,7 @@ specific actions. Defined below, maximum 4.
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
@@ -4937,7 +4937,7 @@ s-maxage`, and `Expires` headers. Defaults to 365 days.
             title="Optional">
         <span>min<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
@@ -4948,7 +4948,7 @@ whether the object has been updated. Defaults to 0 seconds.
             title="Optional">
         <span>smooth<wbr>Streaming</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
@@ -4959,7 +4959,7 @@ associated with this cache behavior.
             title="Optional">
         <span>trusted<wbr>Signers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The AWS accounts, if any, that you want to
 allow to create signed URLs for private content.
@@ -4978,7 +4978,7 @@ allow to create signed URLs for private content.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5001,7 +5001,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>Query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5011,7 +5011,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5022,7 +5022,7 @@ headers.
             title="Optional">
         <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5051,7 +5051,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>Query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5061,7 +5061,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5072,7 +5072,7 @@ headers.
             title="Optional">
         <span>Query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5101,7 +5101,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5111,7 +5111,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5122,7 +5122,7 @@ headers.
             title="Optional">
         <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5151,7 +5151,7 @@ that specifies how CloudFront handles cookies (maximum one).
             title="Required">
         <span>query<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
@@ -5161,7 +5161,7 @@ query strings to the origin that is associated with this cache behavior.
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
@@ -5172,7 +5172,7 @@ headers.
             title="Optional">
         <span>query<wbr>String<wbr>Cache<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}When specified, along with a value of
 `true` for `query_string`, all query strings are forwarded, however only the
@@ -5193,7 +5193,7 @@ value of `true` for `query_string`, all query string keys are cached.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorForwardedValuesCookiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5206,7 +5206,7 @@ value of `true` for `query_string`, all query string keys are cached.
             title="Required">
         <span>Forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -5218,7 +5218,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>Whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -5236,7 +5236,7 @@ your origin.
             title="Required">
         <span>Forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -5248,7 +5248,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>Whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -5266,7 +5266,7 @@ your origin.
             title="Required">
         <span>forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -5278,7 +5278,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -5296,7 +5296,7 @@ your origin.
             title="Required">
         <span>forward</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to forward
 cookies to the origin that is associated with this cache behavior. You can
@@ -5308,7 +5308,7 @@ subsequent `whitelisted_names`
             title="Optional">
         <span>whitelisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
@@ -5328,7 +5328,7 @@ your origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOrderedCacheBehaviorLambdaFunctionAssociationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5341,7 +5341,7 @@ your origin.
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -5352,7 +5352,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -5361,7 +5361,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -5377,7 +5377,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -5388,7 +5388,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -5397,7 +5397,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>Include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -5413,7 +5413,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -5424,7 +5424,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -5433,7 +5433,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -5449,7 +5449,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>event<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
@@ -5460,7 +5460,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>lambda<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
 {{% /md %}}</dd>
@@ -5469,7 +5469,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Optional">
         <span>include<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
 {{% /md %}}</dd>
@@ -5487,7 +5487,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5500,7 +5500,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
             title="Required">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -5510,7 +5510,7 @@ web site of your custom origin.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -5541,7 +5541,7 @@ origin is required, use `s3_origin_config` instead.
             title="Optional">
         <span>Origin<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -5570,7 +5570,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -5580,7 +5580,7 @@ web site of your custom origin.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -5611,7 +5611,7 @@ origin is required, use `s3_origin_config` instead.
             title="Optional">
         <span>Origin<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -5640,7 +5640,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -5650,7 +5650,7 @@ web site of your custom origin.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -5681,7 +5681,7 @@ origin is required, use `s3_origin_config` instead.
             title="Optional">
         <span>origin<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -5710,7 +5710,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
@@ -5720,7 +5720,7 @@ web site of your custom origin.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -5751,7 +5751,7 @@ origin is required, use `s3_origin_config` instead.
             title="Optional">
         <span>origin<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
@@ -5782,7 +5782,7 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomHeaderOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5795,7 +5795,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5803,7 +5803,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5818,7 +5818,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5826,7 +5826,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5841,7 +5841,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5849,7 +5849,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5864,7 +5864,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5872,7 +5872,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5889,7 +5889,7 @@ configuration information. If a custom origin is required, use
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginCustomOriginConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5902,7 +5902,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Http<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd>
@@ -5911,7 +5911,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Https<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd>
@@ -5920,7 +5920,7 @@ configuration information. If a custom origin is required, use
             title="Required">
         <span>Origin<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -5930,7 +5930,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
             title="Required">
         <span>Origin<wbr>Ssl<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -5941,7 +5941,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>Origin<wbr>Keepalive<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -5950,7 +5950,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>Origin<wbr>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -5966,7 +5966,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Http<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd>
@@ -5975,7 +5975,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Https<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd>
@@ -5984,7 +5984,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -5994,7 +5994,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
             title="Required">
         <span>Origin<wbr>Ssl<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -6005,7 +6005,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>Origin<wbr>Keepalive<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6014,7 +6014,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>Origin<wbr>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6030,7 +6030,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>http<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd>
@@ -6039,7 +6039,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>https<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd>
@@ -6048,7 +6048,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -6058,7 +6058,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
             title="Required">
         <span>origin<wbr>Ssl<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -6069,7 +6069,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>origin<wbr>Keepalive<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6078,7 +6078,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>origin<wbr>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6094,7 +6094,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>http<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
 {{% /md %}}</dd>
@@ -6103,7 +6103,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>https<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
 {{% /md %}}</dd>
@@ -6112,7 +6112,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Protocol<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
@@ -6122,7 +6122,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
             title="Required">
         <span>origin<wbr>Ssl<wbr>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
@@ -6133,7 +6133,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>origin<wbr>Keepalive<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6142,7 +6142,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Optional">
         <span>origin<wbr>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
 {{% /md %}}</dd>
@@ -6160,7 +6160,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6191,7 +6191,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6225,7 +6225,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6259,7 +6259,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6293,7 +6293,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6311,7 +6311,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupFailoverCriteriaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6324,7 +6324,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Status<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;int&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -6340,7 +6340,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Status<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -6356,7 +6356,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>status<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -6372,7 +6372,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>status<wbr>Codes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Integer]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
 {{% /md %}}</dd>
@@ -6390,7 +6390,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginGroupMemberOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6403,7 +6403,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6419,7 +6419,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6435,7 +6435,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6451,7 +6451,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>origin<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
 {{% /md %}}</dd>
@@ -6469,7 +6469,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionOriginS3OriginConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6482,7 +6482,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
             title="Required">
         <span>Origin<wbr>Access<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -6499,7 +6499,7 @@ identity][5] to associate with the origin.
             title="Required">
         <span>Origin<wbr>Access<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -6516,7 +6516,7 @@ identity][5] to associate with the origin.
             title="Required">
         <span>origin<wbr>Access<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -6533,7 +6533,7 @@ identity][5] to associate with the origin.
             title="Required">
         <span>origin<wbr>Access<wbr>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
@@ -6552,7 +6552,7 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6627,7 +6627,7 @@ identity][5] to associate with the origin.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionRestrictionsGeoRestrictionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6640,7 +6640,7 @@ identity][5] to associate with the origin.
             title="Required">
         <span>Restriction<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -6651,7 +6651,7 @@ distribution of your content by country: `none`, `whitelist`, or
             title="Optional">
         <span>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -6669,7 +6669,7 @@ distribute your content (`blacklist`).
             title="Required">
         <span>Restriction<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -6680,7 +6680,7 @@ distribution of your content by country: `none`, `whitelist`, or
             title="Optional">
         <span>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -6698,7 +6698,7 @@ distribute your content (`blacklist`).
             title="Required">
         <span>restriction<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -6709,7 +6709,7 @@ distribution of your content by country: `none`, `whitelist`, or
             title="Optional">
         <span>locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -6727,7 +6727,7 @@ distribute your content (`blacklist`).
             title="Required">
         <span>restriction<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
@@ -6738,7 +6738,7 @@ distribution of your content by country: `none`, `whitelist`, or
             title="Optional">
         <span>locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
@@ -6758,7 +6758,7 @@ distribute your content (`blacklist`).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cloudfront?tab=doc#DistributionViewerCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -6771,7 +6771,7 @@ distribute your content (`blacklist`).
             title="Optional">
         <span>Acm<wbr>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
 certificate that you wish to use with this distribution. Specify this,
@@ -6783,7 +6783,7 @@ certificate must be in  US-EAST-1.
             title="Optional">
         <span>Cloudfront<wbr>Default<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -6794,7 +6794,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
             title="Optional">
         <span>Iam<wbr>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -6805,7 +6805,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
             title="Optional">
         <span>Minimum<wbr>Protocol<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -6823,7 +6823,7 @@ must be specified.
             title="Optional">
         <span>Ssl<wbr>Support<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6838,7 +6838,7 @@ must be specified.
             title="Optional">
         <span>Acm<wbr>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
 certificate that you wish to use with this distribution. Specify this,
@@ -6850,7 +6850,7 @@ certificate must be in  US-EAST-1.
             title="Optional">
         <span>Cloudfront<wbr>Default<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -6861,7 +6861,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
             title="Optional">
         <span>Iam<wbr>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -6872,7 +6872,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
             title="Optional">
         <span>Minimum<wbr>Protocol<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -6890,7 +6890,7 @@ must be specified.
             title="Optional">
         <span>Ssl<wbr>Support<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6905,7 +6905,7 @@ must be specified.
             title="Optional">
         <span>acm<wbr>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
 certificate that you wish to use with this distribution. Specify this,
@@ -6917,7 +6917,7 @@ certificate must be in  US-EAST-1.
             title="Optional">
         <span>cloudfront<wbr>Default<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -6928,7 +6928,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
             title="Optional">
         <span>iam<wbr>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -6939,7 +6939,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
             title="Optional">
         <span>minimum<wbr>Protocol<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -6957,7 +6957,7 @@ must be specified.
             title="Optional">
         <span>ssl<wbr>Support<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6972,7 +6972,7 @@ must be specified.
             title="Optional">
         <span>acm<wbr>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the [AWS Certificate Manager][6]
 certificate that you wish to use with this distribution. Specify this,
@@ -6984,7 +6984,7 @@ certificate must be in  US-EAST-1.
             title="Optional">
         <span>cloudfront<wbr>Default<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
@@ -6995,7 +6995,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
             title="Optional">
         <span>iam<wbr>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
@@ -7006,7 +7006,7 @@ this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
             title="Optional">
         <span>minimum<wbr>Protocol<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The minimum version of the SSL protocol that
 you want CloudFront to use for HTTPS connections. Can only be set if
@@ -7024,7 +7024,7 @@ must be specified.
             title="Optional">
         <span>ssl<wbr>Support<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

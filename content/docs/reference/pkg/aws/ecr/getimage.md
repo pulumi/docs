@@ -16,10 +16,10 @@ The ECR Image data source allows the details of an image with a particular tag o
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const serviceImage = pulumi.output(aws.ecr.getImage({
+const serviceImage = aws.ecr.getImage({
     imageTag: "latest",
     repositoryName: "my/service",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -45,7 +45,7 @@ const serviceImage = pulumi.output(aws.ecr.getImage({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecr?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#LookupImageArgs">LookupImageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ecr?tab=doc#LookupImageResult">LookupImageResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -68,7 +68,7 @@ The following arguments are supported:
             title="Required">
         <span>Repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -86,7 +86,7 @@ The following arguments are supported:
             title="Optional">
         <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -95,7 +95,7 @@ The following arguments are supported:
             title="Optional">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Required">
         <span>Repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
@@ -120,7 +120,7 @@ The following arguments are supported:
             title="Optional">
         <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -129,7 +129,7 @@ The following arguments are supported:
             title="Optional">
         <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -138,7 +138,7 @@ The following arguments are supported:
             title="Optional">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ The following arguments are supported:
             title="Required">
         <span>repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ The following arguments are supported:
             title="Optional">
         <span>image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ The following arguments are supported:
             title="Optional">
         <span>image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ The following arguments are supported:
             title="Optional">
         <span>registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ The following arguments are supported:
             title="Required">
         <span>repository_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECR Repository.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ The following arguments are supported:
             title="Optional">
         <span>image_<wbr>digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sha256 digest of the image manifest. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ The following arguments are supported:
             title="Optional">
         <span>image_<wbr>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tag associated with this image. At least one of `image_digest` or `image_tag` must be specified.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ The following arguments are supported:
             title="Optional">
         <span>registry_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Registry where the repository resides.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -270,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Pushed<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Size<wbr>In<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, of the image in the repository.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ The following output properties are available:
             title="">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -313,7 +313,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -328,7 +328,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -345,7 +345,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Pushed<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Size<wbr>In<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, of the image in the repository.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ The following output properties are available:
             title="">
         <span>Registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -380,7 +380,7 @@ The following output properties are available:
             title="">
         <span>Repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -388,7 +388,7 @@ The following output properties are available:
             title="">
         <span>Image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -403,7 +403,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ The following output properties are available:
             title="">
         <span>image<wbr>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -420,7 +420,7 @@ The following output properties are available:
             title="">
         <span>image<wbr>Pushed<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ The following output properties are available:
             title="">
         <span>image<wbr>Size<wbr>In<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, of the image in the repository.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The following output properties are available:
             title="">
         <span>image<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The following output properties are available:
             title="">
         <span>registry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,7 +455,7 @@ The following output properties are available:
             title="">
         <span>repository<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -463,7 +463,7 @@ The following output properties are available:
             title="">
         <span>image<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -478,7 +478,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The following output properties are available:
             title="">
         <span>image_<wbr>digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -495,7 +495,7 @@ The following output properties are available:
             title="">
         <span>image_<wbr>pushed_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The date and time, expressed as a unix timestamp, at which the current image was pushed to the repository.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ The following output properties are available:
             title="">
         <span>image_<wbr>size_<wbr>in_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size, in bytes, of the image in the repository.
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ The following output properties are available:
             title="">
         <span>image_<wbr>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this image.
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ The following output properties are available:
             title="">
         <span>registry_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -530,7 +530,7 @@ The following output properties are available:
             title="">
         <span>repository_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -538,7 +538,7 @@ The following output properties are available:
             title="">
         <span>image_<wbr>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

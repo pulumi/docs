@@ -39,7 +39,7 @@ const example = new aws.route53.Zone("example", {
     vpcs: [{
         vpcId: primary.id,
     }],
-}, { ignoreChanges: ["vpcId", "vpcRegion", "vpcs"] });
+}, {ignoreChanges: ["vpcId", "vpcRegion", "vpcs"]});
 const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
     vpcId: secondaryVpc.id,
     zoneId: example.zoneId,
@@ -64,7 +64,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZoneAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZoneAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociationArgs">ZoneAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -164,7 +164,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Optional">
         <span>vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Required">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ const secondaryZoneAssociation = new aws.route53.ZoneAssociation("secondary", {
             title="Optional">
         <span>vpc_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ Get an existing ZoneAssociation resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneAssociationState">ZoneAssociationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZoneAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociationState">ZoneAssociationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#ZoneAssociation">ZoneAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -430,7 +430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -439,7 +439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC to associate with the private hosted zone.
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC's region. Defaults to the region of the AWS provider.
 {{% /md %}}</dd>
@@ -550,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private hosted zone to associate.
 {{% /md %}}</dd>

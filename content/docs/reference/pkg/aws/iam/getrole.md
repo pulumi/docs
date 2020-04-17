@@ -18,9 +18,9 @@ properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.iam.getRole({
+const example = aws.iam.getRole({
     name: "an_example_role_name",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const example = pulumi.output(aws.iam.getRole({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupRoleArgs">LookupRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupRoleResult">LookupRoleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupRoleArgs">LookupRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#LookupRoleResult">LookupRoleResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -69,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly IAM role name to match.
 {{% /md %}}</dd>
@@ -94,7 +94,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly IAM role name to match.
 {{% /md %}}</dd>
@@ -119,7 +119,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The friendly IAM role name to match.
 {{% /md %}}</dd>
@@ -144,7 +144,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The friendly IAM role name to match.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ The following output properties are available:
             title="">
         <span>Assume<wbr>Role<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document associated with the role.
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation date of the role in RFC 3339 format.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description for the role.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -227,7 +227,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum session duration.
 {{% /md %}}</dd>
@@ -236,7 +236,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -244,7 +244,7 @@ The following output properties are available:
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path to the role.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The following output properties are available:
             title="">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ The following output properties are available:
             title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stable and unique string identifying the role.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ The following output properties are available:
             title="">
         <span>Assume<wbr>Role<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document associated with the role.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation date of the role in RFC 3339 format.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description for the role.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ The following output properties are available:
             title="">
         <span>Max<wbr>Session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum session duration.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -349,7 +349,7 @@ The following output properties are available:
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to the role.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ The following output properties are available:
             title="">
         <span>Permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stable and unique string identifying the role.
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ The following output properties are available:
             title="">
         <span>assume<wbr>Role<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document associated with the role.
 {{% /md %}}</dd>
@@ -410,7 +410,7 @@ The following output properties are available:
             title="">
         <span>create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation date of the role in RFC 3339 format.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description for the role.
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ The following output properties are available:
             title="">
         <span>max<wbr>Session<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum session duration.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -454,7 +454,7 @@ The following output properties are available:
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to the role.
 {{% /md %}}</dd>
@@ -463,7 +463,7 @@ The following output properties are available:
             title="">
         <span>permissions<wbr>Boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ The following output properties are available:
             title="">
         <span>unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stable and unique string identifying the role.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ The following output properties are available:
             title="">
         <span>assume_<wbr>role_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy document associated with the role.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ The following output properties are available:
             title="">
         <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation date of the role in RFC 3339 format.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description for the role.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ The following output properties are available:
             title="">
         <span>max_<wbr>session_<wbr>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum session duration.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path to the role.
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ The following output properties are available:
             title="">
         <span>permissions_<wbr>boundary</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
@@ -586,7 +586,7 @@ The following output properties are available:
             title="">
         <span>unique_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stable and unique string identifying the role.
 {{% /md %}}</dd>

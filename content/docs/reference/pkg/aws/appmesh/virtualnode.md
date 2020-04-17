@@ -183,7 +183,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeArgs">VirtualNodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -283,7 +283,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Required">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Required">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Required">
         <span>mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Required">
         <span>mesh_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -476,7 +476,7 @@ The following output properties are available:
             title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -485,7 +485,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ The following output properties are available:
             title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ The following output properties are available:
             title="">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ The following output properties are available:
             title="">
         <span>last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ The following output properties are available:
             title="">
         <span>created_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ The following output properties are available:
             title="">
         <span>last_<wbr>updated_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -617,7 +617,7 @@ Get an existing VirtualNode resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeState">VirtualNodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNode">VirtualNode</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -731,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -740,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -837,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -898,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -907,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual node.
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last_<wbr>updated_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The last update date of the virtual node.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mesh_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name to use for the virtual node.
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1207,7 +1207,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1286,7 +1286,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecBackendVirtualServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
             title="Required">
         <span>Virtual<wbr>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
@@ -1315,7 +1315,7 @@ The following state arguments are supported:
             title="Required">
         <span>Virtual<wbr>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
             title="Required">
         <span>virtual<wbr>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
             title="Required">
         <span>virtual<wbr>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
 {{% /md %}}</dd>
@@ -1365,7 +1365,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1480,7 +1480,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerHealthCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1493,7 +1493,7 @@ The following state arguments are supported:
             title="Required">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 * `interval_millis`- (Required) The time period in milliseconds between each health check execution.
@@ -1503,7 +1503,7 @@ The following state arguments are supported:
             title="Required">
         <span>Interval<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1511,7 +1511,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1520,7 +1520,7 @@ The following state arguments are supported:
             title="Required">
         <span>Timeout<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd>
@@ -1529,7 +1529,7 @@ The following state arguments are supported:
             title="Required">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
@@ -1538,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
@@ -1563,7 +1563,7 @@ The following state arguments are supported:
             title="Required">
         <span>Healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 * `interval_millis`- (Required) The time period in milliseconds between each health check execution.
@@ -1573,7 +1573,7 @@ The following state arguments are supported:
             title="Required">
         <span>Interval<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1581,7 +1581,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
             title="Required">
         <span>Timeout<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd>
@@ -1599,7 +1599,7 @@ The following state arguments are supported:
             title="Required">
         <span>Unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
 {{% /md %}}</dd>
@@ -1617,7 +1617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
@@ -1633,7 +1633,7 @@ The following state arguments are supported:
             title="Required">
         <span>healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 * `interval_millis`- (Required) The time period in milliseconds between each health check execution.
@@ -1643,7 +1643,7 @@ The following state arguments are supported:
             title="Required">
         <span>interval<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1651,7 +1651,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1660,7 +1660,7 @@ The following state arguments are supported:
             title="Required">
         <span>timeout<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd>
@@ -1669,7 +1669,7 @@ The following state arguments are supported:
             title="Required">
         <span>unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
@@ -1678,7 +1678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
 {{% /md %}}</dd>
@@ -1687,7 +1687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
             title="Required">
         <span>healthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive successful health checks that must occur before declaring listener healthy.
 * `interval_millis`- (Required) The time period in milliseconds between each health check execution.
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
             title="Required">
         <span>interval<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1721,7 +1721,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol for the health check request. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1730,7 +1730,7 @@ The following state arguments are supported:
             title="Required">
         <span>timeout<wbr>Millis</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait when receiving a response from the health check, in milliseconds.
 {{% /md %}}</dd>
@@ -1739,7 +1739,7 @@ The following state arguments are supported:
             title="Required">
         <span>unhealthy<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
 {{% /md %}}</dd>
@@ -1748,7 +1748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination path for the health check request. This is only required if the specified protocol is `http`.
 {{% /md %}}</dd>
@@ -1757,7 +1757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
 {{% /md %}}</dd>
@@ -1775,7 +1775,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecListenerPortMappingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1788,7 +1788,7 @@ The following state arguments are supported:
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd>
@@ -1797,7 +1797,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd>
@@ -1822,7 +1822,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1838,7 +1838,7 @@ The following state arguments are supported:
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd>
@@ -1847,7 +1847,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1863,7 +1863,7 @@ The following state arguments are supported:
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port used for the port mapping.
 {{% /md %}}</dd>
@@ -1872,7 +1872,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol used for the port mapping. Valid values are `http` and `tcp`.
 {{% /md %}}</dd>
@@ -1890,7 +1890,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1969,7 +1969,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2048,7 +2048,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecLoggingAccessLogFileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2061,7 +2061,7 @@ The following state arguments are supported:
             title="Required">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
 {{% /md %}}</dd>
@@ -2077,7 +2077,7 @@ The following state arguments are supported:
             title="Required">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
 {{% /md %}}</dd>
@@ -2093,7 +2093,7 @@ The following state arguments are supported:
             title="Required">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
 {{% /md %}}</dd>
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
             title="Required">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
 {{% /md %}}</dd>
@@ -2127,7 +2127,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2242,7 +2242,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryAwsCloudMapOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2255,7 +2255,7 @@ The following state arguments are supported:
             title="Required">
         <span>Namespace<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
 Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
@@ -2265,7 +2265,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
@@ -2290,7 +2290,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>Namespace<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
 Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
@@ -2300,7 +2300,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
@@ -2325,7 +2325,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>namespace<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
 Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
@@ -2335,7 +2335,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
@@ -2360,7 +2360,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>namespace<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
 Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/providers/aws/r/service_discovery_http_namespace.html) resource to configure a Cloud Map namespace.
@@ -2370,7 +2370,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the [`aws.servicediscovery.Service`](https://www.terraform.io/docs/providers/aws/r/service_discovery_service.html) resource to configure a Cloud Map service.
 {{% /md %}}</dd>
@@ -2397,7 +2397,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/appmesh?tab=doc#VirtualNodeSpecServiceDiscoveryDnsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2410,7 +2410,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS host name for your virtual node.
 {{% /md %}}</dd>
@@ -2426,7 +2426,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS host name for your virtual node.
 {{% /md %}}</dd>
@@ -2442,7 +2442,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS host name for your virtual node.
 {{% /md %}}</dd>
@@ -2458,7 +2458,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
             title="Required">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS host name for your virtual node.
 {{% /md %}}</dd>

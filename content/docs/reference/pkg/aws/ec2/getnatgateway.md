@@ -21,7 +21,7 @@ const subnetId = config.require("subnetId");
 
 const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway({
     subnetId: id,
-}, { async: true }));
+}));
 ```
 
 Usage with tags:
@@ -35,7 +35,7 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
     tags: {
         Name: "gw NAT",
     },
-}, { async: true }));
+}));
 ```
 
 {{% /example %}}
@@ -61,7 +61,7 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNatGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupNatGatewayArgs">LookupNatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupNatGatewayResult">LookupNatGatewayResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNatGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupNatGatewayArgs">LookupNatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupNatGatewayResult">LookupNatGatewayResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -93,7 +93,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific Nat Gateway to retrieve.
 {{% /md %}}</dd>
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the NAT gateway (pending | failed | available | deleting | deleted ).
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of subnet that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -130,7 +130,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific Nat Gateway to retrieve.
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the NAT gateway (pending | failed | available | deleting | deleted ).
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of subnet that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific Nat Gateway to retrieve.
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the NAT gateway (pending | failed | available | deleting | deleted ).
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of subnet that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific Nat Gateway to retrieve.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the NAT gateway (pending | failed | available | deleting | deleted ).
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of subnet that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ a pair on the desired Nat Gateway.
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the Nat Gateway resides in.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ The following output properties are available:
             title="">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -362,7 +362,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the ENI allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -371,7 +371,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private Ip address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ The following output properties are available:
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public Ip (EIP) address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ The following output properties are available:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ The following output properties are available:
             title="">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -436,7 +436,7 @@ The following output properties are available:
             title="">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -453,7 +453,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the ENI allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private Ip address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ The following output properties are available:
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public Ip (EIP) address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ The following output properties are available:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +488,7 @@ The following output properties are available:
             title="">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -504,7 +504,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +527,7 @@ The following output properties are available:
             title="">
         <span>allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -536,7 +536,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -544,7 +544,7 @@ The following output properties are available:
             title="">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of the ENI allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ The following output properties are available:
             title="">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private Ip address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ The following output properties are available:
             title="">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public Ip (EIP) address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -571,7 +571,7 @@ The following output properties are available:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -579,7 +579,7 @@ The following output properties are available:
             title="">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -595,7 +595,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The following output properties are available:
             title="">
         <span>allocation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of the EIP allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -635,7 +635,7 @@ The following output properties are available:
             title="">
         <span>network_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of the ENI allocated to the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following output properties are available:
             title="">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private Ip address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The following output properties are available:
             title="">
         <span>public_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public Ip (EIP) address of the selected Nat Gateway.
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ The following output properties are available:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -670,7 +670,7 @@ The following output properties are available:
             title="">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -686,7 +686,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -716,7 +716,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetNatGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetNatGatewayFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetNatGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetNatGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -729,7 +729,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
@@ -739,7 +739,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Nat Gateway will be selected if any one of the given values matches.
@@ -756,7 +756,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
@@ -766,7 +766,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Nat Gateway will be selected if any one of the given values matches.
@@ -783,7 +783,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
@@ -793,7 +793,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Nat Gateway will be selected if any one of the given values matches.
@@ -810,7 +810,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeNatGateways.html).
@@ -820,7 +820,7 @@ An Nat Gateway will be selected if any one of the given values matches.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 An Nat Gateway will be selected if any one of the given values matches.

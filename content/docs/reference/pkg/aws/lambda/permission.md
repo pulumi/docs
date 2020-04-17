@@ -129,7 +129,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -229,7 +229,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
             title="Required">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
             title="Required">
         <span>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -258,7 +258,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -278,7 +278,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -301,7 +301,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -355,7 +355,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -364,7 +364,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -375,7 +375,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -398,7 +398,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -441,7 +441,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -452,7 +452,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -472,7 +472,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -495,7 +495,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ API Gateway ARNs have a unique structure described
             title="Required">
         <span>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -549,7 +549,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>event_<wbr>source_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -569,7 +569,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -592,7 +592,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement_<wbr>id_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -747,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -785,7 +785,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -796,7 +796,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -819,7 +819,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -882,7 +882,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -893,7 +893,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -916,7 +916,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -925,7 +925,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>Statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>event<wbr>Source<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -979,7 +979,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -990,7 +990,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -1013,7 +1013,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement<wbr>Id<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 {{% /md %}}</dd>
@@ -1047,7 +1047,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>event_<wbr>source_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>principal</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
@@ -1076,7 +1076,7 @@ such as `events.amazonaws.com` or `sns.amazonaws.com`.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
@@ -1087,7 +1087,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
             title="Optional">
         <span>source_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
@@ -1110,7 +1110,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ API Gateway ARNs have a unique structure described
             title="Optional">
         <span>statement_<wbr>id_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
 {{% /md %}}</dd>

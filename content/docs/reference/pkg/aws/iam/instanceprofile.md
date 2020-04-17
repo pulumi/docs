@@ -56,7 +56,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstanceProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstanceProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfileArgs">InstanceProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -156,7 +156,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const testProfile = new aws.iam.InstanceProfile("test_profile", {
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -227,7 +227,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -398,7 +398,7 @@ The following output properties are available:
             title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ The following output properties are available:
             title="">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ The following output properties are available:
             title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ The following output properties are available:
             title="">
         <span>create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -466,7 +466,7 @@ The following output properties are available:
             title="">
         <span>unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ The following output properties are available:
             title="">
         <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The following output properties are available:
             title="">
         <span>unique_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ Get an existing InstanceProfile resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#InstanceProfileState">InstanceProfileState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceProfile<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfileState">InstanceProfileState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#InstanceProfile">InstanceProfile</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -644,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>create<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -831,7 +831,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -840,7 +840,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>unique<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the instance profile.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>create_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creation timestamp of the instance profile.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The profile's name. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -920,7 +920,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Path in which to create the profile.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ A list of role names to include in the profile.  The current default is 1.  If y
             title="Optional">
         <span>unique_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [unique ID][1] assigned by AWS.
 {{% /md %}}</dd>

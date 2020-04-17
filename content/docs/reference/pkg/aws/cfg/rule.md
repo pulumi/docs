@@ -46,7 +46,7 @@ const rule = new aws.cfg.Rule("r", {
         owner: "AWS",
         sourceIdentifier: "S3_BUCKET_VERSIONING_ENABLED",
     },
-}, { dependsOn: [foo] });
+}, {dependsOn: [foo]});
 const rolePolicy = new aws.iam.RolePolicy("p", {
     policy: `{
   "Version": "2012-10-17",
@@ -86,7 +86,7 @@ const exampleRule = new aws.cfg.Rule("example", {
         owner: "CUSTOM_LAMBDA",
         sourceIdentifier: exampleFunction.arn,
     },
-}, { dependsOn: [exampleRecorder, examplePermission] });
+}, {dependsOn: [exampleRecorder, examplePermission]});
 ```
 
 {{% /example %}}
@@ -107,7 +107,7 @@ const exampleRule = new aws.cfg.Rule("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -217,7 +217,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -245,7 +245,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -317,7 +317,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -389,7 +389,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>input_<wbr>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>maximum_<wbr>execution_<wbr>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -461,7 +461,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The following output properties are available:
             title="">
         <span>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ The following output properties are available:
             title="">
         <span>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The following output properties are available:
             title="">
         <span>rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ The following output properties are available:
             title="">
         <span>rule_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -621,7 +621,7 @@ Get an existing Rule resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleState">RuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleState">RuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -735,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -744,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -772,7 +772,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -781,7 +781,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -862,7 +862,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>input<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -952,7 +952,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -1005,7 +1005,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the config rule
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>input_<wbr>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string in JSON format that is passed to the AWS Config rule Lambda function.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>maximum_<wbr>execution_<wbr>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -1042,7 +1042,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>rule_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the config rule
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ the function to evaluate your AWS resources as documented below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleScopeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleScopeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1117,7 +1117,7 @@ the function to evaluate your AWS resources as documented below.
             title="Optional">
         <span>Compliance<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
 If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
@@ -1127,7 +1127,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             title="Optional">
         <span>Compliance<wbr>Resource<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
 evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
@@ -1138,7 +1138,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
             title="Optional">
         <span>Tag<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
 want to trigger an evaluation for the rule.
@@ -1148,7 +1148,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>Tag<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
@@ -1164,7 +1164,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>Compliance<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
 If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
@@ -1174,7 +1174,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             title="Optional">
         <span>Compliance<wbr>Resource<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
 evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
@@ -1185,7 +1185,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
             title="Optional">
         <span>Tag<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
 want to trigger an evaluation for the rule.
@@ -1195,7 +1195,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>Tag<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>compliance<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
 If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
@@ -1221,7 +1221,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             title="Optional">
         <span>compliance<wbr>Resource<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
 evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
@@ -1232,7 +1232,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
             title="Optional">
         <span>tag<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
 want to trigger an evaluation for the rule.
@@ -1242,7 +1242,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>tag<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
@@ -1258,7 +1258,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>compliance<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
 If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
@@ -1268,7 +1268,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
             title="Optional">
         <span>compliance<wbr>Resource<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
 evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
@@ -1279,7 +1279,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
             title="Optional">
         <span>tag<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
 want to trigger an evaluation for the rule.
@@ -1289,7 +1289,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>tag<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ want to trigger an evaluation for the rule.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1320,7 +1320,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the [`aws.lambda.Permission` resource](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html).
 {{% /md %}}</dd>
@@ -1329,7 +1329,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>Source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}For AWS Config managed rules, a predefined identifier, e.g `IAM_PASSWORD_POLICY`. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as `arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name` or the [`arn` attribute of the `aws.lambda.Function` resource](https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn).
 {{% /md %}}</dd>
@@ -1354,7 +1354,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the [`aws.lambda.Permission` resource](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html).
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>Source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}For AWS Config managed rules, a predefined identifier, e.g `IAM_PASSWORD_POLICY`. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as `arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name` or the [`arn` attribute of the `aws.lambda.Function` resource](https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn).
 {{% /md %}}</dd>
@@ -1388,7 +1388,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the [`aws.lambda.Permission` resource](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html).
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}For AWS Config managed rules, a predefined identifier, e.g `IAM_PASSWORD_POLICY`. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as `arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name` or the [`arn` attribute of the `aws.lambda.Function` resource](https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn).
 {{% /md %}}</dd>
@@ -1422,7 +1422,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether AWS or the customer owns and manages the AWS Config rule. Valid values are `AWS` or `CUSTOM_LAMBDA`. For more information about managed rules, see the [AWS Config Managed Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html). For more information about custom rules, see the [AWS Config Custom Rules documentation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules.html). Custom Lambda Functions require permissions to allow the AWS Config service to invoke them, e.g. via the [`aws.lambda.Permission` resource](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html).
 {{% /md %}}</dd>
@@ -1431,7 +1431,7 @@ want to trigger an evaluation for the rule.
             title="Required">
         <span>source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}For AWS Config managed rules, a predefined identifier, e.g `IAM_PASSWORD_POLICY`. For custom Lambda rules, the identifier is the ARN of the Lambda Function, such as `arn:aws:lambda:us-east-1:123456789012:function:custom_rule_name` or the [`arn` attribute of the `aws.lambda.Function` resource](https://www.terraform.io/docs/providers/aws/r/lambda_function.html#arn).
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ want to trigger an evaluation for the rule.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleSourceSourceDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#RuleSourceSourceDetailOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#RuleSourceSourceDetailOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1471,7 +1471,7 @@ want to trigger an evaluation for the rule.
             title="Optional">
         <span>Event<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
 to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
@@ -1481,7 +1481,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -1491,7 +1491,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
 {{% /md %}}</dd>
@@ -1507,7 +1507,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Event<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
 to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
@@ -1517,7 +1517,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
             title="Optional">
         <span>Maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -1527,7 +1527,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>Message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
 {{% /md %}}</dd>
@@ -1543,7 +1543,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>event<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
 to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
@@ -1553,7 +1553,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
             title="Optional">
         <span>maximum<wbr>Execution<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -1563,7 +1563,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
 {{% /md %}}</dd>
@@ -1579,7 +1579,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>event<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
 to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
@@ -1589,7 +1589,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
             title="Optional">
         <span>maximum_<wbr>execution_<wbr>frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
 is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -1599,7 +1599,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
             title="Optional">
         <span>message<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
 {{% /md %}}</dd>

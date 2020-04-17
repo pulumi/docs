@@ -91,7 +91,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
     },
     serviceRole: awsBatchServiceRoleRole.arn,
     type: "MANAGED",
-}, { dependsOn: [awsBatchServiceRoleRolePolicyAttachment] });
+}, {dependsOn: [awsBatchServiceRoleRolePolicyAttachment]});
 ```
 
 {{% /example %}}
@@ -112,7 +112,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewComputeEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewComputeEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentArgs">ComputeEnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -212,7 +212,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>service_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>compute_<wbr>environment_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>compute_<wbr>environment_<wbr>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -468,7 +468,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The following output properties are available:
             title="">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -486,7 +486,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ The following output properties are available:
             title="">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ The following output properties are available:
             title="">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ The following output properties are available:
             title="">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ The following output properties are available:
             title="">
         <span>ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -581,7 +581,7 @@ The following output properties are available:
             title="">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -606,7 +606,7 @@ The following output properties are available:
             title="">
         <span>ecs_<wbr>cluster_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The following output properties are available:
             title="">
         <span>status_<wbr>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ Get an existing ComputeEnvironment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentState">ComputeEnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetComputeEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentState">ComputeEnvironmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironment">ComputeEnvironment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -768,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -777,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -831,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -840,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -910,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -919,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -946,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -971,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compute<wbr>Environment<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compute<wbr>Environment<wbr>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -1016,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -1025,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -1034,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -1043,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the compute environment.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compute_<wbr>environment_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compute_<wbr>environment_<wbr>name_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ecs_<wbr>cluster_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -1113,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -1122,7 +1122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, CREATING or VALID).
 {{% /md %}}</dd>
@@ -1131,7 +1131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status_<wbr>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -1140,7 +1140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1178,7 +1178,7 @@ The following state arguments are supported:
             title="Required">
         <span>Instance<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
             title="Required">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of instance types that may be launched.
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ The following state arguments are supported:
             title="Required">
         <span>Max<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ The following state arguments are supported:
             title="Required">
         <span>Min<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd>
@@ -1214,7 +1214,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 security group that are associated with instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1223,7 +1223,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of VPC subnets into which the compute resources are launched.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocation<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bid<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
 {{% /md %}}</dd>
@@ -1268,7 +1268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1295,7 +1295,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spot<wbr>Iam<wbr>Fleet<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ The following state arguments are supported:
             title="Required">
         <span>Instance<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
 {{% /md %}}</dd>
@@ -1329,7 +1329,7 @@ The following state arguments are supported:
             title="Required">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of instance types that may be launched.
 {{% /md %}}</dd>
@@ -1338,7 +1338,7 @@ The following state arguments are supported:
             title="Required">
         <span>Max<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
 {{% /md %}}</dd>
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
             title="Required">
         <span>Min<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd>
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 security group that are associated with instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1365,7 +1365,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of VPC subnets into which the compute resources are launched.
 {{% /md %}}</dd>
@@ -1374,7 +1374,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1383,7 +1383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocation<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
 {{% /md %}}</dd>
@@ -1392,7 +1392,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bid<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1401,7 +1401,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
 {{% /md %}}</dd>
@@ -1410,7 +1410,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1419,7 +1419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spot<wbr>Iam<wbr>Fleet<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ The following state arguments are supported:
             title="Required">
         <span>instance<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
 {{% /md %}}</dd>
@@ -1471,7 +1471,7 @@ The following state arguments are supported:
             title="Required">
         <span>instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance types that may be launched.
 {{% /md %}}</dd>
@@ -1480,7 +1480,7 @@ The following state arguments are supported:
             title="Required">
         <span>max<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
 {{% /md %}}</dd>
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
             title="Required">
         <span>min<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd>
@@ -1498,7 +1498,7 @@ The following state arguments are supported:
             title="Required">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 security group that are associated with instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1507,7 +1507,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPC subnets into which the compute resources are launched.
 {{% /md %}}</dd>
@@ -1516,7 +1516,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1525,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocation<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
 {{% /md %}}</dd>
@@ -1534,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bid<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1543,7 +1543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>desired<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
 {{% /md %}}</dd>
@@ -1552,7 +1552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1561,7 +1561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1579,7 +1579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spot<wbr>Iam<wbr>Fleet<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
             title="Required">
         <span>instance<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon ECS instance role applied to Amazon EC2 instances in a compute environment.
 {{% /md %}}</dd>
@@ -1613,7 +1613,7 @@ The following state arguments are supported:
             title="Required">
         <span>instance_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of instance types that may be launched.
 {{% /md %}}</dd>
@@ -1622,7 +1622,7 @@ The following state arguments are supported:
             title="Required">
         <span>max<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of EC2 vCPUs that an environment can reach.
 {{% /md %}}</dd>
@@ -1631,7 +1631,7 @@ The following state arguments are supported:
             title="Required">
         <span>min<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of EC2 vCPUs that an environment should maintain.
 {{% /md %}}</dd>
@@ -1640,7 +1640,7 @@ The following state arguments are supported:
             title="Required">
         <span>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of EC2 security group that are associated with instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1649,7 +1649,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of VPC subnets into which the compute resources are launched.
 {{% /md %}}</dd>
@@ -1658,7 +1658,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of compute environment. Valid items are `EC2` or `SPOT`.
 {{% /md %}}</dd>
@@ -1667,7 +1667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocation_<wbr>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details.
 {{% /md %}}</dd>
@@ -1676,7 +1676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bid<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Integer of minimum percentage that a Spot Instance price must be when compared with the On-Demand price for that instance type before instances are launched. For example, if your bid percentage is 20% (`20`), then the Spot price must be below 20% of the current On-Demand price for that EC2 instance. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1685,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>desired<wbr>Vcpus</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The desired number of EC2 vCPUS in the compute environment.
 {{% /md %}}</dd>
@@ -1694,7 +1694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The EC2 key pair that is used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Machine Image (AMI) ID used for instances launched in the compute environment.
 {{% /md %}}</dd>
@@ -1721,7 +1721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spot<wbr>Iam<wbr>Fleet<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Amazon EC2 Spot Fleet IAM role applied to a SPOT compute environment. This parameter is required for SPOT compute environments.
 {{% /md %}}</dd>
@@ -1748,7 +1748,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/batch?tab=doc#ComputeEnvironmentComputeResourcesLaunchTemplateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1761,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Launch<wbr>Template<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
 {{% /md %}}</dd>
@@ -1770,7 +1770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Launch<wbr>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd>
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version number of the launch template. Default: The default version of the launch template.
 {{% /md %}}</dd>
@@ -1795,7 +1795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Launch<wbr>Template<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
 {{% /md %}}</dd>
@@ -1804,7 +1804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Launch<wbr>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd>
@@ -1813,7 +1813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number of the launch template. Default: The default version of the launch template.
 {{% /md %}}</dd>
@@ -1829,7 +1829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>launch<wbr>Template<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
 {{% /md %}}</dd>
@@ -1838,7 +1838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>launch<wbr>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd>
@@ -1847,7 +1847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version number of the launch template. Default: The default version of the launch template.
 {{% /md %}}</dd>
@@ -1863,7 +1863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>launch<wbr>Template<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
 {{% /md %}}</dd>
@@ -1872,7 +1872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>launch<wbr>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the launch template.
 {{% /md %}}</dd>
@@ -1881,7 +1881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version number of the launch template. Default: The default version of the launch template.
 {{% /md %}}</dd>

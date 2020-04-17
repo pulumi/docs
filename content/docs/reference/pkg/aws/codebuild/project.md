@@ -211,7 +211,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -329,7 +329,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Required">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -347,7 +347,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -356,7 +356,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -410,7 +410,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Required">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -570,7 +570,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>Source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Required">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -676,7 +676,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -694,7 +694,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -721,7 +721,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -757,7 +757,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Required">
         <span>service_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>badge_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -836,7 +836,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>build_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>encryption_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>queued_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
             title="Optional">
         <span>source_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -972,7 +972,7 @@ The following output properties are available:
             title="">
         <span>Badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -988,7 +988,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -997,7 +997,7 @@ The following output properties are available:
             title="">
         <span>Badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ The following output properties are available:
             title="">
         <span>badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1047,7 +1047,7 @@ The following output properties are available:
             title="">
         <span>badge_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1191,7 +1191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1209,7 +1209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -1218,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -1245,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -1254,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -1281,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -1290,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -1335,7 +1335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -1369,7 +1369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1387,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -1396,7 +1396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -1423,7 +1423,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -1432,7 +1432,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -1459,7 +1459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -1495,7 +1495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -1513,7 +1513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -1547,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1565,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>badge<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -1574,7 +1574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>badge<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1583,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>build<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -1601,7 +1601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -1610,7 +1610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -1637,7 +1637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -1646,7 +1646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>queued<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -1725,7 +1725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the CodeBuild project.
 {{% /md %}}</dd>
@@ -1743,7 +1743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>badge_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
 {{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>badge_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>build_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
 {{% /md %}}</dd>
@@ -1779,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short description of the project.
 {{% /md %}}</dd>
@@ -1788,7 +1788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The projects name.
 {{% /md %}}</dd>
@@ -1824,7 +1824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>queued_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}How long in minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
 {{% /md %}}</dd>
@@ -1851,7 +1851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account.
 {{% /md %}}</dd>
@@ -1869,7 +1869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A version of the build input to be built for this project. If not specified, the latest version is used.
 {{% /md %}}</dd>
@@ -1912,7 +1912,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectArtifactsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectArtifactsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectArtifactsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectArtifactsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -1943,7 +1943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1952,7 +1952,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -1961,7 +1961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -1970,7 +1970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -1979,7 +1979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -1988,7 +1988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -1997,7 +1997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -2013,7 +2013,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -2031,7 +2031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2040,7 +2040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -2049,7 +2049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -2058,7 +2058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -2067,7 +2067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -2076,7 +2076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -2085,7 +2085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -2101,7 +2101,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -2110,7 +2110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -2119,7 +2119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2128,7 +2128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -2137,7 +2137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -2146,7 +2146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -2155,7 +2155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -2164,7 +2164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -2189,7 +2189,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2216,7 +2216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -2225,7 +2225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -2252,7 +2252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -2261,7 +2261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -2279,7 +2279,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectCacheArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectCacheOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectCacheArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectCacheOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2292,7 +2292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
 {{% /md %}}</dd>
@@ -2301,7 +2301,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
 {{% /md %}}</dd>
@@ -2310,7 +2310,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
 {{% /md %}}</dd>
@@ -2326,7 +2326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
 {{% /md %}}</dd>
@@ -2335,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
 {{% /md %}}</dd>
@@ -2344,7 +2344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
 {{% /md %}}</dd>
@@ -2360,7 +2360,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
 {{% /md %}}</dd>
@@ -2369,7 +2369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
 {{% /md %}}</dd>
@@ -2378,7 +2378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
 {{% /md %}}</dd>
@@ -2394,7 +2394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location where the AWS CodeBuild project stores cached resources. For type `S3` the value must be a valid S3 bucket name/prefix.
 {{% /md %}}</dd>
@@ -2403,7 +2403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>modes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies settings that AWS CodeBuild uses to store and reuse build dependencies. Valid values:  `LOCAL_SOURCE_CACHE`, `LOCAL_DOCKER_LAYER_CACHE`, and `LOCAL_CUSTOM_CACHE`
 {{% /md %}}</dd>
@@ -2412,7 +2412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of storage that will be used for the AWS CodeBuild project cache. Valid values: `NO_CACHE`, `LOCAL`, and `S3`. Defaults to `NO_CACHE`.
 {{% /md %}}</dd>
@@ -2430,7 +2430,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2443,7 +2443,7 @@ The following state arguments are supported:
             title="Required">
         <span>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
@@ -2452,7 +2452,7 @@ The following state arguments are supported:
             title="Required">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
@@ -2461,7 +2461,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` or `ARM_CONTAINER`.
 {{% /md %}}</dd>
@@ -2470,7 +2470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
@@ -2488,7 +2488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Pull<wbr>Credentials<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Privileged<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2522,7 +2522,7 @@ The following state arguments are supported:
             title="Required">
         <span>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
@@ -2531,7 +2531,7 @@ The following state arguments are supported:
             title="Required">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
@@ -2540,7 +2540,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` or `ARM_CONTAINER`.
 {{% /md %}}</dd>
@@ -2549,7 +2549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
@@ -2567,7 +2567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Pull<wbr>Credentials<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
 {{% /md %}}</dd>
@@ -2576,7 +2576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Privileged<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2601,7 +2601,7 @@ The following state arguments are supported:
             title="Required">
         <span>compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
@@ -2610,7 +2610,7 @@ The following state arguments are supported:
             title="Required">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
@@ -2619,7 +2619,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` or `ARM_CONTAINER`.
 {{% /md %}}</dd>
@@ -2628,7 +2628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
@@ -2646,7 +2646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Pull<wbr>Credentials<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
 {{% /md %}}</dd>
@@ -2655,7 +2655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>privileged<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2680,7 +2680,7 @@ The following state arguments are supported:
             title="Required">
         <span>compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Information about the compute resources the build project will use. Available values for this parameter are: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE` or `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` need to be `BUILD_GENERAL1_LARGE`.
 {{% /md %}}</dd>
@@ -2689,7 +2689,7 @@ The following state arguments are supported:
             title="Required">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g. `nginx:latest`), and full Docker repository URIs such as those for ECR (e.g. `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
 {{% /md %}}</dd>
@@ -2698,7 +2698,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of build environment to use for related builds. Available values are: `LINUX_CONTAINER`, `LINUX_GPU_CONTAINER`, `WINDOWS_CONTAINER` or `ARM_CONTAINER`.
 {{% /md %}}</dd>
@@ -2707,7 +2707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
 {{% /md %}}</dd>
@@ -2725,7 +2725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Pull<wbr>Credentials<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of credentials AWS CodeBuild uses to pull images in your build. Available values for this parameter are `CODEBUILD` or `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials. Default to `CODEBUILD`
 {{% /md %}}</dd>
@@ -2734,7 +2734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>privileged<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, enables running the Docker daemon inside a Docker container. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2761,7 +2761,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentEnvironmentVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentEnvironmentVariableOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentEnvironmentVariableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentEnvironmentVariableOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2774,7 +2774,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's name or key.
 {{% /md %}}</dd>
@@ -2783,7 +2783,7 @@ The following state arguments are supported:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's value.
 {{% /md %}}</dd>
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`.
 {{% /md %}}</dd>
@@ -2808,7 +2808,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's name or key.
 {{% /md %}}</dd>
@@ -2817,7 +2817,7 @@ The following state arguments are supported:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's value.
 {{% /md %}}</dd>
@@ -2826,7 +2826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`.
 {{% /md %}}</dd>
@@ -2842,7 +2842,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's name or key.
 {{% /md %}}</dd>
@@ -2851,7 +2851,7 @@ The following state arguments are supported:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's value.
 {{% /md %}}</dd>
@@ -2860,7 +2860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`.
 {{% /md %}}</dd>
@@ -2876,7 +2876,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's name or key.
 {{% /md %}}</dd>
@@ -2885,7 +2885,7 @@ The following state arguments are supported:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The environment variable's value.
 {{% /md %}}</dd>
@@ -2894,7 +2894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`.
 {{% /md %}}</dd>
@@ -2912,7 +2912,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentRegistryCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectEnvironmentRegistryCredentialOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentRegistryCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectEnvironmentRegistryCredentialOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2925,7 +2925,7 @@ The following state arguments are supported:
             title="Required">
         <span>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -2934,7 +2934,7 @@ The following state arguments are supported:
             title="Required">
         <span>Credential<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -2950,7 +2950,7 @@ The following state arguments are supported:
             title="Required">
         <span>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -2959,7 +2959,7 @@ The following state arguments are supported:
             title="Required">
         <span>Credential<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -2975,7 +2975,7 @@ The following state arguments are supported:
             title="Required">
         <span>credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -2984,7 +2984,7 @@ The following state arguments are supported:
             title="Required">
         <span>credential<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -3000,7 +3000,7 @@ The following state arguments are supported:
             title="Required">
         <span>credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) or name of credentials created using AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -3009,7 +3009,7 @@ The following state arguments are supported:
             title="Required">
         <span>credential<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service that created the credentials to access a private Docker registry. The valid value, SECRETS_MANAGER, is for AWS Secrets Manager.
 {{% /md %}}</dd>
@@ -3027,7 +3027,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3142,7 +3142,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigCloudwatchLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigCloudwatchLogsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigCloudwatchLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigCloudwatchLogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3155,7 +3155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3164,7 +3164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
@@ -3173,7 +3173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3189,7 +3189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3198,7 +3198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
@@ -3207,7 +3207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3223,7 +3223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3232,7 +3232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
@@ -3241,7 +3241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3257,7 +3257,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The group name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3266,7 +3266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
 {{% /md %}}</dd>
@@ -3275,7 +3275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The stream name of the logs in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -3293,7 +3293,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigS3LogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectLogsConfigS3LogsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigS3LogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectLogsConfigS3LogsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3306,7 +3306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3315,7 +3315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -3324,7 +3324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -3340,7 +3340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3349,7 +3349,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -3358,7 +3358,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -3374,7 +3374,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3383,7 +3383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -3392,7 +3392,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -3408,7 +3408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3417,7 +3417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket.
 {{% /md %}}</dd>
@@ -3426,7 +3426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Current status of logs in CloudWatch Logs for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -3444,7 +3444,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondaryArtifactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondaryArtifactOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondaryArtifactArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondaryArtifactOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3457,7 +3457,7 @@ The following state arguments are supported:
             title="Required">
         <span>Artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -3466,7 +3466,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -3475,7 +3475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3484,7 +3484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
 {{% /md %}}</dd>
@@ -3493,7 +3493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -3502,7 +3502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -3511,7 +3511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -3520,7 +3520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -3529,7 +3529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -3545,7 +3545,7 @@ The following state arguments are supported:
             title="Required">
         <span>Artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -3554,7 +3554,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -3563,7 +3563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3572,7 +3572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
 {{% /md %}}</dd>
@@ -3581,7 +3581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -3590,7 +3590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -3599,7 +3599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -3608,7 +3608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -3617,7 +3617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -3633,7 +3633,7 @@ The following state arguments are supported:
             title="Required">
         <span>artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -3642,7 +3642,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -3651,7 +3651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3660,7 +3660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
 {{% /md %}}</dd>
@@ -3669,7 +3669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -3678,7 +3678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -3687,7 +3687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -3696,7 +3696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -3705,7 +3705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -3721,7 +3721,7 @@ The following state arguments are supported:
             title="Required">
         <span>artifact<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The artifact identifier. Must be the same specified inside AWS CodeBuild buildspec.
 {{% /md %}}</dd>
@@ -3730,7 +3730,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The build output artifact's type. Valid values for this parameter are: `CODEPIPELINE`, `NO_ARTIFACTS` or `S3`.
 {{% /md %}}</dd>
@@ -3739,7 +3739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encryption<wbr>Disabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, output artifacts will not be encrypted. If `type` is set to `NO_ARTIFACTS` then this value will be ignored. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3748,7 +3748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Information about the build output artifact location. If `type` is set to `CODEPIPELINE` or `NO_ARTIFACTS` then this value will be ignored. If `type` is set to `S3`, this is the name of the output bucket. If `path` is not also specified, then `location` can also specify the path of the output artifact in the output bucket.
 {{% /md %}}</dd>
@@ -3757,7 +3757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the project. If `type` is set to `S3`, this is the name of the output artifact object
 {{% /md %}}</dd>
@@ -3766,7 +3766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values for this parameter are: `BUILD_ID` or `NONE`.
 {{% /md %}}</dd>
@@ -3775,7 +3775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Artifact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, a name specified in the build spec file overrides the artifact name.
 {{% /md %}}</dd>
@@ -3784,7 +3784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>packaging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of build output artifact to create. If `type` is set to `S3`, valid values for this parameter are: `NONE` or `ZIP`
 {{% /md %}}</dd>
@@ -3793,7 +3793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If `type` is set to `S3`, this is the path to the output artifact
 {{% /md %}}</dd>
@@ -3811,7 +3811,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3824,7 +3824,7 @@ The following state arguments are supported:
             title="Required">
         <span>Source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
@@ -3833,7 +3833,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
 {{% /md %}}</dd>
@@ -3851,7 +3851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
 {{% /md %}}</dd>
@@ -3860,7 +3860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -3878,7 +3878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -3887,7 +3887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -3896,7 +3896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
@@ -3912,7 +3912,7 @@ The following state arguments are supported:
             title="Required">
         <span>Source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
@@ -3921,7 +3921,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
 {{% /md %}}</dd>
@@ -3939,7 +3939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
 {{% /md %}}</dd>
@@ -3948,7 +3948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -3966,7 +3966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -3975,7 +3975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -3984,7 +3984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
@@ -4000,7 +4000,7 @@ The following state arguments are supported:
             title="Required">
         <span>source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
@@ -4009,7 +4009,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
 {{% /md %}}</dd>
@@ -4027,7 +4027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
 {{% /md %}}</dd>
@@ -4036,7 +4036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4054,7 +4054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4063,7 +4063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4072,7 +4072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
@@ -4088,7 +4088,7 @@ The following state arguments are supported:
             title="Required">
         <span>source<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source identifier. Source data will be put inside a folder named as this parameter inside AWS CodeBuild source directory
 {{% /md %}}</dd>
@@ -4097,7 +4097,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET` or `S3`.
 {{% /md %}}</dd>
@@ -4115,7 +4115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds.
 {{% /md %}}</dd>
@@ -4124,7 +4124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4142,7 +4142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4151,7 +4151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4160,7 +4160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when your source provider is `GITHUB`, `BITBUCKET`, or `GITHUB_ENTERPRISE`.
 {{% /md %}}</dd>
@@ -4178,7 +4178,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceAuthOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4191,7 +4191,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4200,7 +4200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4216,7 +4216,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4225,7 +4225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4241,7 +4241,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4250,7 +4250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4266,7 +4266,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4275,7 +4275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4293,7 +4293,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceGitSubmodulesConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSecondarySourceGitSubmodulesConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceGitSubmodulesConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSecondarySourceGitSubmodulesConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4306,7 +4306,7 @@ The following state arguments are supported:
             title="Required">
         <span>Fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4322,7 +4322,7 @@ The following state arguments are supported:
             title="Required">
         <span>Fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4338,7 +4338,7 @@ The following state arguments are supported:
             title="Required">
         <span>fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4354,7 +4354,7 @@ The following state arguments are supported:
             title="Required">
         <span>fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4372,7 +4372,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4385,7 +4385,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4403,7 +4403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4412,7 +4412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4430,7 +4430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4439,7 +4439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4448,7 +4448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
@@ -4464,7 +4464,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4482,7 +4482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4491,7 +4491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4509,7 +4509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4518,7 +4518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4527,7 +4527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
@@ -4543,7 +4543,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4561,7 +4561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4570,7 +4570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4588,7 +4588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4597,7 +4597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4606,7 +4606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
@@ -4622,7 +4622,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of repository that contains the source code to be built. Valid values for this parameter are: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3` or `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4640,7 +4640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>buildspec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The build spec declaration to use for this build project's related builds. This must be set when `type` is `NO_SOURCE`.
 {{% /md %}}</dd>
@@ -4649,7 +4649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>git<wbr>Clone<wbr>Depth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Truncate git history to this many commits.
 {{% /md %}}</dd>
@@ -4667,7 +4667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insecure<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Ignore SSL warnings when connecting to source control.
 {{% /md %}}</dd>
@@ -4676,7 +4676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The location of the source code from git or s3.
 {{% /md %}}</dd>
@@ -4685,7 +4685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>report<wbr>Build<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to report the status of a build's start and finish to your source provider. This option is only valid when the `type` is `BITBUCKET` or `GITHUB`.
 {{% /md %}}</dd>
@@ -4703,7 +4703,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceAuthOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceAuthOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4716,7 +4716,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4725,7 +4725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4741,7 +4741,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4750,7 +4750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4766,7 +4766,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4775,7 +4775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4791,7 +4791,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authorization type to use. The only valid value is `OAUTH`
 {{% /md %}}</dd>
@@ -4800,7 +4800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The resource value that applies to the specified authorization type.
 {{% /md %}}</dd>
@@ -4818,7 +4818,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceGitSubmodulesConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectSourceGitSubmodulesConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceGitSubmodulesConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectSourceGitSubmodulesConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4831,7 +4831,7 @@ The following state arguments are supported:
             title="Required">
         <span>Fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4847,7 +4847,7 @@ The following state arguments are supported:
             title="Required">
         <span>Fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4863,7 +4863,7 @@ The following state arguments are supported:
             title="Required">
         <span>fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4879,7 +4879,7 @@ The following state arguments are supported:
             title="Required">
         <span>fetch<wbr>Submodules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If set to true, fetches Git submodules for the AWS CodeBuild build project.
 {{% /md %}}</dd>
@@ -4897,7 +4897,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codebuild?tab=doc#ProjectVpcConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectVpcConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codebuild?tab=doc#ProjectVpcConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4910,7 +4910,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security group IDs to assign to running builds.
 {{% /md %}}</dd>
@@ -4919,7 +4919,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnet IDs within which to run builds.
 {{% /md %}}</dd>
@@ -4928,7 +4928,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPC within which to run builds.
 {{% /md %}}</dd>
@@ -4944,7 +4944,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The security group IDs to assign to running builds.
 {{% /md %}}</dd>
@@ -4953,7 +4953,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The subnet IDs within which to run builds.
 {{% /md %}}</dd>
@@ -4962,7 +4962,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPC within which to run builds.
 {{% /md %}}</dd>
@@ -4978,7 +4978,7 @@ The following state arguments are supported:
             title="Required">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The security group IDs to assign to running builds.
 {{% /md %}}</dd>
@@ -4987,7 +4987,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The subnet IDs within which to run builds.
 {{% /md %}}</dd>
@@ -4996,7 +4996,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPC within which to run builds.
 {{% /md %}}</dd>
@@ -5012,7 +5012,7 @@ The following state arguments are supported:
             title="Required">
         <span>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The security group IDs to assign to running builds.
 {{% /md %}}</dd>
@@ -5021,7 +5021,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The subnet IDs within which to run builds.
 {{% /md %}}</dd>
@@ -5030,7 +5030,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the VPC within which to run builds.
 {{% /md %}}</dd>

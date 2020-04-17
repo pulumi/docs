@@ -184,7 +184,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupArgs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupArgs">DeploymentGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -284,7 +284,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>App<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>Deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -347,7 +347,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>App<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>Deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>app<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -586,7 +586,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -710,7 +710,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>app_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -719,7 +719,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>deployment_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Required">
         <span>service_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -755,7 +755,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>autoscaling_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>deployment_<wbr>config_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -991,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -1027,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -1099,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -1169,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -1178,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -1275,7 +1275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -1293,7 +1293,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Config<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -1383,7 +1383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the application.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Autoscaling groups associated with the deployment group.
 {{% /md %}}</dd>
@@ -1453,7 +1453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment_<wbr>config_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the deployment group.
 {{% /md %}}</dd>
@@ -1525,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service role ARN that allows deployments.
 {{% /md %}}</dd>
@@ -1559,7 +1559,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupAlarmConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1572,7 +1572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alarms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd>
@@ -1581,7 +1581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd>
@@ -1590,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Poll<wbr>Alarm<wbr>Failure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alarms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd>
@@ -1617,7 +1617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd>
@@ -1626,7 +1626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Poll<wbr>Alarm<wbr>Failure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alarms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd>
@@ -1653,7 +1653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd>
@@ -1662,7 +1662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ignore<wbr>Poll<wbr>Alarm<wbr>Failure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -1680,7 +1680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alarms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
 {{% /md %}}</dd>
@@ -1689,7 +1689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ignore<wbr>Poll<wbr>Alarm<wbr>Failure</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is `false`.
 * `true`: The deployment will proceed even if alarm status information can't be retrieved.
@@ -1718,7 +1718,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupAutoRollbackConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd>
@@ -1740,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd>
@@ -1756,7 +1756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd>
@@ -1765,7 +1765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd>
@@ -1781,7 +1781,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd>
@@ -1790,7 +1790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd>
@@ -1806,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types that trigger a rollback. Supported types are `DEPLOYMENT_FAILURE` and `DEPLOYMENT_STOP_ON_ALARM`.
 {{% /md %}}</dd>
@@ -1833,7 +1833,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1984,7 +1984,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1997,7 +1997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action<wbr>On<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2008,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd>
@@ -2024,7 +2024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action<wbr>On<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2035,7 +2035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd>
@@ -2051,7 +2051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action<wbr>On<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2062,7 +2062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd>
@@ -2078,7 +2078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action<wbr>On<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
 * `CONTINUE_DEPLOYMENT`: Register new instances with the load balancer immediately after the new application revision is installed on the instances in the replacement environment.
@@ -2089,7 +2089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait before the status of a blue/green deployment changed to Stopped if rerouting is not started manually. Applies only to the `STOP_DEPLOYMENT` option for `action_on_timeout`.
 {{% /md %}}</dd>
@@ -2107,7 +2107,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2120,7 +2120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -2138,7 +2138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -2156,7 +2156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -2174,7 +2174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The method used to add instances to a replacement environment.
 * `DISCOVER_EXISTING`: Use instances that already exist or will be created manually.
@@ -2194,7 +2194,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2207,7 +2207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -2218,7 +2218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -2245,7 +2245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd>
@@ -2261,7 +2261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -2272,7 +2272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd>
@@ -2288,7 +2288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action to take on instances in the original environment after a successful blue/green deployment.
 * `TERMINATE`: Instances are terminated after a specified wait time.
@@ -2299,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>termination<wbr>Wait<wbr>Time<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
 {{% /md %}}</dd>
@@ -2317,7 +2317,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupDeploymentStyleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2330,7 +2330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd>
@@ -2339,7 +2339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd>
@@ -2355,7 +2355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd>
@@ -2364,7 +2364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd>
@@ -2380,7 +2380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd>
@@ -2389,7 +2389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd>
@@ -2405,7 +2405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
 {{% /md %}}</dd>
@@ -2414,7 +2414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
 {{% /md %}}</dd>
@@ -2432,7 +2432,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2445,7 +2445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2454,7 +2454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2463,7 +2463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2479,7 +2479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2488,7 +2488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2513,7 +2513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2522,7 +2522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2531,7 +2531,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2547,7 +2547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2556,7 +2556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2565,7 +2565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2583,7 +2583,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2662,7 +2662,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEc2TagSetEc2TagFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2675,7 +2675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2684,7 +2684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2693,7 +2693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2709,7 +2709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2718,7 +2718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2727,7 +2727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2743,7 +2743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2752,7 +2752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2761,7 +2761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2777,7 +2777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -2786,7 +2786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -2795,7 +2795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -2813,7 +2813,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupEcsServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2826,7 +2826,7 @@ The following state arguments are supported:
             title="Required">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd>
@@ -2835,7 +2835,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd>
@@ -2851,7 +2851,7 @@ The following state arguments are supported:
             title="Required">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd>
@@ -2860,7 +2860,7 @@ The following state arguments are supported:
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd>
@@ -2876,7 +2876,7 @@ The following state arguments are supported:
             title="Required">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd>
@@ -2885,7 +2885,7 @@ The following state arguments are supported:
             title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd>
@@ -2901,7 +2901,7 @@ The following state arguments are supported:
             title="Required">
         <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS cluster.
 {{% /md %}}</dd>
@@ -2910,7 +2910,7 @@ The following state arguments are supported:
             title="Required">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the ECS service.
 {{% /md %}}</dd>
@@ -2928,7 +2928,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3079,7 +3079,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoElbInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3092,7 +3092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3108,7 +3108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3124,7 +3124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3140,7 +3140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3158,7 +3158,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3171,7 +3171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3187,7 +3187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3203,7 +3203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3219,7 +3219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
 {{% /md %}}</dd>
@@ -3237,7 +3237,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3388,7 +3388,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3401,7 +3401,7 @@ The following state arguments are supported:
             title="Required">
         <span>Listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3417,7 +3417,7 @@ The following state arguments are supported:
             title="Required">
         <span>Listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3433,7 +3433,7 @@ The following state arguments are supported:
             title="Required">
         <span>listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3449,7 +3449,7 @@ The following state arguments are supported:
             title="Required">
         <span>listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3467,7 +3467,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3480,7 +3480,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd>
@@ -3496,7 +3496,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd>
@@ -3512,7 +3512,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd>
@@ -3528,7 +3528,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the target group.
 {{% /md %}}</dd>
@@ -3546,7 +3546,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3559,7 +3559,7 @@ The following state arguments are supported:
             title="Required">
         <span>Listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3575,7 +3575,7 @@ The following state arguments are supported:
             title="Required">
         <span>Listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3591,7 +3591,7 @@ The following state arguments are supported:
             title="Required">
         <span>listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3607,7 +3607,7 @@ The following state arguments are supported:
             title="Required">
         <span>listener<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the load balancer listeners.
 {{% /md %}}</dd>
@@ -3625,7 +3625,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupOnPremisesInstanceTagFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3638,7 +3638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -3647,7 +3647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -3656,7 +3656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -3672,7 +3672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -3681,7 +3681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -3690,7 +3690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -3706,7 +3706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -3715,7 +3715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -3724,7 +3724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -3740,7 +3740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key of the tag filter.
 {{% /md %}}</dd>
@@ -3749,7 +3749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the tag filter, either `KEY_ONLY`, `VALUE_ONLY`, or `KEY_AND_VALUE`.
 {{% /md %}}</dd>
@@ -3758,7 +3758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the tag filter.
 {{% /md %}}</dd>
@@ -3776,7 +3776,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/codedeploy?tab=doc#DeploymentGroupTriggerConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3789,7 +3789,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
 {{% /md %}}</dd>
@@ -3798,7 +3798,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd>
@@ -3807,7 +3807,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd>
@@ -3823,7 +3823,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
 {{% /md %}}</dd>
@@ -3832,7 +3832,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd>
@@ -3841,7 +3841,7 @@ The following state arguments are supported:
             title="Required">
         <span>Trigger<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd>
@@ -3857,7 +3857,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
 {{% /md %}}</dd>
@@ -3866,7 +3866,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd>
@@ -3875,7 +3875,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd>
@@ -3891,7 +3891,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation][1] for all possible values.
 {{% /md %}}</dd>
@@ -3900,7 +3900,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the notification trigger.
 {{% /md %}}</dd>
@@ -3909,7 +3909,7 @@ The following state arguments are supported:
             title="Required">
         <span>trigger<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic through which notifications are sent.
 {{% /md %}}</dd>

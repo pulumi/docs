@@ -52,7 +52,7 @@ const store = new aws.ses.ReceiptRule("store", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleArgs">ReceiptRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -152,7 +152,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Required">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Required">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Required">
         <span>rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -436,7 +436,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>after</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -454,7 +454,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -472,7 +472,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -526,7 +526,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Required">
         <span>rule_<wbr>set_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>after</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -632,7 +632,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>scan_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -659,7 +659,7 @@ const store = new aws.ses.ReceiptRule("store", {
             title="Optional">
         <span>tls_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -700,7 +700,7 @@ Get an existing ReceiptRule resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleState">ReceiptRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReceiptRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleState">ReceiptRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRule">ReceiptRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -823,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -877,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -895,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -922,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -974,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -992,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -1010,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1028,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>after</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -1107,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rule<wbr>Set<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scan<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>after</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule to place this rule after
 {{% /md %}}</dd>
@@ -1240,7 +1240,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the rule will be enabled
 {{% /md %}}</dd>
@@ -1258,7 +1258,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule
 {{% /md %}}</dd>
@@ -1267,7 +1267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of email addresses
 {{% /md %}}</dd>
@@ -1276,7 +1276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rule_<wbr>set_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the rule set
 {{% /md %}}</dd>
@@ -1294,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scan_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, incoming emails will be scanned for spam and viruses
 {{% /md %}}</dd>
@@ -1321,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Require or Optional
 {{% /md %}}</dd>
@@ -1355,7 +1355,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleAddHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleAddHeaderActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleAddHeaderActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleAddHeaderActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1368,7 +1368,7 @@ The following state arguments are supported:
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd>
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd>
@@ -1386,7 +1386,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1402,7 +1402,7 @@ The following state arguments are supported:
             title="Required">
         <span>Header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
             title="Required">
         <span>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd>
@@ -1420,7 +1420,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1436,7 +1436,7 @@ The following state arguments are supported:
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1470,7 +1470,7 @@ The following state arguments are supported:
             title="Required">
         <span>header<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the header to add
 {{% /md %}}</dd>
@@ -1479,7 +1479,7 @@ The following state arguments are supported:
             title="Required">
         <span>header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value of the header to add
 {{% /md %}}</dd>
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1506,7 +1506,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleBounceActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleBounceActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleBounceActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleBounceActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1519,7 +1519,7 @@ The following state arguments are supported:
             title="Required">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd>
@@ -1528,7 +1528,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sender</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd>
@@ -1546,7 +1546,7 @@ The following state arguments are supported:
             title="Required">
         <span>Smtp<wbr>Reply<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd>
@@ -1555,7 +1555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -1564,7 +1564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1580,7 +1580,7 @@ The following state arguments are supported:
             title="Required">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd>
@@ -1589,7 +1589,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1598,7 +1598,7 @@ The following state arguments are supported:
             title="Required">
         <span>Sender</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd>
@@ -1607,7 +1607,7 @@ The following state arguments are supported:
             title="Required">
         <span>Smtp<wbr>Reply<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd>
@@ -1616,7 +1616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -1625,7 +1625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1641,7 +1641,7 @@ The following state arguments are supported:
             title="Required">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd>
@@ -1650,7 +1650,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1659,7 +1659,7 @@ The following state arguments are supported:
             title="Required">
         <span>sender</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd>
@@ -1668,7 +1668,7 @@ The following state arguments are supported:
             title="Required">
         <span>smtp<wbr>Reply<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd>
@@ -1677,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -1686,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
             title="Required">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The message to send
 {{% /md %}}</dd>
@@ -1711,7 +1711,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1720,7 +1720,7 @@ The following state arguments are supported:
             title="Required">
         <span>sender</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email address of the sender
 {{% /md %}}</dd>
@@ -1729,7 +1729,7 @@ The following state arguments are supported:
             title="Required">
         <span>smtp<wbr>Reply<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The RFC 5321 SMTP reply code
 {{% /md %}}</dd>
@@ -1738,7 +1738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status_<wbr>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The RFC 3463 SMTP enhanced status code
 {{% /md %}}</dd>
@@ -1747,7 +1747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1765,7 +1765,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleLambdaActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleLambdaActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleLambdaActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleLambdaActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1778,7 +1778,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
@@ -1787,7 +1787,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invocation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd>
@@ -1805,7 +1805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
             title="Required">
         <span>Function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
@@ -1830,7 +1830,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1839,7 +1839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invocation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd>
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1864,7 +1864,7 @@ The following state arguments are supported:
             title="Required">
         <span>function<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
@@ -1873,7 +1873,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1882,7 +1882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invocation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd>
@@ -1891,7 +1891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
             title="Required">
         <span>function_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the Lambda function to invoke
 {{% /md %}}</dd>
@@ -1916,7 +1916,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invocation<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Event or RequestResponse
 {{% /md %}}</dd>
@@ -1934,7 +1934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -1952,7 +1952,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleS3ActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleS3ActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleS3ActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleS3ActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1965,7 +1965,7 @@ The following state arguments are supported:
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
@@ -1974,7 +1974,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -1983,7 +1983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd>
@@ -1992,7 +1992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd>
@@ -2001,7 +2001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2017,7 +2017,7 @@ The following state arguments are supported:
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
@@ -2026,7 +2026,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2035,7 +2035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd>
@@ -2044,7 +2044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd>
@@ -2053,7 +2053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2069,7 +2069,7 @@ The following state arguments are supported:
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
@@ -2078,7 +2078,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2087,7 +2087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd>
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object<wbr>Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd>
@@ -2105,7 +2105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2121,7 +2121,7 @@ The following state arguments are supported:
             title="Required">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket
 {{% /md %}}</dd>
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2139,7 +2139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the KMS key
 {{% /md %}}</dd>
@@ -2148,7 +2148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object<wbr>Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key prefix of the S3 bucket
 {{% /md %}}</dd>
@@ -2157,7 +2157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2175,7 +2175,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleSnsActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleSnsActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleSnsActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleSnsActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2188,7 +2188,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2197,7 +2197,7 @@ The following state arguments are supported:
             title="Required">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2222,7 +2222,7 @@ The following state arguments are supported:
             title="Required">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2238,7 +2238,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2247,7 +2247,7 @@ The following state arguments are supported:
             title="Required">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2272,7 +2272,7 @@ The following state arguments are supported:
             title="Required">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2290,7 +2290,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleStopActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleStopActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleStopActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleStopActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2303,7 +2303,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2312,7 +2312,7 @@ The following state arguments are supported:
             title="Required">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd>
@@ -2321,7 +2321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2337,7 +2337,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2346,7 +2346,7 @@ The following state arguments are supported:
             title="Required">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd>
@@ -2355,7 +2355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2371,7 +2371,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2380,7 +2380,7 @@ The following state arguments are supported:
             title="Required">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd>
@@ -2389,7 +2389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2405,7 +2405,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2414,7 +2414,7 @@ The following state arguments are supported:
             title="Required">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scope to apply
 {{% /md %}}</dd>
@@ -2423,7 +2423,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2441,7 +2441,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleWorkmailActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ses?tab=doc#ReceiptRuleWorkmailActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleWorkmailActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ses?tab=doc#ReceiptRuleWorkmailActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2454,7 +2454,7 @@ The following state arguments are supported:
             title="Required">
         <span>Organization<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd>
@@ -2463,7 +2463,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2472,7 +2472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2488,7 +2488,7 @@ The following state arguments are supported:
             title="Required">
         <span>Organization<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
             title="Required">
         <span>Position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2506,7 +2506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2522,7 +2522,7 @@ The following state arguments are supported:
             title="Required">
         <span>organization<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd>
@@ -2531,7 +2531,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2540,7 +2540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>
@@ -2556,7 +2556,7 @@ The following state arguments are supported:
             title="Required">
         <span>organization<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the WorkMail organization
 {{% /md %}}</dd>
@@ -2565,7 +2565,7 @@ The following state arguments are supported:
             title="Required">
         <span>position</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The position of the action in the receipt rule
 {{% /md %}}</dd>
@@ -2574,7 +2574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an SNS topic to notify
 {{% /md %}}</dd>

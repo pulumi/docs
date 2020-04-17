@@ -26,7 +26,7 @@ Provides a resource to manage an S3 Access Point.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessPoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointArgs">AccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPoint">AccessPoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessPoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointArgs">AccessPointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPoint">AccessPoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,7 +126,7 @@ Provides a resource to manage an S3 Access Point.
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -135,7 +135,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -144,7 +144,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -153,7 +153,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ Provides a resource to manage an S3 Access Point.
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ Provides a resource to manage an S3 Access Point.
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ Provides a resource to manage an S3 Access Point.
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -327,7 +327,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ Provides a resource to manage an S3 Access Point.
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -401,7 +401,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -410,7 +410,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -445,7 +445,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -454,7 +454,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>Network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -489,7 +489,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -533,7 +533,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>has_<wbr>public_<wbr>access_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="">
         <span>network_<wbr>origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ Get an existing AccessPoint resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessPoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointState">AccessPointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPoint">AccessPoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessPoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointState">AccessPointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPoint">AccessPoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -686,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -723,7 +723,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -750,7 +750,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -821,7 +821,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -919,7 +919,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>has<wbr>Public<wbr>Access<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>network<wbr>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -946,7 +946,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the S3 Access Point.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket that you want to associate this access point with.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DNS domain name of the S3 Access Point in the format _`name`_-_`account_id`_.s3-accesspoint._region_.amazonaws.com.
 Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
@@ -1017,7 +1017,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>has_<wbr>public_<wbr>access_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point currently has a policy that allows public access.
 {{% /md %}}</dd>
@@ -1026,7 +1026,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you want to assign to this access point.
 {{% /md %}}</dd>
@@ -1035,7 +1035,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>network_<wbr>origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
 {{% /md %}}</dd>
@@ -1044,7 +1044,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A valid JSON document that specifies the policy that you want to apply to this access point.
 {{% /md %}}</dd>
@@ -1087,7 +1087,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointPublicAccessBlockConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1100,7 +1100,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Block<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
@@ -1112,7 +1112,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Block<wbr>Public<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
@@ -1122,7 +1122,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Ignore<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore all public ACLs on buckets in this account and any objects that they contain.
@@ -1132,7 +1132,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Restrict<wbr>Public<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access buckets with public policies.
@@ -1149,7 +1149,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Block<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
@@ -1161,7 +1161,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Block<wbr>Public<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
@@ -1171,7 +1171,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Ignore<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore all public ACLs on buckets in this account and any objects that they contain.
@@ -1181,7 +1181,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>Restrict<wbr>Public<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access buckets with public policies.
@@ -1198,7 +1198,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>block<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
@@ -1210,7 +1210,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>block<wbr>Public<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
@@ -1220,7 +1220,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>ignore<wbr>Public<wbr>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore all public ACLs on buckets in this account and any objects that they contain.
@@ -1230,7 +1230,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>restrict<wbr>Public<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access buckets with public policies.
@@ -1247,7 +1247,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>block_<wbr>public_<wbr>acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public.
@@ -1259,7 +1259,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>block_<wbr>public_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect existing bucket policies. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
@@ -1269,7 +1269,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>ignore_<wbr>public_<wbr>acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for buckets in this account. Defaults to `true`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore all public ACLs on buckets in this account and any objects that they contain.
@@ -1279,7 +1279,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Optional">
         <span>restrict_<wbr>public_<wbr>buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for buckets in this account. Defaults to `true`. Enabling this setting does not affect previously stored bucket policies, except that public and cross-account access within any public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access buckets with public policies.
@@ -1298,7 +1298,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointVpcConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#AccessPointVpcConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointVpcConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#AccessPointVpcConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1311,7 +1311,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This access point will only allow connections from the specified VPC ID.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This access point will only allow connections from the specified VPC ID.
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This access point will only allow connections from the specified VPC ID.
 {{% /md %}}</dd>
@@ -1359,7 +1359,7 @@ Note: S3 access points only support secure access by HTTPS. HTTP isn't supported
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This access point will only allow connections from the specified VPC ID.
 {{% /md %}}</dd>

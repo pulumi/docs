@@ -57,7 +57,7 @@ const test = new aws.dms.Endpoint("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -157,7 +157,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -166,7 +166,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -468,7 +468,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -486,7 +486,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -567,7 +567,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -594,7 +594,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>endpoint_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>endpoint_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Required">
         <span>engine_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -637,7 +637,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>certificate_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>database_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -655,7 +655,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>extra_<wbr>connection_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -664,7 +664,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -682,7 +682,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -691,7 +691,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -709,7 +709,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>server_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>service_<wbr>access_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>ssl_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The following output properties are available:
             title="">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -789,7 +789,7 @@ The following output properties are available:
             title="">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ The following output properties are available:
             title="">
         <span>endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following output properties are available:
             title="">
         <span>endpoint_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -851,7 +851,7 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointState">EndpointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointState">EndpointState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -965,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -974,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -992,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1001,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1010,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1019,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1028,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1046,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1109,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1143,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1179,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1233,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1269,7 +1269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1285,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1294,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1303,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1312,7 +1312,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1321,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1330,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1339,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1348,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1366,7 +1366,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1375,7 +1375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1393,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1402,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1429,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>database_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1481,7 +1481,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1499,7 +1499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra_<wbr>connection_<wbr>attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>key_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1535,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1553,7 +1553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1562,7 +1562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>access_<wbr>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1571,7 +1571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1589,7 +1589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1614,7 +1614,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointMongodbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointMongodbSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointMongodbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointMongodbSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1627,7 +1627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1635,7 +1635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1643,7 +1643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1651,7 +1651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1659,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1667,7 +1667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1690,7 +1690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1706,7 +1706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1714,7 +1714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1737,7 +1737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1745,7 +1745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1753,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1761,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1769,7 +1769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1777,7 +1777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1792,7 +1792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1800,7 +1800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1808,7 +1808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1816,7 +1816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1824,7 +1824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1849,7 +1849,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointS3SettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointS3SettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointS3SettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dms?tab=doc#EndpointS3SettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1862,7 +1862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1870,7 +1870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1886,7 +1886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1902,7 +1902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1933,7 +1933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1941,7 +1941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1957,7 +1957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1965,7 +1965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1988,7 +1988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1996,7 +1996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2004,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2012,7 +2012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2020,7 +2020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2028,7 +2028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2036,7 +2036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2051,7 +2051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2059,7 +2059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2067,7 +2067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2075,7 +2075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2083,7 +2083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2091,7 +2091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2099,7 +2099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

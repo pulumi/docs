@@ -50,7 +50,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyArgs">LoadBalancerCookieStickinessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -150,7 +150,7 @@ const foo = new aws.elb.LoadBalancerCookieStickinessPolicy("foo", {
             title="Required">
         <span>Lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -161,7 +161,7 @@ balancer.
             title="Required">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -171,7 +171,7 @@ should be attached.
             title="Optional">
         <span>Cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -181,7 +181,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Required">
         <span>Lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -208,7 +208,7 @@ balancer.
             title="Required">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -218,7 +218,7 @@ should be attached.
             title="Optional">
         <span>Cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -228,7 +228,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Required">
         <span>lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -255,7 +255,7 @@ balancer.
             title="Required">
         <span>load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -265,7 +265,7 @@ should be attached.
             title="Optional">
         <span>cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -275,7 +275,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Required">
         <span>lb_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -302,7 +302,7 @@ balancer.
             title="Required">
         <span>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -312,7 +312,7 @@ should be attached.
             title="Optional">
         <span>cookie_<wbr>expiration_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -322,7 +322,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ Get an existing LoadBalancerCookieStickinessPolicy resource's state with the giv
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyState">LoadBalancerCookieStickinessPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancerCookieStickinessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicyState">LoadBalancerCookieStickinessPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticloadbalancing?tab=doc#LoadBalancerCookieStickinessPolicy">LoadBalancerCookieStickinessPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -468,7 +468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -478,7 +478,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>Lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -489,7 +489,7 @@ balancer.
             title="Optional">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -499,7 +499,7 @@ should be attached.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ should be attached.
             title="Optional">
         <span>Cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -525,7 +525,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>Lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -536,7 +536,7 @@ balancer.
             title="Optional">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -546,7 +546,7 @@ should be attached.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ should be attached.
             title="Optional">
         <span>cookie<wbr>Expiration<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -572,7 +572,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>lb<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -583,7 +583,7 @@ balancer.
             title="Optional">
         <span>load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -593,7 +593,7 @@ should be attached.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ should be attached.
             title="Optional">
         <span>cookie_<wbr>expiration_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time period after which
 the session cookie should be considered stale, expressed in seconds.
@@ -619,7 +619,7 @@ the session cookie should be considered stale, expressed in seconds.
             title="Optional">
         <span>lb_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The load balancer port to which the policy
 should be applied. This must be an active listener on the load
@@ -630,7 +630,7 @@ balancer.
             title="Optional">
         <span>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The load balancer to which the policy
 should be attached.
@@ -640,7 +640,7 @@ should be attached.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stickiness policy.
 {{% /md %}}</dd>

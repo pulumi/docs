@@ -70,7 +70,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLifecycleHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLifecycleHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHookArgs">LifecycleHookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -170,7 +170,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>Lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>Lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -294,7 +294,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -346,7 +346,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -364,7 +364,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>autoscaling_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Required">
         <span>lifecycle_<wbr>transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>default_<wbr>result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -434,7 +434,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>heartbeat_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>notification_<wbr>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>notification_<wbr>target_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ const foobarLifecycleHook = new aws.autoscaling.LifecycleHook("foobar", {
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -502,7 +502,7 @@ Get an existing LifecycleHook resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLifecycleHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#LifecycleHookState">LifecycleHookState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLifecycleHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHookState">LifecycleHookState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#LifecycleHook">LifecycleHook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -616,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -740,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>heartbeat<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lifecycle<wbr>Transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Target<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -837,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Auto Scaling group to which you want to assign the lifecycle hook
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default_<wbr>result</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
 {{% /md %}}</dd>
@@ -871,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>heartbeat_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lifecycle_<wbr>transition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the lifecycle hook.
 {{% /md %}}</dd>
@@ -898,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification_<wbr>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
 {{% /md %}}</dd>
@@ -907,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification_<wbr>target_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
 {{% /md %}}</dd>

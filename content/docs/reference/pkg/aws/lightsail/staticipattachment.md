@@ -49,7 +49,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStaticIpAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lightsail?tab=doc#StaticIpAttachmentArgs">StaticIpAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lightsail?tab=doc#StaticIpAttachment">StaticIpAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStaticIpAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail?tab=doc#StaticIpAttachmentArgs">StaticIpAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail?tab=doc#StaticIpAttachment">StaticIpAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,7 +149,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>Static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>Static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -199,7 +199,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>instance_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const testStaticIpAttachment = new aws.lightsail.StaticIpAttachment("test", {
             title="Required">
         <span>static_<wbr>ip_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ The following output properties are available:
             title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ The following output properties are available:
             title="">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ The following output properties are available:
             title="">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ Get an existing StaticIpAttachment resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStaticIpAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lightsail?tab=doc#StaticIpAttachmentState">StaticIpAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lightsail?tab=doc#StaticIpAttachment">StaticIpAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetStaticIpAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail?tab=doc#StaticIpAttachmentState">StaticIpAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lightsail?tab=doc#StaticIpAttachment">StaticIpAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -453,7 +453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -496,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -521,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -539,7 +539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>static<wbr>Ip<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Lightsail instance to attach the IP to
 {{% /md %}}</dd>
@@ -564,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocated static IP address
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>static_<wbr>ip_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the allocated static IP
 {{% /md %}}</dd>

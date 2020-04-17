@@ -143,7 +143,7 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -243,7 +243,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -403,7 +403,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -421,7 +421,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -536,7 +536,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>enable_<wbr>sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>short_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following output properties are available:
             title="">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The following output properties are available:
             title="">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The following output properties are available:
             title="">
         <span>access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The following output properties are available:
             title="">
         <span>dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following output properties are available:
             title="">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -817,7 +817,7 @@ The following output properties are available:
             title="">
         <span>access_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -826,7 +826,7 @@ The following output properties are available:
             title="">
         <span>dns_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -835,7 +835,7 @@ The following output properties are available:
             title="">
         <span>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -979,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -988,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1006,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1024,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1042,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1078,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1096,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1238,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1263,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1272,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1290,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1299,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1308,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1326,7 +1326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1335,7 +1335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1344,7 +1344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1353,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1362,7 +1362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1380,7 +1380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1405,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1414,7 +1414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1432,7 +1432,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1450,7 +1450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1459,7 +1459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable_<wbr>sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1468,7 +1468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1477,7 +1477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1486,7 +1486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1495,7 +1495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1504,7 +1504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1522,7 +1522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryConnectSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1569,7 +1569,7 @@ The following state arguments are supported:
             title="Required">
         <span>Customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
             title="Required">
         <span>Customer<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The username corresponding to the password provided.
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1612,7 +1612,7 @@ The following state arguments are supported:
             title="Required">
         <span>Customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -1621,7 +1621,7 @@ The following state arguments are supported:
             title="Required">
         <span>Customer<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The username corresponding to the password provided.
 {{% /md %}}</dd>
@@ -1630,7 +1630,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
             title="Required">
         <span>customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -1664,7 +1664,7 @@ The following state arguments are supported:
             title="Required">
         <span>customer<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The username corresponding to the password provided.
 {{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1682,7 +1682,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ The following state arguments are supported:
             title="Required">
         <span>customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -1707,7 +1707,7 @@ The following state arguments are supported:
             title="Required">
         <span>customer<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The username corresponding to the password provided.
 {{% /md %}}</dd>
@@ -1716,7 +1716,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1725,7 +1725,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1743,7 +1743,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/directoryservice?tab=doc#DirectoryVpcSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1756,7 +1756,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1765,7 +1765,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1781,7 +1781,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1790,7 +1790,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1806,7 +1806,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1815,7 +1815,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
             title="Required">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -1840,7 +1840,7 @@ The following state arguments are supported:
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identifier of the VPC that the directory is in.
 {{% /md %}}</dd>

@@ -66,7 +66,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -166,7 +166,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Optional">
         <span>Allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -227,7 +227,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Optional">
         <span>Allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Optional">
         <span>allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>acceptance_<wbr>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Required">
         <span>network_<wbr>load_<wbr>balancer_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
             title="Optional">
         <span>allowed_<wbr>principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ The following output properties are available:
             title="">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ The following output properties are available:
             title="">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ The following output properties are available:
             title="">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ The following output properties are available:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ The following output properties are available:
             title="">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ The following output properties are available:
             title="">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The following output properties are available:
             title="">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ The following output properties are available:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The following output properties are available:
             title="">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
             title="">
         <span>base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ The following output properties are available:
             title="">
         <span>manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The following output properties are available:
             title="">
         <span>private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -526,7 +526,7 @@ The following output properties are available:
             title="">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ The following output properties are available:
             title="">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ The following output properties are available:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ The following output properties are available:
             title="">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ The following output properties are available:
             title="">
         <span>base_<wbr>endpoint_<wbr>dns_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ The following output properties are available:
             title="">
         <span>manages_<wbr>vpc_<wbr>endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ The following output properties are available:
             title="">
         <span>private_<wbr>dns_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following output properties are available:
             title="">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following output properties are available:
             title="">
         <span>service_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The following output properties are available:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointServiceState">VpcEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointServiceState">VpcEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -758,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -988,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -997,7 +997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -1006,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -1024,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -1042,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>acceptance_<wbr>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed_<wbr>principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -1094,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -1103,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base_<wbr>endpoint_<wbr>dns_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manages_<wbr>vpc_<wbr>endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network_<wbr>load_<wbr>balancer_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private_<wbr>dns_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>

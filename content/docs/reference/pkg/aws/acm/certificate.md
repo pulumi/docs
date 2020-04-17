@@ -98,7 +98,7 @@ Supported nested arguments for the `options` configuration block:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -198,7 +198,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -226,7 +226,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -287,7 +287,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -315,7 +315,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -376,7 +376,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -404,7 +404,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -421,7 +421,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -465,7 +465,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate_<wbr>authority_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate_<wbr>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -483,7 +483,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate_<wbr>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -493,7 +493,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>private_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>subject_<wbr>alternative_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>validation_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -566,7 +566,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -584,7 +584,7 @@ The following output properties are available:
             title="">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -600,7 +600,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ The following output properties are available:
             title="">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
             title="">
         <span>validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following output properties are available:
             title="">
         <span>validation_<wbr>emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -716,7 +716,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateState">CertificateState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -830,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -867,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -920,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -929,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -946,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -964,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -983,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1018,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -1045,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1062,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -1071,7 +1071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -1080,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -1099,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1178,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate_<wbr>authority_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -1196,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate_<wbr>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate_<wbr>chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subject_<wbr>alternative_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -1268,7 +1268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation_<wbr>emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -1277,7 +1277,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1303,7 +1303,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateDomainValidationOptionOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateDomainValidationOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1334,7 +1334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1359,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1368,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1377,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1386,7 +1386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1402,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1420,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1429,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1463,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1490,7 +1490,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/acm?tab=doc#CertificateOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1503,7 +1503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1518,7 +1518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1533,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1548,7 +1548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

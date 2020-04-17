@@ -49,7 +49,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ebs?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ebs?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotArgs">SnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,7 +149,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Required">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Required">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Required">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const exampleSnapshot = new aws.ebs.Snapshot("example_snapshot", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ The following output properties are available:
             title="">
         <span>Data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ The following output properties are available:
             title="">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ The following output properties are available:
             title="">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ The following output properties are available:
             title="">
         <span>Owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ The following output properties are available:
             title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ The following output properties are available:
             title="">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ The following output properties are available:
             title="">
         <span>Data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -367,7 +367,7 @@ The following output properties are available:
             title="">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The following output properties are available:
             title="">
         <span>Owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ The following output properties are available:
             title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -403,7 +403,7 @@ The following output properties are available:
             title="">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ The following output properties are available:
             title="">
         <span>data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ The following output properties are available:
             title="">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ The following output properties are available:
             title="">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ The following output properties are available:
             title="">
         <span>owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ The following output properties are available:
             title="">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ The following output properties are available:
             title="">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ The following output properties are available:
             title="">
         <span>data_<wbr>encryption_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ The following output properties are available:
             title="">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ The following output properties are available:
             title="">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The following output properties are available:
             title="">
         <span>owner_<wbr>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The following output properties are available:
             title="">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ The following output properties are available:
             title="">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ Get an existing Snapshot resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ebs?tab=doc#SnapshotState">SnapshotState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ebs?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#SnapshotState">SnapshotState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ebs?tab=doc#Snapshot">Snapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -669,7 +669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -696,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -705,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -757,7 +757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -766,7 +766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -775,7 +775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -820,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -845,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Encryption<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -908,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data_<wbr>encryption_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The data encryption key identifier for the snapshot.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of what the snapshot is.
 {{% /md %}}</dd>
@@ -951,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the snapshot is encrypted.
 {{% /md %}}</dd>
@@ -960,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key.
 {{% /md %}}</dd>
@@ -969,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner_<wbr>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the EBS snapshot owner.
 {{% /md %}}</dd>
@@ -996,7 +996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Volume ID of which to make a snapshot.
 {{% /md %}}</dd>
@@ -1005,7 +1005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the drive in GiBs.
 {{% /md %}}</dd>

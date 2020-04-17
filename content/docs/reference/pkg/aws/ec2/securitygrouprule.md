@@ -59,7 +59,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -159,7 +159,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
             title="Required">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
             title="Required">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -205,7 +205,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -242,7 +242,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -252,7 +252,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -269,7 +269,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -315,7 +315,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -352,7 +352,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -362,7 +362,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -379,7 +379,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>from<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -406,7 +406,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>to<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -425,7 +425,7 @@ or `egress` (outbound).
             title="Optional">
         <span>cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -434,7 +434,7 @@ or `egress` (outbound).
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ or `egress` (outbound).
             title="Optional">
         <span>ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ or `egress` (outbound).
             title="Optional">
         <span>prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -462,7 +462,7 @@ Only valid with `egress`.
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -472,7 +472,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -489,7 +489,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>from_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>to_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -535,7 +535,7 @@ or `egress` (outbound).
             title="Optional">
         <span>cidr_<wbr>blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ or `egress` (outbound).
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ or `egress` (outbound).
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ or `egress` (outbound).
             title="Optional">
         <span>prefix_<wbr>list_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -572,7 +572,7 @@ Only valid with `egress`.
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -582,7 +582,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>source_<wbr>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -615,7 +615,7 @@ Get an existing SecurityGroupRule resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SecurityGroupRuleState">SecurityGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRuleState">SecurityGroupRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -729,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -747,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -775,7 +775,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -803,7 +803,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -813,7 +813,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -839,7 +839,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ or `egress` (outbound).
             title="Optional">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ or `egress` (outbound).
             title="Optional">
         <span>Prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -885,7 +885,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ Only valid with `egress`.
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -913,7 +913,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -923,7 +923,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -932,7 +932,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -949,7 +949,7 @@ or `egress` (outbound).
             title="Optional">
         <span>cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -958,7 +958,7 @@ or `egress` (outbound).
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -967,7 +967,7 @@ or `egress` (outbound).
             title="Optional">
         <span>from<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ or `egress` (outbound).
             title="Optional">
         <span>ipv6Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ or `egress` (outbound).
             title="Optional">
         <span>prefix<wbr>List<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -995,7 +995,7 @@ Only valid with `egress`.
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -1004,7 +1004,7 @@ Only valid with `egress`.
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ Only valid with `egress`.
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -1023,7 +1023,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -1033,7 +1033,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>to<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -1042,7 +1042,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
@@ -1059,7 +1059,7 @@ or `egress` (outbound).
             title="Optional">
         <span>cidr_<wbr>blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ or `egress` (outbound).
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the rule.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ or `egress` (outbound).
             title="Optional">
         <span>from_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ or `egress` (outbound).
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ or `egress` (outbound).
             title="Optional">
         <span>prefix_<wbr>list_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
 Only valid with `egress`.
@@ -1105,7 +1105,7 @@ Only valid with `egress`.
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -1114,7 +1114,7 @@ Only valid with `egress`.
             title="Optional">
         <span>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -1123,7 +1123,7 @@ Only valid with `egress`.
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
@@ -1133,7 +1133,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
             title="Optional">
         <span>source_<wbr>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
@@ -1143,7 +1143,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>to_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}</dd>
@@ -1152,7 +1152,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).

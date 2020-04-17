@@ -18,12 +18,12 @@ Get information on an EC2 Transit Gateway VPC Attachment.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
+const example = aws.ec2transitgateway.getVpcAttachment({
     filters: [{
         name: "vpc-id",
         values: ["vpc-12345678"],
     }],
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -34,9 +34,9 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
+const example = aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -62,7 +62,7 @@ const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpcAttachmentArgs">LookupVpcAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpcAttachmentResult">LookupVpcAttachmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#LookupVpcAttachmentArgs">LookupVpcAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#LookupVpcAttachmentResult">LookupVpcAttachmentResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -94,7 +94,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -128,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway VPC Attachment.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ The following output properties are available:
             title="">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway VPC Attachment identifier
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ The following output properties are available:
             title="">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ The following output properties are available:
             title="">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -357,7 +357,7 @@ The following output properties are available:
             title="">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway VPC Attachment identifier
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ The following output properties are available:
             title="">
         <span>dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ The following output properties are available:
             title="">
         <span>ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ The following output properties are available:
             title="">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ The following output properties are available:
             title="">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway VPC Attachment identifier
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ The following output properties are available:
             title="">
         <span>dns_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ The following output properties are available:
             title="">
         <span>ipv6_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled.
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ The following output properties are available:
             title="">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ The following output properties are available:
             title="">
         <span>transit_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway VPC Attachment identifier
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#GetVpcAttachmentFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#GetVpcAttachmentFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetVpcAttachmentFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#GetVpcAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -602,7 +602,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
@@ -611,7 +611,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
@@ -636,7 +636,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ The following output properties are available:
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>
@@ -677,7 +677,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the filter.
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following output properties are available:
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>

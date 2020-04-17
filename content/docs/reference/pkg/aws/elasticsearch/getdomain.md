@@ -16,9 +16,9 @@ Use this data source to get information about an Elasticsearch Domain
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDomain = pulumi.output(aws.elasticsearch.getDomain({
+const myDomain = aws.elasticsearch.getDomain({
     domainName: "my-domain-name",
-}, { async: true }));
+});
 ```
 
 {{% /example %}}
@@ -44,7 +44,7 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomain<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#LookupDomainArgs">LookupDomainArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#LookupDomainResult">LookupDomainResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -67,7 +67,7 @@ The following arguments are supported:
             title="Required">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -92,7 +92,7 @@ The following arguments are supported:
             title="Required">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -117,7 +117,7 @@ The following arguments are supported:
             title="Required">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -142,7 +142,7 @@ The following arguments are supported:
             title="Required">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Deleted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -269,7 +269,7 @@ The following output properties are available:
             title="">
         <span>Elasticsearch<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Kibana<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ The following output properties are available:
             title="">
         <span>Processing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -375,7 +375,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ The following output properties are available:
             title="">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ The following output properties are available:
             title="">
         <span>Deleted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The following output properties are available:
             title="">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -464,7 +464,7 @@ The following output properties are available:
             title="">
         <span>Elasticsearch<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The following output properties are available:
             title="">
         <span>Kibana<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ The following output properties are available:
             title="">
         <span>Processing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -570,7 +570,7 @@ The following output properties are available:
             title="">
         <span>access<wbr>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The following output properties are available:
             title="">
         <span>deleted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ The following output properties are available:
             title="">
         <span>domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ The following output properties are available:
             title="">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -659,7 +659,7 @@ The following output properties are available:
             title="">
         <span>elasticsearch<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -677,7 +677,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following output properties are available:
             title="">
         <span>kibana<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following output properties are available:
             title="">
         <span>processing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -765,7 +765,7 @@ The following output properties are available:
             title="">
         <span>access_<wbr>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following output properties are available:
             title="">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following output properties are available:
             title="">
         <span>deleted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ The following output properties are available:
             title="">
         <span>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -837,7 +837,7 @@ The following output properties are available:
             title="">
         <span>domain_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -854,7 +854,7 @@ The following output properties are available:
             title="">
         <span>elasticsearch_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -890,7 +890,7 @@ The following output properties are available:
             title="">
         <span>kibana_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ The following output properties are available:
             title="">
         <span>processing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -967,7 +967,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainClusterConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -980,7 +980,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1007,7 +1007,7 @@ The following output properties are available:
             title="Required">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1016,7 +1016,7 @@ The following output properties are available:
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1034,7 +1034,7 @@ The following output properties are available:
             title="Required">
         <span>Zone<wbr>Awareness<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following output properties are available:
             title="Required">
         <span>Dedicated<wbr>Master<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The following output properties are available:
             title="Required">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ The following output properties are available:
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The following output properties are available:
             title="Required">
         <span>Zone<wbr>Awareness<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1120,7 +1120,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1129,7 +1129,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1138,7 +1138,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1147,7 +1147,7 @@ The following output properties are available:
             title="Required">
         <span>instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1156,7 +1156,7 @@ The following output properties are available:
             title="Required">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ The following output properties are available:
             title="Required">
         <span>zone<wbr>Awareness<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1199,7 +1199,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1208,7 +1208,7 @@ The following output properties are available:
             title="Required">
         <span>dedicated<wbr>Master<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1217,7 +1217,7 @@ The following output properties are available:
             title="Required">
         <span>instance_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1226,7 +1226,7 @@ The following output properties are available:
             title="Required">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1244,7 +1244,7 @@ The following output properties are available:
             title="Required">
         <span>zone<wbr>Awareness<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1262,7 +1262,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1275,7 +1275,7 @@ The following output properties are available:
             title="Required">
         <span>Availability<wbr>Zone<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ The following output properties are available:
             title="Required">
         <span>Availability<wbr>Zone<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ The following output properties are available:
             title="Required">
         <span>availability<wbr>Zone<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1323,7 +1323,7 @@ The following output properties are available:
             title="Required">
         <span>availability<wbr>Zone<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1341,7 +1341,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainCognitoOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainCognitoOption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1354,7 +1354,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ The following output properties are available:
             title="Required">
         <span>Identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following output properties are available:
             title="Required">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1381,7 +1381,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ The following output properties are available:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1406,7 +1406,7 @@ The following output properties are available:
             title="Required">
         <span>Identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1415,7 +1415,7 @@ The following output properties are available:
             title="Required">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1424,7 +1424,7 @@ The following output properties are available:
             title="Required">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1440,7 +1440,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1449,7 +1449,7 @@ The following output properties are available:
             title="Required">
         <span>identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ The following output properties are available:
             title="Required">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1467,7 +1467,7 @@ The following output properties are available:
             title="Required">
         <span>user<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1483,7 +1483,7 @@ The following output properties are available:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ The following output properties are available:
             title="Required">
         <span>identity_<wbr>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1501,7 +1501,7 @@ The following output properties are available:
             title="Required">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1510,7 +1510,7 @@ The following output properties are available:
             title="Required">
         <span>user_<wbr>pool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1528,7 +1528,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainEbsOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainEbsOption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1541,7 +1541,7 @@ The following output properties are available:
             title="Required">
         <span>Ebs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -1550,7 +1550,7 @@ The following output properties are available:
             title="Required">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes.
@@ -1560,7 +1560,7 @@ attached to data nodes.
             title="Required">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -1569,7 +1569,7 @@ attached to data nodes.
             title="Required">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -1585,7 +1585,7 @@ attached to data nodes.
             title="Required">
         <span>Ebs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -1594,7 +1594,7 @@ attached to data nodes.
             title="Required">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes.
@@ -1604,7 +1604,7 @@ attached to data nodes.
             title="Required">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -1613,7 +1613,7 @@ attached to data nodes.
             title="Required">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ attached to data nodes.
             title="Required">
         <span>ebs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -1638,7 +1638,7 @@ attached to data nodes.
             title="Required">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes.
@@ -1648,7 +1648,7 @@ attached to data nodes.
             title="Required">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -1657,7 +1657,7 @@ attached to data nodes.
             title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -1673,7 +1673,7 @@ attached to data nodes.
             title="Required">
         <span>ebs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -1682,7 +1682,7 @@ attached to data nodes.
             title="Required">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes.
@@ -1692,7 +1692,7 @@ attached to data nodes.
             title="Required">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ attached to data nodes.
             title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -1719,7 +1719,7 @@ attached to data nodes.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainEncryptionAtRest">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainEncryptionAtRest">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1732,7 +1732,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ attached to data nodes.
             title="Required">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -1757,7 +1757,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1766,7 +1766,7 @@ attached to data nodes.
             title="Required">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -1782,7 +1782,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1791,7 +1791,7 @@ attached to data nodes.
             title="Required">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -1807,7 +1807,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ attached to data nodes.
             title="Required">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -1834,7 +1834,7 @@ attached to data nodes.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainLogPublishingOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainLogPublishingOption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1847,7 +1847,7 @@ attached to data nodes.
             title="Required">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -1856,7 +1856,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1865,7 +1865,7 @@ attached to data nodes.
             title="Required">
         <span>Log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -1881,7 +1881,7 @@ attached to data nodes.
             title="Required">
         <span>Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -1890,7 +1890,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1899,7 +1899,7 @@ attached to data nodes.
             title="Required">
         <span>Log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -1915,7 +1915,7 @@ attached to data nodes.
             title="Required">
         <span>cloudwatch<wbr>Log<wbr>Group<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -1924,7 +1924,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1933,7 +1933,7 @@ attached to data nodes.
             title="Required">
         <span>log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -1949,7 +1949,7 @@ attached to data nodes.
             title="Required">
         <span>cloudwatch_<wbr>log_<wbr>group_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1967,7 +1967,7 @@ attached to data nodes.
             title="Required">
         <span>log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -1985,7 +1985,7 @@ attached to data nodes.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainNodeToNodeEncryption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainNodeToNodeEncryption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1998,7 +1998,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2014,7 +2014,7 @@ attached to data nodes.
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2030,7 +2030,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2046,7 +2046,7 @@ attached to data nodes.
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2064,7 +2064,7 @@ attached to data nodes.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainSnapshotOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainSnapshotOption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2077,7 +2077,7 @@ attached to data nodes.
             title="Required">
         <span>Automated<wbr>Snapshot<wbr>Start<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -2094,7 +2094,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Automated<wbr>Snapshot<wbr>Start<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -2111,7 +2111,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>automated<wbr>Snapshot<wbr>Start<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -2128,7 +2128,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>automated<wbr>Snapshot<wbr>Start<wbr>Hour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily
 snapshot of the indices in the domain.
@@ -2147,7 +2147,7 @@ snapshot of the indices in the domain.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticsearch?tab=doc#GetDomainVpcOption">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/elasticsearch?tab=doc#GetDomainVpcOption">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2160,7 +2160,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2169,7 +2169,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2178,7 +2178,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2187,7 +2187,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2203,7 +2203,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2212,7 +2212,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2221,7 +2221,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2230,7 +2230,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2246,7 +2246,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2255,7 +2255,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2264,7 +2264,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2273,7 +2273,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2289,7 +2289,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>availability_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2298,7 +2298,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2307,7 +2307,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2316,7 +2316,7 @@ snapshot of the indices in the domain.
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>

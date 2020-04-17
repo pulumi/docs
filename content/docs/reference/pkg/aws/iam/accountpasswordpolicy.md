@@ -48,7 +48,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccountPasswordPolicyArgs">AccountPasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccountPasswordPolicy">AccountPasswordPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccountPasswordPolicyArgs">AccountPasswordPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccountPasswordPolicy">AccountPasswordPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -148,7 +148,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -167,7 +167,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -256,7 +256,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>Require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -345,7 +345,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -381,7 +381,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -390,7 +390,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>hard_<wbr>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -434,7 +434,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>max_<wbr>password_<wbr>age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>minimum_<wbr>password_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>password_<wbr>reuse_<wbr>prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require_<wbr>lowercase_<wbr>characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require_<wbr>numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require_<wbr>symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
             title="Optional">
         <span>require_<wbr>uppercase_<wbr>characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ The following output properties are available:
             title="">
         <span>Expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -534,7 +534,7 @@ Returns `false` if it is `0` or _not present_.
             title="">
         <span>Expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -552,7 +552,7 @@ Returns `false` if it is `0` or _not present_.
             title="">
         <span>expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -570,7 +570,7 @@ Returns `false` if it is `0` or _not present_.
             title="">
         <span>expire_<wbr>passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -602,7 +602,7 @@ Get an existing AccountPasswordPolicy resource's state with the given name, ID, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccountPasswordPolicyState">AccountPasswordPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccountPasswordPolicy">AccountPasswordPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountPasswordPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccountPasswordPolicyState">AccountPasswordPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccountPasswordPolicy">AccountPasswordPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -716,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -725,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -736,7 +736,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -746,7 +746,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -755,7 +755,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -791,7 +791,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -836,7 +836,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -846,7 +846,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>Require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -916,7 +916,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -925,7 +925,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>expire<wbr>Passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -936,7 +936,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>hard<wbr>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -946,7 +946,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>max<wbr>Password<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>minimum<wbr>Password<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -964,7 +964,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>password<wbr>Reuse<wbr>Prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require<wbr>Lowercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -982,7 +982,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require<wbr>Numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -991,7 +991,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require<wbr>Symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require<wbr>Uppercase<wbr>Characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>
@@ -1016,7 +1016,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
 {{% /md %}}</dd>
@@ -1025,7 +1025,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>expire_<wbr>passwords</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire.
 Returns `true` if `max_password_age` contains a value greater than `0`.
@@ -1036,7 +1036,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>hard_<wbr>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired
 (i.e. require administrator reset)
@@ -1046,7 +1046,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>max_<wbr>password_<wbr>age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>minimum_<wbr>password_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>password_<wbr>reuse_<wbr>prevention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require_<wbr>lowercase_<wbr>characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require_<wbr>numbers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
 {{% /md %}}</dd>
@@ -1091,7 +1091,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require_<wbr>symbols</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
 {{% /md %}}</dd>
@@ -1100,7 +1100,7 @@ Returns `false` if it is `0` or _not present_.
             title="Optional">
         <span>require_<wbr>uppercase_<wbr>characters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
 {{% /md %}}</dd>

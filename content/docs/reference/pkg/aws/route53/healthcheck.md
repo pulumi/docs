@@ -112,7 +112,7 @@ const foo = new aws.route53.HealthCheck("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheckArgs">HealthCheckArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -212,7 +212,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -339,7 +339,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -357,7 +357,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -436,7 +436,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -454,7 +454,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -463,7 +463,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -472,7 +472,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -518,7 +518,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -536,7 +536,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>Search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -570,7 +570,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -606,7 +606,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -669,7 +669,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -697,7 +697,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -749,7 +749,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>child_<wbr>health_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>child_<wbr>healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>cloudwatch_<wbr>alarm_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>cloudwatch_<wbr>alarm_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>enable_<wbr>sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>failure_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>insufficient_<wbr>data_<wbr>health_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>invert_<wbr>healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>measure_<wbr>latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>reference_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -876,7 +876,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>request_<wbr>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>resource_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ const foo = new aws.route53.HealthCheck("foo", {
             title="Optional">
         <span>search_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHealthCheck<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheckState">HealthCheckState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/route53?tab=doc#HealthCheck">HealthCheck</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1058,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -1067,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -1094,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -1103,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -1112,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1121,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -1176,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -1194,7 +1194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -1203,7 +1203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -1221,7 +1221,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -1237,7 +1237,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -1246,7 +1246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -1255,7 +1255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -1264,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -1273,7 +1273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -1282,7 +1282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1300,7 +1300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -1309,7 +1309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -1318,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -1336,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1345,7 +1345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -1355,7 +1355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -1364,7 +1364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child<wbr>Health<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child<wbr>Healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -1434,7 +1434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch<wbr>Alarm<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -1443,7 +1443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch<wbr>Alarm<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -1452,7 +1452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -1461,7 +1461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>failure<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -1470,7 +1470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1479,7 +1479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insufficient<wbr>Data<wbr>Health<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invert<wbr>Healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -1497,7 +1497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1506,7 +1506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>measure<wbr>Latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -1515,7 +1515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1524,7 +1524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reference<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -1534,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -1543,7 +1543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -1552,7 +1552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -1561,7 +1561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>search<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -1579,7 +1579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>
@@ -1595,7 +1595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child_<wbr>health_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child_<wbr>healthchecks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
 {{% /md %}}</dd>
@@ -1613,7 +1613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch_<wbr>alarm_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the CloudWatch alarm.
 {{% /md %}}</dd>
@@ -1622,7 +1622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloudwatch_<wbr>alarm_<wbr>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatchRegion that the CloudWatch alarm was created in.
 {{% /md %}}</dd>
@@ -1631,7 +1631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable_<wbr>sni</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
 {{% /md %}}</dd>
@@ -1640,7 +1640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>failure_<wbr>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks that an endpoint must pass or fail.
 {{% /md %}}</dd>
@@ -1649,7 +1649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1658,7 +1658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insufficient_<wbr>data_<wbr>health_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
 {{% /md %}}</dd>
@@ -1667,7 +1667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invert_<wbr>healthcheck</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
 {{% /md %}}</dd>
@@ -1676,7 +1676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1685,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>measure_<wbr>latency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
 {{% /md %}}</dd>
@@ -1694,7 +1694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port of the endpoint to be checked.
 {{% /md %}}</dd>
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reference_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}This is a reference name used in Caller Reference
 (helpful for identifying single health_check set amongst others)
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
 {{% /md %}}</dd>
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request_<wbr>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
 {{% /md %}}</dd>
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path that you want Amazon Route 53 to request when performing health checks.
 {{% /md %}}</dd>
@@ -1740,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>search_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
 {{% /md %}}</dd>
@@ -1758,7 +1758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED` and `CLOUDWATCH_METRIC`.
 {{% /md %}}</dd>

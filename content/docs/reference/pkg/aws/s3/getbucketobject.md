@@ -22,10 +22,10 @@ value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
+const bootstrapScript = aws.s3.getBucketObject({
     bucket: "ourcorp-deploy-config",
     key: "ec2-bootstrap-script.sh",
-}, { async: true }));
+});
 const example = new aws.ec2.Instance("example", {
     ami: "ami-2757f631",
     instanceType: "t2.micro",
@@ -43,10 +43,10 @@ Lambda functions is available in the documentation for
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const lambda = pulumi.output(aws.s3.getBucketObject({
+const lambda = aws.s3.getBucketObject({
     bucket: "ourcorp-lambda-functions",
     key: "hello-world.zip",
-}, { async: true }));
+});
 const testLambda = new aws.lambda.Function("test_lambda", {
     handler: "exports.test",
     role: aws_iam_role_iam_for_lambda.arn, // (not shown)
@@ -79,7 +79,7 @@ const testLambda = new aws.lambda.Function("test_lambda", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
 {{% /md %}}</dd>
@@ -120,7 +120,7 @@ The following arguments are supported:
             title="Optional">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -137,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specific version ID of the object returned (defaults to latest version)
 {{% /md %}}</dd>
@@ -153,7 +153,7 @@ The following arguments are supported:
             title="Required">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ The following arguments are supported:
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -188,7 +188,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specific version ID of the object returned (defaults to latest version)
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ The following arguments are supported:
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ The following arguments are supported:
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
 {{% /md %}}</dd>
@@ -222,7 +222,7 @@ The following arguments are supported:
             title="Optional">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -239,7 +239,7 @@ The following arguments are supported:
             title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specific version ID of the object returned (defaults to latest version)
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The following arguments are supported:
             title="Required">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ The following arguments are supported:
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ The following arguments are supported:
             title="Optional">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -290,7 +290,7 @@ The following arguments are supported:
             title="Optional">
         <span>version_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specific version ID of the object returned (defaults to latest version)
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ The following output properties are available:
             title="">
         <span>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Object data (see **limitations above** to understand cases in which this field is actually available)
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ The following output properties are available:
             title="">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -336,7 +336,7 @@ The following output properties are available:
             title="">
         <span>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Disposition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The language the content is in.
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the body in bytes.
 {{% /md %}}</dd>
@@ -381,7 +381,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data.
 {{% /md %}}</dd>
@@ -390,7 +390,7 @@ The following output properties are available:
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}[ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ The following output properties are available:
             title="">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ The following output properties are available:
             title="">
         <span>Expires</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the object is no longer cacheable.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ The following output properties are available:
             title="">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -434,7 +434,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04:05 MST`)
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
 {{% /md %}}</dd>
@@ -461,7 +461,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when this object's object lock will expire.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ The following output properties are available:
             title="">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ The following output properties are available:
             title="">
         <span>Sse<wbr>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}[Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ The following output properties are available:
             title="">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version ID of the object returned.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ The following output properties are available:
             title="">
         <span>Website<wbr>Redirect<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ The following output properties are available:
             title="">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -548,7 +548,7 @@ The following output properties are available:
             title="">
         <span>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Object data (see **limitations above** to understand cases in which this field is actually available)
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ The following output properties are available:
             title="">
         <span>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -565,7 +565,7 @@ The following output properties are available:
             title="">
         <span>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain.
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Disposition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The language the content is in.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the body in bytes.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The following output properties are available:
             title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}[ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following output properties are available:
             title="">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
 {{% /md %}}</dd>
@@ -637,7 +637,7 @@ The following output properties are available:
             title="">
         <span>Expires</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the object is no longer cacheable.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -655,7 +655,7 @@ The following output properties are available:
             title="">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04:05 MST`)
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
 {{% /md %}}</dd>
@@ -690,7 +690,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when this object's object lock will expire.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The following output properties are available:
             title="">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The following output properties are available:
             title="">
         <span>Sse<wbr>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ The following output properties are available:
             title="">
         <span>Storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}[Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
 {{% /md %}}</dd>
@@ -744,7 +744,7 @@ The following output properties are available:
             title="">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version ID of the object returned.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The following output properties are available:
             title="">
         <span>Website<wbr>Redirect<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ The following output properties are available:
             title="">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -777,7 +777,7 @@ The following output properties are available:
             title="">
         <span>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Object data (see **limitations above** to understand cases in which this field is actually available)
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The following output properties are available:
             title="">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -794,7 +794,7 @@ The following output properties are available:
             title="">
         <span>cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The following output properties are available:
             title="">
         <span>content<wbr>Disposition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following output properties are available:
             title="">
         <span>content<wbr>Encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
 {{% /md %}}</dd>
@@ -821,7 +821,7 @@ The following output properties are available:
             title="">
         <span>content<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The language the content is in.
 {{% /md %}}</dd>
@@ -830,7 +830,7 @@ The following output properties are available:
             title="">
         <span>content<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Size of the body in bytes.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following output properties are available:
             title="">
         <span>content<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following output properties are available:
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}[ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following output properties are available:
             title="">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ The following output properties are available:
             title="">
         <span>expires</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the object is no longer cacheable.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ The following output properties are available:
             title="">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -892,7 +892,7 @@ The following output properties are available:
             title="">
         <span>last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04:05 MST`)
 {{% /md %}}</dd>
@@ -910,7 +910,7 @@ The following output properties are available:
             title="">
         <span>object<wbr>Lock<wbr>Legal<wbr>Hold<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
 {{% /md %}}</dd>
@@ -919,7 +919,7 @@ The following output properties are available:
             title="">
         <span>object<wbr>Lock<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following output properties are available:
             title="">
         <span>object<wbr>Lock<wbr>Retain<wbr>Until<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time when this object's object lock will expire.
 {{% /md %}}</dd>
@@ -937,7 +937,7 @@ The following output properties are available:
             title="">
         <span>server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
 {{% /md %}}</dd>
@@ -946,7 +946,7 @@ The following output properties are available:
             title="">
         <span>sse<wbr>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
 {{% /md %}}</dd>
@@ -955,7 +955,7 @@ The following output properties are available:
             title="">
         <span>storage<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}[Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The following output properties are available:
             title="">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version ID of the object returned.
 {{% /md %}}</dd>
@@ -982,7 +982,7 @@ The following output properties are available:
             title="">
         <span>website<wbr>Redirect<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
 {{% /md %}}</dd>
@@ -991,7 +991,7 @@ The following output properties are available:
             title="">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1006,7 +1006,7 @@ The following output properties are available:
             title="">
         <span>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Object data (see **limitations above** to understand cases in which this field is actually available)
 {{% /md %}}</dd>
@@ -1015,7 +1015,7 @@ The following output properties are available:
             title="">
         <span>bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1023,7 +1023,7 @@ The following output properties are available:
             title="">
         <span>cache_<wbr>control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies caching behavior along the request/reply chain.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ The following output properties are available:
             title="">
         <span>content_<wbr>disposition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies presentational information for the object.
 {{% /md %}}</dd>
@@ -1041,7 +1041,7 @@ The following output properties are available:
             title="">
         <span>content_<wbr>encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field.
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ The following output properties are available:
             title="">
         <span>content_<wbr>language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The language the content is in.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following output properties are available:
             title="">
         <span>content_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Size of the body in bytes.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following output properties are available:
             title="">
         <span>content_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A standard MIME type describing the format of the object data.
 {{% /md %}}</dd>
@@ -1077,7 +1077,7 @@ The following output properties are available:
             title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}[ETag](https://en.wikipedia.org/wiki/HTTP_ETag) generated for the object (an MD5 sum of the object content in case it's not encrypted)
 {{% /md %}}</dd>
@@ -1086,7 +1086,7 @@ The following output properties are available:
             title="">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If the object expiration is configured (see [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html)), the field includes this header. It includes the expiry-date and rule-id key value pairs providing object expiration information. The value of the rule-id is URL encoded.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The following output properties are available:
             title="">
         <span>expires</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the object is no longer cacheable.
 {{% /md %}}</dd>
@@ -1104,7 +1104,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1113,7 +1113,7 @@ The following output properties are available:
             title="">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1121,7 +1121,7 @@ The following output properties are available:
             title="">
         <span>last_<wbr>modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last modified date of the object in RFC1123 format (e.g. `Mon, 02 Jan 2006 15:04:05 MST`)
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ The following output properties are available:
             title="">
         <span>object_<wbr>lock_<wbr>legal_<wbr>hold_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether this object has an active [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds). This field is only returned if you have permission to view an object's legal hold status.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following output properties are available:
             title="">
         <span>object_<wbr>lock_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) currently in place for this object.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following output properties are available:
             title="">
         <span>object_<wbr>lock_<wbr>retain_<wbr>until_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time when this object's object lock will expire.
 {{% /md %}}</dd>
@@ -1166,7 +1166,7 @@ The following output properties are available:
             title="">
         <span>server_<wbr>side_<wbr>encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If the object is stored using server-side encryption (KMS or Amazon S3-managed encryption key), this field includes the chosen encryption and algorithm used.
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The following output properties are available:
             title="">
         <span>sse_<wbr>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If present, specifies the ID of the Key Management Service (KMS) master encryption key that was used for the object.
 {{% /md %}}</dd>
@@ -1184,7 +1184,7 @@ The following output properties are available:
             title="">
         <span>storage_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}[Storage class](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html) information of the object. Available for all objects except for `Standard` storage class objects.
 {{% /md %}}</dd>
@@ -1202,7 +1202,7 @@ The following output properties are available:
             title="">
         <span>version_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The latest version ID of the object returned.
 {{% /md %}}</dd>
@@ -1211,7 +1211,7 @@ The following output properties are available:
             title="">
         <span>website_<wbr>redirect_<wbr>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
 {{% /md %}}</dd>
@@ -1220,7 +1220,7 @@ The following output properties are available:
             title="">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

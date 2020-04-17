@@ -17,7 +17,7 @@ and deleted. Instances also support [provisioning](https://www.terraform.io/docs
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = pulumi.output(aws.getAmi({
+const ubuntu = aws.getAmi({
     filters: [
         {
             name: "name",
@@ -30,7 +30,7 @@ const ubuntu = pulumi.output(aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-}, { async: true }));
+});
 const web = new aws.ec2.Instance("web", {
     ami: ubuntu.id,
     instanceType: "t2.micro",
@@ -58,7 +58,7 @@ const web = new aws.ec2.Instance("web", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -158,7 +158,7 @@ const web = new aws.ec2.Instance("web", {
             title="Required">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ const web = new aws.ec2.Instance("web", {
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const web = new aws.ec2.Instance("web", {
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ const web = new aws.ec2.Instance("web", {
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -205,7 +205,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -243,7 +243,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -266,7 +266,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -316,7 +316,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -324,7 +324,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -398,7 +398,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -407,7 +407,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -417,7 +417,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Required">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -534,7 +534,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -572,7 +572,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -595,7 +595,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -645,7 +645,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -653,7 +653,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -707,7 +707,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -727,7 +727,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -736,7 +736,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -746,7 +746,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Required">
         <span>ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -863,7 +863,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -881,7 +881,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -901,7 +901,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -924,7 +924,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -974,7 +974,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -982,7 +982,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -991,7 +991,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -1027,7 +1027,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -1036,7 +1036,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -1056,7 +1056,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -1065,7 +1065,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -1075,7 +1075,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -1093,7 +1093,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -1102,7 +1102,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -1111,7 +1111,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -1129,7 +1129,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -1145,7 +1145,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Required">
         <span>ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -1163,7 +1163,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu_<wbr>core_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -1192,7 +1192,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu_<wbr>threads_<wbr>per_<wbr>core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -1210,7 +1210,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable_<wbr>api_<wbr>termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -1230,7 +1230,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs_<wbr>optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -1253,7 +1253,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get_<wbr>password_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -1262,7 +1262,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -1271,7 +1271,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -1291,7 +1291,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -1303,7 +1303,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6_<wbr>address_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1311,7 +1311,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -1338,7 +1338,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -1356,7 +1356,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>placement_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -1365,7 +1365,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -1385,7 +1385,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -1394,7 +1394,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source_<wbr>dest_<wbr>check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -1404,7 +1404,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -1422,7 +1422,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -1431,7 +1431,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -1440,7 +1440,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user_<wbr>data_<wbr>base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -1486,7 +1486,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -1495,7 +1495,7 @@ The following output properties are available:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -1504,7 +1504,7 @@ The following output properties are available:
             title="">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -1517,7 +1517,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1537,7 +1537,7 @@ for your VPC
             title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1547,7 +1547,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -1563,7 +1563,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -1572,7 +1572,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -1581,7 +1581,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -1594,7 +1594,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -1603,7 +1603,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1614,7 +1614,7 @@ for your VPC
             title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1624,7 +1624,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -1640,7 +1640,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -1649,7 +1649,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -1658,7 +1658,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -1671,7 +1671,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -1680,7 +1680,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1691,7 +1691,7 @@ for your VPC
             title="">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1701,7 +1701,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -1717,7 +1717,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -1726,7 +1726,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>instance_<wbr>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -1735,7 +1735,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>password_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -1748,7 +1748,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>primary_<wbr>network_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -1757,7 +1757,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="">
         <span>private_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1768,7 +1768,7 @@ for your VPC
             title="">
         <span>public_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1778,7 +1778,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>public_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -1808,7 +1808,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1922,7 +1922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -1931,7 +1931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -1940,7 +1940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -1949,7 +1949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -1969,7 +1969,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -1987,7 +1987,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2007,7 +2007,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -2030,7 +2030,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -2039,7 +2039,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -2068,7 +2068,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -2080,7 +2080,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -2098,7 +2098,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2106,7 +2106,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -2115,7 +2115,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -2133,7 +2133,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -2151,7 +2151,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -2164,7 +2164,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -2173,7 +2173,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -2182,7 +2182,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -2193,7 +2193,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -2203,7 +2203,7 @@ instance in a VPC.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -2213,7 +2213,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -2232,7 +2232,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -2241,7 +2241,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -2251,7 +2251,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -2269,7 +2269,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -2278,7 +2278,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -2287,7 +2287,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -2305,7 +2305,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -2321,7 +2321,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -2330,7 +2330,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -2339,7 +2339,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -2348,7 +2348,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -2357,7 +2357,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -2368,7 +2368,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -2386,7 +2386,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2406,7 +2406,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -2429,7 +2429,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -2438,7 +2438,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -2447,7 +2447,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -2467,7 +2467,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -2479,7 +2479,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2505,7 +2505,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -2514,7 +2514,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -2532,7 +2532,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -2550,7 +2550,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -2563,7 +2563,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -2572,7 +2572,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -2581,7 +2581,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -2592,7 +2592,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -2602,7 +2602,7 @@ instance in a VPC.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -2612,7 +2612,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -2631,7 +2631,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -2640,7 +2640,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -2650,7 +2650,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -2668,7 +2668,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -2677,7 +2677,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -2686,7 +2686,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -2704,7 +2704,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -2720,7 +2720,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -2729,7 +2729,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -2738,7 +2738,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -2747,7 +2747,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -2756,7 +2756,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -2767,7 +2767,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -2785,7 +2785,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2805,7 +2805,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -2828,7 +2828,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -2837,7 +2837,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -2846,7 +2846,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -2866,7 +2866,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -2878,7 +2878,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -2896,7 +2896,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2904,7 +2904,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -2913,7 +2913,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -2931,7 +2931,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -2949,7 +2949,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -2962,7 +2962,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -2971,7 +2971,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -2980,7 +2980,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -2991,7 +2991,7 @@ for your VPC
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -3001,7 +3001,7 @@ instance in a VPC.
             title="Optional">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3011,7 +3011,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -3030,7 +3030,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -3039,7 +3039,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -3049,7 +3049,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -3067,7 +3067,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -3076,7 +3076,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -3085,7 +3085,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -3103,7 +3103,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -3119,7 +3119,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -3128,7 +3128,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
@@ -3137,7 +3137,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -3146,7 +3146,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -3155,7 +3155,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu_<wbr>core_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -3166,7 +3166,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu_<wbr>threads_<wbr>per_<wbr>core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -3184,7 +3184,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable_<wbr>api_<wbr>termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -3204,7 +3204,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs_<wbr>optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -3227,7 +3227,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get_<wbr>password_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -3236,7 +3236,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -3245,7 +3245,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -3265,7 +3265,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -3277,7 +3277,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance_<wbr>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
@@ -3295,7 +3295,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6_<wbr>address_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3303,7 +3303,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -3312,7 +3312,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -3330,7 +3330,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -3348,7 +3348,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>password_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Base-64 encoded encrypted password data for the instance.
 Useful for getting the administrator password for instances running Microsoft Windows.
@@ -3361,7 +3361,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>placement_<wbr>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -3370,7 +3370,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>primary_<wbr>network_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance's primary network interface.
 {{% /md %}}</dd>
@@ -3379,7 +3379,7 @@ See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API
             title="Optional">
         <span>private_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3390,7 +3390,7 @@ for your VPC
             title="Optional">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -3400,7 +3400,7 @@ instance in a VPC.
             title="Optional">
         <span>public_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3410,7 +3410,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>public_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
@@ -3429,7 +3429,7 @@ device of the instance. See Block Devices below for details.
             title="Optional, Deprecated">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use of `securityGroups` is discouraged as it does not allow for changes and will force your instance to be replaced if changes are made. To avoid this, use `vpcSecurityGroupIds` which allows for updates.{{% /md %}}</p></dd>
@@ -3438,7 +3438,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source_<wbr>dest_<wbr>check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -3448,7 +3448,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>subnet_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -3466,7 +3466,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -3475,7 +3475,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user_<wbr>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -3484,7 +3484,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>user_<wbr>data_<wbr>base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -3502,7 +3502,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -3527,7 +3527,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceCreditSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceCreditSpecificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceCreditSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceCreditSpecificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3540,7 +3540,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -3556,7 +3556,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -3572,7 +3572,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -3588,7 +3588,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -3606,7 +3606,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceEbsBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceEbsBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3619,7 +3619,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Required">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3628,7 +3628,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -3638,7 +3638,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -3649,7 +3649,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3660,7 +3660,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -3669,7 +3669,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -3678,7 +3678,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3686,7 +3686,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -3695,7 +3695,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -3712,7 +3712,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Required">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3721,7 +3721,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -3731,7 +3731,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -3742,7 +3742,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3753,7 +3753,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -3762,7 +3762,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -3771,7 +3771,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3779,7 +3779,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -3788,7 +3788,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -3805,7 +3805,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Required">
         <span>device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3814,7 +3814,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -3824,7 +3824,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -3835,7 +3835,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3846,7 +3846,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -3855,7 +3855,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -3864,7 +3864,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3872,7 +3872,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -3881,7 +3881,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -3898,7 +3898,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Required">
         <span>device_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3907,7 +3907,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -3917,7 +3917,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -3928,7 +3928,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -3939,7 +3939,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -3948,7 +3948,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>snapshot_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -3957,7 +3957,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3965,7 +3965,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -3974,7 +3974,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -3993,7 +3993,7 @@ or `"io1"`. (Default: `"gp2"`).
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceEphemeralBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceEphemeralBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4006,7 +4006,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Required">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd>
@@ -4015,7 +4015,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4024,7 +4024,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4042,7 +4042,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd>
@@ -4051,7 +4051,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4060,7 +4060,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4078,7 +4078,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd>
@@ -4087,7 +4087,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>no<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4096,7 +4096,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4114,7 +4114,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>device_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the block device to mount on the instance.
 {{% /md %}}</dd>
@@ -4123,7 +4123,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>no<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4132,7 +4132,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4152,7 +4152,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceMetadataOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceMetadataOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceMetadataOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceMetadataOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4165,7 +4165,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -4174,7 +4174,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -4183,7 +4183,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -4199,7 +4199,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -4208,7 +4208,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -4217,7 +4217,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -4233,7 +4233,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -4242,7 +4242,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -4251,7 +4251,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -4267,7 +4267,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -4276,7 +4276,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -4285,7 +4285,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -4303,7 +4303,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceNetworkInterfaceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceNetworkInterfaceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4316,7 +4316,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>Device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
@@ -4325,7 +4325,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -4334,7 +4334,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
@@ -4350,7 +4350,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>Device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
@@ -4359,7 +4359,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -4368,7 +4368,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
@@ -4384,7 +4384,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
@@ -4393,7 +4393,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -4402,7 +4402,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
@@ -4418,7 +4418,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>device_<wbr>index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
@@ -4427,7 +4427,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Required">
         <span>network_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -4436,7 +4436,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
@@ -4454,7 +4454,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#InstanceRootBlockDeviceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#InstanceRootBlockDeviceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4467,7 +4467,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -4477,7 +4477,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4486,7 +4486,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4498,7 +4498,7 @@ using that type
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4507,7 +4507,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4515,7 +4515,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -4524,7 +4524,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4540,7 +4540,7 @@ using that type
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -4550,7 +4550,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4559,7 +4559,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4571,7 +4571,7 @@ using that type
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4580,7 +4580,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4588,7 +4588,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -4597,7 +4597,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4613,7 +4613,7 @@ using that type
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -4623,7 +4623,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4632,7 +4632,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4644,7 +4644,7 @@ using that type
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4653,7 +4653,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4661,7 +4661,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -4670,7 +4670,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4686,7 +4686,7 @@ using that type
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -4696,7 +4696,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4705,7 +4705,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4717,7 +4717,7 @@ using that type
             title="Optional">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -4726,7 +4726,7 @@ using that type
             title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4734,7 +4734,7 @@ using that type
             title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -4743,7 +4743,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>

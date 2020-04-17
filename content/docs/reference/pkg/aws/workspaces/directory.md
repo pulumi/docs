@@ -67,7 +67,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -167,7 +167,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Required">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Required">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Required">
         <span>directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Required">
         <span>directory_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectoryState">DirectoryState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -469,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -512,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -650,7 +650,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/workspaces?tab=doc#DirectorySelfServicePermissionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -663,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -690,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -785,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -828,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -837,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -846,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>

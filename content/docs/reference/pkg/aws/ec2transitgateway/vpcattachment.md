@@ -43,7 +43,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#VpcAttachmentArgs">VpcAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#VpcAttachment">VpcAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#VpcAttachmentArgs">VpcAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#VpcAttachment">VpcAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,7 +143,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -222,7 +222,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -328,7 +328,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -364,7 +364,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>transit_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -398,7 +398,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>dns_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>ipv6_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -434,7 +434,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ A full example of how to create a Transit Gateway in one AWS account, share it w
             title="Optional">
         <span>transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -503,7 +503,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ Get an existing VpcAttachment resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#VpcAttachmentState">VpcAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#VpcAttachment">VpcAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVpcAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#VpcAttachmentState">VpcAttachmentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2transitgateway?tab=doc#VpcAttachment">VpcAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -663,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -735,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -760,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipv6Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Default<wbr>Route<wbr>Table<wbr>Propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipv6_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether IPv6 support is enabled. Valid values: `disable`, `enable`. Default value: `disable`.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>association</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -972,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit_<wbr>gateway_<wbr>default_<wbr>route_<wbr>table_<wbr>propagation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. This cannot be configured or perform drift detection with Resource Access Manager shared EC2 Transit Gateways. Default value: `true`.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -990,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of EC2 VPC.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc_<wbr>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the AWS account that owns the EC2 VPC.
 {{% /md %}}</dd>

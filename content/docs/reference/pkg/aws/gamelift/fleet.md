@@ -47,7 +47,7 @@ const example = new aws.gamelift.Fleet("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetArgs">FleetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -147,7 +147,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>Build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -156,7 +156,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>Ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>Build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>Ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -325,7 +325,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>new<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -492,7 +492,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>build_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Required">
         <span>ec2_<wbr>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -528,7 +528,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>fleet_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>instance_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>metric_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -564,7 +564,7 @@ const example = new aws.gamelift.Fleet("example", {
             title="Optional">
         <span>new_<wbr>game_<wbr>session_<wbr>protection_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following output properties are available:
             title="">
         <span>Log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -636,7 +636,7 @@ The following output properties are available:
             title="">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -652,7 +652,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -661,7 +661,7 @@ The following output properties are available:
             title="">
         <span>Log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -669,7 +669,7 @@ The following output properties are available:
             title="">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -694,7 +694,7 @@ The following output properties are available:
             title="">
         <span>log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -702,7 +702,7 @@ The following output properties are available:
             title="">
         <span>operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ The following output properties are available:
             title="">
         <span>log_<wbr>paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -735,7 +735,7 @@ The following output properties are available:
             title="">
         <span>operating_<wbr>system</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ Get an existing Fleet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetState">FleetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFleet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetState">FleetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#Fleet">Fleet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -879,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -950,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -1056,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -1074,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -1083,7 +1083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -1100,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1109,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>New<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -1161,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>build<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -1179,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -1197,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fleet<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -1224,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1232,7 +1232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metric<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -1241,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>new<wbr>Game<wbr>Session<wbr>Protection<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -1259,7 +1259,7 @@ The following state arguments are supported:
             title="Optional">
         <span>operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -1302,7 +1302,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Fleet ARN.
 {{% /md %}}</dd>
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>build_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the Gamelift Build to be deployed on the fleet.
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the fleet.
 {{% /md %}}</dd>
@@ -1338,7 +1338,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2_<wbr>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an EC2 instance type. e.g. `t2.micro`
 {{% /md %}}</dd>
@@ -1347,7 +1347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fleet_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -1356,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ARN of an IAM role that instances in the fleet can assume.
 {{% /md %}}</dd>
@@ -1365,7 +1365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log_<wbr>paths</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1373,7 +1373,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metric_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
 {{% /md %}}</dd>
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the fleet.
 {{% /md %}}</dd>
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
             title="Optional">
         <span>new_<wbr>game_<wbr>session_<wbr>protection_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game session protection policy to apply to all instances in this fleet. e.g. `FullProtection`. Defaults to `NoProtection`.
 {{% /md %}}</dd>
@@ -1400,7 +1400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>operating_<wbr>system</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operating system of the fleet's computing resources.
 {{% /md %}}</dd>
@@ -1452,7 +1452,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetEc2InboundPermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1465,7 +1465,7 @@ The following state arguments are supported:
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
@@ -1474,7 +1474,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
@@ -1483,7 +1483,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ The following state arguments are supported:
             title="Required">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
             title="Required">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
@@ -1535,7 +1535,7 @@ The following state arguments are supported:
             title="Required">
         <span>To<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
@@ -1551,7 +1551,7 @@ The following state arguments are supported:
             title="Required">
         <span>from<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
@@ -1560,7 +1560,7 @@ The following state arguments are supported:
             title="Required">
         <span>ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
@@ -1569,7 +1569,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
@@ -1578,7 +1578,7 @@ The following state arguments are supported:
             title="Required">
         <span>to<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
@@ -1594,7 +1594,7 @@ The following state arguments are supported:
             title="Required">
         <span>from_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Starting value for a range of allowed port numbers.
 {{% /md %}}</dd>
@@ -1603,7 +1603,7 @@ The following state arguments are supported:
             title="Required">
         <span>ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Range of allowed IP addresses expressed in CIDR notation. e.g. `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
 {{% /md %}}</dd>
@@ -1612,7 +1612,7 @@ The following state arguments are supported:
             title="Required">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network communication protocol used by the fleet. e.g. `TCP` or `UDP`
 {{% /md %}}</dd>
@@ -1621,7 +1621,7 @@ The following state arguments are supported:
             title="Required">
         <span>to_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetResourceCreationLimitPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1652,7 +1652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>New<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
@@ -1661,7 +1661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Period<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
@@ -1677,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>New<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
@@ -1686,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Period<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>new<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
@@ -1711,7 +1711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Period<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
@@ -1727,7 +1727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>new<wbr>Game<wbr>Sessions<wbr>Per<wbr>Creator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions that an individual can create during the policy period.
 {{% /md %}}</dd>
@@ -1736,7 +1736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Period<wbr>In<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Time span used in evaluating the resource creation limit policy.
 {{% /md %}}</dd>
@@ -1754,7 +1754,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1767,7 +1767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
@@ -1776,7 +1776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
@@ -1810,7 +1810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
 {{% /md %}}</dd>
@@ -1835,7 +1835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
@@ -1844,7 +1844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
 {{% /md %}}</dd>
@@ -1869,7 +1869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>game<wbr>Session<wbr>Activation<wbr>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
 {{% /md %}}</dd>
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrent<wbr>Game<wbr>Session<wbr>Activations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously. 
 {{% /md %}}</dd>
@@ -1905,7 +1905,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#FleetRuntimeConfigurationServerProcessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
             title="Required">
         <span>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
             title="Required">
         <span>Launch<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
@@ -1936,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
@@ -1952,7 +1952,7 @@ The following state arguments are supported:
             title="Required">
         <span>Concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
@@ -1961,7 +1961,7 @@ The following state arguments are supported:
             title="Required">
         <span>Launch<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
@@ -1970,7 +1970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
@@ -1986,7 +1986,7 @@ The following state arguments are supported:
             title="Required">
         <span>concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
@@ -1995,7 +1995,7 @@ The following state arguments are supported:
             title="Required">
         <span>launch<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
@@ -2004,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>
@@ -2020,7 +2020,7 @@ The following state arguments are supported:
             title="Required">
         <span>concurrent<wbr>Executions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of server processes using this configuration to run concurrently on an instance.
 {{% /md %}}</dd>
@@ -2029,7 +2029,7 @@ The following state arguments are supported:
             title="Required">
         <span>launch<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
 {{% /md %}}</dd>
@@ -2038,7 +2038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Optional list of parameters to pass to the server executable on launch.
 {{% /md %}}</dd>

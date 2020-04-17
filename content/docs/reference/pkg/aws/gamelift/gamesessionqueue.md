@@ -52,7 +52,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGameSessionQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueueArgs">GameSessionQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueue">GameSessionQueue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGameSessionQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueueArgs">GameSessionQueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueue">GameSessionQueue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -152,7 +152,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>Timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const test = new aws.gamelift.GameSessionQueue("test", {
             title="Optional">
         <span>timeout_<wbr>in_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -450,7 +450,7 @@ Get an existing GameSessionQueue resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameSessionQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueueState">GameSessionQueueState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueue">GameSessionQueue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameSessionQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueueState">GameSessionQueueState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueue">GameSessionQueue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -564,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -695,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -731,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -747,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Game Session Queue ARN.
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destinations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of fleet/alias ARNs used by session queue for placing game sessions.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the session queue.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout_<wbr>in_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum time a game session request can remain in the queue.
 {{% /md %}}</dd>
@@ -817,7 +817,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/gamelift?tab=doc#GameSessionQueuePlayerLatencyPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -830,7 +830,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
 {{% /md %}}</dd>
@@ -880,7 +880,7 @@ The following state arguments are supported:
             title="Required">
         <span>maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
 {{% /md %}}</dd>
@@ -905,7 +905,7 @@ The following state arguments are supported:
             title="Required">
         <span>maximum<wbr>Individual<wbr>Player<wbr>Latency<wbr>Milliseconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum latency value that is allowed for any player.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Duration<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Length of time that the policy is enforced while placing a new game session. Absence of value for this attribute means that the policy is enforced until the queue times out.
 {{% /md %}}</dd>

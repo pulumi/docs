@@ -42,7 +42,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCapacityReservation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCapacityReservation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#CapacityReservationArgs">CapacityReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -142,7 +142,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -151,7 +151,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>End<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>End<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>Instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -390,7 +390,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>end<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>end<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -426,7 +426,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Required">
         <span>instance_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -496,7 +496,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>ebs_<wbr>optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>end_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>end_<wbr>date_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>ephemeral_<wbr>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
             title="Optional">
         <span>instance_<wbr>match_<wbr>criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityReservation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCapacityReservation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#CapacityReservationState">CapacityReservationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#CapacityReservation">CapacityReservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -696,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -705,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -750,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -820,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -847,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -856,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -908,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -926,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -935,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end<wbr>Date<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ephemeral<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -962,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Match<wbr>Criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Availability Zone in which to create the Capacity Reservation.
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs_<wbr>optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
 {{% /md %}}</dd>
@@ -1041,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end_<wbr>date_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ephemeral_<wbr>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of instances for which to reserve capacity.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>match_<wbr>criteria</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
 {{% /md %}}</dd>

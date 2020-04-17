@@ -45,7 +45,7 @@ const testIntegration = new aws.apigateway.Integration("test", {
 const testDeployment = new aws.apigateway.Deployment("test", {
     restApi: testRestApi.id,
     stageName: "dev",
-}, { dependsOn: [testIntegration] });
+}, {dependsOn: [testIntegration]});
 const testStage = new aws.apigateway.Stage("test", {
     deployment: testDeployment.id,
     restApi: testRestApi.id,
@@ -80,7 +80,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMethodSettings<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettingsArgs">MethodSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettings">MethodSettings</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMethodSettings<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsArgs">MethodSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettings">MethodSettings</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -180,7 +180,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>Method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>Stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>Method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>Stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>method_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ const methodSettings = new aws.apigateway.MethodSettings("s", {
             title="Required">
         <span>stage_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ Get an existing MethodSettings resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMethodSettings<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettingsState">MethodSettingsState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettings">MethodSettings</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMethodSettings<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsState">MethodSettingsState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettings">MethodSettings</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -482,7 +482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>method<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -595,7 +595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stage<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -611,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>method_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Method path defined as `{resource_path}/{http_method}` for an individual method override, or `*/*` for overriding all methods in the stage.
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stage_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the stage
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettingsSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#MethodSettingsSettingsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigateway?tab=doc#MethodSettingsSettingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -676,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Data<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
@@ -685,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Ttl<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
@@ -694,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Caching<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Trace<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
@@ -721,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
@@ -730,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
@@ -739,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling<wbr>Burst<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit.
 {{% /md %}}</dd>
@@ -748,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit.
 {{% /md %}}</dd>
@@ -757,7 +757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Data<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Ttl<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
@@ -791,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Caching<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Trace<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
@@ -818,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
@@ -836,7 +836,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling<wbr>Burst<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit.
 {{% /md %}}</dd>
@@ -845,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Throttling<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cache<wbr>Data<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cache<wbr>Ttl<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>caching<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Trace<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
@@ -906,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logging<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>throttling<wbr>Burst<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>throttling<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit.
 {{% /md %}}</dd>
@@ -951,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>
@@ -967,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cache<wbr>Data<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the cached responses are encrypted.
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cache<wbr>Ttl<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>caching<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached. 
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Trace<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logging<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metrics<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether Amazon CloudWatch metrics are enabled for this method.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>require<wbr>Authorization<wbr>For<wbr>Cache<wbr>Control</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether authorization is required for a cache invalidation request.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>throttling<wbr>Burst<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling burst limit.
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>throttling<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Specifies the throttling rate limit.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>unauthorized<wbr>Cache<wbr>Control<wbr>Header<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
 {{% /md %}}</dd>

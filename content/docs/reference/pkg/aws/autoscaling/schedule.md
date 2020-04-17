@@ -54,7 +54,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#ScheduleArgs">ScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -154,7 +154,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
             title="Required">
         <span>Scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ const foobarSchedule = new aws.autoscaling.Schedule("foobar", {
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -191,7 +191,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -201,7 +201,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -211,7 +211,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -237,7 +237,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>Scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -274,7 +274,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -284,7 +284,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -294,7 +294,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -320,7 +320,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -338,7 +338,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -347,7 +347,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>end<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -357,7 +357,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -367,7 +367,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -377,7 +377,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -403,7 +403,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>autoscaling_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Required">
         <span>scheduled_<wbr>action_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -421,7 +421,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>desired_<wbr>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>end_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -440,7 +440,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>max_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -450,7 +450,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>min_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -460,7 +460,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>start_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -498,7 +498,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#ScheduleState">ScheduleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#ScheduleState">ScheduleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/autoscaling?tab=doc#Schedule">Schedule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -690,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -727,7 +727,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -737,7 +737,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -747,7 +747,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -765,7 +765,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -782,7 +782,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -791,7 +791,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -800,7 +800,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>End<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -819,7 +819,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -829,7 +829,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -839,7 +839,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -874,7 +874,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>autoscaling<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -892,7 +892,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>end<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -911,7 +911,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -921,7 +921,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -931,7 +931,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -940,7 +940,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>scheduled<wbr>Action<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -966,7 +966,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN assigned by AWS to the autoscaling schedule.
 {{% /md %}}</dd>
@@ -975,7 +975,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>autoscaling_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name or Amazon Resource Name (ARN) of the Auto Scaling group.
 {{% /md %}}</dd>
@@ -984,7 +984,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>desired_<wbr>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>end_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to end, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.
@@ -1003,7 +1003,7 @@ If you try to schedule your action in the past, Auto Scaling returns an error me
             title="Optional">
         <span>max_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the maximum size at the scheduled time.
@@ -1013,7 +1013,7 @@ Set to -1 if you don't want to change the maximum size at the scheduled time.
             title="Optional">
         <span>min_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum size for the Auto Scaling group. Default 0.
 Set to -1 if you don't want to change the minimum size at the scheduled time.
@@ -1023,7 +1023,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>scheduled_<wbr>action_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of this scaling action.
 {{% /md %}}</dd>
@@ -1041,7 +1041,7 @@ Set to -1 if you don't want to change the minimum size at the scheduled time.
             title="Optional">
         <span>start_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The time for this action to start, in "YYYY-MM-DDThh:mm:ssZ" format in UTC/GMT only (for example, 2014-06-01T00:00:00Z ).
 If you try to schedule your action in the past, Auto Scaling returns an error message.

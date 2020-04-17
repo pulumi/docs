@@ -26,7 +26,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigArgs">FunctionEventInvokeConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,7 +126,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Required">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -144,7 +144,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -153,7 +153,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Required">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Required">
         <span>function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Required">
         <span>function_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>maximum_<wbr>retry_<wbr>attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ Get an existing FunctionEventInvokeConfig resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigState">FunctionEventInvokeConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFunctionEventInvokeConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigState">FunctionEventInvokeConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfig">FunctionEventInvokeConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -473,7 +473,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -586,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -595,7 +595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum<wbr>Retry<wbr>Attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -604,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -629,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum_<wbr>retry_<wbr>attempts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Lambda Function published version, `$LATEST`, or Lambda Alias name.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -796,7 +796,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnFailureOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -809,7 +809,7 @@ The following state arguments are supported:
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ The following state arguments are supported:
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The following state arguments are supported:
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -857,7 +857,7 @@ The following state arguments are supported:
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/lambda?tab=doc#FunctionEventInvokeConfigDestinationConfigOnSuccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -888,7 +888,7 @@ The following state arguments are supported:
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -904,7 +904,7 @@ The following state arguments are supported:
             title="Required">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -920,7 +920,7 @@ The following state arguments are supported:
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following state arguments are supported:
             title="Required">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
 {{% /md %}}</dd>

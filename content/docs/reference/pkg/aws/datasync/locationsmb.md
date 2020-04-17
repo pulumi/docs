@@ -45,7 +45,7 @@ const example = new aws.datasync.LocationSmb("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmbArgs">LocationSmbArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -145,7 +145,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -190,7 +190,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>agent_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>server_<wbr>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Required">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ const example = new aws.datasync.LocationSmb("example", {
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The following output properties are available:
             title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -497,7 +497,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ The following output properties are available:
             title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -521,7 +521,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following output properties are available:
             title="">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -545,7 +545,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ The following output properties are available:
             title="">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -583,7 +583,7 @@ Get an existing LocationSmb resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbState">LocationSmbState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocationSmb<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmbState">LocationSmbState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmb">LocationSmb</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -697,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -751,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -769,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -777,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -847,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>agent<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -898,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -907,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -925,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -934,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -943,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -969,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>agent_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of DataSync Agent ARNs with which this location will be associated.
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Windows domain the SMB server belongs to.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password of the user who can mount the share and has file permissions in the SMB.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server_<wbr>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the IP address or DNS name of the SMB server. The DataSync Agent(s) use this to mount the SMB share.
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Should be exported by the NFS server.
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1065,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user who can mount the share and has file and folder permissions in the SMB share.
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbMountOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#LocationSmbMountOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmbMountOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/datasync?tab=doc#LocationSmbMountOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1103,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>
@@ -1151,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The specific SMB version that you want DataSync to use for mounting your SMB share. Valid values: `AUTOMATIC`, `SMB2`, and `SMB3`. Default: `AUTOMATIC`
 {{% /md %}}</dd>

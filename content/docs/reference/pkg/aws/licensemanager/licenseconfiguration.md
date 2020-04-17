@@ -59,7 +59,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLicenseConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/licensemanager?tab=doc#LicenseConfigurationArgs">LicenseConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/licensemanager?tab=doc#LicenseConfiguration">LicenseConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLicenseConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/licensemanager?tab=doc#LicenseConfigurationArgs">LicenseConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/licensemanager?tab=doc#LicenseConfiguration">LicenseConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -159,7 +159,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Required">
         <span>License<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Required">
         <span>License<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>License<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Required">
         <span>license<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Required">
         <span>license_<wbr>counting_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license_<wbr>count_<wbr>hard_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>license_<wbr>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ Get an existing LicenseConfiguration resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLicenseConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/licensemanager?tab=doc#LicenseConfigurationState">LicenseConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/licensemanager?tab=doc#LicenseConfiguration">LicenseConfiguration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLicenseConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/licensemanager?tab=doc#LicenseConfigurationState">LicenseConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/licensemanager?tab=doc#LicenseConfiguration">LicenseConfiguration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -569,7 +569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -639,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -666,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -675,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -684,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -709,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -727,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Count<wbr>Hard<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -736,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Counting<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>
@@ -779,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the license configuration.
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of licenses managed by the license configuration.
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license_<wbr>count_<wbr>hard_<wbr>limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Sets the number of available licenses as a hard limit.
 {{% /md %}}</dd>
@@ -806,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license_<wbr>counting_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Dimension to use to track license inventory. Specify either `vCPU`, `Instance`, `Core` or `Socket`.
 {{% /md %}}</dd>
@@ -815,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license_<wbr>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Array of configured License Manager rules.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the license configuration.
 {{% /md %}}</dd>

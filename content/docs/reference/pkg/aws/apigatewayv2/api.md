@@ -20,8 +20,7 @@ Manages an Amazon API Gateway Version 2 API.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.Apigatewayv2Api("example", {
-    name: "example-websocket-api",
+const example = new aws.apigatewayv2.Api("example", {
     protocolType: "WEBSOCKET",
     routeSelectionExpression: "$request.body.action",
 });
@@ -35,8 +34,7 @@ const example = new aws.Apigatewayv2Api("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.Apigatewayv2Api("example", {
-    name: "example-http-api",
+const example = new aws.apigatewayv2.Api("example", {
     protocolType: "HTTP",
 });
 ```
@@ -59,7 +57,7 @@ const example = new aws.Apigatewayv2Api("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2?tab=doc#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#ApiArgs">ApiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -159,7 +157,7 @@ const example = new aws.Apigatewayv2Api("example", {
             title="Required">
         <span>Protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -168,7 +166,7 @@ const example = new aws.Apigatewayv2Api("example", {
             title="Optional">
         <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -179,7 +177,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -188,7 +186,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -197,7 +195,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -216,7 +214,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -232,7 +230,7 @@ Defaults to `$request.method $request.path`.
             title="Required">
         <span>Protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -241,7 +239,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -252,7 +250,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -261,7 +259,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -270,7 +268,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -289,7 +287,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -305,7 +303,7 @@ Defaults to `$request.method $request.path`.
             title="Required">
         <span>protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -314,7 +312,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -325,7 +323,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -334,7 +332,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -343,7 +341,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -362,7 +360,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -378,7 +376,7 @@ Defaults to `$request.method $request.path`.
             title="Required">
         <span>protocol_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -387,7 +385,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api_<wbr>key_<wbr>selection_<wbr>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -398,7 +396,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -407,7 +405,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -416,7 +414,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>route_<wbr>selection_<wbr>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -435,7 +433,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -463,7 +461,7 @@ The following output properties are available:
             title="">
         <span>Api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -472,7 +470,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -481,7 +479,7 @@ The following output properties are available:
             title="">
         <span>Execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -499,7 +497,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>Api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -508,7 +506,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -517,7 +515,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>Execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -535,7 +533,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -544,7 +542,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -553,7 +551,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -571,7 +569,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>api_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -580,7 +578,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -589,7 +587,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="">
         <span>execution_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -621,7 +619,7 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2?tab=doc#ApiState">ApiState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigatewayv2?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#ApiState">ApiState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/apigatewayv2?tab=doc#Api">Api</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -735,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -744,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -755,7 +753,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -764,7 +762,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -773,7 +771,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -784,7 +782,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -793,7 +791,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -802,7 +800,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -821,7 +819,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -837,7 +835,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -846,7 +844,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -857,7 +855,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -866,7 +864,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -875,7 +873,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>Execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -886,7 +884,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -895,7 +893,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -904,7 +902,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>Route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -923,7 +921,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -939,7 +937,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -948,7 +946,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api<wbr>Key<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -959,7 +957,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -968,7 +966,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -977,7 +975,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>execution<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -988,7 +986,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -997,7 +995,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>protocol<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -1006,7 +1004,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>route<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -1025,7 +1023,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>
@@ -1041,7 +1039,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 {{% /md %}}</dd>
@@ -1050,7 +1048,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>api_<wbr>key_<wbr>selection_<wbr>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An [API key selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-apikey-selection-expressions).
 Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-key`. Defaults to `$request.header.x-api-key`.
@@ -1061,7 +1059,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the API.
 {{% /md %}}</dd>
@@ -1070,7 +1068,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the API.
 {{% /md %}}</dd>
@@ -1079,7 +1077,7 @@ Applicable for WebSocket APIs.
             title="Optional">
         <span>execution_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN prefix to be used in an [`aws.lambda.Permission`](https://www.terraform.io/docs/providers/aws/r/lambda_permission.html)'s `source_arn` attribute
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
@@ -1090,7 +1088,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API.
 {{% /md %}}</dd>
@@ -1099,7 +1097,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>protocol_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 {{% /md %}}</dd>
@@ -1108,7 +1106,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
             title="Optional">
         <span>route_<wbr>selection_<wbr>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
 Defaults to `$request.method $request.path`.
@@ -1127,7 +1125,7 @@ Defaults to `$request.method $request.path`.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A version identifier for the API.
 {{% /md %}}</dd>

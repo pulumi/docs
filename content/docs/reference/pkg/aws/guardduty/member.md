@@ -26,7 +26,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty?tab=doc#MemberArgs">MemberArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty?tab=doc#Member">Member</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#MemberArgs">MemberArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#Member">Member</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,7 +126,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -135,7 +135,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -144,7 +144,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -153,7 +153,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>Invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>detector_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -327,7 +327,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Required">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>disable_<wbr>email_<wbr>notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>invitation_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
             title="Optional">
         <span>invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ The following output properties are available:
             title="">
         <span>Relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -398,7 +398,7 @@ The following output properties are available:
             title="">
         <span>Relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ The following output properties are available:
             title="">
         <span>relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ The following output properties are available:
             title="">
         <span>relationship_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ Get an existing Member resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty?tab=doc#MemberState">MemberState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/guardduty?tab=doc#Member">Member</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#MemberState">MemberState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/guardduty?tab=doc#Member">Member</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -574,7 +574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -610,7 +610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -662,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -671,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>detector<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disable<wbr>Email<wbr>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -741,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -750,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invitation<wbr>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -759,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -768,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>relationship<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS account ID for member account.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>detector_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The detector ID of the GuardDuty account where you want to create member accounts.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disable_<wbr>email_<wbr>notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email address for member account.
 {{% /md %}}</dd>
@@ -820,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invitation_<wbr>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Message for invitation.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invite</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>relationship_<wbr>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 {{% /md %}}</dd>

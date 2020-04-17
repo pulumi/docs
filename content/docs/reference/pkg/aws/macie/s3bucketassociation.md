@@ -45,7 +45,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewS3BucketAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociationArgs">S3BucketAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociation">S3BucketAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewS3BucketAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationArgs">S3BucketAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociation">S3BucketAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -145,7 +145,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>Member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>Member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Required">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>member_<wbr>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ const example = new aws.macie.S3BucketAssociation("example", {
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ Get an existing S3BucketAssociation resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetS3BucketAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociationState">S3BucketAssociationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociation">S3BucketAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetS3BucketAssociation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationState">S3BucketAssociationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociation">S3BucketAssociation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -447,7 +447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>member<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket that you want to associate with Amazon Macie.
 {{% /md %}}</dd>
@@ -594,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>member_<wbr>account_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Object key prefix identifying one or more S3 objects to which the association applies.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/macie?tab=doc#S3BucketAssociationClassificationTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -641,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Continuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
@@ -651,7 +651,7 @@ The only valid value is the default value, `FULL`.
             title="Optional">
         <span>One<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
@@ -668,7 +668,7 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span>Continuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
@@ -678,7 +678,7 @@ The only valid value is the default value, `FULL`.
             title="Optional">
         <span>One<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
@@ -695,7 +695,7 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span>continuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
@@ -705,7 +705,7 @@ The only valid value is the default value, `FULL`.
             title="Optional">
         <span>one<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
@@ -722,7 +722,7 @@ Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie onl
             title="Optional">
         <span>continuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating that Macie perform a one-time classification of all of the existing objects in the bucket.
 The only valid value is the default value, `FULL`.
@@ -732,7 +732,7 @@ The only valid value is the default value, `FULL`.
             title="Optional">
         <span>one<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A string value indicating whether or not Macie performs a one-time classification of all of the existing objects in the bucket.
 Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.

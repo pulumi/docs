@@ -52,7 +52,7 @@ const example = new aws.xray.SamplingRule("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSamplingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/xray?tab=doc#SamplingRuleArgs">SamplingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/xray?tab=doc#SamplingRule">SamplingRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSamplingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/xray?tab=doc#SamplingRuleArgs">SamplingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/xray?tab=doc#SamplingRule">SamplingRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -152,7 +152,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Optional">
         <span>Rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -294,7 +294,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Optional">
         <span>Rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -436,7 +436,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -454,7 +454,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -463,7 +463,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Optional">
         <span>rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>fixed_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>http_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>reservoir_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>resource_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>service_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>url_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -578,7 +578,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Required">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ const example = new aws.xray.SamplingRule("example", {
             title="Optional">
         <span>rule_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -702,7 +702,7 @@ Get an existing SamplingRule resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSamplingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/xray?tab=doc#SamplingRuleState">SamplingRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/xray?tab=doc#SamplingRule">SamplingRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSamplingRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/xray?tab=doc#SamplingRuleState">SamplingRuleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/xray?tab=doc#SamplingRule">SamplingRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -816,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -861,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -906,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -940,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -958,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -967,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -1064,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -1082,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fixed<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -1100,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -1109,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reservoir<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -1127,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -1136,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rule<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -1145,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -1154,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -1163,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -1172,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the sampling rule.
 {{% /md %}}</dd>
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fixed_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The percentage of matching requests to instrument, after the reservoir is exhausted.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the hostname from a request URL.
 {{% /md %}}</dd>
@@ -1224,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>http_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the HTTP method of a request.
 {{% /md %}}</dd>
@@ -1233,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The priority of the sampling rule.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reservoir_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 {{% /md %}}</dd>
@@ -1251,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the ARN of the AWS resource on which the service runs.
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rule_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the sampling rule.
 {{% /md %}}</dd>
@@ -1269,7 +1269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the `name` that the service uses to identify itself in segments.
 {{% /md %}}</dd>
@@ -1278,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the `origin` that the service uses to identify its type in segments.
 {{% /md %}}</dd>
@@ -1287,7 +1287,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Matches the path from a request URL.
 {{% /md %}}</dd>
@@ -1296,7 +1296,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The version of the sampling rule format (`1` )
 {{% /md %}}</dd>
