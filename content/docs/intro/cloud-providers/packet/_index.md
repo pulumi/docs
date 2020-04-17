@@ -15,7 +15,7 @@ aliases: ["/docs/reference/clouds/packet/"]
 The Packet.net provider for Pulumi can be used to provision any of the cloud resources available in [Packet.net](https://www.packet.com).
 The Packet.net provider must be configured with credentials to deploy and update resources in Packet.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/packet" >}}) for complete details of the available Packet.net provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/packet" >}}) for complete details of the available Packet.net provider APIs.
 
 ## Setup
 

@@ -12,7 +12,7 @@ menu:
 
 The Okta provider for Pulumi can be used to provision any of the resources available in [Okta](https://www.okta.com/).
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/okta" >}}) for complete details of the available Okta provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/okta" >}}) for complete details of the available Okta provider APIs.
 
 ## Setup
 

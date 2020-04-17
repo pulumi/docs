@@ -15,7 +15,7 @@ aliases: ["/docs/reference/clouds/linode/"]
 The Linode provider for Pulumi can be used to provision any of the cloud resources available in [Linode](https://www.linode.com).
 The Linode provider must be configured with credentials to deploy and update resources in Linode.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/linode" >}}) for complete details of the available Linode provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/linode" >}}) for complete details of the available Linode provider APIs.
 
 ## Setup
 
