@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing consul resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-consul` repo](https://github.com/pulumi/pulumi-consul/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-consul` repo](https://github.com/terraform-providers/terraform-provider-consul/issues).
-
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="aclauthmethod" title="AclAuthMethod"><span class="symbol resource"></span>AclAuthMethod</a></li>
@@ -64,6 +59,9 @@ A Pulumi package for creating and managing consul resources.
 	<dd><a href="https://github.com/pulumi/pulumi-consul">https://github.com/pulumi/pulumi-consul</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/terraform-providers/terraform-provider-consul).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

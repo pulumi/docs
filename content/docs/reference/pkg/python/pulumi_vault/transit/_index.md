@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_vault.transit.SecretBackendKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.transit.</code><code class="sig-name descname">SecretBackendKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_plaintext_backup=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">convergent_encryption=None</em>, <em class="sig-param">deletion_allowed=None</em>, <em class="sig-param">derived=None</em>, <em class="sig-param">exportable=None</em>, <em class="sig-param">min_decryption_version=None</em>, <em class="sig-param">min_encryption_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.transit.SecretBackendKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Encryption Keyring on a Transit Secret Backend for Vault.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_key.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -259,9 +256,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.transit.SecretCacheConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.transit.</code><code class="sig-name descname">SecretCacheConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.transit.SecretCacheConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configure the cache for the Transit Secret Backend in Vault.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_cache_config.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/transit_secret_backend_cache_config.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

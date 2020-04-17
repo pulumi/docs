@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a Github Auth mount in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -325,9 +322,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Teams authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -498,9 +492,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Users authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
