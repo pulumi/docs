@@ -7,7 +7,9 @@ block_external_search_index: true
 
 
 `f5bigip.sys.Provision` provides details bout how to enable "ilx", "asm" "apm" resource on BIG-IP
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 
 ```typescript
@@ -24,7 +26,8 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -41,7 +44,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvision<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#ProvisionArgs">ProvisionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#Provision">Provision</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvision<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#ProvisionArgs">ProvisionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#Provision">Provision</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -141,7 +144,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -150,7 +153,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -159,7 +162,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -168,7 +171,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -177,7 +180,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -186,7 +189,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -202,7 +205,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -211,7 +214,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -220,7 +223,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -229,7 +232,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -238,7 +241,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -247,7 +250,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>Memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -263,7 +266,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -272,7 +275,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -281,7 +284,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -290,7 +293,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -299,7 +302,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -308,7 +311,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -324,7 +327,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -333,7 +336,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>cpu_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -342,7 +345,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>disk_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -351,7 +354,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>full_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -360,7 +363,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -369,7 +372,7 @@ const test_provision = new f5bigip.sys.Provision("test-provision", {
             title="Optional">
         <span>memory_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -401,7 +404,7 @@ Get an existing Provision resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProvision<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#ProvisionState">ProvisionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/go/f5bigip/sys?tab=doc#Provision">Provision</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProvision<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#ProvisionState">ProvisionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-f5bigip/sdk/v2/go/f5bigip/sys?tab=doc#Provision">Provision</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -515,7 +518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -524,7 +527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -533,7 +536,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -542,7 +545,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -551,7 +554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -560,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -576,7 +579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -585,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -594,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -603,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -612,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -621,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -637,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cpu<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -646,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -655,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>full<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -664,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -673,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>memory<wbr>Ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -682,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -698,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cpu_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}cpu Ratio
 {{% /md %}}</dd>
@@ -707,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}disk Ratio
 {{% /md %}}</dd>
@@ -716,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>full_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}path
 {{% /md %}}</dd>
@@ -725,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}what level nominal or dedicated
 {{% /md %}}</dd>
@@ -734,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>memory_<wbr>ratio</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}memory Ratio
 {{% /md %}}</dd>
@@ -743,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the module to be provisioned
 {{% /md %}}</dd>
@@ -767,6 +770,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 </dl>
 
