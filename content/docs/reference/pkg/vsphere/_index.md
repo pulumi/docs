@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating vsphere resources
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-vsphere` repo](https://github.com/pulumi/pulumi-vsphere/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-vsphere` repo](https://github.com/terraform-providers/terraform-provider-vsphere/issues).
-
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="computecluster" title="ComputeCluster"><span class="symbol resource"></span>ComputeCluster</a></li>
@@ -85,6 +80,7 @@ A Pulumi package for creating vsphere resources
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

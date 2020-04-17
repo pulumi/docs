@@ -19,7 +19,9 @@ For more information on vSphere HA, see [this page][ref-vsphere-ha-clusters].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The example below creates a virtual machine in a cluster using the
 [`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
@@ -43,21 +45,21 @@ failure.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}, { async: true }));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}, { async: true }));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}, { async: true }));
+});
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: datastore.id,
     disks: [{
@@ -79,7 +81,8 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -96,7 +99,7 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHaVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HaVmOverrideArgs">HaVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HaVmOverride">HaVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHaVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HaVmOverrideArgs">HaVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HaVmOverride">HaVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -196,7 +199,7 @@ const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -207,7 +210,7 @@ resource if changed.
             title="Required">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -217,7 +220,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -230,7 +233,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -243,7 +246,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -256,7 +259,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -269,7 +272,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -281,7 +284,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -292,7 +295,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -306,7 +309,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -317,7 +320,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -328,7 +331,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -339,7 +342,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -351,7 +354,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -363,7 +366,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -382,7 +385,7 @@ specify the cluster default.  Default: `-1`.
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -393,7 +396,7 @@ resource if changed.
             title="Required">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -403,7 +406,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -416,7 +419,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -429,7 +432,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -442,7 +445,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -455,7 +458,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -467,7 +470,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -478,7 +481,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -492,7 +495,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -503,7 +506,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -514,7 +517,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -525,7 +528,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -537,7 +540,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -549,7 +552,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -568,7 +571,7 @@ specify the cluster default.  Default: `-1`.
             title="Required">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -579,7 +582,7 @@ resource if changed.
             title="Required">
         <span>virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -589,7 +592,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -602,7 +605,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -615,7 +618,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -628,7 +631,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -641,7 +644,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -653,7 +656,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -664,7 +667,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -678,7 +681,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -689,7 +692,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -700,7 +703,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -711,7 +714,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -723,7 +726,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -735,7 +738,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -754,7 +757,7 @@ specify the cluster default.  Default: `-1`.
             title="Required">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -765,7 +768,7 @@ resource if changed.
             title="Required">
         <span>virtual_<wbr>machine_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -775,7 +778,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -788,7 +791,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -801,7 +804,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -814,7 +817,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>pdl_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -827,7 +830,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>ha_<wbr>host_<wbr>isolation_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -839,7 +842,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>ha_<wbr>vm_<wbr>failure_<wbr>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -850,7 +853,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -864,7 +867,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>maximum_<wbr>resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -875,7 +878,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>minimum_<wbr>uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -886,7 +889,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -897,7 +900,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>ha_<wbr>vm_<wbr>monitoring_<wbr>use_<wbr>cluster_<wbr>defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -909,7 +912,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>ha_<wbr>vm_<wbr>restart_<wbr>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -921,7 +924,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>ha_<wbr>vm_<wbr>restart_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -956,7 +959,7 @@ Get an existing HaVmOverride resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HaVmOverrideState">HaVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HaVmOverride">HaVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHaVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HaVmOverrideState">HaVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HaVmOverride">HaVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1070,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -1081,7 +1084,7 @@ resource if changed.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -1094,7 +1097,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -1107,7 +1110,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -1120,7 +1123,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -1133,7 +1136,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -1145,7 +1148,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -1156,7 +1159,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -1170,7 +1173,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -1181,7 +1184,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -1192,7 +1195,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -1203,7 +1206,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -1215,7 +1218,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -1227,7 +1230,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -1239,7 +1242,7 @@ specify the cluster default.  Default: `-1`.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -1256,7 +1259,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -1267,7 +1270,7 @@ resource if changed.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -1280,7 +1283,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -1293,7 +1296,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -1306,7 +1309,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>Ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -1319,7 +1322,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>Ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -1331,7 +1334,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -1342,7 +1345,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -1356,7 +1359,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -1367,7 +1370,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -1378,7 +1381,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -1389,7 +1392,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -1401,7 +1404,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -1413,7 +1416,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>Ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -1425,7 +1428,7 @@ specify the cluster default.  Default: `-1`.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -1442,7 +1445,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -1453,7 +1456,7 @@ resource if changed.
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Recovery<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -1466,7 +1469,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -1479,7 +1482,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Apd<wbr>Response<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -1492,7 +1495,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>ha<wbr>Datastore<wbr>Pdl<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -1505,7 +1508,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>ha<wbr>Host<wbr>Isolation<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -1517,7 +1520,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>ha<wbr>Vm<wbr>Failure<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -1528,7 +1531,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>ha<wbr>Vm<wbr>Maximum<wbr>Failure<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -1542,7 +1545,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Maximum<wbr>Resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -1553,7 +1556,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Minimum<wbr>Uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -1564,7 +1567,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>ha<wbr>Vm<wbr>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -1575,7 +1578,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>ha<wbr>Vm<wbr>Monitoring<wbr>Use<wbr>Cluster<wbr>Defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -1587,7 +1590,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>ha<wbr>Vm<wbr>Restart<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -1599,7 +1602,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>ha<wbr>Vm<wbr>Restart<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -1611,7 +1614,7 @@ specify the cluster default.  Default: `-1`.
             title="Optional">
         <span>virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -1628,7 +1631,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -1639,7 +1642,7 @@ resource if changed.
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>recovery_<wbr>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
@@ -1652,7 +1655,7 @@ the middle of an APD event. Can be one of `useClusterDefault`, `none` or
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected loss to all paths to a relevant
@@ -1665,7 +1668,7 @@ datastore. Can be one of `clusterDefault`, `disabled`, `warning`,
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>apd_<wbr>response_<wbr>delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Controls the delay in minutes
 to wait after an APD timeout event to execute the response action defined in
@@ -1678,7 +1681,7 @@ the cluster default. Default: `-1`.
             title="Optional">
         <span>ha_<wbr>datastore_<wbr>pdl_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls the action to take on this
 virtual machine when the cluster has detected a permanent device loss to a
@@ -1691,7 +1694,7 @@ relevant datastore. Can be one of `clusterDefault`, `disabled`, `warning`, or
             title="Optional">
         <span>ha_<wbr>host_<wbr>isolation_<wbr>response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The action to take on this virtual
 machine when a host has detected that it has been isolated from the rest of
@@ -1703,7 +1706,7 @@ the cluster. Can be one of `clusterIsolationResponse`, `none`, `powerOff`, or
             title="Optional">
         <span>ha_<wbr>vm_<wbr>failure_<wbr>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}If a heartbeat from this virtual
 machine is not received within this configured interval, the virtual machine
@@ -1714,7 +1717,7 @@ is marked as failed. The value is in seconds. Default: `30`.
             title="Optional">
         <span>ha_<wbr>vm_<wbr>maximum_<wbr>failure_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The length of the reset window in
 which `ha_vm_maximum_resets` can operate. When this
@@ -1728,7 +1731,7 @@ unlimited reset time is allotted. The value is specified in seconds. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>maximum_<wbr>resets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of resets that HA will
 perform to this virtual machine when responding to a failure event. Default:
@@ -1739,7 +1742,7 @@ perform to this virtual machine when responding to a failure event. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>minimum_<wbr>uptime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that HA waits after
 powering on this virtual machine before monitoring for heartbeats. Default:
@@ -1750,7 +1753,7 @@ powering on this virtual machine before monitoring for heartbeats. Default:
             title="Optional">
         <span>ha_<wbr>vm_<wbr>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of virtual machine monitoring to use
 when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
@@ -1761,7 +1764,7 @@ when HA is enabled in the cluster. Can be one of `vmMonitoringDisabled`,
             title="Optional">
         <span>ha_<wbr>vm_<wbr>monitoring_<wbr>use_<wbr>cluster_<wbr>defaults</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether or
 not the cluster's default settings or the VM override settings specified in
@@ -1773,7 +1776,7 @@ this resource are used for virtual machine monitoring. The default is `true`
             title="Optional">
         <span>ha_<wbr>vm_<wbr>restart_<wbr>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The restart priority for the virtual
 machine when vSphere detects a host failure. Can be one of
@@ -1785,7 +1788,7 @@ Default: `clusterRestartPriority`.
             title="Optional">
         <span>ha_<wbr>vm_<wbr>restart_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum time, in seconds, that
 vSphere HA will wait for this virtual machine to be ready. Use `-1` to
@@ -1797,7 +1800,7 @@ specify the cluster default.  Default: `-1`.
             title="Optional">
         <span>virtual_<wbr>machine_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -1822,6 +1825,7 @@ the override for.  Forces a new resource if changed.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

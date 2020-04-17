@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchArgs">DistributedVirtualSwitchArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Required">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -132,7 +132,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -144,7 +144,7 @@ here for more details.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -155,7 +155,7 @@ address than that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -165,7 +165,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -175,7 +175,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>Block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -186,7 +186,7 @@ virtual devices.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -196,7 +196,7 @@ to detect NIC failure.
             title="Optional">
         <span>Contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -206,7 +206,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>Contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -228,7 +228,7 @@ for custom attributes.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ for custom attributes.
             title="Optional">
         <span>Directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -247,7 +247,7 @@ for which this policy applies to.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -257,7 +257,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -267,7 +267,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -277,7 +277,7 @@ on the port for egress traffic.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -287,7 +287,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -297,7 +297,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -343,7 +343,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ options are:
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -399,7 +399,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -409,7 +409,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -419,7 +419,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -429,7 +429,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -440,7 +440,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -458,7 +458,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -476,7 +476,7 @@ below.
             title="Optional">
         <span>Lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -487,7 +487,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>Lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -497,7 +497,7 @@ applies to.
             title="Optional">
         <span>Lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ applies to.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -516,7 +516,7 @@ for link discovery traffic.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -526,7 +526,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -572,7 +572,7 @@ switch.
             title="Optional">
         <span>Multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -582,7 +582,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -602,7 +602,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -613,7 +613,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -623,7 +623,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -633,7 +633,7 @@ applies to.
             title="Optional">
         <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -644,7 +644,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -655,7 +655,7 @@ Default: `false`.
             title="Optional">
         <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -665,7 +665,7 @@ the Netflow collector.
             title="Optional">
         <span>Netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -677,7 +677,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -687,7 +687,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -697,7 +697,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -743,7 +743,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -753,7 +753,7 @@ ID when using private VLANs.
             title="Optional">
         <span>Standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -765,7 +765,7 @@ here for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -775,7 +775,7 @@ here for more details.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -786,7 +786,7 @@ here for more details.
             title="Optional">
         <span>Tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -796,7 +796,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -809,7 +809,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -818,7 +818,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -836,7 +836,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -845,7 +845,7 @@ use this option.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -857,7 +857,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -866,7 +866,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ downgraded.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -923,7 +923,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -932,7 +932,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ below:
             title="Required">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -1003,7 +1003,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -1015,7 +1015,7 @@ here for more details.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -1026,7 +1026,7 @@ address than that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -1036,7 +1036,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -1046,7 +1046,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>Block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -1057,7 +1057,7 @@ virtual devices.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -1067,7 +1067,7 @@ to detect NIC failure.
             title="Optional">
         <span>Contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -1077,7 +1077,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>Contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -1099,7 +1099,7 @@ for custom attributes.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ for custom attributes.
             title="Optional">
         <span>Directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -1118,7 +1118,7 @@ for which this policy applies to.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -1128,7 +1128,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -1138,7 +1138,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -1148,7 +1148,7 @@ on the port for egress traffic.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -1158,7 +1158,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -1168,7 +1168,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1177,7 +1177,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1186,7 +1186,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1195,7 +1195,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1204,7 +1204,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -1214,7 +1214,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1223,7 +1223,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1241,7 +1241,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ options are:
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -1270,7 +1270,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -1280,7 +1280,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -1290,7 +1290,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -1300,7 +1300,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -1311,7 +1311,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1329,7 +1329,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1338,7 +1338,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1347,7 +1347,7 @@ below.
             title="Optional">
         <span>Lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -1358,7 +1358,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>Lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -1368,7 +1368,7 @@ applies to.
             title="Optional">
         <span>Lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -1377,7 +1377,7 @@ applies to.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -1387,7 +1387,7 @@ for link discovery traffic.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -1397,7 +1397,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1406,7 +1406,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1415,7 +1415,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1424,7 +1424,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1433,7 +1433,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -1443,7 +1443,7 @@ switch.
             title="Optional">
         <span>Multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -1453,7 +1453,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -1473,7 +1473,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -1484,7 +1484,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -1494,7 +1494,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -1504,7 +1504,7 @@ applies to.
             title="Optional">
         <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -1515,7 +1515,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -1526,7 +1526,7 @@ Default: `false`.
             title="Optional">
         <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -1536,7 +1536,7 @@ the Netflow collector.
             title="Optional">
         <span>Netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -1548,7 +1548,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -1558,7 +1558,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -1568,7 +1568,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1577,7 +1577,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1586,7 +1586,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1595,7 +1595,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -1614,7 +1614,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -1624,7 +1624,7 @@ ID when using private VLANs.
             title="Optional">
         <span>Standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -1636,7 +1636,7 @@ here for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -1646,7 +1646,7 @@ here for more details.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -1657,7 +1657,7 @@ here for more details.
             title="Optional">
         <span>Tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -1667,7 +1667,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -1680,7 +1680,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1689,7 +1689,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1698,7 +1698,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1707,7 +1707,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1716,7 +1716,7 @@ use this option.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -1728,7 +1728,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1737,7 +1737,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1746,7 +1746,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1755,7 +1755,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1764,7 +1764,7 @@ downgraded.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -1785,7 +1785,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1794,7 +1794,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1803,7 +1803,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1812,7 +1812,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1830,7 +1830,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -1839,7 +1839,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -1848,7 +1848,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -1864,7 +1864,7 @@ below:
             title="Required">
         <span>datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -1874,7 +1874,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -1886,7 +1886,7 @@ here for more details.
             title="Optional">
         <span>allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -1897,7 +1897,7 @@ address than that of its own.
             title="Optional">
         <span>allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -1907,7 +1907,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -1917,7 +1917,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -1928,7 +1928,7 @@ virtual devices.
             title="Optional">
         <span>check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -1938,7 +1938,7 @@ to detect NIC failure.
             title="Optional">
         <span>contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -1948,7 +1948,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -1970,7 +1970,7 @@ for custom attributes.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -1979,7 +1979,7 @@ for custom attributes.
             title="Optional">
         <span>directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -1989,7 +1989,7 @@ for which this policy applies to.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -1999,7 +1999,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -2009,7 +2009,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -2019,7 +2019,7 @@ on the port for egress traffic.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -2029,7 +2029,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -2039,7 +2039,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2057,7 +2057,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2066,7 +2066,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2075,7 +2075,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -2085,7 +2085,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2094,7 +2094,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2103,7 +2103,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2112,7 +2112,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2131,7 +2131,7 @@ options are:
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -2141,7 +2141,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -2151,7 +2151,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -2161,7 +2161,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -2171,7 +2171,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -2182,7 +2182,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2191,7 +2191,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2200,7 +2200,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2209,7 +2209,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2218,7 +2218,7 @@ below.
             title="Optional">
         <span>lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -2229,7 +2229,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -2239,7 +2239,7 @@ applies to.
             title="Optional">
         <span>lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -2248,7 +2248,7 @@ applies to.
             title="Optional">
         <span>link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -2258,7 +2258,7 @@ for link discovery traffic.
             title="Optional">
         <span>link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -2268,7 +2268,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2277,7 +2277,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2286,7 +2286,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2295,7 +2295,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2304,7 +2304,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -2314,7 +2314,7 @@ switch.
             title="Optional">
         <span>multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -2324,7 +2324,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -2333,7 +2333,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -2344,7 +2344,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -2355,7 +2355,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -2365,7 +2365,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -2375,7 +2375,7 @@ applies to.
             title="Optional">
         <span>netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -2386,7 +2386,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -2397,7 +2397,7 @@ Default: `false`.
             title="Optional">
         <span>netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -2407,7 +2407,7 @@ the Netflow collector.
             title="Optional">
         <span>netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -2419,7 +2419,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -2429,7 +2429,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -2439,7 +2439,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2448,7 +2448,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2457,7 +2457,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2466,7 +2466,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2475,7 +2475,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -2485,7 +2485,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -2495,7 +2495,7 @@ ID when using private VLANs.
             title="Optional">
         <span>standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -2507,7 +2507,7 @@ here for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -2517,7 +2517,7 @@ here for more details.
             title="Optional">
         <span>teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -2528,7 +2528,7 @@ here for more details.
             title="Optional">
         <span>tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -2538,7 +2538,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -2551,7 +2551,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2560,7 +2560,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2569,7 +2569,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2578,7 +2578,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2587,7 +2587,7 @@ use this option.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -2599,7 +2599,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2608,7 +2608,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2617,7 +2617,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2626,7 +2626,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2635,7 +2635,7 @@ downgraded.
             title="Optional">
         <span>vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -2656,7 +2656,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2665,7 +2665,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2674,7 +2674,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2683,7 +2683,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2692,7 +2692,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2701,7 +2701,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2710,7 +2710,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2719,7 +2719,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2735,7 +2735,7 @@ below:
             title="Required">
         <span>datacenter_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -2745,7 +2745,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>active_<wbr>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -2757,7 +2757,7 @@ here for more details.
             title="Optional">
         <span>allow_<wbr>forged_<wbr>transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -2768,7 +2768,7 @@ address than that of its own.
             title="Optional">
         <span>allow_<wbr>mac_<wbr>changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -2778,7 +2778,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>allow_<wbr>promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -2788,7 +2788,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>block_<wbr>all_<wbr>ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -2799,7 +2799,7 @@ virtual devices.
             title="Optional">
         <span>check_<wbr>beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -2809,7 +2809,7 @@ to detect NIC failure.
             title="Optional">
         <span>contact_<wbr>detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -2819,7 +2819,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>contact_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -2841,7 +2841,7 @@ for custom attributes.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -2850,7 +2850,7 @@ for custom attributes.
             title="Optional">
         <span>directpath_<wbr>gen2_<wbr>allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -2860,7 +2860,7 @@ for which this policy applies to.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -2870,7 +2870,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -2880,7 +2880,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -2890,7 +2890,7 @@ on the port for egress traffic.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -2900,7 +2900,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -2910,7 +2910,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2919,7 +2919,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2928,7 +2928,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2937,7 +2937,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -2946,7 +2946,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -2956,7 +2956,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2965,7 +2965,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -2974,7 +2974,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -2983,7 +2983,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3002,7 +3002,7 @@ options are:
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -3012,7 +3012,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -3022,7 +3022,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -3032,7 +3032,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -3042,7 +3042,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ipv4_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -3053,7 +3053,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3062,7 +3062,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3071,7 +3071,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3080,7 +3080,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3089,7 +3089,7 @@ below.
             title="Optional">
         <span>lacp_<wbr>api_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -3100,7 +3100,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>lacp_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -3110,7 +3110,7 @@ applies to.
             title="Optional">
         <span>lacp_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -3119,7 +3119,7 @@ applies to.
             title="Optional">
         <span>link_<wbr>discovery_<wbr>operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -3129,7 +3129,7 @@ for link discovery traffic.
             title="Optional">
         <span>link_<wbr>discovery_<wbr>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -3139,7 +3139,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3148,7 +3148,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3157,7 +3157,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3166,7 +3166,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3175,7 +3175,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>max_<wbr>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -3185,7 +3185,7 @@ switch.
             title="Optional">
         <span>multicast_<wbr>filtering_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -3195,7 +3195,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -3204,7 +3204,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>netflow_<wbr>active_<wbr>flow_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -3215,7 +3215,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>netflow_<wbr>collector_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -3226,7 +3226,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow_<wbr>collector_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -3236,7 +3236,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -3246,7 +3246,7 @@ applies to.
             title="Optional">
         <span>netflow_<wbr>idle_<wbr>flow_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -3257,7 +3257,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>netflow_<wbr>internal_<wbr>flows_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -3268,7 +3268,7 @@ Default: `false`.
             title="Optional">
         <span>netflow_<wbr>observation_<wbr>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -3278,7 +3278,7 @@ the Netflow collector.
             title="Optional">
         <span>netflow_<wbr>sampling_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -3290,7 +3290,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>network_<wbr>resource_<wbr>control_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -3300,7 +3300,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>network_<wbr>resource_<wbr>control_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -3310,7 +3310,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3319,7 +3319,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3328,7 +3328,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3337,7 +3337,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3346,7 +3346,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>notify_<wbr>switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -3356,7 +3356,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -3366,7 +3366,7 @@ ID when using private VLANs.
             title="Optional">
         <span>standby_<wbr>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -3378,7 +3378,7 @@ here for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -3388,7 +3388,7 @@ here for more details.
             title="Optional">
         <span>teaming_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -3399,7 +3399,7 @@ here for more details.
             title="Optional">
         <span>tx_<wbr>uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -3409,7 +3409,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -3422,7 +3422,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3431,7 +3431,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3440,7 +3440,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3449,7 +3449,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3458,7 +3458,7 @@ use this option.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -3470,7 +3470,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3479,7 +3479,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3488,7 +3488,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3497,7 +3497,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3506,7 +3506,7 @@ downgraded.
             title="Optional">
         <span>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -3527,7 +3527,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3536,7 +3536,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3545,7 +3545,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3554,7 +3554,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3563,7 +3563,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3572,7 +3572,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -3581,7 +3581,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -3590,7 +3590,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -3618,7 +3618,7 @@ The following output properties are available:
             title="">
         <span>Config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -3634,7 +3634,7 @@ The following output properties are available:
             title="">
         <span>Config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -3650,7 +3650,7 @@ The following output properties are available:
             title="">
         <span>config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -3666,7 +3666,7 @@ The following output properties are available:
             title="">
         <span>config_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -3696,7 +3696,7 @@ Get an existing DistributedVirtualSwitch resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDistributedVirtualSwitch<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchState">DistributedVirtualSwitchState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitch">DistributedVirtualSwitch</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -3810,7 +3810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -3822,7 +3822,7 @@ here for more details.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -3833,7 +3833,7 @@ address than that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -3843,7 +3843,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -3853,7 +3853,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>Block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -3864,7 +3864,7 @@ virtual devices.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -3874,7 +3874,7 @@ to detect NIC failure.
             title="Optional">
         <span>Config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -3883,7 +3883,7 @@ to detect NIC failure.
             title="Optional">
         <span>Contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -3893,7 +3893,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>Contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -3915,7 +3915,7 @@ for custom attributes.
             title="Optional">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -3925,7 +3925,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -3934,7 +3934,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -3944,7 +3944,7 @@ for which this policy applies to.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -3954,7 +3954,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -3964,7 +3964,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -3974,7 +3974,7 @@ on the port for egress traffic.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -3984,7 +3984,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -3994,7 +3994,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4003,7 +4003,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4012,7 +4012,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4021,7 +4021,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4030,7 +4030,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -4040,7 +4040,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4049,7 +4049,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4058,7 +4058,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4067,7 +4067,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4086,7 +4086,7 @@ options are:
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -4096,7 +4096,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -4106,7 +4106,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -4116,7 +4116,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -4126,7 +4126,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -4137,7 +4137,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4146,7 +4146,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4155,7 +4155,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4164,7 +4164,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4173,7 +4173,7 @@ below.
             title="Optional">
         <span>Lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -4184,7 +4184,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>Lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -4194,7 +4194,7 @@ applies to.
             title="Optional">
         <span>Lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -4203,7 +4203,7 @@ applies to.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -4213,7 +4213,7 @@ for link discovery traffic.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -4223,7 +4223,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4232,7 +4232,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4241,7 +4241,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4250,7 +4250,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4259,7 +4259,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -4269,7 +4269,7 @@ switch.
             title="Optional">
         <span>Multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -4279,7 +4279,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -4288,7 +4288,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -4299,7 +4299,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -4310,7 +4310,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -4320,7 +4320,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -4330,7 +4330,7 @@ applies to.
             title="Optional">
         <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -4341,7 +4341,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -4352,7 +4352,7 @@ Default: `false`.
             title="Optional">
         <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -4362,7 +4362,7 @@ the Netflow collector.
             title="Optional">
         <span>Netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -4374,7 +4374,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -4384,7 +4384,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -4394,7 +4394,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4403,7 +4403,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4412,7 +4412,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4421,7 +4421,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4430,7 +4430,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -4440,7 +4440,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -4450,7 +4450,7 @@ ID when using private VLANs.
             title="Optional">
         <span>Standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -4462,7 +4462,7 @@ here for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -4472,7 +4472,7 @@ here for more details.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -4483,7 +4483,7 @@ here for more details.
             title="Optional">
         <span>Tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -4493,7 +4493,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -4506,7 +4506,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4515,7 +4515,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4524,7 +4524,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4533,7 +4533,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4542,7 +4542,7 @@ use this option.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -4554,7 +4554,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4563,7 +4563,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4572,7 +4572,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4581,7 +4581,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4590,7 +4590,7 @@ downgraded.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -4611,7 +4611,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4620,7 +4620,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4629,7 +4629,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4638,7 +4638,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4647,7 +4647,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4656,7 +4656,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4665,7 +4665,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4674,7 +4674,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4690,7 +4690,7 @@ below:
             title="Optional">
         <span>Active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -4702,7 +4702,7 @@ here for more details.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -4713,7 +4713,7 @@ address than that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -4723,7 +4723,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -4733,7 +4733,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>Block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -4744,7 +4744,7 @@ virtual devices.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -4754,7 +4754,7 @@ to detect NIC failure.
             title="Optional">
         <span>Config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -4763,7 +4763,7 @@ to detect NIC failure.
             title="Optional">
         <span>Contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -4773,7 +4773,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>Contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -4795,7 +4795,7 @@ for custom attributes.
             title="Optional">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -4805,7 +4805,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -4814,7 +4814,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>Directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -4824,7 +4824,7 @@ for which this policy applies to.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -4834,7 +4834,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -4844,7 +4844,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -4854,7 +4854,7 @@ on the port for egress traffic.
             title="Optional">
         <span>Egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -4864,7 +4864,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -4874,7 +4874,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4883,7 +4883,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4892,7 +4892,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4901,7 +4901,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4910,7 +4910,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -4920,7 +4920,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4929,7 +4929,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -4938,7 +4938,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -4947,7 +4947,7 @@ if changed.
             title="Optional">
         <span>Hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -4966,7 +4966,7 @@ options are:
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -4976,7 +4976,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -4986,7 +4986,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -4996,7 +4996,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>Ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -5006,7 +5006,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>Ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -5017,7 +5017,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5026,7 +5026,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5035,7 +5035,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5044,7 +5044,7 @@ below.
             title="Optional">
         <span>Iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5053,7 +5053,7 @@ below.
             title="Optional">
         <span>Lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -5064,7 +5064,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>Lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -5074,7 +5074,7 @@ applies to.
             title="Optional">
         <span>Lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -5083,7 +5083,7 @@ applies to.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -5093,7 +5093,7 @@ for link discovery traffic.
             title="Optional">
         <span>Link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -5103,7 +5103,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5112,7 +5112,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5121,7 +5121,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5130,7 +5130,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5139,7 +5139,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>Max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -5149,7 +5149,7 @@ switch.
             title="Optional">
         <span>Multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -5159,7 +5159,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -5168,7 +5168,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>Netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -5179,7 +5179,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -5190,7 +5190,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -5200,7 +5200,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>Netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -5210,7 +5210,7 @@ applies to.
             title="Optional">
         <span>Netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -5221,7 +5221,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>Netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -5232,7 +5232,7 @@ Default: `false`.
             title="Optional">
         <span>Netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -5242,7 +5242,7 @@ the Netflow collector.
             title="Optional">
         <span>Netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -5254,7 +5254,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -5264,7 +5264,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>Network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -5274,7 +5274,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5283,7 +5283,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5292,7 +5292,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5301,7 +5301,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5310,7 +5310,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -5320,7 +5320,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>Port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -5330,7 +5330,7 @@ ID when using private VLANs.
             title="Optional">
         <span>Standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -5342,7 +5342,7 @@ here for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -5352,7 +5352,7 @@ here for more details.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -5363,7 +5363,7 @@ here for more details.
             title="Optional">
         <span>Tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -5373,7 +5373,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -5386,7 +5386,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5395,7 +5395,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5404,7 +5404,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5413,7 +5413,7 @@ use this option.
             title="Optional">
         <span>Vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5422,7 +5422,7 @@ use this option.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -5434,7 +5434,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5443,7 +5443,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5452,7 +5452,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5461,7 +5461,7 @@ downgraded.
             title="Optional">
         <span>Virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5470,7 +5470,7 @@ downgraded.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -5491,7 +5491,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5500,7 +5500,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5509,7 +5509,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5518,7 +5518,7 @@ below:
             title="Optional">
         <span>Vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5527,7 +5527,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5536,7 +5536,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5545,7 +5545,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5554,7 +5554,7 @@ below:
             title="Optional">
         <span>Vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5570,7 +5570,7 @@ below:
             title="Optional">
         <span>active<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -5582,7 +5582,7 @@ here for more details.
             title="Optional">
         <span>allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -5593,7 +5593,7 @@ address than that of its own.
             title="Optional">
         <span>allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -5603,7 +5603,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -5613,7 +5613,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>block<wbr>All<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -5624,7 +5624,7 @@ virtual devices.
             title="Optional">
         <span>check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -5634,7 +5634,7 @@ to detect NIC failure.
             title="Optional">
         <span>config<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -5643,7 +5643,7 @@ to detect NIC failure.
             title="Optional">
         <span>contact<wbr>Detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -5653,7 +5653,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>contact<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -5675,7 +5675,7 @@ for custom attributes.
             title="Optional">
         <span>datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -5685,7 +5685,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -5694,7 +5694,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>directpath<wbr>Gen2Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -5704,7 +5704,7 @@ for which this policy applies to.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -5714,7 +5714,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -5724,7 +5724,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -5734,7 +5734,7 @@ on the port for egress traffic.
             title="Optional">
         <span>egress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -5744,7 +5744,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -5754,7 +5754,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5763,7 +5763,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5772,7 +5772,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5781,7 +5781,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5790,7 +5790,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -5800,7 +5800,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5809,7 +5809,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5818,7 +5818,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5827,7 +5827,7 @@ if changed.
             title="Optional">
         <span>hbr<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5846,7 +5846,7 @@ options are:
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -5856,7 +5856,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -5866,7 +5866,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -5876,7 +5876,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>ingress<wbr>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -5886,7 +5886,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ipv4Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -5897,7 +5897,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5906,7 +5906,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5915,7 +5915,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -5924,7 +5924,7 @@ below.
             title="Optional">
         <span>iscsi<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -5933,7 +5933,7 @@ below.
             title="Optional">
         <span>lacp<wbr>Api<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -5944,7 +5944,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>lacp<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -5954,7 +5954,7 @@ applies to.
             title="Optional">
         <span>lacp<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -5963,7 +5963,7 @@ applies to.
             title="Optional">
         <span>link<wbr>Discovery<wbr>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -5973,7 +5973,7 @@ for link discovery traffic.
             title="Optional">
         <span>link<wbr>Discovery<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -5983,7 +5983,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -5992,7 +5992,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6001,7 +6001,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6010,7 +6010,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6019,7 +6019,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>max<wbr>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -6029,7 +6029,7 @@ switch.
             title="Optional">
         <span>multicast<wbr>Filtering<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -6039,7 +6039,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -6048,7 +6048,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>netflow<wbr>Active<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -6059,7 +6059,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>netflow<wbr>Collector<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -6070,7 +6070,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow<wbr>Collector<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -6080,7 +6080,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -6090,7 +6090,7 @@ applies to.
             title="Optional">
         <span>netflow<wbr>Idle<wbr>Flow<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -6101,7 +6101,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>netflow<wbr>Internal<wbr>Flows<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -6112,7 +6112,7 @@ Default: `false`.
             title="Optional">
         <span>netflow<wbr>Observation<wbr>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -6122,7 +6122,7 @@ the Netflow collector.
             title="Optional">
         <span>netflow<wbr>Sampling<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -6134,7 +6134,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>network<wbr>Resource<wbr>Control<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -6144,7 +6144,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>network<wbr>Resource<wbr>Control<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -6154,7 +6154,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6163,7 +6163,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6172,7 +6172,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6181,7 +6181,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6190,7 +6190,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -6200,7 +6200,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>port<wbr>Private<wbr>Secondary<wbr>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -6210,7 +6210,7 @@ ID when using private VLANs.
             title="Optional">
         <span>standby<wbr>Uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -6222,7 +6222,7 @@ here for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -6232,7 +6232,7 @@ here for more details.
             title="Optional">
         <span>teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -6243,7 +6243,7 @@ here for more details.
             title="Optional">
         <span>tx<wbr>Uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -6253,7 +6253,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -6266,7 +6266,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6275,7 +6275,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6284,7 +6284,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6293,7 +6293,7 @@ use this option.
             title="Optional">
         <span>vdp<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6302,7 +6302,7 @@ use this option.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -6314,7 +6314,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6323,7 +6323,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6332,7 +6332,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6341,7 +6341,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6350,7 +6350,7 @@ downgraded.
             title="Optional">
         <span>vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -6371,7 +6371,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6380,7 +6380,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6389,7 +6389,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6398,7 +6398,7 @@ below:
             title="Optional">
         <span>vmotion<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6407,7 +6407,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Maximum<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6416,7 +6416,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Reservation<wbr>Mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6425,7 +6425,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Share<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6434,7 +6434,7 @@ below:
             title="Optional">
         <span>vsan<wbr>Share<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6450,7 +6450,7 @@ below:
             title="Optional">
         <span>active_<wbr>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of active uplinks to be used in load
 balancing. These uplinks need to match the definitions in the
@@ -6462,7 +6462,7 @@ here for more details.
             title="Optional">
         <span>allow_<wbr>forged_<wbr>transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
@@ -6473,7 +6473,7 @@ address than that of its own.
             title="Optional">
         <span>allow_<wbr>mac_<wbr>changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access
 Control (MAC) address can be changed.
@@ -6483,7 +6483,7 @@ Control (MAC) address can be changed.
             title="Optional">
         <span>allow_<wbr>promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This
 flag indicates whether or not all traffic is seen on a given port.
@@ -6493,7 +6493,7 @@ flag indicates whether or not all traffic is seen on a given port.
             title="Optional">
         <span>block_<wbr>all_<wbr>ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Shuts down all ports in the port groups that
 this policy applies to, effectively blocking all network access to connected
@@ -6504,7 +6504,7 @@ virtual devices.
             title="Optional">
         <span>check_<wbr>beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables beacon probing as an additional measure
 to detect NIC failure.
@@ -6514,7 +6514,7 @@ to detect NIC failure.
             title="Optional">
         <span>config_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
@@ -6523,7 +6523,7 @@ to detect NIC failure.
             title="Optional">
         <span>contact_<wbr>detail</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The detailed contact information for the person
 who is responsible for the DVS.
@@ -6533,7 +6533,7 @@ who is responsible for the DVS.
             title="Optional">
         <span>contact_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the person who is responsible for the
 DVS.
@@ -6555,7 +6555,7 @@ for custom attributes.
             title="Optional">
         <span>datacenter_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter where the distributed
 virtual switch will be created. Forces a new resource if changed.
@@ -6565,7 +6565,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A detailed description for the DVS.
 {{% /md %}}</dd>
@@ -6574,7 +6574,7 @@ virtual switch will be created. Forces a new resource if changed.
             title="Optional">
         <span>directpath_<wbr>gen2_<wbr>allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow VMDirectPath Gen2 for the ports
 for which this policy applies to.
@@ -6584,7 +6584,7 @@ for which this policy applies to.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits
 per second if egress traffic shaping is enabled on the port.
@@ -6594,7 +6594,7 @@ per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if egress traffic shaping is enabled on the port.
@@ -6604,7 +6604,7 @@ bytes if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is enabled
 on the port for egress traffic.
@@ -6614,7 +6614,7 @@ on the port for egress traffic.
             title="Optional">
         <span>egress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts
 in bits per second if egress traffic shaping is enabled on the port.
@@ -6624,7 +6624,7 @@ in bits per second if egress traffic shaping is enabled on the port.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will re-activate failed
 uplinks higher in precedence when they come back up.
@@ -6634,7 +6634,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6643,7 +6643,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the faultTolerance traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6652,7 +6652,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the faultTolerance traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6661,7 +6661,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>faulttolerance_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the faultTolerance traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6670,7 +6670,7 @@ uplinks higher in precedence when they come back up.
             title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The folder to create the DVS in. Forces a new resource
 if changed.
@@ -6680,7 +6680,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6689,7 +6689,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the hbr traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6698,7 +6698,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the hbr traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6707,7 +6707,7 @@ if changed.
             title="Optional">
         <span>hbr_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the hbr traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6726,7 +6726,7 @@ options are:
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in
 bits per second if ingress traffic shaping is enabled on the port.
@@ -6736,7 +6736,7 @@ bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in
 bytes if ingress traffic shaping is enabled on the port.
@@ -6746,7 +6746,7 @@ bytes if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}`true` if the traffic shaper is
 enabled on the port for ingress traffic.
@@ -6756,7 +6756,7 @@ enabled on the port for ingress traffic.
             title="Optional">
         <span>ingress_<wbr>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during
 bursts in bits per second if ingress traffic shaping is enabled on the port.
@@ -6766,7 +6766,7 @@ bursts in bits per second if ingress traffic shaping is enabled on the port.
             title="Optional">
         <span>ipv4_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An IPv4 address to identify the switch. This is
 mostly useful when used with the Netflow arguments found
@@ -6777,7 +6777,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6786,7 +6786,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the iSCSI traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6795,7 +6795,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the iSCSI traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6804,7 +6804,7 @@ below.
             title="Optional">
         <span>iscsi_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the iSCSI traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6813,7 +6813,7 @@ below.
             title="Optional">
         <span>lacp_<wbr>api_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Link Aggregation Control Protocol group
 version to use with the switch. Possible values are `singleLag` and
@@ -6824,7 +6824,7 @@ version to use with the switch. Possible values are `singleLag` and
             title="Optional">
         <span>lacp_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables LACP for the ports that this policy
 applies to.
@@ -6834,7 +6834,7 @@ applies to.
             title="Optional">
         <span>lacp_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The LACP mode. Can be one of `active` or `passive`.
 {{% /md %}}</dd>
@@ -6843,7 +6843,7 @@ applies to.
             title="Optional">
         <span>link_<wbr>discovery_<wbr>operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether to `advertise` or `listen`
 for link discovery traffic.
@@ -6853,7 +6853,7 @@ for link discovery traffic.
             title="Optional">
         <span>link_<wbr>discovery_<wbr>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The discovery protocol type. Valid
 types are `cdp` and `lldp`.
@@ -6863,7 +6863,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6872,7 +6872,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the management traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -6881,7 +6881,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the management traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -6890,7 +6890,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>management_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the management traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -6899,7 +6899,7 @@ types are `cdp` and `lldp`.
             title="Optional">
         <span>max_<wbr>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) for the virtual
 switch.
@@ -6909,7 +6909,7 @@ switch.
             title="Optional">
         <span>multicast_<wbr>filtering_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The multicast filtering mode to use
 with the switch. Can be one of `legacyFiltering` or `snooping`.
@@ -6919,7 +6919,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the distributed virtual switch.
 {{% /md %}}</dd>
@@ -6928,7 +6928,7 @@ with the switch. Can be one of `legacyFiltering` or `snooping`.
             title="Optional">
         <span>netflow_<wbr>active_<wbr>flow_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 active flows are forced to be exported to the collector. Allowed range is
@@ -6939,7 +6939,7 @@ active flows are forced to be exported to the collector. Allowed range is
             title="Optional">
         <span>netflow_<wbr>collector_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address for the Netflow
 collector, using IPv4 or IPv6. IPv6 is supported in vSphere Distributed
@@ -6950,7 +6950,7 @@ Switch Version 6.0 or later. Must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow_<wbr>collector_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Port for the Netflow collector. This
 must be set before Netflow can be enabled.
@@ -6960,7 +6960,7 @@ must be set before Netflow can be enabled.
             title="Optional">
         <span>netflow_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables Netflow on all ports that this policy
 applies to.
@@ -6970,7 +6970,7 @@ applies to.
             title="Optional">
         <span>netflow_<wbr>idle_<wbr>flow_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of seconds after which
 idle flows are forced to be exported to the collector. Allowed range is `10`
@@ -6981,7 +6981,7 @@ to `600`. Default: `15`.
             title="Optional">
         <span>netflow_<wbr>internal_<wbr>flows_<wbr>only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to limit analysis to
 traffic that has both source and destination served by the same host.
@@ -6992,7 +6992,7 @@ Default: `false`.
             title="Optional">
         <span>netflow_<wbr>observation_<wbr>domain_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The observation domain ID for
 the Netflow collector.
@@ -7002,7 +7002,7 @@ the Netflow collector.
             title="Optional">
         <span>netflow_<wbr>sampling_<wbr>rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The ratio of total number of packets to
 the number of packets analyzed. The default is `0`, which indicates that the
@@ -7014,7 +7014,7 @@ indicates an analysis rate of 0.001%.
             title="Optional">
         <span>network_<wbr>resource_<wbr>control_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` to enable
 network I/O control. Default: `false`.
@@ -7024,7 +7024,7 @@ network I/O control. Default: `false`.
             title="Optional">
         <span>network_<wbr>resource_<wbr>control_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of network I/O
 control to use. Can be one of `version2` or `version3`. Default: `version2`.
@@ -7034,7 +7034,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7043,7 +7043,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the nfs traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7052,7 +7052,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the nfs traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -7061,7 +7061,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>nfs_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the nfs traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -7070,7 +7070,7 @@ control to use. Can be one of `version2` or `version3`. Default: `version2`.
             title="Optional">
         <span>notify_<wbr>switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If `true`, the teaming policy will notify the
 broadcast network of an uplink failover, triggering cache updates.
@@ -7080,7 +7080,7 @@ broadcast network of an uplink failover, triggering cache updates.
             title="Optional">
         <span>port_<wbr>private_<wbr>secondary_<wbr>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Used to define a secondary VLAN
 ID when using private VLANs.
@@ -7090,7 +7090,7 @@ ID when using private VLANs.
             title="Optional">
         <span>standby_<wbr>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of standby uplinks to be used in
 failover. These uplinks need to match the definitions in the
@@ -7102,7 +7102,7 @@ here for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource. See
 [here][docs-applying-tags] for a reference on how to apply tags.
@@ -7112,7 +7112,7 @@ here for more details.
             title="Optional">
         <span>teaming_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The uplink teaming policy. Can be one of
 `loadbalance_ip`, `loadbalance_srcmac`, `loadbalance_srcid`, or
@@ -7123,7 +7123,7 @@ here for more details.
             title="Optional">
         <span>tx_<wbr>uplink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Forward all traffic transmitted by ports for which
 this policy applies to its DVS uplinks.
@@ -7133,7 +7133,7 @@ this policy applies to its DVS uplinks.
             title="Optional">
         <span>uplinks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of strings that uniquely identifies the names
 of the uplinks on the DVS across hosts. The number of items in this list
@@ -7146,7 +7146,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7155,7 +7155,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vdp traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7164,7 +7164,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vdp traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -7173,7 +7173,7 @@ use this option.
             title="Optional">
         <span>vdp_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vdp traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -7182,7 +7182,7 @@ use this option.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}- The version of the DVS to create. The default is to
 create the DVS at the latest version supported by the version of vSphere
@@ -7194,7 +7194,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7203,7 +7203,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the virtualMachine traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7212,7 +7212,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the virtualMachine traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -7221,7 +7221,7 @@ downgraded.
             title="Optional">
         <span>virtualmachine_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the virtualMachine traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -7230,7 +7230,7 @@ downgraded.
             title="Optional">
         <span>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID for single VLAN mode. 0 denotes no VLAN.
 {{% /md %}}</dd>
@@ -7251,7 +7251,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7260,7 +7260,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vmotion traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7269,7 +7269,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vmotion traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -7278,7 +7278,7 @@ below:
             title="Optional">
         <span>vmotion_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vmotion traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -7287,7 +7287,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>maximum_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum allowed usage for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7296,7 +7296,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>reservation_<wbr>mbit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of guaranteed bandwidth for the vsan traffic class, in Mbits/sec.
 {{% /md %}}</dd>
@@ -7305,7 +7305,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>share_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of shares to allocate to the vsan traffic class for a custom share level.
 {{% /md %}}</dd>
@@ -7314,7 +7314,7 @@ below:
             title="Optional">
         <span>vsan_<wbr>share_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation level for the vsan traffic class. Can be one of high, low, normal, or custom.
 {{% /md %}}</dd>
@@ -7339,7 +7339,7 @@ below:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchHostOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchHostOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7352,7 +7352,7 @@ below:
             title="Required">
         <span>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7362,7 +7362,7 @@ added in order they are specified.
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7379,7 +7379,7 @@ DVS.
             title="Required">
         <span>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7389,7 +7389,7 @@ added in order they are specified.
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7406,7 +7406,7 @@ DVS.
             title="Required">
         <span>devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7416,7 +7416,7 @@ added in order they are specified.
             title="Required">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7433,7 +7433,7 @@ DVS.
             title="Required">
         <span>devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of NIC devices to map to uplinks on the DVS,
 added in order they are specified.
@@ -7443,7 +7443,7 @@ added in order they are specified.
             title="Required">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The host system ID of the host to add to the
 DVS.
@@ -7462,7 +7462,7 @@ DVS.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DistributedVirtualSwitchVlanRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchVlanRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DistributedVirtualSwitchVlanRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -7475,7 +7475,7 @@ DVS.
             title="Required">
         <span>Max<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7483,7 +7483,7 @@ DVS.
             title="Required">
         <span>Min<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7498,7 +7498,7 @@ DVS.
             title="Required">
         <span>Max<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7506,7 +7506,7 @@ DVS.
             title="Required">
         <span>Min<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7521,7 +7521,7 @@ DVS.
             title="Required">
         <span>max<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7529,7 +7529,7 @@ DVS.
             title="Required">
         <span>min<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7544,7 +7544,7 @@ DVS.
             title="Required">
         <span>max<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7552,7 +7552,7 @@ DVS.
             title="Required">
         <span>min<wbr>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7573,6 +7573,7 @@ DVS.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

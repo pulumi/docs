@@ -24,13 +24,13 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -58,13 +58,13 @@ the implicit default of `false` set on the virtual switch.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+});
+const esxiHost = vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-}, { async: true }));
+});
 const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
     activeNics: ["vmnic0"],
     hostSystemId: esxiHost.id,
@@ -82,8 +82,6 @@ const pg = new vsphere.HostPortGroup("pg", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown.
-
 
 
 ## Create a HostPortGroup Resource
@@ -99,7 +97,7 @@ const pg = new vsphere.HostPortGroup("pg", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupArgs">HostPortGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -199,7 +197,7 @@ const pg = new vsphere.HostPortGroup("pg", {
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -209,7 +207,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Required">
         <span>Virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -219,7 +217,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -228,7 +226,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -238,7 +236,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -247,7 +245,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -256,7 +254,7 @@ that of its own.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -266,7 +264,7 @@ only.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -275,7 +273,7 @@ only.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -285,7 +283,7 @@ changed.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -294,7 +292,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -303,7 +301,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -312,7 +310,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -321,7 +319,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -330,7 +328,7 @@ changed.
             title="Optional">
         <span>Standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -339,7 +337,7 @@ changed.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -349,7 +347,7 @@ failover_explicit.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -368,7 +366,7 @@ tagging. Default: `0`.
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -378,7 +376,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Required">
         <span>Virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -388,7 +386,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -397,7 +395,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -407,7 +405,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -416,7 +414,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -425,7 +423,7 @@ that of its own.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -435,7 +433,7 @@ only.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -444,7 +442,7 @@ only.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -454,7 +452,7 @@ changed.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -463,7 +461,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -472,7 +470,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -481,7 +479,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -490,7 +488,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -499,7 +497,7 @@ changed.
             title="Optional">
         <span>Standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -508,7 +506,7 @@ changed.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -518,7 +516,7 @@ failover_explicit.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -537,7 +535,7 @@ tagging. Default: `0`.
             title="Required">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -547,7 +545,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Required">
         <span>virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -557,7 +555,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -566,7 +564,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -576,7 +574,7 @@ that of its own.
             title="Optional">
         <span>allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -585,7 +583,7 @@ that of its own.
             title="Optional">
         <span>allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -594,7 +592,7 @@ that of its own.
             title="Optional">
         <span>check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -604,7 +602,7 @@ only.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -613,7 +611,7 @@ only.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -623,7 +621,7 @@ changed.
             title="Optional">
         <span>notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -632,7 +630,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -641,7 +639,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -650,7 +648,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -659,7 +657,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -668,7 +666,7 @@ changed.
             title="Optional">
         <span>standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -677,7 +675,7 @@ changed.
             title="Optional">
         <span>teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -687,7 +685,7 @@ failover_explicit.
             title="Optional">
         <span>vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -706,7 +704,7 @@ tagging. Default: `0`.
             title="Required">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -716,7 +714,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Required">
         <span>virtual_<wbr>switch_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -726,7 +724,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>active_<wbr>nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -735,7 +733,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>allow_<wbr>forged_<wbr>transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -745,7 +743,7 @@ that of its own.
             title="Optional">
         <span>allow_<wbr>mac_<wbr>changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -754,7 +752,7 @@ that of its own.
             title="Optional">
         <span>allow_<wbr>promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -763,7 +761,7 @@ that of its own.
             title="Optional">
         <span>check_<wbr>beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -773,7 +771,7 @@ only.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -782,7 +780,7 @@ only.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -792,7 +790,7 @@ changed.
             title="Optional">
         <span>notify_<wbr>switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -801,7 +799,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -810,7 +808,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -819,7 +817,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -828,7 +826,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -837,7 +835,7 @@ changed.
             title="Optional">
         <span>standby_<wbr>nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -846,7 +844,7 @@ changed.
             title="Optional">
         <span>teaming_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -856,7 +854,7 @@ failover_explicit.
             title="Optional">
         <span>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -898,7 +896,7 @@ explaining the effective policy for this port group.
             title="">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -934,7 +932,7 @@ explaining the effective policy for this port group.
             title="">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -970,7 +968,7 @@ explaining the effective policy for this port group.
             title="">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1006,7 +1004,7 @@ explaining the effective policy for this port group.
             title="">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1045,7 +1043,7 @@ Get an existing HostPortGroup resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHostPortGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupState">HostPortGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroup">HostPortGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1159,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -1168,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1178,7 +1176,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -1187,7 +1185,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -1196,7 +1194,7 @@ that of its own.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -1217,7 +1215,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -1226,7 +1224,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -1236,7 +1234,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1245,7 +1243,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -1255,7 +1253,7 @@ changed.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -1273,7 +1271,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1282,7 +1280,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1291,7 +1289,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -1300,7 +1298,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1309,7 +1307,7 @@ changed.
             title="Optional">
         <span>Standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -1318,7 +1316,7 @@ changed.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -1328,7 +1326,7 @@ failover_explicit.
             title="Optional">
         <span>Virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -1338,7 +1336,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -1357,7 +1355,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -1366,7 +1364,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1376,7 +1374,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -1385,7 +1383,7 @@ that of its own.
             title="Optional">
         <span>Allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -1394,7 +1392,7 @@ that of its own.
             title="Optional">
         <span>Check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -1415,7 +1413,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>Failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -1424,7 +1422,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -1434,7 +1432,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1443,7 +1441,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -1453,7 +1451,7 @@ changed.
             title="Optional">
         <span>Notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -1471,7 +1469,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1480,7 +1478,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1489,7 +1487,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -1498,7 +1496,7 @@ changed.
             title="Optional">
         <span>Shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1507,7 +1505,7 @@ changed.
             title="Optional">
         <span>Standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -1516,7 +1514,7 @@ changed.
             title="Optional">
         <span>Teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -1526,7 +1524,7 @@ failover_explicit.
             title="Optional">
         <span>Virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -1536,7 +1534,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>Vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -1555,7 +1553,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>active<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -1564,7 +1562,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>allow<wbr>Forged<wbr>Transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1574,7 +1572,7 @@ that of its own.
             title="Optional">
         <span>allow<wbr>Mac<wbr>Changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -1583,7 +1581,7 @@ that of its own.
             title="Optional">
         <span>allow<wbr>Promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -1592,7 +1590,7 @@ that of its own.
             title="Optional">
         <span>check<wbr>Beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -1613,7 +1611,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -1622,7 +1620,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -1632,7 +1630,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1641,7 +1639,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -1651,7 +1649,7 @@ changed.
             title="Optional">
         <span>notify<wbr>Switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -1669,7 +1667,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Average<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1678,7 +1676,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Burst<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1687,7 +1685,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -1696,7 +1694,7 @@ changed.
             title="Optional">
         <span>shaping<wbr>Peak<wbr>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1705,7 +1703,7 @@ changed.
             title="Optional">
         <span>standby<wbr>Nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -1714,7 +1712,7 @@ changed.
             title="Optional">
         <span>teaming<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -1724,7 +1722,7 @@ failover_explicit.
             title="Optional">
         <span>virtual<wbr>Switch<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -1734,7 +1732,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>vlan<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -1753,7 +1751,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>active_<wbr>nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of active network adapters used for load balancing.
 {{% /md %}}</dd>
@@ -1762,7 +1760,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>allow_<wbr>forged_<wbr>transmits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the virtual network adapter is allowed to send network traffic with a different MAC address than
 that of its own.
@@ -1772,7 +1770,7 @@ that of its own.
             title="Optional">
         <span>allow_<wbr>mac_<wbr>changes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Controls whether or not the Media Access Control (MAC) address can be changed.
 {{% /md %}}</dd>
@@ -1781,7 +1779,7 @@ that of its own.
             title="Optional">
         <span>allow_<wbr>promiscuous</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable promiscuous mode on the network. This flag indicates whether or not all traffic is seen on a given port.
 {{% /md %}}</dd>
@@ -1790,7 +1788,7 @@ that of its own.
             title="Optional">
         <span>check_<wbr>beacon</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable beacon probing. Requires that the vSwitch has been configured to use a beacon. If disabled, link status is used
 only.
@@ -1811,7 +1809,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>failback</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will re-activate failed interfaces higher in precedence when they come back up.
 {{% /md %}}</dd>
@@ -1820,7 +1818,7 @@ explaining the effective policy for this port group.
             title="Optional">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.
@@ -1830,7 +1828,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1839,7 +1837,7 @@ the host to set the port group up on. Forces a new resource if changed.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the port group.  Forces a new resource if
 changed.
@@ -1849,7 +1847,7 @@ changed.
             title="Optional">
         <span>notify_<wbr>switches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, the teaming policy will notify the broadcast network of a NIC failover, triggering cache updates.
 {{% /md %}}</dd>
@@ -1867,7 +1865,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>average_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The average bandwidth in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1876,7 +1874,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>burst_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum burst size allowed in bytes if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1885,7 +1883,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable traffic shaping on this virtual switch or port group.
 {{% /md %}}</dd>
@@ -1894,7 +1892,7 @@ changed.
             title="Optional">
         <span>shaping_<wbr>peak_<wbr>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The peak bandwidth during bursts in bits per second if traffic shaping is enabled.
 {{% /md %}}</dd>
@@ -1903,7 +1901,7 @@ changed.
             title="Optional">
         <span>standby_<wbr>nics</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of standby network adapters used for failover.
 {{% /md %}}</dd>
@@ -1912,7 +1910,7 @@ changed.
             title="Optional">
         <span>teaming_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The network adapter teaming policy. Can be one of loadbalance_ip, loadbalance_srcmac, loadbalance_srcid, or
 failover_explicit.
@@ -1922,7 +1920,7 @@ failover_explicit.
             title="Optional">
         <span>virtual_<wbr>switch_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual switch to bind
 this port group to. Forces a new resource if changed.
@@ -1932,7 +1930,7 @@ this port group to. Forces a new resource if changed.
             title="Optional">
         <span>vlan_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The VLAN ID/trunk mode for this port group.  An ID of
 `0` denotes no tagging, an ID of `1`-`4094` tags with the specific ID, and an
@@ -1960,7 +1958,7 @@ tagging. Default: `0`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostPortGroupPortsOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#HostPortGroupPortsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1973,7 +1971,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -1982,7 +1980,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Mac<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1990,7 +1988,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2005,7 +2003,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -2014,7 +2012,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Mac<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2022,7 +2020,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2037,7 +2035,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -2046,7 +2044,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>mac<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2054,7 +2052,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2069,7 +2067,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key for this port group as returned from the vSphere API.
 {{% /md %}}</dd>
@@ -2078,7 +2076,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>mac<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2086,7 +2084,7 @@ tagging. Default: `0`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2107,6 +2105,7 @@ tagging. Default: `0`.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

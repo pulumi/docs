@@ -21,7 +21,9 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example creates a compute cluster comprised of three hosts,
 making use of the
@@ -47,15 +49,15 @@ const hosts = config.get("hosts") || [
     "esxi3",
 ];
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: datacenter,
-}, { async: true }));
-const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
+});
+const hostsHost: vsphere.GetHostResult[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(dc.apply(dc => vsphere.getHost({
+    hostsHost.push(vsphere.getHost({
         datacenterId: dc.id,
         name: hosts[i],
-    }, { async: true })));
+    }));
 }
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.id,
@@ -71,7 +73,8 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -88,7 +91,7 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -188,7 +191,7 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -199,7 +202,7 @@ resource if changed.
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -208,7 +211,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -219,7 +222,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -236,7 +239,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -247,7 +250,7 @@ resource if changed.
             title="Required">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -256,7 +259,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -267,7 +270,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -284,7 +287,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Required">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -295,7 +298,7 @@ resource if changed.
             title="Required">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -304,7 +307,7 @@ resource if changed.
             title="Optional">
         <span>dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -315,7 +318,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -332,7 +335,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Required">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -343,7 +346,7 @@ resource if changed.
             title="Required">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -352,7 +355,7 @@ resource if changed.
             title="Optional">
         <span>dpm_<wbr>automation_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -363,7 +366,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -396,7 +399,7 @@ Get an existing DpmHostOverride resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverrideState">DpmHostOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DpmHostOverrideState">DpmHostOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -510,7 +513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -521,7 +524,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -532,7 +535,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -542,7 +545,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -558,7 +561,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -569,7 +572,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -580,7 +583,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -590,7 +593,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -606,7 +609,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -617,7 +620,7 @@ resource if changed.
             title="Optional">
         <span>dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -628,7 +631,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -638,7 +641,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -654,7 +657,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -665,7 +668,7 @@ resource if changed.
             title="Optional">
         <span>dpm_<wbr>automation_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -676,7 +679,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -686,7 +689,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -710,6 +713,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 
