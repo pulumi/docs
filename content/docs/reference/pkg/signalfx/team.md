@@ -185,7 +185,13 @@ You can configure [team notification policies](https://docs.signalfx.com/en/late
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Team Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Team resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -546,8 +552,9 @@ You can configure [team notification policies](https://docs.signalfx.com/en/late
 
 
 
+### Outputs
 
-## Team Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Team resource produces the following computed outputs.
 
 The following output properties are available:
 

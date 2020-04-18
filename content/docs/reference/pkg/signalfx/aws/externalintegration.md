@@ -187,7 +187,13 @@ SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integra
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ExternalIntegration Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ExternalIntegration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -260,8 +266,9 @@ SignalFx AWS CloudWatch integrations using Role ARNs. For help with this integra
 
 
 
+### Outputs
 
-## ExternalIntegration Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ExternalIntegration resource produces the following computed outputs.
 
 The following output properties are available:
 

@@ -216,7 +216,13 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Integration Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Integration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -577,6 +583,9 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Integration resource does not produce any additional output properties.
 
 
 
