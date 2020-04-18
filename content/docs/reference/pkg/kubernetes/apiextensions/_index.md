@@ -14,6 +14,11 @@ block_external_search_index: true
     <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
 </ul>
 
+<h3>Resources</h3>
+<ul class="api">
+    <li><a href="customresource" title="CustomResource"><span class="symbol resource"></span>CustomResource</a></li>
+</ul>
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -21,5 +26,7 @@ block_external_search_index: true
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
     
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 
